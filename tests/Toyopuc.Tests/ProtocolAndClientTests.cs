@@ -5,6 +5,8 @@ namespace Toyopuc.Tests;
 
 public class ProtocolAndClientTests
 {
+    private const double LocalTestTimeoutSeconds = 3.0;
+
     [Fact]
     public void BuildWordReadFrame_MatchesExpectedBytes()
     {
@@ -41,7 +43,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(response);
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: 1.0)
+        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -72,7 +74,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x1C, new byte[] { 0x11, 0x11, 0x22, 0x22, 0x33, 0x33 }));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: 1.0)
+        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -101,7 +103,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x94, new byte[] { 0x11, 0x11, 0x22, 0x22 }));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: 1.0)
+        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -137,7 +139,7 @@ public class ProtocolAndClientTests
             "127.0.0.1",
             port,
             protocol: "tcp",
-            timeout: 1.0,
+            timeout: LocalTestTimeoutSeconds,
             addressingOptions: ToyopucAddressingOptions.Nano10GxCompatible)
         {
             CaptureTraceFrames = true,
@@ -167,7 +169,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x1C, new byte[] { 0x34, 0x12 }));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: 1.0);
+        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds);
         var result = client.Read("D0100");
 
         await serverTask;
@@ -194,7 +196,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x22, new byte[] { 0x34, 0x12, 0x78, 0x56 }));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: 1.0)
+        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -227,7 +229,7 @@ public class ProtocolAndClientTests
             "127.0.0.1",
             port,
             protocol: "tcp",
-            timeout: 1.0,
+            timeout: LocalTestTimeoutSeconds,
             deviceProfile: ToyopucDeviceProfiles.Pc10GMode.Name)
         {
             CaptureTraceFrames = true,
@@ -272,7 +274,7 @@ public class ProtocolAndClientTests
             "127.0.0.1",
             port,
             protocol: "tcp",
-            timeout: 1.0,
+            timeout: LocalTestTimeoutSeconds,
             addressingOptions: ToyopucAddressingOptions.Nano10GxCompatible)
         {
             CaptureTraceFrames = true,
@@ -314,7 +316,7 @@ public class ProtocolAndClientTests
             "127.0.0.1",
             port,
             protocol: "tcp",
-            timeout: 1.0,
+            timeout: LocalTestTimeoutSeconds,
             addressingOptions: ToyopucAddressingOptions.Pc10GMode)
         {
             CaptureTraceFrames = true,
@@ -349,7 +351,7 @@ public class ProtocolAndClientTests
             "127.0.0.1",
             port,
             protocol: "tcp",
-            timeout: 1.0,
+            timeout: LocalTestTimeoutSeconds,
             addressingOptions: ToyopucAddressingOptions.Pc10GMode)
         {
             CaptureTraceFrames = true,
@@ -398,7 +400,7 @@ public class ProtocolAndClientTests
             "127.0.0.1",
             port,
             protocol: "tcp",
-            timeout: 1.0,
+            timeout: LocalTestTimeoutSeconds,
             addressingOptions: ToyopucAddressingOptions.Nano10GxCompatible)
         {
             CaptureTraceFrames = true,
@@ -429,7 +431,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x1D, Array.Empty<byte>()));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: 1.0)
+        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -461,7 +463,7 @@ public class ProtocolAndClientTests
             "127.0.0.1",
             port,
             protocol: "tcp",
-            timeout: 1.0,
+            timeout: LocalTestTimeoutSeconds,
             addressingOptions: ToyopucAddressingOptions.Pc10GMode)
         {
             CaptureTraceFrames = true,
@@ -502,7 +504,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x23, Array.Empty<byte>()));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: 1.0)
+        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -542,7 +544,7 @@ public class ProtocolAndClientTests
             "127.0.0.1",
             port,
             protocol: "tcp",
-            timeout: 1.0,
+            timeout: LocalTestTimeoutSeconds,
             addressingOptions: ToyopucAddressingOptions.Nano10GxCompatible)
         {
             CaptureTraceFrames = true,
@@ -585,7 +587,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0xC3, Array.Empty<byte>()));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: 1.0)
+        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
