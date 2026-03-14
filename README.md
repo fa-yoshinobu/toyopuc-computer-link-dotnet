@@ -1,5 +1,10 @@
 # TOYOPUC Computer Link for .NET
 
+[![release](https://img.shields.io/github/v/release/fa-yoshinobu/toyopuc-computer-link-dotnet?display_name=tag&label=release)](https://github.com/fa-yoshinobu/toyopuc-computer-link-dotnet/releases)
+[![CI](https://img.shields.io/github/actions/workflow/status/fa-yoshinobu/toyopuc-computer-link-dotnet/ci.yml?branch=main&label=CI)](https://github.com/fa-yoshinobu/toyopuc-computer-link-dotnet/actions/workflows/ci.yml)
+[![license](https://img.shields.io/github/license/fa-yoshinobu/toyopuc-computer-link-dotnet?label=license)](https://github.com/fa-yoshinobu/toyopuc-computer-link-dotnet/blob/main/LICENSE)
+[![.NET](https://img.shields.io/badge/.NET-9.0%2B-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/download/dotnet/9.0)
+
 TOYOPUC computer-link communication library for .NET.
 
 This repository is a .NET port of the Python library
