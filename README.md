@@ -1,9 +1,9 @@
-# Toyopuc
+# TOYOPUC Computer Link for .NET
 
 TOYOPUC computer-link communication library for .NET.
 
 This repository is a .NET port of the Python library
-[`pytoyopuc-computerlink`](https://github.com/fa-yoshinobu/pytoyopuc-computerlink).
+[`pytoyopuc-computerlink`](https://github.com/fa-yoshinobu/toyopuc-computer-link-python).
 For protocol background, address details, and other fine-grained reference
 material, see the Python repository first.
 
@@ -99,7 +99,7 @@ dotnet add package Toyopuc.Net
 ## Upstream Reference
 
 - Original Python library:
-  [`fa-yoshinobu/pytoyopuc-computerlink`](https://github.com/fa-yoshinobu/pytoyopuc-computerlink)
+  [`fa-yoshinobu/toyopuc-computer-link-python`](https://github.com/fa-yoshinobu/toyopuc-computer-link-python)
 - .NET repository:
   [`fa-yoshinobu/toyopuc-computer-link-dotnet`](https://github.com/fa-yoshinobu/toyopuc-computer-link-dotnet)
 - This repository focuses on the .NET port, packaging, validation, and verified
@@ -137,7 +137,7 @@ dotnet add package Toyopuc.Net
 - [`docs/internal/LIBRARY_PROFILE_SPEC.md`](docs/internal/LIBRARY_PROFILE_SPEC.md): internal machine preset and address-range specification
 - [`docs/internal/PYTHON_PORTING_NOTES.md`](docs/internal/PYTHON_PORTING_NOTES.md): mapping and differences from the original Python implementation
 - [`docs/internal/TESTRESULTS.md`](docs/internal/TESTRESULTS.md): recorded hardware results
-- [`fa-yoshinobu/pytoyopuc-computerlink`](https://github.com/fa-yoshinobu/pytoyopuc-computerlink): original Python repository and reference materials
+- [`fa-yoshinobu/toyopuc-computer-link-python`](https://github.com/fa-yoshinobu/toyopuc-computer-link-python): original Python repository and reference materials
 
 ## Build From Source
 
@@ -462,13 +462,13 @@ powershell -ExecutionPolicy Bypass -File examples\run_validation.ps1 -Target plu
 ## Simulator
 
 The upstream Python repository includes a simulator for local testing:
-[`fa-yoshinobu/pytoyopuc-computerlink`](https://github.com/fa-yoshinobu/pytoyopuc-computerlink)
+[`fa-yoshinobu/toyopuc-computer-link-python`](https://github.com/fa-yoshinobu/toyopuc-computer-link-python)
 
 Start it in another terminal:
 
 ```powershell
-git clone https://github.com/fa-yoshinobu/pytoyopuc-computerlink
-cd pytoyopuc-computerlink
+git clone https://github.com/fa-yoshinobu/toyopuc-computer-link-python
+cd toyopuc-computer-link-python
 python -m tools.sim_server --host 127.0.0.1 --port 15000
 ```
 
