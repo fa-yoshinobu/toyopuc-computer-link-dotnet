@@ -323,9 +323,9 @@ internal static class Program
         return false;
     }
 
-    private static ToyopucHighLevelClient CreateClient(ProbeOptions options)
+    private static ToyopucDeviceClient CreateClient(ProbeOptions options)
     {
-        return new ToyopucHighLevelClient(
+        return new ToyopucDeviceClient(
             options.Host,
             options.Port,
             protocol: options.Protocol,
@@ -466,13 +466,13 @@ internal static class Program
         return selected;
     }
 
-    private static (int Word, int Low, int High) ReadPacked(ToyopucHighLevelClient client, ProbeCase probeCase)
+    private static (int Word, int Low, int High) ReadPacked(ToyopucDeviceClient client, ProbeCase probeCase)
     {
         var values = client.ReadMany(new object[] { probeCase.WordDevice, probeCase.LowDevice, probeCase.HighDevice });
         return (ToInt32(values[0]), ToInt32(values[1]), ToInt32(values[2]));
     }
 
-    private static bool[] ReadBits(ToyopucHighLevelClient client, string bitDevice)
+    private static bool[] ReadBits(ToyopucDeviceClient client, string bitDevice)
     {
         var values = client.Read(bitDevice, 16);
         return values switch

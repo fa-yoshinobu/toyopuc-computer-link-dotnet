@@ -15,12 +15,12 @@ Common issues and solutions when using the TOYOPUC Computer Link .NET library.
 - The requested device is outside the range supported by your specific TOYOPUC model. Refer to [Model Ranges](../user/MODEL_RANGES.md) for details.
 
 ### Timeout Exceptions
-- Check network latency. Consider increasing the `Timeout` property in `ToyopucHighLevelClient`.
+- Check network latency. Consider increasing the `Timeout` property in `ToyopucDeviceClient`.
 
 ## 3. General Questions
 
 ### How many points can I read at once?
-The library automatically splits large requests according to the protocol limits (approx. 960 words per frame for standard Toyopuc SN-I/SN-II).
+The library automatically splits large requests according to the protocol limits (approx. 960 words per frame for standard TOYOPUC).
 
 ### Does this work with Toyopuc-Plus?
 Yes, it is fully tested and verified with TOYOPUC-Plus and Nano 10GX series.

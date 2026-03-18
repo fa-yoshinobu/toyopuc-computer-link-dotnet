@@ -4,9 +4,9 @@ namespace Toyopuc.Tests;
 
 public sealed class LibraryResolverContractTests
 {
-    private static readonly MethodInfo BuildResolvedTextMethod = typeof(ToyopucHighLevelClient)
+    private static readonly MethodInfo BuildResolvedTextMethod = typeof(ToyopucDeviceClient)
         .GetMethod("BuildResolvedText", BindingFlags.NonPublic | BindingFlags.Static)
-        ?? throw new InvalidOperationException("Failed to locate ToyopucHighLevelClient.BuildResolvedText");
+        ?? throw new InvalidOperationException("Failed to locate ToyopucDeviceClient.BuildResolvedText");
 
     public static TheoryData<string> ReviewedProfiles => new()
     {

@@ -2,7 +2,7 @@ using System.Globalization;
 using System.Text;
 using Toyopuc;
 
-ToyopucHighLevelClient? plc = null;
+ToyopucDeviceClient? plc = null;
 SmokeLogger? logger = null;
 
 try
@@ -39,7 +39,7 @@ try
             $"pc10    : upper-u={(addressingOptions.UseUpperUPc10 ? "on" : "off")} eb={(addressingOptions.UseEbPc10 ? "on" : "off")} fr={(addressingOptions.UseFrPc10 ? "on" : "off")}");
     }
 
-    plc = new ToyopucHighLevelClient(
+    plc = new ToyopucDeviceClient(
         options.Host,
         options.Port,
         localPort: options.LocalPort,
@@ -347,7 +347,7 @@ static int[] BuildNumericWriteSequence(int count, int baseValue, string pattern,
     return values;
 }
 
-static int RunCountProbe(SmokeLogger logger, ToyopucHighLevelClient plc, SmokeTestOptions options)
+static int RunCountProbe(SmokeLogger logger, ToyopucDeviceClient plc, SmokeTestOptions options)
 {
     var hadFailure = false;
     foreach (var count in options.ProbeCounts)
@@ -378,7 +378,7 @@ static int RunCountProbe(SmokeLogger logger, ToyopucHighLevelClient plc, SmokeTe
     return hadFailure ? 1 : 0;
 }
 
-static int RunManyDeviceAccess(SmokeLogger logger, ToyopucHighLevelClient plc, SmokeTestOptions options)
+static int RunManyDeviceAccess(SmokeLogger logger, ToyopucDeviceClient plc, SmokeTestOptions options)
 {
     var devices = options.ManyDevices.Select(static device => (object)device).ToArray();
 
@@ -593,7 +593,7 @@ static bool ManyValuesEqual(object actual, object expected)
         == Convert.ToInt32(expected, CultureInfo.InvariantCulture);
 }
 
-static void DumpFrames(SmokeLogger logger, ToyopucHighLevelClient plc, SmokeTestOptions options, string label)
+static void DumpFrames(SmokeLogger logger, ToyopucDeviceClient plc, SmokeTestOptions options, string label)
 {
     if (!options.Verbose)
     {
@@ -624,7 +624,7 @@ static void DumpFrames(SmokeLogger logger, ToyopucHighLevelClient plc, SmokeTest
     }
 }
 
-static void DumpLastFramesOnError(SmokeLogger logger, ToyopucHighLevelClient plc)
+static void DumpLastFramesOnError(SmokeLogger logger, ToyopucDeviceClient plc)
 {
     if (plc.TraceFrames.Count > 0)
     {
@@ -640,7 +640,7 @@ static void DumpLastFramesOnError(SmokeLogger logger, ToyopucHighLevelClient plc
     logger.Error($"last-rx : {FormatFrame(plc.LastRx)}");
 }
 
-static void PrepareTrace(ToyopucHighLevelClient plc)
+static void PrepareTrace(ToyopucDeviceClient plc)
 {
     plc.ClearTraceFrames();
 }
@@ -655,7 +655,7 @@ static string FormatFrame(byte[]? frame)
     return string.Join(" ", frame.Select(static b => b.ToString("X2", CultureInfo.InvariantCulture)));
 }
 
-static int RunSuite(SmokeLogger logger, ToyopucHighLevelClient plc, SmokeTestOptions options)
+static int RunSuite(SmokeLogger logger, ToyopucDeviceClient plc, SmokeTestOptions options)
 {
     var probes = BuildSuiteProbes(options.Suite);
     var ok = 0;
@@ -701,7 +701,7 @@ static int RunSuite(SmokeLogger logger, ToyopucHighLevelClient plc, SmokeTestOpt
     return ng == 0 ? 0 : 1;
 }
 
-static int RunFrRangeWrite(SmokeLogger logger, ToyopucHighLevelClient plc, SmokeTestOptions options)
+static int RunFrRangeWrite(SmokeLogger logger, ToyopucDeviceClient plc, SmokeTestOptions options)
 {
     const int frTotalWords = 0x200000;
     const int frBlockWords = 0x8000;
@@ -795,7 +795,7 @@ static int RunFrRangeWrite(SmokeLogger logger, ToyopucHighLevelClient plc, Smoke
     return 0;
 }
 
-static int RunFrRangePatternVerify(SmokeLogger logger, ToyopucHighLevelClient plc, SmokeTestOptions options)
+static int RunFrRangePatternVerify(SmokeLogger logger, ToyopucDeviceClient plc, SmokeTestOptions options)
 {
     const int frTotalWords = 0x200000;
     const int frBlockWords = 0x8000;
@@ -860,7 +860,7 @@ static int RunFrRangePatternVerify(SmokeLogger logger, ToyopucHighLevelClient pl
     return 0;
 }
 
-static int RunFrRangeDump(SmokeLogger logger, ToyopucHighLevelClient plc, SmokeTestOptions options)
+static int RunFrRangeDump(SmokeLogger logger, ToyopucDeviceClient plc, SmokeTestOptions options)
 {
     const int frTotalWords = 0x200000;
     const int frBlockWords = 0x8000;
@@ -1181,7 +1181,7 @@ static bool CanResolveSuiteDevice(string device, ToyopucAddressingOptions option
     }
 }
 
-static bool IsOutOfRangeError(Exception exception, ToyopucHighLevelClient plc)
+static bool IsOutOfRangeError(Exception exception, ToyopucDeviceClient plc)
 {
     if (exception.Message.Contains("Address out of range for profile", StringComparison.OrdinalIgnoreCase)
         || exception.Message.Contains("Unknown area for profile", StringComparison.OrdinalIgnoreCase)

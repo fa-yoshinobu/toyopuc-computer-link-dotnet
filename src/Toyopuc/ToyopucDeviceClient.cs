@@ -3,7 +3,7 @@ using System.Globalization;
 
 namespace Toyopuc;
 
-public class ToyopucHighLevelClient : ToyopucClient
+public partial class ToyopucDeviceClient : ToyopucClient
 {
     private sealed class ReadOnlyListSlice<T>(IReadOnlyList<T> source, int offset, int count) : IReadOnlyList<T>
     {
@@ -35,7 +35,7 @@ public class ToyopucHighLevelClient : ToyopucClient
     public ToyopucAddressingOptions AddressingOptions { get; }
     public string? DeviceProfile { get; }
 
-    public ToyopucHighLevelClient(
+    public ToyopucDeviceClient(
         string host,
         int port,
         int localPort = 0,

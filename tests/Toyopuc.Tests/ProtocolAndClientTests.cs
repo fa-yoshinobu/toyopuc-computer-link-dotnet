@@ -43,7 +43,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(response);
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -56,6 +56,105 @@ public class ProtocolAndClientTests
         var trace = Assert.Single(client.TraceFrames);
         Assert.Equal(requestFrame, trace.Tx);
         Assert.Equal(BuildResponse(0x1C, new byte[] { 0x34, 0x12 }), trace.Rx);
+    }
+
+    [Fact]
+    public async Task HighLevelClient_ReadsDWordViaSingleWordReadFrame()
+    {
+        using var listener = new TcpListener(IPAddress.Loopback, 0);
+        listener.Start();
+        var port = ((IPEndPoint)listener.LocalEndpoint).Port;
+
+        byte[]? requestFrame = null;
+        var serverTask = Task.Run(async () =>
+        {
+            using var serverClient = await listener.AcceptTcpClientAsync();
+            await using var stream = serverClient.GetStream();
+            requestFrame = await ReadFrameAsync(stream);
+            await stream.WriteAsync(BuildResponse(0x1C, new byte[] { 0x78, 0x56, 0x34, 0x12 }));
+        });
+
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds);
+        var result = client.ReadDWord("D0100");
+
+        await serverTask;
+
+        Assert.Equal(0x12345678u, result);
+        Assert.Equal(ToyopucProtocol.BuildWordRead(0x1100, 2), requestFrame);
+    }
+
+    [Fact]
+    public async Task HighLevelClient_ReadsFloat32ViaSingleWordReadFrame()
+    {
+        using var listener = new TcpListener(IPAddress.Loopback, 0);
+        listener.Start();
+        var port = ((IPEndPoint)listener.LocalEndpoint).Port;
+
+        byte[]? requestFrame = null;
+        var serverTask = Task.Run(async () =>
+        {
+            using var serverClient = await listener.AcceptTcpClientAsync();
+            await using var stream = serverClient.GetStream();
+            requestFrame = await ReadFrameAsync(stream);
+            await stream.WriteAsync(BuildResponse(0x1C, new byte[] { 0x00, 0x00, 0xC0, 0x3F }));
+        });
+
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds);
+        var result = client.ReadFloat32("D0100");
+
+        await serverTask;
+
+        Assert.Equal(1.5f, result);
+        Assert.Equal(ToyopucProtocol.BuildWordRead(0x1100, 2), requestFrame);
+    }
+
+    [Fact]
+    public async Task HighLevelClient_ReadsDWordAsyncViaSingleWordReadFrame()
+    {
+        using var listener = new TcpListener(IPAddress.Loopback, 0);
+        listener.Start();
+        var port = ((IPEndPoint)listener.LocalEndpoint).Port;
+
+        byte[]? requestFrame = null;
+        var serverTask = Task.Run(async () =>
+        {
+            using var serverClient = await listener.AcceptTcpClientAsync();
+            await using var stream = serverClient.GetStream();
+            requestFrame = await ReadFrameAsync(stream);
+            await stream.WriteAsync(BuildResponse(0x1C, new byte[] { 0x78, 0x56, 0x34, 0x12 }));
+        });
+
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds);
+        var result = await client.ReadDWordAsync("D0100");
+
+        await serverTask;
+
+        Assert.Equal(0x12345678u, result);
+        Assert.Equal(ToyopucProtocol.BuildWordRead(0x1100, 2), requestFrame);
+    }
+
+    [Fact]
+    public async Task HighLevelClient_WritesFloat32ViaSingleWordWriteFrame()
+    {
+        using var listener = new TcpListener(IPAddress.Loopback, 0);
+        listener.Start();
+        var port = ((IPEndPoint)listener.LocalEndpoint).Port;
+
+        byte[]? requestFrame = null;
+        var serverTask = Task.Run(async () =>
+        {
+            using var serverClient = await listener.AcceptTcpClientAsync();
+            await using var stream = serverClient.GetStream();
+            requestFrame = await ReadFrameAsync(stream);
+            await stream.WriteAsync(BuildResponse(0x1D, Array.Empty<byte>()));
+        });
+
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds);
+        client.WriteFloat32("D0100", 1.5f);
+
+        await serverTask;
+
+        Assert.Equal(ToyopucProtocol.BuildWordWrite(0x1100, new[] { 0x0000, 0x3FC0 }), requestFrame);
     }
 
     [Fact]
@@ -74,7 +173,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x1C, new byte[] { 0x11, 0x11, 0x22, 0x22, 0x33, 0x33 }));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -103,7 +202,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x94, new byte[] { 0x11, 0x11, 0x22, 0x22 }));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -135,7 +234,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0xC2, new byte[] { 0x22, 0x22 }));
         });
 
-        using var client = new ToyopucHighLevelClient(
+        using var client = new ToyopucDeviceClient(
             "127.0.0.1",
             port,
             protocol: "tcp",
@@ -169,7 +268,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x1C, new byte[] { 0x34, 0x12 }));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds);
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds);
         var result = client.Read("D0100");
 
         await serverTask;
@@ -196,7 +295,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x22, new byte[] { 0x34, 0x12, 0x78, 0x56 }));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -225,7 +324,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x98, new byte[] { 0x5A, 0xA5 }));
         });
 
-        using var client = new ToyopucHighLevelClient(
+        using var client = new ToyopucDeviceClient(
             "127.0.0.1",
             port,
             protocol: "tcp",
@@ -270,7 +369,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0xC4, new byte[] { 0x00, 0x00, 0x00, 0x00, 0x34, 0x12, 0x78, 0x56 }));
         });
 
-        using var client = new ToyopucHighLevelClient(
+        using var client = new ToyopucDeviceClient(
             "127.0.0.1",
             port,
             protocol: "tcp",
@@ -312,7 +411,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0xC2, new byte[] { 0xBC, 0x9A }));
         });
 
-        using var client = new ToyopucHighLevelClient(
+        using var client = new ToyopucDeviceClient(
             "127.0.0.1",
             port,
             protocol: "tcp",
@@ -347,7 +446,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0xC4, new byte[] { 0x00, 0x00, 0x00, 0x00, 0x5A, 0xA5 }));
         });
 
-        using var client = new ToyopucHighLevelClient(
+        using var client = new ToyopucDeviceClient(
             "127.0.0.1",
             port,
             protocol: "tcp",
@@ -396,7 +495,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0xC2, new byte[] { 0x78, 0x56 }));
         });
 
-        using var client = new ToyopucHighLevelClient(
+        using var client = new ToyopucDeviceClient(
             "127.0.0.1",
             port,
             protocol: "tcp",
@@ -431,7 +530,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x1D, Array.Empty<byte>()));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -459,7 +558,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0xC5, Array.Empty<byte>()));
         });
 
-        using var client = new ToyopucHighLevelClient(
+        using var client = new ToyopucDeviceClient(
             "127.0.0.1",
             port,
             protocol: "tcp",
@@ -504,7 +603,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0x23, Array.Empty<byte>()));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };
@@ -540,7 +639,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0xC3, Array.Empty<byte>()));
         });
 
-        using var client = new ToyopucHighLevelClient(
+        using var client = new ToyopucDeviceClient(
             "127.0.0.1",
             port,
             protocol: "tcp",
@@ -587,7 +686,7 @@ public class ProtocolAndClientTests
             await stream.WriteAsync(BuildResponse(0xC3, Array.Empty<byte>()));
         });
 
-        using var client = new ToyopucHighLevelClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
+        using var client = new ToyopucDeviceClient("127.0.0.1", port, protocol: "tcp", timeout: LocalTestTimeoutSeconds)
         {
             CaptureTraceFrames = true,
         };

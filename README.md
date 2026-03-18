@@ -4,7 +4,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 [![Static Analysis: dotnet format](https://img.shields.io/badge/Lint-dotnet%20format-blue.svg)](https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-format)
 
-A modern, high-performance .NET client library for JTEKT TOYOPUC computer-link communication. Supporting TOYOPUC-Plus, Nano 10GX, and other SN-I/SN-II compatible models.
+A modern, high-performance .NET client library for JTEKT TOYOPUC computer-link communication. Supporting TOYOPUC-Plus, Nano 10GX, and other compatible models.
 
 ## Key Features
 
@@ -27,14 +27,14 @@ A modern, high-performance .NET client library for JTEKT TOYOPUC computer-link c
 using Toyopuc;
 
 // Connect to a TOYOPUC PLC
-using var client = new ToyopucHighLevelClient("192.168.1.5");
+using var client = new ToyopucDeviceClient("192.168.1.5", 1025);
 
 // Read P1-D0000 (Program 1, Word)
-int val = await client.ReadWordAsync("P1-D0000");
-Console.WriteLine($"Value: {val}");
+var value = await client.ReadAsync("P1-D0000");
+Console.WriteLine($"Value: {value}");
 
 // Write to P1-M0000 (Program 1, Bit)
-await client.WriteBitAsync("P1-M0000", true);
+await client.WriteAsync("P1-M0000", true);
 ```
 
 ## Documentation

@@ -94,9 +94,9 @@ ProbeResult ExecuteWriteProbe(string device, int count, int seed, bool expectSuc
     return result;
 }
 
-ToyopucHighLevelClient CreateClient()
+ToyopucDeviceClient CreateClient()
 {
-    return new ToyopucHighLevelClient(
+    return new ToyopucDeviceClient(
         options.Host,
         options.Port,
         protocol: options.Protocol,
@@ -105,7 +105,7 @@ ToyopucHighLevelClient CreateClient()
         deviceProfile: options.Profile);
 }
 
-int[] ReadWords(ToyopucHighLevelClient client, string device, int count)
+int[] ReadWords(ToyopucDeviceClient client, string device, int count)
 {
     var value = client.Read(device, count);
     return value switch
@@ -124,12 +124,12 @@ int[] ReadAfterFailure(string device, int count)
     return ReadWords(retryClient, device, count);
 }
 
-void WriteWords(ToyopucHighLevelClient client, string device, int[] values)
+void WriteWords(ToyopucDeviceClient client, string device, int[] values)
 {
     client.Write(device, values);
 }
 
-void RestoreInChunks(ToyopucHighLevelClient client, string device, int[] baseline, int chunkSize)
+void RestoreInChunks(ToyopucDeviceClient client, string device, int[] baseline, int chunkSize)
 {
     for (var offset = 0; offset < baseline.Length; offset += chunkSize)
     {

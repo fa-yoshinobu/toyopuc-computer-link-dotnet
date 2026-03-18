@@ -15,7 +15,7 @@ var device = (args.ElementAtOrDefault(3) ?? "P1-D0000").ToUpperInvariant();
 var profileName = args.ElementAtOrDefault(4) ?? "TOYOPUC-Plus:Plus Extended mode";
 var profile = ToyopucAddressingOptions.FromProfile(profileName);
 
-using var plc = new ToyopucHighLevelClient(
+using var plc = new ToyopucDeviceClient(
     host,
     port,
     protocol: protocol,

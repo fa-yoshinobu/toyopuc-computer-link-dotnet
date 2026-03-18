@@ -7,7 +7,7 @@ return await RunAsync(args).ConfigureAwait(false);
 
 static async Task<int> RunAsync(string[] args)
 {
-    ToyopucHighLevelClient? plc = null;
+    ToyopucDeviceClient? plc = null;
     SoakLogger? logger = null;
     PollCsvWriter? pollCsv = null;
     var cancelSource = new CancellationTokenSource();
@@ -203,9 +203,9 @@ static async Task<int> RunAsync(string[] args)
     }
 }
 
-static ToyopucHighLevelClient CreateClient(SoakMonitorOptions options, ToyopucAddressingOptions addressingOptions)
+static ToyopucDeviceClient CreateClient(SoakMonitorOptions options, ToyopucAddressingOptions addressingOptions)
 {
-    return new ToyopucHighLevelClient(
+    return new ToyopucDeviceClient(
         options.Host,
         options.Port,
         localPort: options.LocalPort,

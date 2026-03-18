@@ -72,7 +72,7 @@ internal sealed class DeviceMonitorForm : Form
         Padding = new Padding(0, 4, 12, 0),
     };
 
-    private ToyopucHighLevelClient? _client;
+    private ToyopucDeviceClient? _client;
     private DetailViewerForm? _cpuStatusWindow;
     private ClockViewerForm? _clockWindow;
     private DetailViewerForm? _versionWindow;
@@ -633,7 +633,7 @@ internal sealed class DeviceMonitorForm : Form
         }
     }
 
-    private async Task ReadPackedWordRowsBySegmentsAsync(ToyopucHighLevelClient client, ConnectionSettings settings, bool manual)
+    private async Task ReadPackedWordRowsBySegmentsAsync(ToyopucDeviceClient client, ConnectionSettings settings, bool manual)
     {
         var runStart = 0;
         while (runStart < _rows.Count)
@@ -701,7 +701,7 @@ internal sealed class DeviceMonitorForm : Form
     }
 
     private async Task ReadRowsIndividuallyAsync(
-        ToyopucHighLevelClient client,
+        ToyopucDeviceClient client,
         ConnectionSettings settings,
         int startIndex,
         int endIndex,
@@ -1856,9 +1856,9 @@ internal sealed class DeviceMonitorForm : Form
             DeviceMonitorCatalogHelper.NormalizeProfile(_profileComboBox.Text));
     }
 
-    private static ToyopucHighLevelClient CreateClient(ConnectionSettings settings)
+    private static ToyopucDeviceClient CreateClient(ConnectionSettings settings)
     {
-        return new ToyopucHighLevelClient(
+        return new ToyopucDeviceClient(
             settings.Host,
             settings.Port,
             localPort: settings.LocalPort,
@@ -2321,7 +2321,7 @@ internal sealed class DeviceMonitorForm : Form
     private void ShowVersionWindow()
     {
         var appAssembly = typeof(DeviceMonitorForm).Assembly;
-        var libraryAssembly = typeof(ToyopucHighLevelClient).Assembly;
+        var libraryAssembly = typeof(ToyopucDeviceClient).Assembly;
         var window = GetOrCreateDetailWindow(ref _versionWindow, "Version", horizontalOffset: 180);
         window.SetActions();
         window.UpdateContent(

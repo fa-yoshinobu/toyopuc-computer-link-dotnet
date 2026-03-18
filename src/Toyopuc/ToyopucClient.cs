@@ -4,7 +4,7 @@ using System.Net.Sockets;
 
 namespace Toyopuc;
 
-public class ToyopucClient : IDisposable
+public partial class ToyopucClient : IDisposable, IAsyncDisposable
 {
     private static readonly IReadOnlyDictionary<int, string> ErrorCodeDescriptions = new Dictionary<int, string>
     {

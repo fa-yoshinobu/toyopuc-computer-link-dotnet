@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="..\..\docs\internal\device_profile_matrix_r2.csv"
+    <None Include="..\..\docs\maintainer\device_profile_matrix_r2.csv"
           Link="device_profile_matrix_r2.csv"
           CopyToOutputDirectory="PreserveNewest" />
   </ItemGroup>
