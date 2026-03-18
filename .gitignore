@@ -5,3 +5,5 @@ artifacts/
 sample/
 *.nupkg
 *.snupkg
+
+publish/
