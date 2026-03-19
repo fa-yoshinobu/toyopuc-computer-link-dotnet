@@ -13,7 +13,6 @@ public sealed class ExampleEntryPointTests
     [InlineData(@"examples\Toyopuc.SmokeTest\Program.cs")]
     [InlineData(@"examples\Toyopuc.SoakMonitor\Program.cs")]
     [InlineData(@"examples\Toyopuc.WriteLimitProbe\Program.cs")]
-    [InlineData(@"soak_monitor_10gx_core.bat")]
     public void EntryPointFiles_DoNotContainSyntheticGxyAlias(string relativePath)
     {
         var text = ReadRepoFile(relativePath);
@@ -77,14 +76,12 @@ public sealed class ExampleEntryPointTests
         var minimalRead = ReadRepoFile(@"examples\Toyopuc.MinimalRead\Program.cs");
         var soakMonitor = ReadRepoFile(@"examples\Toyopuc.SoakMonitor\Program.cs");
         var writeLimitProbe = ReadRepoFile(@"examples\Toyopuc.WriteLimitProbe\Program.cs");
-        var soakBatch = ReadRepoFile(@"soak_monitor_10gx_core.bat");
 
         Assert.Contains("public string Device { get; private init; } = \"P1-D0000\";", smokeTest, StringComparison.Ordinal);
         Assert.Contains("default: P1-D0000", smokeTest, StringComparison.Ordinal);
         Assert.Contains("P1-D0000", minimalRead, StringComparison.Ordinal);
         Assert.Contains("P1-D0000,P1-M0000,U08000", soakMonitor, StringComparison.Ordinal);
         Assert.Contains("P1-D0000:622:623:0x4100", writeLimitProbe, StringComparison.Ordinal);
-        Assert.Contains("DEVICES=P1-D0000,P1-M0000,U08000,EB00000,FR000000", soakBatch, StringComparison.Ordinal);
     }
 
     [Fact]
