@@ -869,13 +869,13 @@ public partial class ToyopucDeviceClient : ToyopucClient
                 RelayWriteBasicWordBatch(hops, items);
                 return;
             case "basic-byte":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildMultiByteWrite(CollectBasicAddressValues(items)));
-                EnsureCommand(response, 0x25, "Unexpected CMD in relay multi-byte-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildMultiByteWrite(CollectBasicAddressValues(items)));
+                    EnsureCommand(response, 0x25, "Unexpected CMD in relay multi-byte-write response");
+                    return;
+                }
             case "ext-word":
                 RelayWriteExtWordBatch(hops, items);
                 return;
@@ -889,13 +889,13 @@ public partial class ToyopucDeviceClient : ToyopucClient
                 RelayWritePc10WordBatch(hops, items);
                 return;
             case "pc10-bit":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildPc10MultiWrite(PackPc10MultiBitPayload(CollectAddress32BitValues(items))));
-                EnsureCommand(response, 0xC5, "Unexpected CMD in relay PC10 multi-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildPc10MultiWrite(PackPc10MultiBitPayload(CollectAddress32BitValues(items))));
+                    EnsureCommand(response, 0xC5, "Unexpected CMD in relay PC10 multi-write response");
+                    return;
+                }
             case "pc10-byte":
                 RelayWritePc10ByteBatch(hops, items);
                 return;
@@ -1950,142 +1950,142 @@ public partial class ToyopucDeviceClient : ToyopucClient
         switch (resolved.Scheme)
         {
             case "basic-bit":
-            {
-                var response = SendViaRelay(hops, ToyopucProtocol.BuildBitRead(Require(resolved.BasicAddress, "basic_addr")));
-                EnsureCommand(response, 0x20, "Unexpected CMD in relay bit-read response");
-                if (response.Data.Length != 1)
                 {
-                    throw new ToyopucProtocolError("Relay bit-read response must be 1 byte");
-                }
+                    var response = SendViaRelay(hops, ToyopucProtocol.BuildBitRead(Require(resolved.BasicAddress, "basic_addr")));
+                    EnsureCommand(response, 0x20, "Unexpected CMD in relay bit-read response");
+                    if (response.Data.Length != 1)
+                    {
+                        throw new ToyopucProtocolError("Relay bit-read response must be 1 byte");
+                    }
 
-                return (response.Data[0] & 0x01) != 0;
-            }
+                    return (response.Data[0] & 0x01) != 0;
+                }
             case "basic-word":
-            {
-                var response = SendViaRelay(hops, ToyopucProtocol.BuildWordRead(Require(resolved.BasicAddress, "basic_addr"), 1));
-                EnsureCommand(response, 0x1C, "Unexpected CMD in relay word-read response");
-                return ToyopucProtocol.UnpackU16LittleEndian(response.Data)[0];
-            }
+                {
+                    var response = SendViaRelay(hops, ToyopucProtocol.BuildWordRead(Require(resolved.BasicAddress, "basic_addr"), 1));
+                    EnsureCommand(response, 0x1C, "Unexpected CMD in relay word-read response");
+                    return ToyopucProtocol.UnpackU16LittleEndian(response.Data)[0];
+                }
             case "basic-byte":
-            {
-                var response = SendViaRelay(hops, ToyopucProtocol.BuildByteRead(Require(resolved.BasicAddress, "basic_addr"), 1));
-                EnsureCommand(response, 0x1E, "Unexpected CMD in relay byte-read response");
-                if (response.Data.Length != 1)
                 {
-                    throw new ToyopucProtocolError("Relay byte-read response must be 1 byte");
-                }
+                    var response = SendViaRelay(hops, ToyopucProtocol.BuildByteRead(Require(resolved.BasicAddress, "basic_addr"), 1));
+                    EnsureCommand(response, 0x1E, "Unexpected CMD in relay byte-read response");
+                    if (response.Data.Length != 1)
+                    {
+                        throw new ToyopucProtocolError("Relay byte-read response must be 1 byte");
+                    }
 
-                return response.Data[0];
-            }
+                    return response.Data[0];
+                }
             case "program-bit":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtMultiRead(
-                        new[] { (Require(resolved.No, "program number"), Require(resolved.BitNo, "program bit"), Require(resolved.Address, "program addr")) },
-                        Array.Empty<(int No, int Address)>(),
-                        Array.Empty<(int No, int Address)>()));
-                EnsureCommand(response, 0x98, "Unexpected CMD in relay multi-read response");
-                if (response.Data.Length == 0)
                 {
-                    throw new ToyopucProtocolError("Relay multi-read response missing bit payload");
-                }
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtMultiRead(
+                            new[] { (Require(resolved.No, "program number"), Require(resolved.BitNo, "program bit"), Require(resolved.Address, "program addr")) },
+                            Array.Empty<(int No, int Address)>(),
+                            Array.Empty<(int No, int Address)>()));
+                    EnsureCommand(response, 0x98, "Unexpected CMD in relay multi-read response");
+                    if (response.Data.Length == 0)
+                    {
+                        throw new ToyopucProtocolError("Relay multi-read response missing bit payload");
+                    }
 
-                return (response.Data[0] & 0x01) != 0;
-            }
+                    return (response.Data[0] & 0x01) != 0;
+                }
             case "program-word":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtWordRead(Require(resolved.No, "program number"), Require(resolved.Address, "program addr"), 1));
-                EnsureCommand(response, 0x94, "Unexpected CMD in relay ext word-read response");
-                return ToyopucProtocol.UnpackU16LittleEndian(response.Data)[0];
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtWordRead(Require(resolved.No, "program number"), Require(resolved.Address, "program addr"), 1));
+                    EnsureCommand(response, 0x94, "Unexpected CMD in relay ext word-read response");
+                    return ToyopucProtocol.UnpackU16LittleEndian(response.Data)[0];
+                }
             case "program-byte":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtByteRead(Require(resolved.No, "program number"), Require(resolved.Address, "program addr"), 1));
-                EnsureCommand(response, 0x96, "Unexpected CMD in relay ext byte-read response");
-                if (response.Data.Length != 1)
                 {
-                    throw new ToyopucProtocolError("Relay ext byte-read response must be 1 byte");
-                }
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtByteRead(Require(resolved.No, "program number"), Require(resolved.Address, "program addr"), 1));
+                    EnsureCommand(response, 0x96, "Unexpected CMD in relay ext byte-read response");
+                    if (response.Data.Length != 1)
+                    {
+                        throw new ToyopucProtocolError("Relay ext byte-read response must be 1 byte");
+                    }
 
-                return response.Data[0];
-            }
+                    return response.Data[0];
+                }
             case "ext-bit":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtMultiRead(
-                        new[] { (Require(resolved.No, "extended number"), Require(resolved.BitNo, "extended bit"), Require(resolved.Address, "extended addr")) },
-                        Array.Empty<(int No, int Address)>(),
-                        Array.Empty<(int No, int Address)>()));
-                EnsureCommand(response, 0x98, "Unexpected CMD in relay multi-read response");
-                if (response.Data.Length == 0)
                 {
-                    throw new ToyopucProtocolError("Relay multi-read response missing bit payload");
-                }
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtMultiRead(
+                            new[] { (Require(resolved.No, "extended number"), Require(resolved.BitNo, "extended bit"), Require(resolved.Address, "extended addr")) },
+                            Array.Empty<(int No, int Address)>(),
+                            Array.Empty<(int No, int Address)>()));
+                    EnsureCommand(response, 0x98, "Unexpected CMD in relay multi-read response");
+                    if (response.Data.Length == 0)
+                    {
+                        throw new ToyopucProtocolError("Relay multi-read response missing bit payload");
+                    }
 
-                return (response.Data[0] & 0x01) != 0;
-            }
+                    return (response.Data[0] & 0x01) != 0;
+                }
             case "ext-word":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtWordRead(Require(resolved.No, "extended number"), Require(resolved.Address, "extended addr"), 1));
-                EnsureCommand(response, 0x94, "Unexpected CMD in relay ext word-read response");
-                return ToyopucProtocol.UnpackU16LittleEndian(response.Data)[0];
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtWordRead(Require(resolved.No, "extended number"), Require(resolved.Address, "extended addr"), 1));
+                    EnsureCommand(response, 0x94, "Unexpected CMD in relay ext word-read response");
+                    return ToyopucProtocol.UnpackU16LittleEndian(response.Data)[0];
+                }
             case "ext-byte":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtByteRead(Require(resolved.No, "extended number"), Require(resolved.Address, "extended addr"), 1));
-                EnsureCommand(response, 0x96, "Unexpected CMD in relay ext byte-read response");
-                if (response.Data.Length != 1)
                 {
-                    throw new ToyopucProtocolError("Relay ext byte-read response must be 1 byte");
-                }
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtByteRead(Require(resolved.No, "extended number"), Require(resolved.Address, "extended addr"), 1));
+                    EnsureCommand(response, 0x96, "Unexpected CMD in relay ext byte-read response");
+                    if (response.Data.Length != 1)
+                    {
+                        throw new ToyopucProtocolError("Relay ext byte-read response must be 1 byte");
+                    }
 
-                return response.Data[0];
-            }
+                    return response.Data[0];
+                }
             case "pc10-bit":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildPc10MultiRead(BuildPc10MultiBitReadPayload(new[] { Require(resolved.Address32, "pc10 addr32") })));
-                EnsureCommand(response, 0xC4, "Unexpected CMD in relay PC10 multi-read response");
-                if (response.Data.Length < 5)
                 {
-                    throw new ToyopucProtocolError("Relay PC10 bit-read response too short");
-                }
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildPc10MultiRead(BuildPc10MultiBitReadPayload(new[] { Require(resolved.Address32, "pc10 addr32") })));
+                    EnsureCommand(response, 0xC4, "Unexpected CMD in relay PC10 multi-read response");
+                    if (response.Data.Length < 5)
+                    {
+                        throw new ToyopucProtocolError("Relay PC10 bit-read response too short");
+                    }
 
-                return (response.Data[4] & 0x01) != 0;
-            }
+                    return (response.Data[4] & 0x01) != 0;
+                }
             case "pc10-word":
-            {
-                var response = SendViaRelay(hops, ToyopucProtocol.BuildPc10BlockRead(Require(resolved.Address32, "pc10 addr32"), 2));
-                EnsureCommand(response, 0xC2, "Unexpected CMD in relay PC10 block-read response");
-                if (response.Data.Length < 2)
                 {
-                    throw new ToyopucProtocolError("Relay PC10 word-read response too short");
-                }
+                    var response = SendViaRelay(hops, ToyopucProtocol.BuildPc10BlockRead(Require(resolved.Address32, "pc10 addr32"), 2));
+                    EnsureCommand(response, 0xC2, "Unexpected CMD in relay PC10 block-read response");
+                    if (response.Data.Length < 2)
+                    {
+                        throw new ToyopucProtocolError("Relay PC10 word-read response too short");
+                    }
 
-                return response.Data[0] | (response.Data[1] << 8);
-            }
+                    return response.Data[0] | (response.Data[1] << 8);
+                }
             case "pc10-byte":
-            {
-                var response = SendViaRelay(hops, ToyopucProtocol.BuildPc10BlockRead(Require(resolved.Address32, "pc10 addr32"), 1));
-                EnsureCommand(response, 0xC2, "Unexpected CMD in relay PC10 block-read response");
-                if (response.Data.Length < 1)
                 {
-                    throw new ToyopucProtocolError("Relay PC10 byte-read response too short");
-                }
+                    var response = SendViaRelay(hops, ToyopucProtocol.BuildPc10BlockRead(Require(resolved.Address32, "pc10 addr32"), 1));
+                    EnsureCommand(response, 0xC2, "Unexpected CMD in relay PC10 block-read response");
+                    if (response.Data.Length < 1)
+                    {
+                        throw new ToyopucProtocolError("Relay PC10 byte-read response too short");
+                    }
 
-                return response.Data[0];
-            }
+                    return response.Data[0];
+                }
             default:
                 throw new ArgumentException($"Unsupported resolved scheme: {resolved.Scheme}", nameof(resolved));
         }
@@ -2152,101 +2152,101 @@ public partial class ToyopucDeviceClient : ToyopucClient
         switch (resolved.Scheme)
         {
             case "basic-bit":
-            {
-                var response = SendViaRelay(hops, ToyopucProtocol.BuildBitWrite(Require(resolved.BasicAddress, "basic_addr"), ToInt32Invariant(value) & 0x01));
-                EnsureCommand(response, 0x21, "Unexpected CMD in relay bit-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(hops, ToyopucProtocol.BuildBitWrite(Require(resolved.BasicAddress, "basic_addr"), ToInt32Invariant(value) & 0x01));
+                    EnsureCommand(response, 0x21, "Unexpected CMD in relay bit-write response");
+                    return;
+                }
             case "basic-word":
-            {
-                var response = SendViaRelay(hops, ToyopucProtocol.BuildWordWrite(Require(resolved.BasicAddress, "basic_addr"), new[] { ToInt32Invariant(value) }));
-                EnsureCommand(response, 0x1D, "Unexpected CMD in relay word-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(hops, ToyopucProtocol.BuildWordWrite(Require(resolved.BasicAddress, "basic_addr"), new[] { ToInt32Invariant(value) }));
+                    EnsureCommand(response, 0x1D, "Unexpected CMD in relay word-write response");
+                    return;
+                }
             case "basic-byte":
-            {
-                var response = SendViaRelay(hops, ToyopucProtocol.BuildByteWrite(Require(resolved.BasicAddress, "basic_addr"), new[] { ToInt32Invariant(value) }));
-                EnsureCommand(response, 0x1F, "Unexpected CMD in relay byte-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(hops, ToyopucProtocol.BuildByteWrite(Require(resolved.BasicAddress, "basic_addr"), new[] { ToInt32Invariant(value) }));
+                    EnsureCommand(response, 0x1F, "Unexpected CMD in relay byte-write response");
+                    return;
+                }
             case "program-bit":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtMultiWrite(
-                        new[] { (Require(resolved.No, "program number"), Require(resolved.BitNo, "program bit"), Require(resolved.Address, "program addr"), ToInt32Invariant(value) & 0x01) },
-                        Array.Empty<(int No, int Address, int Value)>(),
-                        Array.Empty<(int No, int Address, int Value)>()));
-                EnsureCommand(response, 0x99, "Unexpected CMD in relay multi-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtMultiWrite(
+                            new[] { (Require(resolved.No, "program number"), Require(resolved.BitNo, "program bit"), Require(resolved.Address, "program addr"), ToInt32Invariant(value) & 0x01) },
+                            Array.Empty<(int No, int Address, int Value)>(),
+                            Array.Empty<(int No, int Address, int Value)>()));
+                    EnsureCommand(response, 0x99, "Unexpected CMD in relay multi-write response");
+                    return;
+                }
             case "program-word":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtWordWrite(Require(resolved.No, "program number"), Require(resolved.Address, "program addr"), new[] { ToInt32Invariant(value) }));
-                EnsureCommand(response, 0x95, "Unexpected CMD in relay ext word-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtWordWrite(Require(resolved.No, "program number"), Require(resolved.Address, "program addr"), new[] { ToInt32Invariant(value) }));
+                    EnsureCommand(response, 0x95, "Unexpected CMD in relay ext word-write response");
+                    return;
+                }
             case "program-byte":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtByteWrite(Require(resolved.No, "program number"), Require(resolved.Address, "program addr"), new[] { ToInt32Invariant(value) }));
-                EnsureCommand(response, 0x97, "Unexpected CMD in relay ext byte-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtByteWrite(Require(resolved.No, "program number"), Require(resolved.Address, "program addr"), new[] { ToInt32Invariant(value) }));
+                    EnsureCommand(response, 0x97, "Unexpected CMD in relay ext byte-write response");
+                    return;
+                }
             case "ext-bit":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtMultiWrite(
-                        new[] { (Require(resolved.No, "extended number"), Require(resolved.BitNo, "extended bit"), Require(resolved.Address, "extended addr"), ToInt32Invariant(value) & 0x01) },
-                        Array.Empty<(int No, int Address, int Value)>(),
-                        Array.Empty<(int No, int Address, int Value)>()));
-                EnsureCommand(response, 0x99, "Unexpected CMD in relay multi-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtMultiWrite(
+                            new[] { (Require(resolved.No, "extended number"), Require(resolved.BitNo, "extended bit"), Require(resolved.Address, "extended addr"), ToInt32Invariant(value) & 0x01) },
+                            Array.Empty<(int No, int Address, int Value)>(),
+                            Array.Empty<(int No, int Address, int Value)>()));
+                    EnsureCommand(response, 0x99, "Unexpected CMD in relay multi-write response");
+                    return;
+                }
             case "ext-word":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtWordWrite(Require(resolved.No, "extended number"), Require(resolved.Address, "extended addr"), new[] { ToInt32Invariant(value) }));
-                EnsureCommand(response, 0x95, "Unexpected CMD in relay ext word-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtWordWrite(Require(resolved.No, "extended number"), Require(resolved.Address, "extended addr"), new[] { ToInt32Invariant(value) }));
+                    EnsureCommand(response, 0x95, "Unexpected CMD in relay ext word-write response");
+                    return;
+                }
             case "ext-byte":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildExtByteWrite(Require(resolved.No, "extended number"), Require(resolved.Address, "extended addr"), new[] { ToInt32Invariant(value) }));
-                EnsureCommand(response, 0x97, "Unexpected CMD in relay ext byte-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildExtByteWrite(Require(resolved.No, "extended number"), Require(resolved.Address, "extended addr"), new[] { ToInt32Invariant(value) }));
+                    EnsureCommand(response, 0x97, "Unexpected CMD in relay ext byte-write response");
+                    return;
+                }
             case "pc10-bit":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildPc10MultiWrite(PackPc10MultiBitPayload(new[] { (Require(resolved.Address32, "pc10 addr32"), ToInt32Invariant(value) & 0x01) })));
-                EnsureCommand(response, 0xC5, "Unexpected CMD in relay PC10 multi-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildPc10MultiWrite(PackPc10MultiBitPayload(new[] { (Require(resolved.Address32, "pc10 addr32"), ToInt32Invariant(value) & 0x01) })));
+                    EnsureCommand(response, 0xC5, "Unexpected CMD in relay PC10 multi-write response");
+                    return;
+                }
             case "pc10-word":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildPc10BlockWrite(Require(resolved.Address32, "pc10 addr32"), ToyopucProtocol.PackU16LittleEndian(ToInt32Invariant(value) & 0xFFFF)));
-                EnsureCommand(response, 0xC3, "Unexpected CMD in relay PC10 block-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildPc10BlockWrite(Require(resolved.Address32, "pc10 addr32"), ToyopucProtocol.PackU16LittleEndian(ToInt32Invariant(value) & 0xFFFF)));
+                    EnsureCommand(response, 0xC3, "Unexpected CMD in relay PC10 block-write response");
+                    return;
+                }
             case "pc10-byte":
-            {
-                var response = SendViaRelay(
-                    hops,
-                    ToyopucProtocol.BuildPc10BlockWrite(Require(resolved.Address32, "pc10 addr32"), new[] { (byte)(ToInt32Invariant(value) & 0xFF) }));
-                EnsureCommand(response, 0xC3, "Unexpected CMD in relay PC10 block-write response");
-                return;
-            }
+                {
+                    var response = SendViaRelay(
+                        hops,
+                        ToyopucProtocol.BuildPc10BlockWrite(Require(resolved.Address32, "pc10 addr32"), new[] { (byte)(ToInt32Invariant(value) & 0xFF) }));
+                    EnsureCommand(response, 0xC3, "Unexpected CMD in relay PC10 block-write response");
+                    return;
+                }
             default:
                 throw new ArgumentException($"Unsupported resolved scheme: {resolved.Scheme}", nameof(resolved));
         }
@@ -2279,172 +2279,172 @@ public partial class ToyopucDeviceClient : ToyopucClient
         switch (resolved.Scheme)
         {
             case "basic-bit":
-            {
-                if ((resolved.Area is "L" or "M") && nextIndex >= 0x1000)
                 {
-                    break;
-                }
+                    if ((resolved.Area is "L" or "M") && nextIndex >= 0x1000)
+                    {
+                        break;
+                    }
 
-                var parsed = new ParsedAddress(resolved.Area, nextIndex, "bit", Packed: resolved.Packed);
-                next = resolved with
-                {
-                    Text = nextText,
-                    Index = nextIndex,
-                    BasicAddress = ToyopucAddress.EncodeBitAddress(parsed),
-                };
-                return true;
-            }
+                    var parsed = new ParsedAddress(resolved.Area, nextIndex, "bit", Packed: resolved.Packed);
+                    next = resolved with
+                    {
+                        Text = nextText,
+                        Index = nextIndex,
+                        BasicAddress = ToyopucAddress.EncodeBitAddress(parsed),
+                    };
+                    return true;
+                }
             case "basic-word":
-            {
-                var parsed = new ParsedAddress(resolved.Area, nextIndex, "word", Packed: resolved.Packed);
-                next = resolved with
                 {
-                    Text = nextText,
-                    Index = nextIndex,
-                    BasicAddress = ToyopucAddress.EncodeWordAddress(parsed),
-                };
-                return true;
-            }
+                    var parsed = new ParsedAddress(resolved.Area, nextIndex, "word", Packed: resolved.Packed);
+                    next = resolved with
+                    {
+                        Text = nextText,
+                        Index = nextIndex,
+                        BasicAddress = ToyopucAddress.EncodeWordAddress(parsed),
+                    };
+                    return true;
+                }
             case "basic-byte":
-            {
-                var parsed = new ParsedAddress(resolved.Area, nextIndex, "byte", resolved.High, resolved.Packed);
-                next = resolved with
                 {
-                    Text = nextText,
-                    Index = nextIndex,
-                    BasicAddress = ToyopucAddress.EncodeByteAddress(parsed),
-                };
-                return true;
-            }
+                    var parsed = new ParsedAddress(resolved.Area, nextIndex, "byte", resolved.High, resolved.Packed);
+                    next = resolved with
+                    {
+                        Text = nextText,
+                        Index = nextIndex,
+                        BasicAddress = ToyopucAddress.EncodeByteAddress(parsed),
+                    };
+                    return true;
+                }
             case "program-bit":
-            {
-                if (resolved.Prefix is null || !ProgramPrefixExNo.TryGetValue(resolved.Prefix, out var exNo))
                 {
-                    break;
-                }
+                    if (resolved.Prefix is null || !ProgramPrefixExNo.TryGetValue(resolved.Prefix, out var exNo))
+                    {
+                        break;
+                    }
 
-                var parsed = new ParsedAddress(resolved.Area, nextIndex, "bit", Packed: resolved.Packed);
-                var (bitNo, address) = ToyopucAddress.EncodeProgramBitAddress(parsed);
-                next = resolved with
-                {
-                    Text = nextText,
-                    Index = nextIndex,
-                    Address = address,
-                    BitNo = bitNo,
-                    Address32 = ToyopucAddress.EncodePc10BitAddress(parsed) | (exNo << 19),
-                };
-                return true;
-            }
+                    var parsed = new ParsedAddress(resolved.Area, nextIndex, "bit", Packed: resolved.Packed);
+                    var (bitNo, address) = ToyopucAddress.EncodeProgramBitAddress(parsed);
+                    next = resolved with
+                    {
+                        Text = nextText,
+                        Index = nextIndex,
+                        Address = address,
+                        BitNo = bitNo,
+                        Address32 = ToyopucAddress.EncodePc10BitAddress(parsed) | (exNo << 19),
+                    };
+                    return true;
+                }
             case "program-word":
-            {
-                var parsed = new ParsedAddress(resolved.Area, nextIndex, "word", Packed: resolved.Packed);
-                next = resolved with
                 {
-                    Text = nextText,
-                    Index = nextIndex,
-                    Address = ToyopucAddress.EncodeProgramWordAddress(parsed),
-                };
-                return true;
-            }
+                    var parsed = new ParsedAddress(resolved.Area, nextIndex, "word", Packed: resolved.Packed);
+                    next = resolved with
+                    {
+                        Text = nextText,
+                        Index = nextIndex,
+                        Address = ToyopucAddress.EncodeProgramWordAddress(parsed),
+                    };
+                    return true;
+                }
             case "program-byte":
-            {
-                var parsed = new ParsedAddress(resolved.Area, nextIndex, "byte", resolved.High, resolved.Packed);
-                next = resolved with
                 {
-                    Text = nextText,
-                    Index = nextIndex,
-                    Address = ToyopucAddress.EncodeProgramByteAddress(parsed),
-                };
-                return true;
-            }
+                    var parsed = new ParsedAddress(resolved.Area, nextIndex, "byte", resolved.High, resolved.Packed);
+                    next = resolved with
+                    {
+                        Text = nextText,
+                        Index = nextIndex,
+                        Address = ToyopucAddress.EncodeProgramByteAddress(parsed),
+                    };
+                    return true;
+                }
             case "ext-word":
-            {
-                if (resolved.Area == "U" && AddressingOptions.UseUpperUPc10 && nextIndex >= 0x08000)
                 {
-                    break;
-                }
+                    if (resolved.Area == "U" && AddressingOptions.UseUpperUPc10 && nextIndex >= 0x08000)
+                    {
+                        break;
+                    }
 
-                var ext = ToyopucAddress.EncodeExtNoAddress(resolved.Area, nextIndex, "word");
-                next = resolved with
-                {
-                    Text = nextText,
-                    Index = nextIndex,
-                    No = ext.No,
-                    Address = ext.Address,
-                };
-                return true;
-            }
+                    var ext = ToyopucAddress.EncodeExtNoAddress(resolved.Area, nextIndex, "word");
+                    next = resolved with
+                    {
+                        Text = nextText,
+                        Index = nextIndex,
+                        No = ext.No,
+                        Address = ext.Address,
+                    };
+                    return true;
+                }
             case "ext-byte":
-            {
-                if (resolved.Area == "FR")
                 {
-                    break;
-                }
+                    if (resolved.Area == "FR")
+                    {
+                        break;
+                    }
 
-                if (resolved.Area == "U" && AddressingOptions.UseUpperUPc10 && nextIndex >= 0x08000)
-                {
-                    break;
-                }
+                    if (resolved.Area == "U" && AddressingOptions.UseUpperUPc10 && nextIndex >= 0x08000)
+                    {
+                        break;
+                    }
 
-                var ext = ToyopucAddress.EncodeExtNoAddress(
-                    resolved.Area,
-                    checked((nextIndex * 2) + (resolved.High ? 1 : 0)),
-                    "byte");
-                next = resolved with
-                {
-                    Text = nextText,
-                    Index = nextIndex,
-                    No = ext.No,
-                    Address = ext.Address,
-                };
-                return true;
-            }
+                    var ext = ToyopucAddress.EncodeExtNoAddress(
+                        resolved.Area,
+                        checked((nextIndex * 2) + (resolved.High ? 1 : 0)),
+                        "byte");
+                    next = resolved with
+                    {
+                        Text = nextText,
+                        Index = nextIndex,
+                        No = ext.No,
+                        Address = ext.Address,
+                    };
+                    return true;
+                }
             case "pc10-bit":
-            {
-                if (nextIndex < 0x1000)
                 {
-                    break;
-                }
+                    if (nextIndex < 0x1000)
+                    {
+                        break;
+                    }
 
-                var parsed = new ParsedAddress(resolved.Area, nextIndex, "bit", Packed: resolved.Packed);
-                next = resolved with
-                {
-                    Text = nextText,
-                    Index = nextIndex,
-                    Address32 = ToyopucAddress.EncodePc10BitAddress(parsed),
-                };
-                return true;
-            }
+                    var parsed = new ParsedAddress(resolved.Area, nextIndex, "bit", Packed: resolved.Packed);
+                    next = resolved with
+                    {
+                        Text = nextText,
+                        Index = nextIndex,
+                        Address32 = ToyopucAddress.EncodePc10BitAddress(parsed),
+                    };
+                    return true;
+                }
             case "pc10-word":
-            {
-                if (!TryEncodePc10WordAddress32(resolved.Area, nextIndex, out var address32))
                 {
-                    break;
-                }
+                    if (!TryEncodePc10WordAddress32(resolved.Area, nextIndex, out var address32))
+                    {
+                        break;
+                    }
 
-                next = resolved with
-                {
-                    Text = nextText,
-                    Index = nextIndex,
-                    Address32 = address32,
-                };
-                return true;
-            }
+                    next = resolved with
+                    {
+                        Text = nextText,
+                        Index = nextIndex,
+                        Address32 = address32,
+                    };
+                    return true;
+                }
             case "pc10-byte":
-            {
-                if (!TryEncodePc10ByteAddress32(resolved.Area, nextIndex, resolved.High, out var address32))
                 {
-                    break;
-                }
+                    if (!TryEncodePc10ByteAddress32(resolved.Area, nextIndex, resolved.High, out var address32))
+                    {
+                        break;
+                    }
 
-                next = resolved with
-                {
-                    Text = nextText,
-                    Index = nextIndex,
-                    Address32 = address32,
-                };
-                return true;
-            }
+                    next = resolved with
+                    {
+                        Text = nextText,
+                        Index = nextIndex,
+                        Address32 = address32,
+                    };
+                    return true;
+                }
         }
 
         next = null!;
