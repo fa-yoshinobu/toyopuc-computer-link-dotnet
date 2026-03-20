@@ -8,8 +8,8 @@ This document records the hardware validation flow used in this repository for:
 
 ## Preconditions
 
-- Use [Toyopuc.SmokeTest](d:/Github/toyopucdriver/examples/Toyopuc.SmokeTest/Program.cs) for general validation runs.
-- Use [Toyopuc.BitPatternProbe](d:/Github/toyopucdriver/examples/Toyopuc.BitPatternProbe/Program.cs) for sampled `BIT -> W/L/H` readback validation.
+- Use [Toyopuc.SmokeTest](examples/Toyopuc.SmokeTest/Program.cs) for general validation runs.
+- Use [Toyopuc.BitPatternProbe](examples/Toyopuc.BitPatternProbe/Program.cs) for sampled `BIT -> W/L/H` readback validation.
 - Add `--restore-after-write` to write checks so the original value is restored after verification.
 - When `--profile` is specified, basic families `P/K/V/T/C/L/X/Y/M/S/N/R/D` must be addressed as `P1-*`, `P2-*`, or `P3-*`.
 - Pass relay hops as one PowerShell string.
@@ -305,8 +305,8 @@ Expected result:
 
 - `OK`
   - communication succeeded and the observed value matched the expectation
-  - for [Toyopuc.BitPatternProbe](d:/Github/toyopucdriver/examples/Toyopuc.BitPatternProbe/Program.cs) on direct `PC10G`, documented `V` / `EV` target-specific mismatches are also accepted when restore succeeds
-  - for [Toyopuc.BitPatternProbe](d:/Github/toyopucdriver/examples/Toyopuc.BitPatternProbe/Program.cs) on direct `TOYOPUC-Plus:Plus Extended mode`, documented `V` / `EV` and low-base `X` / `Y` target-specific mismatches are also accepted when restore succeeds
+  - for [Toyopuc.BitPatternProbe](examples/Toyopuc.BitPatternProbe/Program.cs) on direct `PC10G`, documented `V` / `EV` target-specific mismatches are also accepted when restore succeeds
+  - for [Toyopuc.BitPatternProbe](examples/Toyopuc.BitPatternProbe/Program.cs) on direct `TOYOPUC-Plus:Plus Extended mode`, documented `V` / `EV` and low-base `X` / `Y` target-specific mismatches are also accepted when restore succeeds
 - `SKIP`
   - the area is confirmed unsupported for that machine profile
 - `NG`

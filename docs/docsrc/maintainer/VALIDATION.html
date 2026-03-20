@@ -81,8 +81,8 @@
 </ul>
 <h2 id="preconditions">Preconditions</h2>
 <ul>
-<li>Use <a href="d:/Github/toyopucdriver/examples/Toyopuc.SmokeTest/Program.cs">Toyopuc.SmokeTest</a> for general validation runs.</li>
-<li>Use <a href="d:/Github/toyopucdriver/examples/Toyopuc.BitPatternProbe/Program.cs">Toyopuc.BitPatternProbe</a> for sampled <code>BIT -&gt; W/L/H</code> readback validation.</li>
+<li>Use <a href="examples/Toyopuc.SmokeTest/Program.cs">Toyopuc.SmokeTest</a> for general validation runs.</li>
+<li>Use <a href="examples/Toyopuc.BitPatternProbe/Program.cs">Toyopuc.BitPatternProbe</a> for sampled <code>BIT -&gt; W/L/H</code> readback validation.</li>
 <li>Add <code>--restore-after-write</code> to write checks so the original value is restored after verification.</li>
 <li>When <code>--profile</code> is specified, basic families <code>P/K/V/T/C/L/X/Y/M/S/N/R/D</code> must be addressed as <code>P1-*</code>, <code>P2-*</code>, or <code>P3-*</code>.</li>
 <li>Pass relay hops as one PowerShell string.
@@ -322,8 +322,8 @@ dotnet run --project examples\Toyopuc.SmokeTest -- --host 192.168.250.101 --port
 <li><code>OK</code>
 <ul>
 <li>communication succeeded and the observed value matched the expectation</li>
-<li>for <a href="d:/Github/toyopucdriver/examples/Toyopuc.BitPatternProbe/Program.cs">Toyopuc.BitPatternProbe</a> on direct <code>PC10G</code>, documented <code>V</code> / <code>EV</code> target-specific mismatches are also accepted when restore succeeds</li>
-<li>for <a href="d:/Github/toyopucdriver/examples/Toyopuc.BitPatternProbe/Program.cs">Toyopuc.BitPatternProbe</a> on direct <code>TOYOPUC-Plus:Plus Extended mode</code>, documented <code>V</code> / <code>EV</code> and low-base <code>X</code> / <code>Y</code> target-specific mismatches are also accepted when restore succeeds</li>
+<li>for <a href="examples/Toyopuc.BitPatternProbe/Program.cs">Toyopuc.BitPatternProbe</a> on direct <code>PC10G</code>, documented <code>V</code> / <code>EV</code> target-specific mismatches are also accepted when restore succeeds</li>
+<li>for <a href="examples/Toyopuc.BitPatternProbe/Program.cs">Toyopuc.BitPatternProbe</a> on direct <code>TOYOPUC-Plus:Plus Extended mode</code>, documented <code>V</code> / <code>EV</code> and low-base <code>X</code> / <code>Y</code> target-specific mismatches are also accepted when restore succeeds</li>
 </ul>
 </li>
 <li><code>SKIP</code>

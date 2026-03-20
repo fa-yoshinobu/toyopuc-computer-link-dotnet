@@ -12,11 +12,11 @@ In command examples, `--log` / `--csv` / `--summary-json` paths are illustrative
 - Repository: `d:\Github\toyopucdriver`
 - .NET library: `Toyopuc`
 - Tools:
-  - [SmokeTest](d:/Github/toyopucdriver/examples/Toyopuc.SmokeTest/Program.cs)
-  - [MinimalRead](d:/Github/toyopucdriver/examples/Toyopuc.MinimalRead/Program.cs)
-  - [run_validation.ps1](d:/Github/toyopucdriver/examples/run_validation.ps1)
+  - [SmokeTest](examples/Toyopuc.SmokeTest/Program.cs)
+  - [MinimalRead](examples/Toyopuc.MinimalRead/Program.cs)
+  - [run_validation.ps1](examples/run_validation.ps1)
 - Procedure:
-  - [VALIDATION.md](d:/Github/toyopucdriver/docsrc/internal/VALIDATION.md)
+  - [VALIDATION.md](docsrc/internal/VALIDATION.md)
 
 ## 1. Direct TOYOPUC-Plus
 
