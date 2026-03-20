@@ -1,4 +1,5 @@
-# Examples
+
+[![Documentation](https://img.shields.io/badge/docs-GitHub_Pages-blue.svg)](https://fa-yoshinobu.github.io/examples/)
 
 Use `examples/Toyopuc.SmokeTest` for .NET validation.
 Use `examples/Toyopuc.MinimalRead` as the smallest read-only integration sample.
@@ -202,4 +203,6 @@ Validation runner:
 powershell -ExecutionPolicy Bypass -File examples\run_validation.ps1 -Target plus
 powershell -ExecutionPolicy Bypass -File examples\run_validation.ps1 -Target relay-10gx
 ```
+
+
 
