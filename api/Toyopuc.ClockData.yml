@@ -1,0 +1,689 @@
+### YamlMime:ManagedReference
+items:
+- uid: Toyopuc.ClockData
+  commentId: T:Toyopuc.ClockData
+  id: ClockData
+  parent: Toyopuc
+  children:
+  - Toyopuc.ClockData.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  - Toyopuc.ClockData.AsDateTime(System.Int32)
+  - Toyopuc.ClockData.Day
+  - Toyopuc.ClockData.Hour
+  - Toyopuc.ClockData.Minute
+  - Toyopuc.ClockData.Month
+  - Toyopuc.ClockData.Second
+  - Toyopuc.ClockData.Weekday
+  - Toyopuc.ClockData.Year2Digit
+  langs:
+  - csharp
+  - vb
+  name: ClockData
+  nameWithType: ClockData
+  fullName: Toyopuc.ClockData
+  type: Class
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ClockData
+    path: src/Toyopuc/Models.cs
+    startLine: 8
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: 'public sealed record ClockData : IEquatable<ClockData>'
+    content.vb: Public NotInheritable Class ClockData Implements IEquatable(Of ClockData)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Toyopuc.ClockData}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Toyopuc.ClockData.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Toyopuc.ClockData.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)'
+  parent: Toyopuc.ClockData
+  langs:
+  - csharp
+  - vb
+  name: ClockData(int, int, int, int, int, int, int)
+  nameWithType: ClockData.ClockData(int, int, int, int, int, int, int)
+  fullName: Toyopuc.ClockData.ClockData(int, int, int, int, int, int, int)
+  type: Constructor
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: .ctor
+    path: src/Toyopuc/Models.cs
+    startLine: 8
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public ClockData(int Second, int Minute, int Hour, int Day, int Month, int Year2Digit, int Weekday)
+    parameters:
+    - id: Second
+      type: System.Int32
+    - id: Minute
+      type: System.Int32
+    - id: Hour
+      type: System.Int32
+    - id: Day
+      type: System.Int32
+    - id: Month
+      type: System.Int32
+    - id: Year2Digit
+      type: System.Int32
+    - id: Weekday
+      type: System.Int32
+    content.vb: Public Sub New(Second As Integer, Minute As Integer, Hour As Integer, Day As Integer, Month As Integer, Year2Digit As Integer, Weekday As Integer)
+  overload: Toyopuc.ClockData.#ctor*
+  nameWithType.vb: ClockData.New(Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  fullName.vb: Toyopuc.ClockData.New(Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  name.vb: New(Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+- uid: Toyopuc.ClockData.Second
+  commentId: P:Toyopuc.ClockData.Second
+  id: Second
+  parent: Toyopuc.ClockData
+  langs:
+  - csharp
+  - vb
+  name: Second
+  nameWithType: ClockData.Second
+  fullName: Toyopuc.ClockData.Second
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Second
+    path: src/Toyopuc/Models.cs
+    startLine: 9
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int Second { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Second As Integer
+  overload: Toyopuc.ClockData.Second*
+- uid: Toyopuc.ClockData.Minute
+  commentId: P:Toyopuc.ClockData.Minute
+  id: Minute
+  parent: Toyopuc.ClockData
+  langs:
+  - csharp
+  - vb
+  name: Minute
+  nameWithType: ClockData.Minute
+  fullName: Toyopuc.ClockData.Minute
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Minute
+    path: src/Toyopuc/Models.cs
+    startLine: 10
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int Minute { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Minute As Integer
+  overload: Toyopuc.ClockData.Minute*
+- uid: Toyopuc.ClockData.Hour
+  commentId: P:Toyopuc.ClockData.Hour
+  id: Hour
+  parent: Toyopuc.ClockData
+  langs:
+  - csharp
+  - vb
+  name: Hour
+  nameWithType: ClockData.Hour
+  fullName: Toyopuc.ClockData.Hour
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Hour
+    path: src/Toyopuc/Models.cs
+    startLine: 11
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int Hour { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Hour As Integer
+  overload: Toyopuc.ClockData.Hour*
+- uid: Toyopuc.ClockData.Day
+  commentId: P:Toyopuc.ClockData.Day
+  id: Day
+  parent: Toyopuc.ClockData
+  langs:
+  - csharp
+  - vb
+  name: Day
+  nameWithType: ClockData.Day
+  fullName: Toyopuc.ClockData.Day
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Day
+    path: src/Toyopuc/Models.cs
+    startLine: 12
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int Day { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Day As Integer
+  overload: Toyopuc.ClockData.Day*
+- uid: Toyopuc.ClockData.Month
+  commentId: P:Toyopuc.ClockData.Month
+  id: Month
+  parent: Toyopuc.ClockData
+  langs:
+  - csharp
+  - vb
+  name: Month
+  nameWithType: ClockData.Month
+  fullName: Toyopuc.ClockData.Month
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Month
+    path: src/Toyopuc/Models.cs
+    startLine: 13
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int Month { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Month As Integer
+  overload: Toyopuc.ClockData.Month*
+- uid: Toyopuc.ClockData.Year2Digit
+  commentId: P:Toyopuc.ClockData.Year2Digit
+  id: Year2Digit
+  parent: Toyopuc.ClockData
+  langs:
+  - csharp
+  - vb
+  name: Year2Digit
+  nameWithType: ClockData.Year2Digit
+  fullName: Toyopuc.ClockData.Year2Digit
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Year2Digit
+    path: src/Toyopuc/Models.cs
+    startLine: 14
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int Year2Digit { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Year2Digit As Integer
+  overload: Toyopuc.ClockData.Year2Digit*
+- uid: Toyopuc.ClockData.Weekday
+  commentId: P:Toyopuc.ClockData.Weekday
+  id: Weekday
+  parent: Toyopuc.ClockData
+  langs:
+  - csharp
+  - vb
+  name: Weekday
+  nameWithType: ClockData.Weekday
+  fullName: Toyopuc.ClockData.Weekday
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Weekday
+    path: src/Toyopuc/Models.cs
+    startLine: 15
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int Weekday { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Weekday As Integer
+  overload: Toyopuc.ClockData.Weekday*
+- uid: Toyopuc.ClockData.AsDateTime(System.Int32)
+  commentId: M:Toyopuc.ClockData.AsDateTime(System.Int32)
+  id: AsDateTime(System.Int32)
+  parent: Toyopuc.ClockData
+  langs:
+  - csharp
+  - vb
+  name: AsDateTime(int)
+  nameWithType: ClockData.AsDateTime(int)
+  fullName: Toyopuc.ClockData.AsDateTime(int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: AsDateTime
+    path: src/Toyopuc/Models.cs
+    startLine: 17
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public DateTime AsDateTime(int yearBase = 2000)
+    parameters:
+    - id: yearBase
+      type: System.Int32
+    return:
+      type: System.DateTime
+    content.vb: Public Function AsDateTime(yearBase As Integer = 2000) As Date
+  overload: Toyopuc.ClockData.AsDateTime*
+  nameWithType.vb: ClockData.AsDateTime(Integer)
+  fullName.vb: Toyopuc.ClockData.AsDateTime(Integer)
+  name.vb: AsDateTime(Integer)
+references:
+- uid: Toyopuc
+  commentId: N:Toyopuc
+  href: Toyopuc.html
+  name: Toyopuc
+  nameWithType: Toyopuc
+  fullName: Toyopuc
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{Toyopuc.ClockData}
+  commentId: T:System.IEquatable{Toyopuc.ClockData}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ClockData>
+  nameWithType: IEquatable<ClockData>
+  fullName: System.IEquatable<Toyopuc.ClockData>
+  nameWithType.vb: IEquatable(Of ClockData)
+  fullName.vb: System.IEquatable(Of Toyopuc.ClockData)
+  name.vb: IEquatable(Of ClockData)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Toyopuc.ClockData
+    name: ClockData
+    href: Toyopuc.ClockData.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Toyopuc.ClockData
+    name: ClockData
+    href: Toyopuc.ClockData.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Toyopuc.ClockData.#ctor*
+  commentId: Overload:Toyopuc.ClockData.#ctor
+  href: Toyopuc.ClockData.html#Toyopuc_ClockData__ctor_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: ClockData
+  nameWithType: ClockData.ClockData
+  fullName: Toyopuc.ClockData.ClockData
+  nameWithType.vb: ClockData.New
+  fullName.vb: Toyopuc.ClockData.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Toyopuc.ClockData.Second*
+  commentId: Overload:Toyopuc.ClockData.Second
+  href: Toyopuc.ClockData.html#Toyopuc_ClockData_Second
+  name: Second
+  nameWithType: ClockData.Second
+  fullName: Toyopuc.ClockData.Second
+- uid: Toyopuc.ClockData.Minute*
+  commentId: Overload:Toyopuc.ClockData.Minute
+  href: Toyopuc.ClockData.html#Toyopuc_ClockData_Minute
+  name: Minute
+  nameWithType: ClockData.Minute
+  fullName: Toyopuc.ClockData.Minute
+- uid: Toyopuc.ClockData.Hour*
+  commentId: Overload:Toyopuc.ClockData.Hour
+  href: Toyopuc.ClockData.html#Toyopuc_ClockData_Hour
+  name: Hour
+  nameWithType: ClockData.Hour
+  fullName: Toyopuc.ClockData.Hour
+- uid: Toyopuc.ClockData.Day*
+  commentId: Overload:Toyopuc.ClockData.Day
+  href: Toyopuc.ClockData.html#Toyopuc_ClockData_Day
+  name: Day
+  nameWithType: ClockData.Day
+  fullName: Toyopuc.ClockData.Day
+- uid: Toyopuc.ClockData.Month*
+  commentId: Overload:Toyopuc.ClockData.Month
+  href: Toyopuc.ClockData.html#Toyopuc_ClockData_Month
+  name: Month
+  nameWithType: ClockData.Month
+  fullName: Toyopuc.ClockData.Month
+- uid: Toyopuc.ClockData.Year2Digit*
+  commentId: Overload:Toyopuc.ClockData.Year2Digit
+  href: Toyopuc.ClockData.html#Toyopuc_ClockData_Year2Digit
+  name: Year2Digit
+  nameWithType: ClockData.Year2Digit
+  fullName: Toyopuc.ClockData.Year2Digit
+- uid: Toyopuc.ClockData.Weekday*
+  commentId: Overload:Toyopuc.ClockData.Weekday
+  href: Toyopuc.ClockData.html#Toyopuc_ClockData_Weekday
+  name: Weekday
+  nameWithType: ClockData.Weekday
+  fullName: Toyopuc.ClockData.Weekday
+- uid: Toyopuc.ClockData.AsDateTime*
+  commentId: Overload:Toyopuc.ClockData.AsDateTime
+  href: Toyopuc.ClockData.html#Toyopuc_ClockData_AsDateTime_System_Int32_
+  name: AsDateTime
+  nameWithType: ClockData.AsDateTime
+  fullName: Toyopuc.ClockData.AsDateTime
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.datetime
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+  nameWithType.vb: Date
+  fullName.vb: Date
+  name.vb: Date

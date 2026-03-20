@@ -1,0 +1,672 @@
+### YamlMime:ManagedReference
+items:
+- uid: Toyopuc.ParsedAddress
+  commentId: T:Toyopuc.ParsedAddress
+  id: ParsedAddress
+  parent: Toyopuc
+  children:
+  - Toyopuc.ParsedAddress.#ctor(System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Nullable{System.Int32})
+  - Toyopuc.ParsedAddress.Area
+  - Toyopuc.ParsedAddress.DigitCount
+  - Toyopuc.ParsedAddress.High
+  - Toyopuc.ParsedAddress.Index
+  - Toyopuc.ParsedAddress.Packed
+  - Toyopuc.ParsedAddress.Unit
+  langs:
+  - csharp
+  - vb
+  name: ParsedAddress
+  nameWithType: ParsedAddress
+  fullName: Toyopuc.ParsedAddress
+  type: Class
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ParsedAddress
+    path: src/Toyopuc/Models.cs
+    startLine: 112
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: 'public sealed record ParsedAddress : IEquatable<ParsedAddress>'
+    content.vb: Public NotInheritable Class ParsedAddress Implements IEquatable(Of ParsedAddress)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Toyopuc.ParsedAddress}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Toyopuc.ParsedAddress.#ctor(System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Nullable{System.Int32})
+  commentId: M:Toyopuc.ParsedAddress.#ctor(System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Nullable{System.Int32})
+  id: '#ctor(System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Nullable{System.Int32})'
+  parent: Toyopuc.ParsedAddress
+  langs:
+  - csharp
+  - vb
+  name: ParsedAddress(string, int, string, bool, bool, int?)
+  nameWithType: ParsedAddress.ParsedAddress(string, int, string, bool, bool, int?)
+  fullName: Toyopuc.ParsedAddress.ParsedAddress(string, int, string, bool, bool, int?)
+  type: Constructor
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: .ctor
+    path: src/Toyopuc/Models.cs
+    startLine: 112
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public ParsedAddress(string Area, int Index, string Unit, bool High = false, bool Packed = false, int? DigitCount = null)
+    parameters:
+    - id: Area
+      type: System.String
+    - id: Index
+      type: System.Int32
+    - id: Unit
+      type: System.String
+    - id: High
+      type: System.Boolean
+    - id: Packed
+      type: System.Boolean
+    - id: DigitCount
+      type: System.Nullable{System.Int32}
+    content.vb: Public Sub New(Area As String, Index As Integer, Unit As String, High As Boolean = False, Packed As Boolean = False, DigitCount As Integer? = Nothing)
+  overload: Toyopuc.ParsedAddress.#ctor*
+  nameWithType.vb: ParsedAddress.New(String, Integer, String, Boolean, Boolean, Integer?)
+  fullName.vb: Toyopuc.ParsedAddress.New(String, Integer, String, Boolean, Boolean, Integer?)
+  name.vb: New(String, Integer, String, Boolean, Boolean, Integer?)
+- uid: Toyopuc.ParsedAddress.Area
+  commentId: P:Toyopuc.ParsedAddress.Area
+  id: Area
+  parent: Toyopuc.ParsedAddress
+  langs:
+  - csharp
+  - vb
+  name: Area
+  nameWithType: ParsedAddress.Area
+  fullName: Toyopuc.ParsedAddress.Area
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Area
+    path: src/Toyopuc/Models.cs
+    startLine: 113
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public string Area { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Area As String
+  overload: Toyopuc.ParsedAddress.Area*
+- uid: Toyopuc.ParsedAddress.Index
+  commentId: P:Toyopuc.ParsedAddress.Index
+  id: Index
+  parent: Toyopuc.ParsedAddress
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: ParsedAddress.Index
+  fullName: Toyopuc.ParsedAddress.Index
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Index
+    path: src/Toyopuc/Models.cs
+    startLine: 114
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int Index { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Index As Integer
+  overload: Toyopuc.ParsedAddress.Index*
+- uid: Toyopuc.ParsedAddress.Unit
+  commentId: P:Toyopuc.ParsedAddress.Unit
+  id: Unit
+  parent: Toyopuc.ParsedAddress
+  langs:
+  - csharp
+  - vb
+  name: Unit
+  nameWithType: ParsedAddress.Unit
+  fullName: Toyopuc.ParsedAddress.Unit
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Unit
+    path: src/Toyopuc/Models.cs
+    startLine: 115
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public string Unit { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Unit As String
+  overload: Toyopuc.ParsedAddress.Unit*
+- uid: Toyopuc.ParsedAddress.High
+  commentId: P:Toyopuc.ParsedAddress.High
+  id: High
+  parent: Toyopuc.ParsedAddress
+  langs:
+  - csharp
+  - vb
+  name: High
+  nameWithType: ParsedAddress.High
+  fullName: Toyopuc.ParsedAddress.High
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: High
+    path: src/Toyopuc/Models.cs
+    startLine: 116
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool High { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property High As Boolean
+  overload: Toyopuc.ParsedAddress.High*
+- uid: Toyopuc.ParsedAddress.Packed
+  commentId: P:Toyopuc.ParsedAddress.Packed
+  id: Packed
+  parent: Toyopuc.ParsedAddress
+  langs:
+  - csharp
+  - vb
+  name: Packed
+  nameWithType: ParsedAddress.Packed
+  fullName: Toyopuc.ParsedAddress.Packed
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Packed
+    path: src/Toyopuc/Models.cs
+    startLine: 117
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool Packed { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Packed As Boolean
+  overload: Toyopuc.ParsedAddress.Packed*
+- uid: Toyopuc.ParsedAddress.DigitCount
+  commentId: P:Toyopuc.ParsedAddress.DigitCount
+  id: DigitCount
+  parent: Toyopuc.ParsedAddress
+  langs:
+  - csharp
+  - vb
+  name: DigitCount
+  nameWithType: ParsedAddress.DigitCount
+  fullName: Toyopuc.ParsedAddress.DigitCount
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: DigitCount
+    path: src/Toyopuc/Models.cs
+    startLine: 118
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int? DigitCount { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property DigitCount As Integer?
+  overload: Toyopuc.ParsedAddress.DigitCount*
+references:
+- uid: Toyopuc
+  commentId: N:Toyopuc
+  href: Toyopuc.html
+  name: Toyopuc
+  nameWithType: Toyopuc
+  fullName: Toyopuc
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{Toyopuc.ParsedAddress}
+  commentId: T:System.IEquatable{Toyopuc.ParsedAddress}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ParsedAddress>
+  nameWithType: IEquatable<ParsedAddress>
+  fullName: System.IEquatable<Toyopuc.ParsedAddress>
+  nameWithType.vb: IEquatable(Of ParsedAddress)
+  fullName.vb: System.IEquatable(Of Toyopuc.ParsedAddress)
+  name.vb: IEquatable(Of ParsedAddress)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Toyopuc.ParsedAddress
+    name: ParsedAddress
+    href: Toyopuc.ParsedAddress.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Toyopuc.ParsedAddress
+    name: ParsedAddress
+    href: Toyopuc.ParsedAddress.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Toyopuc.ParsedAddress.#ctor*
+  commentId: Overload:Toyopuc.ParsedAddress.#ctor
+  href: Toyopuc.ParsedAddress.html#Toyopuc_ParsedAddress__ctor_System_String_System_Int32_System_String_System_Boolean_System_Boolean_System_Nullable_System_Int32__
+  name: ParsedAddress
+  nameWithType: ParsedAddress.ParsedAddress
+  fullName: Toyopuc.ParsedAddress.ParsedAddress
+  nameWithType.vb: ParsedAddress.New
+  fullName.vb: Toyopuc.ParsedAddress.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Toyopuc.ParsedAddress.Area*
+  commentId: Overload:Toyopuc.ParsedAddress.Area
+  href: Toyopuc.ParsedAddress.html#Toyopuc_ParsedAddress_Area
+  name: Area
+  nameWithType: ParsedAddress.Area
+  fullName: Toyopuc.ParsedAddress.Area
+- uid: Toyopuc.ParsedAddress.Index*
+  commentId: Overload:Toyopuc.ParsedAddress.Index
+  href: Toyopuc.ParsedAddress.html#Toyopuc_ParsedAddress_Index
+  name: Index
+  nameWithType: ParsedAddress.Index
+  fullName: Toyopuc.ParsedAddress.Index
+- uid: Toyopuc.ParsedAddress.Unit*
+  commentId: Overload:Toyopuc.ParsedAddress.Unit
+  href: Toyopuc.ParsedAddress.html#Toyopuc_ParsedAddress_Unit
+  name: Unit
+  nameWithType: ParsedAddress.Unit
+  fullName: Toyopuc.ParsedAddress.Unit
+- uid: Toyopuc.ParsedAddress.High*
+  commentId: Overload:Toyopuc.ParsedAddress.High
+  href: Toyopuc.ParsedAddress.html#Toyopuc_ParsedAddress_High
+  name: High
+  nameWithType: ParsedAddress.High
+  fullName: Toyopuc.ParsedAddress.High
+- uid: Toyopuc.ParsedAddress.Packed*
+  commentId: Overload:Toyopuc.ParsedAddress.Packed
+  href: Toyopuc.ParsedAddress.html#Toyopuc_ParsedAddress_Packed
+  name: Packed
+  nameWithType: ParsedAddress.Packed
+  fullName: Toyopuc.ParsedAddress.Packed
+- uid: Toyopuc.ParsedAddress.DigitCount*
+  commentId: Overload:Toyopuc.ParsedAddress.DigitCount
+  href: Toyopuc.ParsedAddress.html#Toyopuc_ParsedAddress_DigitCount
+  name: DigitCount
+  nameWithType: ParsedAddress.DigitCount
+  fullName: Toyopuc.ParsedAddress.DigitCount

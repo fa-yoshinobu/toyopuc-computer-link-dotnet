@@ -1,0 +1,44 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "files": ["src/**/*.csproj"],
+          "exclude": ["**/bin/**", "**/obj/**"]
+        }
+      ],
+      "dest": "obj/api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": ["**/*.yml"],
+        "src": "obj/api",
+        "dest": "api"
+      },
+      {
+        "files": ["docs/**/*.md", "docs/**/toc.yml"]
+      },
+      {
+        "files": ["index.md", "toc.yml"]
+      }
+    ],
+    "resource": [
+      {
+        "files": ["docs/user/assets/**", "docs/maintainer/assets/**", "docs/maintainer/*.csv", "src/**/*.cs", "tests/**/*.cs", "README.md"]
+      }
+    ],
+    "dest": "_site",
+    "globalMetadata": {
+      "_appTitle": "TOYOPUC Computer Link .NET Documentation",
+      "_enableSearch": true,
+      "_enableNewTab": true,
+      "_appFooter": "PLC Communication Workspace - fa-yoshinobu"
+    },
+    "template": [
+      "default",
+      "modern"
+    ]
+  }
+}

@@ -1,0 +1,4 @@
+- name: User Guide
+  href: USER_GUIDE.md
+- name: Troubleshooting
+  href: TROUBLESHOOTING.md

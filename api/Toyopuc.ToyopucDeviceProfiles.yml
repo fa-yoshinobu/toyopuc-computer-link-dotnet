@@ -1,0 +1,913 @@
+### YamlMime:ManagedReference
+items:
+- uid: Toyopuc.ToyopucDeviceProfiles
+  commentId: T:Toyopuc.ToyopucDeviceProfiles
+  id: ToyopucDeviceProfiles
+  parent: Toyopuc
+  children:
+  - Toyopuc.ToyopucDeviceProfiles.FromName(System.String)
+  - Toyopuc.ToyopucDeviceProfiles.Generic
+  - Toyopuc.ToyopucDeviceProfiles.GetNames
+  - Toyopuc.ToyopucDeviceProfiles.Nano10GxCompatible
+  - Toyopuc.ToyopucDeviceProfiles.Nano10GxMode
+  - Toyopuc.ToyopucDeviceProfiles.NormalizeName(System.String)
+  - Toyopuc.ToyopucDeviceProfiles.Pc10GMode
+  - Toyopuc.ToyopucDeviceProfiles.Pc10GStandardPc3Jg
+  - Toyopuc.ToyopucDeviceProfiles.Pc3JgMode
+  - Toyopuc.ToyopucDeviceProfiles.Pc3JgPc3Separate
+  - Toyopuc.ToyopucDeviceProfiles.Pc3JxPc3Separate
+  - Toyopuc.ToyopucDeviceProfiles.Pc3JxPlusExpansion
+  - Toyopuc.ToyopucDeviceProfiles.ToyopucPlusExtended
+  - Toyopuc.ToyopucDeviceProfiles.ToyopucPlusStandard
+  langs:
+  - csharp
+  - vb
+  name: ToyopucDeviceProfiles
+  nameWithType: ToyopucDeviceProfiles
+  fullName: Toyopuc.ToyopucDeviceProfiles
+  type: Class
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ToyopucDeviceProfiles
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 2
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static class ToyopucDeviceProfiles
+    content.vb: Public Module ToyopucDeviceProfiles
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Toyopuc.ToyopucDeviceProfiles.Generic
+  commentId: P:Toyopuc.ToyopucDeviceProfiles.Generic
+  id: Generic
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: Generic
+  nameWithType: ToyopucDeviceProfiles.Generic
+  fullName: Toyopuc.ToyopucDeviceProfiles.Generic
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Generic
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 4
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile Generic { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared ReadOnly Property Generic As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.Generic*
+- uid: Toyopuc.ToyopucDeviceProfiles.ToyopucPlusStandard
+  commentId: P:Toyopuc.ToyopucDeviceProfiles.ToyopucPlusStandard
+  id: ToyopucPlusStandard
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: ToyopucPlusStandard
+  nameWithType: ToyopucDeviceProfiles.ToyopucPlusStandard
+  fullName: Toyopuc.ToyopucDeviceProfiles.ToyopucPlusStandard
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ToyopucPlusStandard
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 9
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile ToyopucPlusStandard { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared ReadOnly Property ToyopucPlusStandard As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.ToyopucPlusStandard*
+- uid: Toyopuc.ToyopucDeviceProfiles.ToyopucPlusExtended
+  commentId: P:Toyopuc.ToyopucDeviceProfiles.ToyopucPlusExtended
+  id: ToyopucPlusExtended
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: ToyopucPlusExtended
+  nameWithType: ToyopucDeviceProfiles.ToyopucPlusExtended
+  fullName: Toyopuc.ToyopucDeviceProfiles.ToyopucPlusExtended
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ToyopucPlusExtended
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 14
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile ToyopucPlusExtended { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared ReadOnly Property ToyopucPlusExtended As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.ToyopucPlusExtended*
+- uid: Toyopuc.ToyopucDeviceProfiles.Nano10GxMode
+  commentId: P:Toyopuc.ToyopucDeviceProfiles.Nano10GxMode
+  id: Nano10GxMode
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: Nano10GxMode
+  nameWithType: ToyopucDeviceProfiles.Nano10GxMode
+  fullName: Toyopuc.ToyopucDeviceProfiles.Nano10GxMode
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Nano10GxMode
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 19
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile Nano10GxMode { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared ReadOnly Property Nano10GxMode As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.Nano10GxMode*
+- uid: Toyopuc.ToyopucDeviceProfiles.Nano10GxCompatible
+  commentId: P:Toyopuc.ToyopucDeviceProfiles.Nano10GxCompatible
+  id: Nano10GxCompatible
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: Nano10GxCompatible
+  nameWithType: ToyopucDeviceProfiles.Nano10GxCompatible
+  fullName: Toyopuc.ToyopucDeviceProfiles.Nano10GxCompatible
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Nano10GxCompatible
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 24
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile Nano10GxCompatible { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared ReadOnly Property Nano10GxCompatible As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.Nano10GxCompatible*
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc10GStandardPc3Jg
+  commentId: P:Toyopuc.ToyopucDeviceProfiles.Pc10GStandardPc3Jg
+  id: Pc10GStandardPc3Jg
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: Pc10GStandardPc3Jg
+  nameWithType: ToyopucDeviceProfiles.Pc10GStandardPc3Jg
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc10GStandardPc3Jg
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc10GStandardPc3Jg
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 29
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile Pc10GStandardPc3Jg { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared ReadOnly Property Pc10GStandardPc3Jg As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.Pc10GStandardPc3Jg*
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc10GMode
+  commentId: P:Toyopuc.ToyopucDeviceProfiles.Pc10GMode
+  id: Pc10GMode
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: Pc10GMode
+  nameWithType: ToyopucDeviceProfiles.Pc10GMode
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc10GMode
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc10GMode
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 34
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile Pc10GMode { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared ReadOnly Property Pc10GMode As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.Pc10GMode*
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc3JxPc3Separate
+  commentId: P:Toyopuc.ToyopucDeviceProfiles.Pc3JxPc3Separate
+  id: Pc3JxPc3Separate
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: Pc3JxPc3Separate
+  nameWithType: ToyopucDeviceProfiles.Pc3JxPc3Separate
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc3JxPc3Separate
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc3JxPc3Separate
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 39
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile Pc3JxPc3Separate { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared ReadOnly Property Pc3JxPc3Separate As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.Pc3JxPc3Separate*
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc3JxPlusExpansion
+  commentId: P:Toyopuc.ToyopucDeviceProfiles.Pc3JxPlusExpansion
+  id: Pc3JxPlusExpansion
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: Pc3JxPlusExpansion
+  nameWithType: ToyopucDeviceProfiles.Pc3JxPlusExpansion
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc3JxPlusExpansion
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc3JxPlusExpansion
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 44
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile Pc3JxPlusExpansion { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared ReadOnly Property Pc3JxPlusExpansion As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.Pc3JxPlusExpansion*
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc3JgMode
+  commentId: P:Toyopuc.ToyopucDeviceProfiles.Pc3JgMode
+  id: Pc3JgMode
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: Pc3JgMode
+  nameWithType: ToyopucDeviceProfiles.Pc3JgMode
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc3JgMode
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc3JgMode
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 49
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile Pc3JgMode { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared ReadOnly Property Pc3JgMode As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.Pc3JgMode*
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc3JgPc3Separate
+  commentId: P:Toyopuc.ToyopucDeviceProfiles.Pc3JgPc3Separate
+  id: Pc3JgPc3Separate
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: Pc3JgPc3Separate
+  nameWithType: ToyopucDeviceProfiles.Pc3JgPc3Separate
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc3JgPc3Separate
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc3JgPc3Separate
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 54
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile Pc3JgPc3Separate { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared ReadOnly Property Pc3JgPc3Separate As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.Pc3JgPc3Separate*
+- uid: Toyopuc.ToyopucDeviceProfiles.GetNames
+  commentId: M:Toyopuc.ToyopucDeviceProfiles.GetNames
+  id: GetNames
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: GetNames()
+  nameWithType: ToyopucDeviceProfiles.GetNames()
+  fullName: Toyopuc.ToyopucDeviceProfiles.GetNames()
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: GetNames
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 74
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static IReadOnlyList<string> GetNames()
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.String}
+    content.vb: Public Shared Function GetNames() As IReadOnlyList(Of String)
+  overload: Toyopuc.ToyopucDeviceProfiles.GetNames*
+- uid: Toyopuc.ToyopucDeviceProfiles.NormalizeName(System.String)
+  commentId: M:Toyopuc.ToyopucDeviceProfiles.NormalizeName(System.String)
+  id: NormalizeName(System.String)
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: NormalizeName(string?)
+  nameWithType: ToyopucDeviceProfiles.NormalizeName(string?)
+  fullName: Toyopuc.ToyopucDeviceProfiles.NormalizeName(string?)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: NormalizeName
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 79
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static string NormalizeName(string? profile)
+    parameters:
+    - id: profile
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function NormalizeName(profile As String) As String
+  overload: Toyopuc.ToyopucDeviceProfiles.NormalizeName*
+  nameWithType.vb: ToyopucDeviceProfiles.NormalizeName(String)
+  fullName.vb: Toyopuc.ToyopucDeviceProfiles.NormalizeName(String)
+  name.vb: NormalizeName(String)
+- uid: Toyopuc.ToyopucDeviceProfiles.FromName(System.String)
+  commentId: M:Toyopuc.ToyopucDeviceProfiles.FromName(System.String)
+  id: FromName(System.String)
+  parent: Toyopuc.ToyopucDeviceProfiles
+  langs:
+  - csharp
+  - vb
+  name: FromName(string?)
+  nameWithType: ToyopucDeviceProfiles.FromName(string?)
+  fullName: Toyopuc.ToyopucDeviceProfiles.FromName(string?)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfiles.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: FromName
+    path: src/Toyopuc/ToyopucDeviceProfiles.cs
+    startLine: 84
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucDeviceProfile FromName(string? profile)
+    parameters:
+    - id: profile
+      type: System.String
+    return:
+      type: Toyopuc.ToyopucDeviceProfile
+    content.vb: Public Shared Function FromName(profile As String) As ToyopucDeviceProfile
+  overload: Toyopuc.ToyopucDeviceProfiles.FromName*
+  nameWithType.vb: ToyopucDeviceProfiles.FromName(String)
+  fullName.vb: Toyopuc.ToyopucDeviceProfiles.FromName(String)
+  name.vb: FromName(String)
+references:
+- uid: Toyopuc
+  commentId: N:Toyopuc
+  href: Toyopuc.html
+  name: Toyopuc
+  nameWithType: Toyopuc
+  fullName: Toyopuc
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Toyopuc.ToyopucDeviceProfiles.Generic*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.Generic
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_Generic
+  name: Generic
+  nameWithType: ToyopucDeviceProfiles.Generic
+  fullName: Toyopuc.ToyopucDeviceProfiles.Generic
+- uid: Toyopuc.ToyopucDeviceProfile
+  commentId: T:Toyopuc.ToyopucDeviceProfile
+  parent: Toyopuc
+  href: Toyopuc.ToyopucDeviceProfile.html
+  name: ToyopucDeviceProfile
+  nameWithType: ToyopucDeviceProfile
+  fullName: Toyopuc.ToyopucDeviceProfile
+- uid: Toyopuc.ToyopucDeviceProfiles.ToyopucPlusStandard*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.ToyopucPlusStandard
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_ToyopucPlusStandard
+  name: ToyopucPlusStandard
+  nameWithType: ToyopucDeviceProfiles.ToyopucPlusStandard
+  fullName: Toyopuc.ToyopucDeviceProfiles.ToyopucPlusStandard
+- uid: Toyopuc.ToyopucDeviceProfiles.ToyopucPlusExtended*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.ToyopucPlusExtended
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_ToyopucPlusExtended
+  name: ToyopucPlusExtended
+  nameWithType: ToyopucDeviceProfiles.ToyopucPlusExtended
+  fullName: Toyopuc.ToyopucDeviceProfiles.ToyopucPlusExtended
+- uid: Toyopuc.ToyopucDeviceProfiles.Nano10GxMode*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.Nano10GxMode
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_Nano10GxMode
+  name: Nano10GxMode
+  nameWithType: ToyopucDeviceProfiles.Nano10GxMode
+  fullName: Toyopuc.ToyopucDeviceProfiles.Nano10GxMode
+- uid: Toyopuc.ToyopucDeviceProfiles.Nano10GxCompatible*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.Nano10GxCompatible
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_Nano10GxCompatible
+  name: Nano10GxCompatible
+  nameWithType: ToyopucDeviceProfiles.Nano10GxCompatible
+  fullName: Toyopuc.ToyopucDeviceProfiles.Nano10GxCompatible
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc10GStandardPc3Jg*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.Pc10GStandardPc3Jg
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_Pc10GStandardPc3Jg
+  name: Pc10GStandardPc3Jg
+  nameWithType: ToyopucDeviceProfiles.Pc10GStandardPc3Jg
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc10GStandardPc3Jg
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc10GMode*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.Pc10GMode
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_Pc10GMode
+  name: Pc10GMode
+  nameWithType: ToyopucDeviceProfiles.Pc10GMode
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc10GMode
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc3JxPc3Separate*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.Pc3JxPc3Separate
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_Pc3JxPc3Separate
+  name: Pc3JxPc3Separate
+  nameWithType: ToyopucDeviceProfiles.Pc3JxPc3Separate
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc3JxPc3Separate
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc3JxPlusExpansion*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.Pc3JxPlusExpansion
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_Pc3JxPlusExpansion
+  name: Pc3JxPlusExpansion
+  nameWithType: ToyopucDeviceProfiles.Pc3JxPlusExpansion
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc3JxPlusExpansion
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc3JgMode*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.Pc3JgMode
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_Pc3JgMode
+  name: Pc3JgMode
+  nameWithType: ToyopucDeviceProfiles.Pc3JgMode
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc3JgMode
+- uid: Toyopuc.ToyopucDeviceProfiles.Pc3JgPc3Separate*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.Pc3JgPc3Separate
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_Pc3JgPc3Separate
+  name: Pc3JgPc3Separate
+  nameWithType: ToyopucDeviceProfiles.Pc3JgPc3Separate
+  fullName: Toyopuc.ToyopucDeviceProfiles.Pc3JgPc3Separate
+- uid: Toyopuc.ToyopucDeviceProfiles.GetNames*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.GetNames
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_GetNames
+  name: GetNames
+  nameWithType: ToyopucDeviceProfiles.GetNames
+  fullName: Toyopuc.ToyopucDeviceProfiles.GetNames
+- uid: System.Collections.Generic.IReadOnlyList{System.String}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<string>
+  nameWithType: IReadOnlyList<string>
+  fullName: System.Collections.Generic.IReadOnlyList<string>
+  nameWithType.vb: IReadOnlyList(Of String)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of String)
+  name.vb: IReadOnlyList(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: System.String
+    name: string
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.String
+    name: String
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.string
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Toyopuc.ToyopucDeviceProfiles.NormalizeName*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.NormalizeName
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_NormalizeName_System_String_
+  name: NormalizeName
+  nameWithType: ToyopucDeviceProfiles.NormalizeName
+  fullName: Toyopuc.ToyopucDeviceProfiles.NormalizeName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Toyopuc.ToyopucDeviceProfiles.FromName*
+  commentId: Overload:Toyopuc.ToyopucDeviceProfiles.FromName
+  href: Toyopuc.ToyopucDeviceProfiles.html#Toyopuc_ToyopucDeviceProfiles_FromName_System_String_
+  name: FromName
+  nameWithType: ToyopucDeviceProfiles.FromName
+  fullName: Toyopuc.ToyopucDeviceProfiles.FromName

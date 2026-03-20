@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Python Porting Notes | TOYOPUC Computer Link .NET Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Python Porting Notes | TOYOPUC Computer Link .NET Documentation ">
+      
+      
+      <link rel="icon" href="../../favicon.ico">
+      <link rel="stylesheet" href="../../public/docfx.min.css">
+      <link rel="stylesheet" href="../../public/main.css">
+      <meta name="docfx:navrel" content="../../toc.html">
+      <meta name="docfx:tocrel" content="../../toc.html">
+      
+      <meta name="docfx:rel" content="../../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docs/maintainer/PYTHON_PORTING_NOTES.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../../index.html">
+            <img id="logo" class="svg" src="../../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="python-porting-notes">Python Porting Notes</h1>
+
+<p>This document tracks behavior checks between this .NET implementation and the
+upstream Python implementation.</p>
+<h2 id="candidate-cross-implementation-defect">Candidate Cross-Implementation Defect</h2>
+<h3 id="pc10-packed-word-readmany-may-return-all-zeros-on-non-consecutive-lists">PC10 packed-word <code>ReadMany</code> may return all zeros on non-consecutive lists</h3>
+<p>Discovered on <code>2026-03-12</code> during direct <code>Nano 10GX:Compatible mode</code> checks in
+the .NET implementation (before library-side fix).</p>
+<h4 id="symptom">Symptom</h4>
+<ul>
+<li>Single/contiguous reads of packed word devices (for example <code>P1-V000W</code> range)
+return non-zero values.</li>
+<li>Non-consecutive packed-word <code>ReadMany</code> (especially lists spanning multiple
+address sub-ranges, such as <code>...V00xW</code> then <code>...V10xW</code>) may return all zeros.</li>
+</ul>
+<h4 id="trigger-pattern">Trigger Pattern</h4>
+<ul>
+<li>Access kind: <code>pc10-word</code></li>
+<li>Device style: packed word (<code>W</code> suffix)</li>
+<li>Request style: one <code>ReadMany</code> list containing gaps (not a single consecutive
+block)</li>
+</ul>
+<h4 id="impact">Impact</h4>
+<ul>
+<li>Monitoring UIs or batch polling can display false zeros.</li>
+<li>Readback-based validation can incorrectly report bad device state.</li>
+</ul>
+<h4 id="net-side-mitigation-already-applied">.NET-side mitigation already applied</h4>
+<ul>
+<li>For <code>pc10-word</code> + packed-word list in <code>ReadMany</code> / <code>RelayReadMany</code>, the
+client now splits the list into consecutive segments and performs <code>PC10 block read (C2)</code> per segment instead of <code>PC10 multi read (C4)</code> over the full sparse
+list.</li>
+</ul>
+<hr>
+<h2 id="checklist-for-the-original-python-program">Checklist for the Original Python Program</h2>
+<p>Use this checklist to determine whether the same issue exists in Python.</p>
+<h3 id="1-preconditions">1. Preconditions</h3>
+<ul>
+<li>[ ] PLC/profile where packed-word PC10 access is available (for example
+<code>Nano 10GX:Compatible mode</code> direct).</li>
+<li>[ ] Frame logging enabled (to confirm command type and payload).</li>
+<li>[ ] A packed-word area that has known non-zero points at the test time.</li>
+</ul>
+<h3 id="2-reference-read-contiguous-expected-good">2. Reference Read (contiguous, expected-good)</h3>
+<ul>
+<li>[ ] Read a contiguous packed-word block (example: <code>P1-V000W</code> count <code>16</code>).</li>
+<li>[ ] Confirm at least one value is non-zero.</li>
+<li>[ ] Confirm transport uses normal PC10 block-read path for contiguous access.</li>
+</ul>
+<p>Pass condition:</p>
+<ul>
+<li>contiguous read returns plausible values (not forced all-zero).</li>
+</ul>
+<h3 id="3-sparse-readmany-repro">3. Sparse <code>ReadMany</code> Repro</h3>
+<ul>
+<li>[ ] Build one sparse packed-word device list containing a range gap.</li>
+<li>[ ] Example list pattern:
+- <code>P1-V000W</code> .. <code>P1-V00FW</code> (16 points)
+- <code>P1-V100W</code> .. <code>P1-V12FW</code> (48 points)
+- total <code>64</code> points in one <code>ReadMany</code>.</li>
+<li>[ ] Execute one-shot <code>ReadMany</code> with that list.</li>
+</ul>
+<p>Pass condition:</p>
+<ul>
+<li>result is not uniformly zero when step 2 proved non-zero data exists.</li>
+</ul>
+<p>Fail condition (suspected same defect):</p>
+<ul>
+<li>sparse <code>ReadMany</code> returns all zeros while contiguous read in step 2 returns
+non-zero.</li>
+</ul>
+<h3 id="4-frame-level-confirmation">4. Frame-Level Confirmation</h3>
+<ul>
+<li>[ ] Inspect captured request frames for sparse <code>ReadMany</code>.</li>
+<li>[ ] Check whether Python sends one <code>PC10 multi-read (C4)</code> over sparse packed
+words.</li>
+<li>[ ] Compare with segmented <code>PC10 block-read (C2)</code> behavior.</li>
+</ul>
+<p>Interpretation:</p>
+<ul>
+<li>If sparse packed-word <code>ReadMany</code> uses <code>C4</code> and reproduces all-zero, defect is
+very likely shared.</li>
+<li>If Python already segments to <code>C2</code> and values are correct, this defect is not
+present (or already fixed) there.</li>
+</ul>
+<h3 id="5-relay-variant-optional">5. Relay Variant (optional)</h3>
+<ul>
+<li>[ ] Repeat steps 2-4 through relay path (if relay is used in production).</li>
+<li>[ ] Confirm behavior is consistent between direct and relay.</li>
+</ul>
+<h3 id="6-regression-guard-recommended">6. Regression Guard (recommended)</h3>
+<ul>
+<li>[ ] Add an automated test that compares:
+- contiguous packed-word read result
+- sparse packed-word <code>ReadMany</code> result</li>
+<li>[ ] Assert that sparse read does not collapse to all-zero when contiguous
+read confirms non-zero in same cycle.</li>
+<li>[ ] Assert frame strategy for sparse packed words:
+segmented block reads are preferred over one sparse multi-read.</li>
+</ul>
+<hr>
+<h2 id="quick-triage-conclusion-template">Quick Triage Conclusion Template</h2>
+<p>When reporting Python verification results, record:</p>
+<ul>
+<li>target/profile:</li>
+<li>direct or relay:</li>
+<li>contiguous packed read sample:</li>
+<li>sparse <code>ReadMany</code> sample:</li>
+<li>frame command type used (<code>C2</code> segmented / <code>C4</code> sparse):</li>
+<li>conclusion: <code>reproduced</code> / <code>not reproduced</code> / <code>inconclusive</code></li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docs/maintainer/PYTHON_PORTING_NOTES.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          PLC Communication Workspace - fa-yoshinobu
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

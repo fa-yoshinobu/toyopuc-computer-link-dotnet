@@ -1,0 +1,1052 @@
+### YamlMime:ManagedReference
+items:
+- uid: Toyopuc.ToyopucAddressingOptions
+  commentId: T:Toyopuc.ToyopucAddressingOptions
+  id: ToyopucAddressingOptions
+  parent: Toyopuc
+  children:
+  - Toyopuc.ToyopucAddressingOptions.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  - Toyopuc.ToyopucAddressingOptions.Default
+  - Toyopuc.ToyopucAddressingOptions.FromProfile(System.String)
+  - Toyopuc.ToyopucAddressingOptions.Generic
+  - Toyopuc.ToyopucAddressingOptions.Nano10GxCompatible
+  - Toyopuc.ToyopucAddressingOptions.Nano10GxMode
+  - Toyopuc.ToyopucAddressingOptions.Pc10GMode
+  - Toyopuc.ToyopucAddressingOptions.Pc10GStandardPc3Jg
+  - Toyopuc.ToyopucAddressingOptions.Pc3JgMode
+  - Toyopuc.ToyopucAddressingOptions.Pc3JgPc3Separate
+  - Toyopuc.ToyopucAddressingOptions.Pc3JxPc3Separate
+  - Toyopuc.ToyopucAddressingOptions.Pc3JxPlusExpansion
+  - Toyopuc.ToyopucAddressingOptions.ToyopucPlusExtended
+  - Toyopuc.ToyopucAddressingOptions.ToyopucPlusStandard
+  - Toyopuc.ToyopucAddressingOptions.UseEbPc10
+  - Toyopuc.ToyopucAddressingOptions.UseFrPc10
+  - Toyopuc.ToyopucAddressingOptions.UseUpperBitPc10
+  - Toyopuc.ToyopucAddressingOptions.UseUpperMBitPc10
+  - Toyopuc.ToyopucAddressingOptions.UseUpperUPc10
+  langs:
+  - csharp
+  - vb
+  name: ToyopucAddressingOptions
+  nameWithType: ToyopucAddressingOptions
+  fullName: Toyopuc.ToyopucAddressingOptions
+  type: Class
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ToyopucAddressingOptions
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 2
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: 'public sealed record ToyopucAddressingOptions : IEquatable<ToyopucAddressingOptions>'
+    content.vb: Public NotInheritable Class ToyopucAddressingOptions Implements IEquatable(Of ToyopucAddressingOptions)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Toyopuc.ToyopucAddressingOptions}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Toyopuc.ToyopucAddressingOptions.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  commentId: M:Toyopuc.ToyopucAddressingOptions.#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)
+  id: '#ctor(System.Boolean,System.Boolean,System.Boolean,System.Boolean,System.Boolean)'
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: ToyopucAddressingOptions(bool, bool, bool, bool, bool)
+  nameWithType: ToyopucAddressingOptions.ToyopucAddressingOptions(bool, bool, bool, bool, bool)
+  fullName: Toyopuc.ToyopucAddressingOptions.ToyopucAddressingOptions(bool, bool, bool, bool, bool)
+  type: Constructor
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: .ctor
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 2
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public ToyopucAddressingOptions(bool UseUpperUPc10 = true, bool UseEbPc10 = true, bool UseFrPc10 = true, bool UseUpperBitPc10 = true, bool UseUpperMBitPc10 = true)
+    parameters:
+    - id: UseUpperUPc10
+      type: System.Boolean
+    - id: UseEbPc10
+      type: System.Boolean
+    - id: UseFrPc10
+      type: System.Boolean
+    - id: UseUpperBitPc10
+      type: System.Boolean
+    - id: UseUpperMBitPc10
+      type: System.Boolean
+    content.vb: Public Sub New(UseUpperUPc10 As Boolean = True, UseEbPc10 As Boolean = True, UseFrPc10 As Boolean = True, UseUpperBitPc10 As Boolean = True, UseUpperMBitPc10 As Boolean = True)
+  overload: Toyopuc.ToyopucAddressingOptions.#ctor*
+  nameWithType.vb: ToyopucAddressingOptions.New(Boolean, Boolean, Boolean, Boolean, Boolean)
+  fullName.vb: Toyopuc.ToyopucAddressingOptions.New(Boolean, Boolean, Boolean, Boolean, Boolean)
+  name.vb: New(Boolean, Boolean, Boolean, Boolean, Boolean)
+- uid: Toyopuc.ToyopucAddressingOptions.UseUpperUPc10
+  commentId: P:Toyopuc.ToyopucAddressingOptions.UseUpperUPc10
+  id: UseUpperUPc10
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: UseUpperUPc10
+  nameWithType: ToyopucAddressingOptions.UseUpperUPc10
+  fullName: Toyopuc.ToyopucAddressingOptions.UseUpperUPc10
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: UseUpperUPc10
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 3
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool UseUpperUPc10 { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseUpperUPc10 As Boolean
+  overload: Toyopuc.ToyopucAddressingOptions.UseUpperUPc10*
+- uid: Toyopuc.ToyopucAddressingOptions.UseEbPc10
+  commentId: P:Toyopuc.ToyopucAddressingOptions.UseEbPc10
+  id: UseEbPc10
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: UseEbPc10
+  nameWithType: ToyopucAddressingOptions.UseEbPc10
+  fullName: Toyopuc.ToyopucAddressingOptions.UseEbPc10
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: UseEbPc10
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 4
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool UseEbPc10 { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseEbPc10 As Boolean
+  overload: Toyopuc.ToyopucAddressingOptions.UseEbPc10*
+- uid: Toyopuc.ToyopucAddressingOptions.UseFrPc10
+  commentId: P:Toyopuc.ToyopucAddressingOptions.UseFrPc10
+  id: UseFrPc10
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: UseFrPc10
+  nameWithType: ToyopucAddressingOptions.UseFrPc10
+  fullName: Toyopuc.ToyopucAddressingOptions.UseFrPc10
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: UseFrPc10
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 5
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool UseFrPc10 { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseFrPc10 As Boolean
+  overload: Toyopuc.ToyopucAddressingOptions.UseFrPc10*
+- uid: Toyopuc.ToyopucAddressingOptions.UseUpperBitPc10
+  commentId: P:Toyopuc.ToyopucAddressingOptions.UseUpperBitPc10
+  id: UseUpperBitPc10
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: UseUpperBitPc10
+  nameWithType: ToyopucAddressingOptions.UseUpperBitPc10
+  fullName: Toyopuc.ToyopucAddressingOptions.UseUpperBitPc10
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: UseUpperBitPc10
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 6
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool UseUpperBitPc10 { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseUpperBitPc10 As Boolean
+  overload: Toyopuc.ToyopucAddressingOptions.UseUpperBitPc10*
+- uid: Toyopuc.ToyopucAddressingOptions.UseUpperMBitPc10
+  commentId: P:Toyopuc.ToyopucAddressingOptions.UseUpperMBitPc10
+  id: UseUpperMBitPc10
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: UseUpperMBitPc10
+  nameWithType: ToyopucAddressingOptions.UseUpperMBitPc10
+  fullName: Toyopuc.ToyopucAddressingOptions.UseUpperMBitPc10
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: UseUpperMBitPc10
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 7
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool UseUpperMBitPc10 { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property UseUpperMBitPc10 As Boolean
+  overload: Toyopuc.ToyopucAddressingOptions.UseUpperMBitPc10*
+- uid: Toyopuc.ToyopucAddressingOptions.Default
+  commentId: P:Toyopuc.ToyopucAddressingOptions.Default
+  id: Default
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: ToyopucAddressingOptions.Default
+  fullName: Toyopuc.ToyopucAddressingOptions.Default
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Default
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 9
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions Default { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property [Default] As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.Default*
+- uid: Toyopuc.ToyopucAddressingOptions.Generic
+  commentId: P:Toyopuc.ToyopucAddressingOptions.Generic
+  id: Generic
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: Generic
+  nameWithType: ToyopucAddressingOptions.Generic
+  fullName: Toyopuc.ToyopucAddressingOptions.Generic
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Generic
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 11
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions Generic { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property Generic As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.Generic*
+- uid: Toyopuc.ToyopucAddressingOptions.ToyopucPlusStandard
+  commentId: P:Toyopuc.ToyopucAddressingOptions.ToyopucPlusStandard
+  id: ToyopucPlusStandard
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: ToyopucPlusStandard
+  nameWithType: ToyopucAddressingOptions.ToyopucPlusStandard
+  fullName: Toyopuc.ToyopucAddressingOptions.ToyopucPlusStandard
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ToyopucPlusStandard
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 13
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions ToyopucPlusStandard { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property ToyopucPlusStandard As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.ToyopucPlusStandard*
+- uid: Toyopuc.ToyopucAddressingOptions.ToyopucPlusExtended
+  commentId: P:Toyopuc.ToyopucAddressingOptions.ToyopucPlusExtended
+  id: ToyopucPlusExtended
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: ToyopucPlusExtended
+  nameWithType: ToyopucAddressingOptions.ToyopucPlusExtended
+  fullName: Toyopuc.ToyopucAddressingOptions.ToyopucPlusExtended
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ToyopucPlusExtended
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 20
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions ToyopucPlusExtended { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property ToyopucPlusExtended As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.ToyopucPlusExtended*
+- uid: Toyopuc.ToyopucAddressingOptions.Nano10GxMode
+  commentId: P:Toyopuc.ToyopucAddressingOptions.Nano10GxMode
+  id: Nano10GxMode
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: Nano10GxMode
+  nameWithType: ToyopucAddressingOptions.Nano10GxMode
+  fullName: Toyopuc.ToyopucAddressingOptions.Nano10GxMode
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Nano10GxMode
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 22
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions Nano10GxMode { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property Nano10GxMode As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.Nano10GxMode*
+- uid: Toyopuc.ToyopucAddressingOptions.Nano10GxCompatible
+  commentId: P:Toyopuc.ToyopucAddressingOptions.Nano10GxCompatible
+  id: Nano10GxCompatible
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: Nano10GxCompatible
+  nameWithType: ToyopucAddressingOptions.Nano10GxCompatible
+  fullName: Toyopuc.ToyopucAddressingOptions.Nano10GxCompatible
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Nano10GxCompatible
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 24
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions Nano10GxCompatible { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property Nano10GxCompatible As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.Nano10GxCompatible*
+- uid: Toyopuc.ToyopucAddressingOptions.Pc10GStandardPc3Jg
+  commentId: P:Toyopuc.ToyopucAddressingOptions.Pc10GStandardPc3Jg
+  id: Pc10GStandardPc3Jg
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: Pc10GStandardPc3Jg
+  nameWithType: ToyopucAddressingOptions.Pc10GStandardPc3Jg
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc10GStandardPc3Jg
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc10GStandardPc3Jg
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 26
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions Pc10GStandardPc3Jg { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property Pc10GStandardPc3Jg As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.Pc10GStandardPc3Jg*
+- uid: Toyopuc.ToyopucAddressingOptions.Pc10GMode
+  commentId: P:Toyopuc.ToyopucAddressingOptions.Pc10GMode
+  id: Pc10GMode
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: Pc10GMode
+  nameWithType: ToyopucAddressingOptions.Pc10GMode
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc10GMode
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc10GMode
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 33
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions Pc10GMode { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property Pc10GMode As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.Pc10GMode*
+- uid: Toyopuc.ToyopucAddressingOptions.Pc3JxPc3Separate
+  commentId: P:Toyopuc.ToyopucAddressingOptions.Pc3JxPc3Separate
+  id: Pc3JxPc3Separate
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: Pc3JxPc3Separate
+  nameWithType: ToyopucAddressingOptions.Pc3JxPc3Separate
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc3JxPc3Separate
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc3JxPc3Separate
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 35
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions Pc3JxPc3Separate { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property Pc3JxPc3Separate As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.Pc3JxPc3Separate*
+- uid: Toyopuc.ToyopucAddressingOptions.Pc3JxPlusExpansion
+  commentId: P:Toyopuc.ToyopucAddressingOptions.Pc3JxPlusExpansion
+  id: Pc3JxPlusExpansion
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: Pc3JxPlusExpansion
+  nameWithType: ToyopucAddressingOptions.Pc3JxPlusExpansion
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc3JxPlusExpansion
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc3JxPlusExpansion
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 42
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions Pc3JxPlusExpansion { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property Pc3JxPlusExpansion As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.Pc3JxPlusExpansion*
+- uid: Toyopuc.ToyopucAddressingOptions.Pc3JgMode
+  commentId: P:Toyopuc.ToyopucAddressingOptions.Pc3JgMode
+  id: Pc3JgMode
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: Pc3JgMode
+  nameWithType: ToyopucAddressingOptions.Pc3JgMode
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc3JgMode
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc3JgMode
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 49
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions Pc3JgMode { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property Pc3JgMode As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.Pc3JgMode*
+- uid: Toyopuc.ToyopucAddressingOptions.Pc3JgPc3Separate
+  commentId: P:Toyopuc.ToyopucAddressingOptions.Pc3JgPc3Separate
+  id: Pc3JgPc3Separate
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: Pc3JgPc3Separate
+  nameWithType: ToyopucAddressingOptions.Pc3JgPc3Separate
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc3JgPc3Separate
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Pc3JgPc3Separate
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 51
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions Pc3JgPc3Separate { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared ReadOnly Property Pc3JgPc3Separate As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.Pc3JgPc3Separate*
+- uid: Toyopuc.ToyopucAddressingOptions.FromProfile(System.String)
+  commentId: M:Toyopuc.ToyopucAddressingOptions.FromProfile(System.String)
+  id: FromProfile(System.String)
+  parent: Toyopuc.ToyopucAddressingOptions
+  langs:
+  - csharp
+  - vb
+  name: FromProfile(string?)
+  nameWithType: ToyopucAddressingOptions.FromProfile(string?)
+  fullName: Toyopuc.ToyopucAddressingOptions.FromProfile(string?)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddressingOptions.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: FromProfile
+    path: src/Toyopuc/ToyopucAddressingOptions.cs
+    startLine: 53
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ToyopucAddressingOptions FromProfile(string? profile)
+    parameters:
+    - id: profile
+      type: System.String
+    return:
+      type: Toyopuc.ToyopucAddressingOptions
+    content.vb: Public Shared Function FromProfile(profile As String) As ToyopucAddressingOptions
+  overload: Toyopuc.ToyopucAddressingOptions.FromProfile*
+  nameWithType.vb: ToyopucAddressingOptions.FromProfile(String)
+  fullName.vb: Toyopuc.ToyopucAddressingOptions.FromProfile(String)
+  name.vb: FromProfile(String)
+references:
+- uid: Toyopuc
+  commentId: N:Toyopuc
+  href: Toyopuc.html
+  name: Toyopuc
+  nameWithType: Toyopuc
+  fullName: Toyopuc
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{Toyopuc.ToyopucAddressingOptions}
+  commentId: T:System.IEquatable{Toyopuc.ToyopucAddressingOptions}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ToyopucAddressingOptions>
+  nameWithType: IEquatable<ToyopucAddressingOptions>
+  fullName: System.IEquatable<Toyopuc.ToyopucAddressingOptions>
+  nameWithType.vb: IEquatable(Of ToyopucAddressingOptions)
+  fullName.vb: System.IEquatable(Of Toyopuc.ToyopucAddressingOptions)
+  name.vb: IEquatable(Of ToyopucAddressingOptions)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Toyopuc.ToyopucAddressingOptions
+    name: ToyopucAddressingOptions
+    href: Toyopuc.ToyopucAddressingOptions.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Toyopuc.ToyopucAddressingOptions
+    name: ToyopucAddressingOptions
+    href: Toyopuc.ToyopucAddressingOptions.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Toyopuc.ToyopucAddressingOptions.#ctor*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.#ctor
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions__ctor_System_Boolean_System_Boolean_System_Boolean_System_Boolean_System_Boolean_
+  name: ToyopucAddressingOptions
+  nameWithType: ToyopucAddressingOptions.ToyopucAddressingOptions
+  fullName: Toyopuc.ToyopucAddressingOptions.ToyopucAddressingOptions
+  nameWithType.vb: ToyopucAddressingOptions.New
+  fullName.vb: Toyopuc.ToyopucAddressingOptions.New
+  name.vb: New
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: Toyopuc.ToyopucAddressingOptions.UseUpperUPc10*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.UseUpperUPc10
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_UseUpperUPc10
+  name: UseUpperUPc10
+  nameWithType: ToyopucAddressingOptions.UseUpperUPc10
+  fullName: Toyopuc.ToyopucAddressingOptions.UseUpperUPc10
+- uid: Toyopuc.ToyopucAddressingOptions.UseEbPc10*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.UseEbPc10
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_UseEbPc10
+  name: UseEbPc10
+  nameWithType: ToyopucAddressingOptions.UseEbPc10
+  fullName: Toyopuc.ToyopucAddressingOptions.UseEbPc10
+- uid: Toyopuc.ToyopucAddressingOptions.UseFrPc10*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.UseFrPc10
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_UseFrPc10
+  name: UseFrPc10
+  nameWithType: ToyopucAddressingOptions.UseFrPc10
+  fullName: Toyopuc.ToyopucAddressingOptions.UseFrPc10
+- uid: Toyopuc.ToyopucAddressingOptions.UseUpperBitPc10*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.UseUpperBitPc10
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_UseUpperBitPc10
+  name: UseUpperBitPc10
+  nameWithType: ToyopucAddressingOptions.UseUpperBitPc10
+  fullName: Toyopuc.ToyopucAddressingOptions.UseUpperBitPc10
+- uid: Toyopuc.ToyopucAddressingOptions.UseUpperMBitPc10*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.UseUpperMBitPc10
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_UseUpperMBitPc10
+  name: UseUpperMBitPc10
+  nameWithType: ToyopucAddressingOptions.UseUpperMBitPc10
+  fullName: Toyopuc.ToyopucAddressingOptions.UseUpperMBitPc10
+- uid: Toyopuc.ToyopucAddressingOptions.Default*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.Default
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_Default
+  name: Default
+  nameWithType: ToyopucAddressingOptions.Default
+  fullName: Toyopuc.ToyopucAddressingOptions.Default
+- uid: Toyopuc.ToyopucAddressingOptions
+  commentId: T:Toyopuc.ToyopucAddressingOptions
+  parent: Toyopuc
+  href: Toyopuc.ToyopucAddressingOptions.html
+  name: ToyopucAddressingOptions
+  nameWithType: ToyopucAddressingOptions
+  fullName: Toyopuc.ToyopucAddressingOptions
+- uid: Toyopuc.ToyopucAddressingOptions.Generic*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.Generic
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_Generic
+  name: Generic
+  nameWithType: ToyopucAddressingOptions.Generic
+  fullName: Toyopuc.ToyopucAddressingOptions.Generic
+- uid: Toyopuc.ToyopucAddressingOptions.ToyopucPlusStandard*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.ToyopucPlusStandard
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_ToyopucPlusStandard
+  name: ToyopucPlusStandard
+  nameWithType: ToyopucAddressingOptions.ToyopucPlusStandard
+  fullName: Toyopuc.ToyopucAddressingOptions.ToyopucPlusStandard
+- uid: Toyopuc.ToyopucAddressingOptions.ToyopucPlusExtended*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.ToyopucPlusExtended
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_ToyopucPlusExtended
+  name: ToyopucPlusExtended
+  nameWithType: ToyopucAddressingOptions.ToyopucPlusExtended
+  fullName: Toyopuc.ToyopucAddressingOptions.ToyopucPlusExtended
+- uid: Toyopuc.ToyopucAddressingOptions.Nano10GxMode*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.Nano10GxMode
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_Nano10GxMode
+  name: Nano10GxMode
+  nameWithType: ToyopucAddressingOptions.Nano10GxMode
+  fullName: Toyopuc.ToyopucAddressingOptions.Nano10GxMode
+- uid: Toyopuc.ToyopucAddressingOptions.Nano10GxCompatible*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.Nano10GxCompatible
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_Nano10GxCompatible
+  name: Nano10GxCompatible
+  nameWithType: ToyopucAddressingOptions.Nano10GxCompatible
+  fullName: Toyopuc.ToyopucAddressingOptions.Nano10GxCompatible
+- uid: Toyopuc.ToyopucAddressingOptions.Pc10GStandardPc3Jg*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.Pc10GStandardPc3Jg
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_Pc10GStandardPc3Jg
+  name: Pc10GStandardPc3Jg
+  nameWithType: ToyopucAddressingOptions.Pc10GStandardPc3Jg
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc10GStandardPc3Jg
+- uid: Toyopuc.ToyopucAddressingOptions.Pc10GMode*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.Pc10GMode
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_Pc10GMode
+  name: Pc10GMode
+  nameWithType: ToyopucAddressingOptions.Pc10GMode
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc10GMode
+- uid: Toyopuc.ToyopucAddressingOptions.Pc3JxPc3Separate*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.Pc3JxPc3Separate
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_Pc3JxPc3Separate
+  name: Pc3JxPc3Separate
+  nameWithType: ToyopucAddressingOptions.Pc3JxPc3Separate
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc3JxPc3Separate
+- uid: Toyopuc.ToyopucAddressingOptions.Pc3JxPlusExpansion*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.Pc3JxPlusExpansion
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_Pc3JxPlusExpansion
+  name: Pc3JxPlusExpansion
+  nameWithType: ToyopucAddressingOptions.Pc3JxPlusExpansion
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc3JxPlusExpansion
+- uid: Toyopuc.ToyopucAddressingOptions.Pc3JgMode*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.Pc3JgMode
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_Pc3JgMode
+  name: Pc3JgMode
+  nameWithType: ToyopucAddressingOptions.Pc3JgMode
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc3JgMode
+- uid: Toyopuc.ToyopucAddressingOptions.Pc3JgPc3Separate*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.Pc3JgPc3Separate
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_Pc3JgPc3Separate
+  name: Pc3JgPc3Separate
+  nameWithType: ToyopucAddressingOptions.Pc3JgPc3Separate
+  fullName: Toyopuc.ToyopucAddressingOptions.Pc3JgPc3Separate
+- uid: Toyopuc.ToyopucAddressingOptions.FromProfile*
+  commentId: Overload:Toyopuc.ToyopucAddressingOptions.FromProfile
+  href: Toyopuc.ToyopucAddressingOptions.html#Toyopuc_ToyopucAddressingOptions_FromProfile_System_String_
+  name: FromProfile
+  nameWithType: ToyopucAddressingOptions.FromProfile
+  fullName: Toyopuc.ToyopucAddressingOptions.FromProfile
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String

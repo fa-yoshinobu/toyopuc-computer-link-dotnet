@@ -1,0 +1,938 @@
+### YamlMime:ManagedReference
+items:
+- uid: Toyopuc.ResolvedDevice
+  commentId: T:Toyopuc.ResolvedDevice
+  id: ResolvedDevice
+  parent: Toyopuc
+  children:
+  - Toyopuc.ResolvedDevice.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  - Toyopuc.ResolvedDevice.Address
+  - Toyopuc.ResolvedDevice.Address32
+  - Toyopuc.ResolvedDevice.Area
+  - Toyopuc.ResolvedDevice.BasicAddress
+  - Toyopuc.ResolvedDevice.BitNo
+  - Toyopuc.ResolvedDevice.High
+  - Toyopuc.ResolvedDevice.Index
+  - Toyopuc.ResolvedDevice.No
+  - Toyopuc.ResolvedDevice.Packed
+  - Toyopuc.ResolvedDevice.Prefix
+  - Toyopuc.ResolvedDevice.Scheme
+  - Toyopuc.ResolvedDevice.Text
+  - Toyopuc.ResolvedDevice.Unit
+  langs:
+  - csharp
+  - vb
+  name: ResolvedDevice
+  nameWithType: ResolvedDevice
+  fullName: Toyopuc.ResolvedDevice
+  type: Class
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ResolvedDevice
+    path: src/Toyopuc/Models.cs
+    startLine: 130
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: 'public sealed record ResolvedDevice : IEquatable<ResolvedDevice>'
+    content.vb: Public NotInheritable Class ResolvedDevice Implements IEquatable(Of ResolvedDevice)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Toyopuc.ResolvedDevice}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Toyopuc.ResolvedDevice.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  commentId: M:Toyopuc.ResolvedDevice.#ctor(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})
+  id: '#ctor(System.String,System.String,System.String,System.String,System.Int32,System.String,System.Boolean,System.Boolean,System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32},System.Nullable{System.Int32})'
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: ResolvedDevice(string, string, string, string, int, string?, bool, bool, int?, int?, int?, int?, int?)
+  nameWithType: ResolvedDevice.ResolvedDevice(string, string, string, string, int, string?, bool, bool, int?, int?, int?, int?, int?)
+  fullName: Toyopuc.ResolvedDevice.ResolvedDevice(string, string, string, string, int, string?, bool, bool, int?, int?, int?, int?, int?)
+  type: Constructor
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: .ctor
+    path: src/Toyopuc/Models.cs
+    startLine: 130
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public ResolvedDevice(string Text, string Scheme, string Unit, string Area, int Index, string? Prefix = null, bool High = false, bool Packed = false, int? BasicAddress = null, int? No = null, int? Address = null, int? BitNo = null, int? Address32 = null)
+    parameters:
+    - id: Text
+      type: System.String
+    - id: Scheme
+      type: System.String
+    - id: Unit
+      type: System.String
+    - id: Area
+      type: System.String
+    - id: Index
+      type: System.Int32
+    - id: Prefix
+      type: System.String
+    - id: High
+      type: System.Boolean
+    - id: Packed
+      type: System.Boolean
+    - id: BasicAddress
+      type: System.Nullable{System.Int32}
+    - id: No
+      type: System.Nullable{System.Int32}
+    - id: Address
+      type: System.Nullable{System.Int32}
+    - id: BitNo
+      type: System.Nullable{System.Int32}
+    - id: Address32
+      type: System.Nullable{System.Int32}
+    content.vb: Public Sub New(Text As String, Scheme As String, Unit As String, Area As String, Index As Integer, Prefix As String = Nothing, High As Boolean = False, Packed As Boolean = False, BasicAddress As Integer? = Nothing, No As Integer? = Nothing, Address As Integer? = Nothing, BitNo As Integer? = Nothing, Address32 As Integer? = Nothing)
+  overload: Toyopuc.ResolvedDevice.#ctor*
+  nameWithType.vb: ResolvedDevice.New(String, String, String, String, Integer, String, Boolean, Boolean, Integer?, Integer?, Integer?, Integer?, Integer?)
+  fullName.vb: Toyopuc.ResolvedDevice.New(String, String, String, String, Integer, String, Boolean, Boolean, Integer?, Integer?, Integer?, Integer?, Integer?)
+  name.vb: New(String, String, String, String, Integer, String, Boolean, Boolean, Integer?, Integer?, Integer?, Integer?, Integer?)
+- uid: Toyopuc.ResolvedDevice.Text
+  commentId: P:Toyopuc.ResolvedDevice.Text
+  id: Text
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: Text
+  nameWithType: ResolvedDevice.Text
+  fullName: Toyopuc.ResolvedDevice.Text
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Text
+    path: src/Toyopuc/Models.cs
+    startLine: 131
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public string Text { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Text As String
+  overload: Toyopuc.ResolvedDevice.Text*
+- uid: Toyopuc.ResolvedDevice.Scheme
+  commentId: P:Toyopuc.ResolvedDevice.Scheme
+  id: Scheme
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: Scheme
+  nameWithType: ResolvedDevice.Scheme
+  fullName: Toyopuc.ResolvedDevice.Scheme
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Scheme
+    path: src/Toyopuc/Models.cs
+    startLine: 132
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public string Scheme { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Scheme As String
+  overload: Toyopuc.ResolvedDevice.Scheme*
+- uid: Toyopuc.ResolvedDevice.Unit
+  commentId: P:Toyopuc.ResolvedDevice.Unit
+  id: Unit
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: Unit
+  nameWithType: ResolvedDevice.Unit
+  fullName: Toyopuc.ResolvedDevice.Unit
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Unit
+    path: src/Toyopuc/Models.cs
+    startLine: 133
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public string Unit { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Unit As String
+  overload: Toyopuc.ResolvedDevice.Unit*
+- uid: Toyopuc.ResolvedDevice.Area
+  commentId: P:Toyopuc.ResolvedDevice.Area
+  id: Area
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: Area
+  nameWithType: ResolvedDevice.Area
+  fullName: Toyopuc.ResolvedDevice.Area
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Area
+    path: src/Toyopuc/Models.cs
+    startLine: 134
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public string Area { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Area As String
+  overload: Toyopuc.ResolvedDevice.Area*
+- uid: Toyopuc.ResolvedDevice.Index
+  commentId: P:Toyopuc.ResolvedDevice.Index
+  id: Index
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: Index
+  nameWithType: ResolvedDevice.Index
+  fullName: Toyopuc.ResolvedDevice.Index
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Index
+    path: src/Toyopuc/Models.cs
+    startLine: 135
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int Index { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Index As Integer
+  overload: Toyopuc.ResolvedDevice.Index*
+- uid: Toyopuc.ResolvedDevice.Prefix
+  commentId: P:Toyopuc.ResolvedDevice.Prefix
+  id: Prefix
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: Prefix
+  nameWithType: ResolvedDevice.Prefix
+  fullName: Toyopuc.ResolvedDevice.Prefix
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Prefix
+    path: src/Toyopuc/Models.cs
+    startLine: 136
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public string? Prefix { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Prefix As String
+  overload: Toyopuc.ResolvedDevice.Prefix*
+- uid: Toyopuc.ResolvedDevice.High
+  commentId: P:Toyopuc.ResolvedDevice.High
+  id: High
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: High
+  nameWithType: ResolvedDevice.High
+  fullName: Toyopuc.ResolvedDevice.High
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: High
+    path: src/Toyopuc/Models.cs
+    startLine: 137
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool High { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property High As Boolean
+  overload: Toyopuc.ResolvedDevice.High*
+- uid: Toyopuc.ResolvedDevice.Packed
+  commentId: P:Toyopuc.ResolvedDevice.Packed
+  id: Packed
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: Packed
+  nameWithType: ResolvedDevice.Packed
+  fullName: Toyopuc.ResolvedDevice.Packed
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Packed
+    path: src/Toyopuc/Models.cs
+    startLine: 138
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool Packed { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property Packed As Boolean
+  overload: Toyopuc.ResolvedDevice.Packed*
+- uid: Toyopuc.ResolvedDevice.BasicAddress
+  commentId: P:Toyopuc.ResolvedDevice.BasicAddress
+  id: BasicAddress
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: BasicAddress
+  nameWithType: ResolvedDevice.BasicAddress
+  fullName: Toyopuc.ResolvedDevice.BasicAddress
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BasicAddress
+    path: src/Toyopuc/Models.cs
+    startLine: 139
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int? BasicAddress { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property BasicAddress As Integer?
+  overload: Toyopuc.ResolvedDevice.BasicAddress*
+- uid: Toyopuc.ResolvedDevice.No
+  commentId: P:Toyopuc.ResolvedDevice.No
+  id: No
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: No
+  nameWithType: ResolvedDevice.No
+  fullName: Toyopuc.ResolvedDevice.No
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: No
+    path: src/Toyopuc/Models.cs
+    startLine: 140
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int? No { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property No As Integer?
+  overload: Toyopuc.ResolvedDevice.No*
+- uid: Toyopuc.ResolvedDevice.Address
+  commentId: P:Toyopuc.ResolvedDevice.Address
+  id: Address
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: ResolvedDevice.Address
+  fullName: Toyopuc.ResolvedDevice.Address
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Address
+    path: src/Toyopuc/Models.cs
+    startLine: 141
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int? Address { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property Address As Integer?
+  overload: Toyopuc.ResolvedDevice.Address*
+- uid: Toyopuc.ResolvedDevice.BitNo
+  commentId: P:Toyopuc.ResolvedDevice.BitNo
+  id: BitNo
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: BitNo
+  nameWithType: ResolvedDevice.BitNo
+  fullName: Toyopuc.ResolvedDevice.BitNo
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BitNo
+    path: src/Toyopuc/Models.cs
+    startLine: 142
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int? BitNo { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property BitNo As Integer?
+  overload: Toyopuc.ResolvedDevice.BitNo*
+- uid: Toyopuc.ResolvedDevice.Address32
+  commentId: P:Toyopuc.ResolvedDevice.Address32
+  id: Address32
+  parent: Toyopuc.ResolvedDevice
+  langs:
+  - csharp
+  - vb
+  name: Address32
+  nameWithType: ResolvedDevice.Address32
+  fullName: Toyopuc.ResolvedDevice.Address32
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Address32
+    path: src/Toyopuc/Models.cs
+    startLine: 143
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int? Address32 { get; init; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Int32}
+    content.vb: Public Property Address32 As Integer?
+  overload: Toyopuc.ResolvedDevice.Address32*
+references:
+- uid: Toyopuc
+  commentId: N:Toyopuc
+  href: Toyopuc.html
+  name: Toyopuc
+  nameWithType: Toyopuc
+  fullName: Toyopuc
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{Toyopuc.ResolvedDevice}
+  commentId: T:System.IEquatable{Toyopuc.ResolvedDevice}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ResolvedDevice>
+  nameWithType: IEquatable<ResolvedDevice>
+  fullName: System.IEquatable<Toyopuc.ResolvedDevice>
+  nameWithType.vb: IEquatable(Of ResolvedDevice)
+  fullName.vb: System.IEquatable(Of Toyopuc.ResolvedDevice)
+  name.vb: IEquatable(Of ResolvedDevice)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Toyopuc.ResolvedDevice
+    name: ResolvedDevice
+    href: Toyopuc.ResolvedDevice.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Toyopuc.ResolvedDevice
+    name: ResolvedDevice
+    href: Toyopuc.ResolvedDevice.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Toyopuc.ResolvedDevice.#ctor*
+  commentId: Overload:Toyopuc.ResolvedDevice.#ctor
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice__ctor_System_String_System_String_System_String_System_String_System_Int32_System_String_System_Boolean_System_Boolean_System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__System_Nullable_System_Int32__
+  name: ResolvedDevice
+  nameWithType: ResolvedDevice.ResolvedDevice
+  fullName: Toyopuc.ResolvedDevice.ResolvedDevice
+  nameWithType.vb: ResolvedDevice.New
+  fullName.vb: Toyopuc.ResolvedDevice.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Nullable{System.Int32}
+  commentId: T:System.Nullable{System.Int32}
+  parent: System
+  definition: System.Nullable`1
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int?
+  nameWithType: int?
+  fullName: int?
+  nameWithType.vb: Integer?
+  fullName.vb: Integer?
+  name.vb: Integer?
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '?'
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.nullable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Toyopuc.ResolvedDevice.Text*
+  commentId: Overload:Toyopuc.ResolvedDevice.Text
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_Text
+  name: Text
+  nameWithType: ResolvedDevice.Text
+  fullName: Toyopuc.ResolvedDevice.Text
+- uid: Toyopuc.ResolvedDevice.Scheme*
+  commentId: Overload:Toyopuc.ResolvedDevice.Scheme
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_Scheme
+  name: Scheme
+  nameWithType: ResolvedDevice.Scheme
+  fullName: Toyopuc.ResolvedDevice.Scheme
+- uid: Toyopuc.ResolvedDevice.Unit*
+  commentId: Overload:Toyopuc.ResolvedDevice.Unit
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_Unit
+  name: Unit
+  nameWithType: ResolvedDevice.Unit
+  fullName: Toyopuc.ResolvedDevice.Unit
+- uid: Toyopuc.ResolvedDevice.Area*
+  commentId: Overload:Toyopuc.ResolvedDevice.Area
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_Area
+  name: Area
+  nameWithType: ResolvedDevice.Area
+  fullName: Toyopuc.ResolvedDevice.Area
+- uid: Toyopuc.ResolvedDevice.Index*
+  commentId: Overload:Toyopuc.ResolvedDevice.Index
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_Index
+  name: Index
+  nameWithType: ResolvedDevice.Index
+  fullName: Toyopuc.ResolvedDevice.Index
+- uid: Toyopuc.ResolvedDevice.Prefix*
+  commentId: Overload:Toyopuc.ResolvedDevice.Prefix
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_Prefix
+  name: Prefix
+  nameWithType: ResolvedDevice.Prefix
+  fullName: Toyopuc.ResolvedDevice.Prefix
+- uid: Toyopuc.ResolvedDevice.High*
+  commentId: Overload:Toyopuc.ResolvedDevice.High
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_High
+  name: High
+  nameWithType: ResolvedDevice.High
+  fullName: Toyopuc.ResolvedDevice.High
+- uid: Toyopuc.ResolvedDevice.Packed*
+  commentId: Overload:Toyopuc.ResolvedDevice.Packed
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_Packed
+  name: Packed
+  nameWithType: ResolvedDevice.Packed
+  fullName: Toyopuc.ResolvedDevice.Packed
+- uid: Toyopuc.ResolvedDevice.BasicAddress*
+  commentId: Overload:Toyopuc.ResolvedDevice.BasicAddress
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_BasicAddress
+  name: BasicAddress
+  nameWithType: ResolvedDevice.BasicAddress
+  fullName: Toyopuc.ResolvedDevice.BasicAddress
+- uid: Toyopuc.ResolvedDevice.No*
+  commentId: Overload:Toyopuc.ResolvedDevice.No
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_No
+  name: No
+  nameWithType: ResolvedDevice.No
+  fullName: Toyopuc.ResolvedDevice.No
+- uid: Toyopuc.ResolvedDevice.Address*
+  commentId: Overload:Toyopuc.ResolvedDevice.Address
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_Address
+  name: Address
+  nameWithType: ResolvedDevice.Address
+  fullName: Toyopuc.ResolvedDevice.Address
+- uid: Toyopuc.ResolvedDevice.BitNo*
+  commentId: Overload:Toyopuc.ResolvedDevice.BitNo
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_BitNo
+  name: BitNo
+  nameWithType: ResolvedDevice.BitNo
+  fullName: Toyopuc.ResolvedDevice.BitNo
+- uid: Toyopuc.ResolvedDevice.Address32*
+  commentId: Overload:Toyopuc.ResolvedDevice.Address32
+  href: Toyopuc.ResolvedDevice.html#Toyopuc_ResolvedDevice_Address32
+  name: Address32
+  nameWithType: ResolvedDevice.Address32
+  fullName: Toyopuc.ResolvedDevice.Address32

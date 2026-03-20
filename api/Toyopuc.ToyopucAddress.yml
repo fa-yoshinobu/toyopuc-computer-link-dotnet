@@ -1,0 +1,1059 @@
+### YamlMime:ManagedReference
+items:
+- uid: Toyopuc.ToyopucAddress
+  commentId: T:Toyopuc.ToyopucAddress
+  id: ToyopucAddress
+  parent: Toyopuc
+  children:
+  - Toyopuc.ToyopucAddress.EncodeBitAddress(Toyopuc.ParsedAddress)
+  - Toyopuc.ToyopucAddress.EncodeByteAddress(Toyopuc.ParsedAddress)
+  - Toyopuc.ToyopucAddress.EncodeExNoBitU32(System.Int32,System.Int32)
+  - Toyopuc.ToyopucAddress.EncodeExNoByteU32(System.Int32,System.Int32)
+  - Toyopuc.ToyopucAddress.EncodeExtNoAddress(System.String,System.Int32,System.String)
+  - Toyopuc.ToyopucAddress.EncodeFrWordAddr32(System.Int32)
+  - Toyopuc.ToyopucAddress.EncodePc10BitAddress(Toyopuc.ParsedAddress)
+  - Toyopuc.ToyopucAddress.EncodeProgramBitAddress(Toyopuc.ParsedAddress)
+  - Toyopuc.ToyopucAddress.EncodeProgramByteAddress(Toyopuc.ParsedAddress)
+  - Toyopuc.ToyopucAddress.EncodeProgramWordAddress(Toyopuc.ParsedAddress)
+  - Toyopuc.ToyopucAddress.EncodeWordAddress(Toyopuc.ParsedAddress)
+  - Toyopuc.ToyopucAddress.FrBlockExNo(System.Int32)
+  - Toyopuc.ToyopucAddress.ParseAddress(System.String,System.String,System.Int32)
+  - Toyopuc.ToyopucAddress.ParsePrefixedAddress(System.String,System.String,System.Int32)
+  - Toyopuc.ToyopucAddress.SplitU32Words(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: ToyopucAddress
+  nameWithType: ToyopucAddress
+  fullName: Toyopuc.ToyopucAddress
+  type: Class
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ToyopucAddress
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 4
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static class ToyopucAddress
+    content.vb: Public Module ToyopucAddress
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Toyopuc.ToyopucAddress.ParseAddress(System.String,System.String,System.Int32)
+  commentId: M:Toyopuc.ToyopucAddress.ParseAddress(System.String,System.String,System.Int32)
+  id: ParseAddress(System.String,System.String,System.Int32)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: ParseAddress(string, string, int)
+  nameWithType: ToyopucAddress.ParseAddress(string, string, int)
+  fullName: Toyopuc.ToyopucAddress.ParseAddress(string, string, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ParseAddress
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 160
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ParsedAddress ParseAddress(string text, string unit, int radix = 16)
+    parameters:
+    - id: text
+      type: System.String
+    - id: unit
+      type: System.String
+    - id: radix
+      type: System.Int32
+    return:
+      type: Toyopuc.ParsedAddress
+    content.vb: Public Shared Function ParseAddress(text As String, unit As String, radix As Integer = 16) As ParsedAddress
+  overload: Toyopuc.ToyopucAddress.ParseAddress*
+  nameWithType.vb: ToyopucAddress.ParseAddress(String, String, Integer)
+  fullName.vb: Toyopuc.ToyopucAddress.ParseAddress(String, String, Integer)
+  name.vb: ParseAddress(String, String, Integer)
+- uid: Toyopuc.ToyopucAddress.ParsePrefixedAddress(System.String,System.String,System.Int32)
+  commentId: M:Toyopuc.ToyopucAddress.ParsePrefixedAddress(System.String,System.String,System.Int32)
+  id: ParsePrefixedAddress(System.String,System.String,System.Int32)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: ParsePrefixedAddress(string, string, int)
+  nameWithType: ToyopucAddress.ParsePrefixedAddress(string, string, int)
+  fullName: Toyopuc.ToyopucAddress.ParsePrefixedAddress(string, string, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ParsePrefixedAddress
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 175
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static (int ExNo, ParsedAddress Address) ParsePrefixedAddress(string text, string unit, int radix = 16)
+    parameters:
+    - id: text
+      type: System.String
+    - id: unit
+      type: System.String
+    - id: radix
+      type: System.Int32
+    return:
+      type: System.ValueTuple{System.Int32,Toyopuc.ParsedAddress}
+    content.vb: Public Shared Function ParsePrefixedAddress(text As String, unit As String, radix As Integer = 16) As (ExNo As Integer, Address As ParsedAddress)
+  overload: Toyopuc.ToyopucAddress.ParsePrefixedAddress*
+  nameWithType.vb: ToyopucAddress.ParsePrefixedAddress(String, String, Integer)
+  fullName.vb: Toyopuc.ToyopucAddress.ParsePrefixedAddress(String, String, Integer)
+  name.vb: ParsePrefixedAddress(String, String, Integer)
+- uid: Toyopuc.ToyopucAddress.EncodeWordAddress(Toyopuc.ParsedAddress)
+  commentId: M:Toyopuc.ToyopucAddress.EncodeWordAddress(Toyopuc.ParsedAddress)
+  id: EncodeWordAddress(Toyopuc.ParsedAddress)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: EncodeWordAddress(ParsedAddress)
+  nameWithType: ToyopucAddress.EncodeWordAddress(ParsedAddress)
+  fullName: Toyopuc.ToyopucAddress.EncodeWordAddress(Toyopuc.ParsedAddress)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: EncodeWordAddress
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 191
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int EncodeWordAddress(ParsedAddress address)
+    parameters:
+    - id: address
+      type: Toyopuc.ParsedAddress
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function EncodeWordAddress(address As ParsedAddress) As Integer
+  overload: Toyopuc.ToyopucAddress.EncodeWordAddress*
+- uid: Toyopuc.ToyopucAddress.EncodeByteAddress(Toyopuc.ParsedAddress)
+  commentId: M:Toyopuc.ToyopucAddress.EncodeByteAddress(Toyopuc.ParsedAddress)
+  id: EncodeByteAddress(Toyopuc.ParsedAddress)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: EncodeByteAddress(ParsedAddress)
+  nameWithType: ToyopucAddress.EncodeByteAddress(ParsedAddress)
+  fullName: Toyopuc.ToyopucAddress.EncodeByteAddress(Toyopuc.ParsedAddress)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: EncodeByteAddress
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 211
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int EncodeByteAddress(ParsedAddress address)
+    parameters:
+    - id: address
+      type: Toyopuc.ParsedAddress
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function EncodeByteAddress(address As ParsedAddress) As Integer
+  overload: Toyopuc.ToyopucAddress.EncodeByteAddress*
+- uid: Toyopuc.ToyopucAddress.EncodeBitAddress(Toyopuc.ParsedAddress)
+  commentId: M:Toyopuc.ToyopucAddress.EncodeBitAddress(Toyopuc.ParsedAddress)
+  id: EncodeBitAddress(Toyopuc.ParsedAddress)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: EncodeBitAddress(ParsedAddress)
+  nameWithType: ToyopucAddress.EncodeBitAddress(ParsedAddress)
+  fullName: Toyopuc.ToyopucAddress.EncodeBitAddress(Toyopuc.ParsedAddress)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: EncodeBitAddress
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 226
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int EncodeBitAddress(ParsedAddress address)
+    parameters:
+    - id: address
+      type: Toyopuc.ParsedAddress
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function EncodeBitAddress(address As ParsedAddress) As Integer
+  overload: Toyopuc.ToyopucAddress.EncodeBitAddress*
+- uid: Toyopuc.ToyopucAddress.EncodePc10BitAddress(Toyopuc.ParsedAddress)
+  commentId: M:Toyopuc.ToyopucAddress.EncodePc10BitAddress(Toyopuc.ParsedAddress)
+  id: EncodePc10BitAddress(Toyopuc.ParsedAddress)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: EncodePc10BitAddress(ParsedAddress)
+  nameWithType: ToyopucAddress.EncodePc10BitAddress(ParsedAddress)
+  fullName: Toyopuc.ToyopucAddress.EncodePc10BitAddress(Toyopuc.ParsedAddress)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: EncodePc10BitAddress
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 246
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int EncodePc10BitAddress(ParsedAddress address)
+    parameters:
+    - id: address
+      type: Toyopuc.ParsedAddress
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function EncodePc10BitAddress(address As ParsedAddress) As Integer
+  overload: Toyopuc.ToyopucAddress.EncodePc10BitAddress*
+- uid: Toyopuc.ToyopucAddress.EncodeProgramWordAddress(Toyopuc.ParsedAddress)
+  commentId: M:Toyopuc.ToyopucAddress.EncodeProgramWordAddress(Toyopuc.ParsedAddress)
+  id: EncodeProgramWordAddress(Toyopuc.ParsedAddress)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: EncodeProgramWordAddress(ParsedAddress)
+  nameWithType: ToyopucAddress.EncodeProgramWordAddress(ParsedAddress)
+  fullName: Toyopuc.ToyopucAddress.EncodeProgramWordAddress(Toyopuc.ParsedAddress)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: EncodeProgramWordAddress
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 274
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int EncodeProgramWordAddress(ParsedAddress address)
+    parameters:
+    - id: address
+      type: Toyopuc.ParsedAddress
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function EncodeProgramWordAddress(address As ParsedAddress) As Integer
+  overload: Toyopuc.ToyopucAddress.EncodeProgramWordAddress*
+- uid: Toyopuc.ToyopucAddress.EncodeProgramByteAddress(Toyopuc.ParsedAddress)
+  commentId: M:Toyopuc.ToyopucAddress.EncodeProgramByteAddress(Toyopuc.ParsedAddress)
+  id: EncodeProgramByteAddress(Toyopuc.ParsedAddress)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: EncodeProgramByteAddress(ParsedAddress)
+  nameWithType: ToyopucAddress.EncodeProgramByteAddress(ParsedAddress)
+  fullName: Toyopuc.ToyopucAddress.EncodeProgramByteAddress(Toyopuc.ParsedAddress)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: EncodeProgramByteAddress
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 310
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int EncodeProgramByteAddress(ParsedAddress address)
+    parameters:
+    - id: address
+      type: Toyopuc.ParsedAddress
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function EncodeProgramByteAddress(address As ParsedAddress) As Integer
+  overload: Toyopuc.ToyopucAddress.EncodeProgramByteAddress*
+- uid: Toyopuc.ToyopucAddress.EncodeProgramBitAddress(Toyopuc.ParsedAddress)
+  commentId: M:Toyopuc.ToyopucAddress.EncodeProgramBitAddress(Toyopuc.ParsedAddress)
+  id: EncodeProgramBitAddress(Toyopuc.ParsedAddress)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: EncodeProgramBitAddress(ParsedAddress)
+  nameWithType: ToyopucAddress.EncodeProgramBitAddress(ParsedAddress)
+  fullName: Toyopuc.ToyopucAddress.EncodeProgramBitAddress(Toyopuc.ParsedAddress)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: EncodeProgramBitAddress
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 340
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static (int BitNo, int Address) EncodeProgramBitAddress(ParsedAddress address)
+    parameters:
+    - id: address
+      type: Toyopuc.ParsedAddress
+    return:
+      type: System.ValueTuple{System.Int32,System.Int32}
+    content.vb: Public Shared Function EncodeProgramBitAddress(address As ParsedAddress) As (BitNo As Integer, Address As Integer)
+  overload: Toyopuc.ToyopucAddress.EncodeProgramBitAddress*
+- uid: Toyopuc.ToyopucAddress.EncodeExNoBitU32(System.Int32,System.Int32)
+  commentId: M:Toyopuc.ToyopucAddress.EncodeExNoBitU32(System.Int32,System.Int32)
+  id: EncodeExNoBitU32(System.Int32,System.Int32)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: EncodeExNoBitU32(int, int)
+  nameWithType: ToyopucAddress.EncodeExNoBitU32(int, int)
+  fullName: Toyopuc.ToyopucAddress.EncodeExNoBitU32(int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: EncodeExNoBitU32
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 364
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int EncodeExNoBitU32(int exNo, int bitAddress)
+    parameters:
+    - id: exNo
+      type: System.Int32
+    - id: bitAddress
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function EncodeExNoBitU32(exNo As Integer, bitAddress As Integer) As Integer
+  overload: Toyopuc.ToyopucAddress.EncodeExNoBitU32*
+  nameWithType.vb: ToyopucAddress.EncodeExNoBitU32(Integer, Integer)
+  fullName.vb: Toyopuc.ToyopucAddress.EncodeExNoBitU32(Integer, Integer)
+  name.vb: EncodeExNoBitU32(Integer, Integer)
+- uid: Toyopuc.ToyopucAddress.EncodeExNoByteU32(System.Int32,System.Int32)
+  commentId: M:Toyopuc.ToyopucAddress.EncodeExNoByteU32(System.Int32,System.Int32)
+  id: EncodeExNoByteU32(System.Int32,System.Int32)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: EncodeExNoByteU32(int, int)
+  nameWithType: ToyopucAddress.EncodeExNoByteU32(int, int)
+  fullName: Toyopuc.ToyopucAddress.EncodeExNoByteU32(int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: EncodeExNoByteU32
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 369
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int EncodeExNoByteU32(int exNo, int byteAddress)
+    parameters:
+    - id: exNo
+      type: System.Int32
+    - id: byteAddress
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function EncodeExNoByteU32(exNo As Integer, byteAddress As Integer) As Integer
+  overload: Toyopuc.ToyopucAddress.EncodeExNoByteU32*
+  nameWithType.vb: ToyopucAddress.EncodeExNoByteU32(Integer, Integer)
+  fullName.vb: Toyopuc.ToyopucAddress.EncodeExNoByteU32(Integer, Integer)
+  name.vb: EncodeExNoByteU32(Integer, Integer)
+- uid: Toyopuc.ToyopucAddress.SplitU32Words(System.Int32)
+  commentId: M:Toyopuc.ToyopucAddress.SplitU32Words(System.Int32)
+  id: SplitU32Words(System.Int32)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: SplitU32Words(int)
+  nameWithType: ToyopucAddress.SplitU32Words(int)
+  fullName: Toyopuc.ToyopucAddress.SplitU32Words(int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: SplitU32Words
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 374
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static (int LowWord, int HighWord) SplitU32Words(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+    return:
+      type: System.ValueTuple{System.Int32,System.Int32}
+    content.vb: Public Shared Function SplitU32Words(value As Integer) As (LowWord As Integer, HighWord As Integer)
+  overload: Toyopuc.ToyopucAddress.SplitU32Words*
+  nameWithType.vb: ToyopucAddress.SplitU32Words(Integer)
+  fullName.vb: Toyopuc.ToyopucAddress.SplitU32Words(Integer)
+  name.vb: SplitU32Words(Integer)
+- uid: Toyopuc.ToyopucAddress.FrBlockExNo(System.Int32)
+  commentId: M:Toyopuc.ToyopucAddress.FrBlockExNo(System.Int32)
+  id: FrBlockExNo(System.Int32)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: FrBlockExNo(int)
+  nameWithType: ToyopucAddress.FrBlockExNo(int)
+  fullName: Toyopuc.ToyopucAddress.FrBlockExNo(int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: FrBlockExNo
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 379
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int FrBlockExNo(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function FrBlockExNo(index As Integer) As Integer
+  overload: Toyopuc.ToyopucAddress.FrBlockExNo*
+  nameWithType.vb: ToyopucAddress.FrBlockExNo(Integer)
+  fullName.vb: Toyopuc.ToyopucAddress.FrBlockExNo(Integer)
+  name.vb: FrBlockExNo(Integer)
+- uid: Toyopuc.ToyopucAddress.EncodeFrWordAddr32(System.Int32)
+  commentId: M:Toyopuc.ToyopucAddress.EncodeFrWordAddr32(System.Int32)
+  id: EncodeFrWordAddr32(System.Int32)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: EncodeFrWordAddr32(int)
+  nameWithType: ToyopucAddress.EncodeFrWordAddr32(int)
+  fullName: Toyopuc.ToyopucAddress.EncodeFrWordAddr32(int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: EncodeFrWordAddr32
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 389
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int EncodeFrWordAddr32(int index)
+    parameters:
+    - id: index
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function EncodeFrWordAddr32(index As Integer) As Integer
+  overload: Toyopuc.ToyopucAddress.EncodeFrWordAddr32*
+  nameWithType.vb: ToyopucAddress.EncodeFrWordAddr32(Integer)
+  fullName.vb: Toyopuc.ToyopucAddress.EncodeFrWordAddr32(Integer)
+  name.vb: EncodeFrWordAddr32(Integer)
+- uid: Toyopuc.ToyopucAddress.EncodeExtNoAddress(System.String,System.Int32,System.String)
+  commentId: M:Toyopuc.ToyopucAddress.EncodeExtNoAddress(System.String,System.Int32,System.String)
+  id: EncodeExtNoAddress(System.String,System.Int32,System.String)
+  parent: Toyopuc.ToyopucAddress
+  langs:
+  - csharp
+  - vb
+  name: EncodeExtNoAddress(string, int, string)
+  nameWithType: ToyopucAddress.EncodeExtNoAddress(string, int, string)
+  fullName: Toyopuc.ToyopucAddress.EncodeExtNoAddress(string, int, string)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucAddress.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: EncodeExtNoAddress
+    path: src/Toyopuc/ToyopucAddress.cs
+    startLine: 396
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ExtNoAddress EncodeExtNoAddress(string area, int index, string unit)
+    parameters:
+    - id: area
+      type: System.String
+    - id: index
+      type: System.Int32
+    - id: unit
+      type: System.String
+    return:
+      type: Toyopuc.ExtNoAddress
+    content.vb: Public Shared Function EncodeExtNoAddress(area As String, index As Integer, unit As String) As ExtNoAddress
+  overload: Toyopuc.ToyopucAddress.EncodeExtNoAddress*
+  nameWithType.vb: ToyopucAddress.EncodeExtNoAddress(String, Integer, String)
+  fullName.vb: Toyopuc.ToyopucAddress.EncodeExtNoAddress(String, Integer, String)
+  name.vb: EncodeExtNoAddress(String, Integer, String)
+references:
+- uid: Toyopuc
+  commentId: N:Toyopuc
+  href: Toyopuc.html
+  name: Toyopuc
+  nameWithType: Toyopuc
+  fullName: Toyopuc
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Toyopuc.ToyopucAddress.ParseAddress*
+  commentId: Overload:Toyopuc.ToyopucAddress.ParseAddress
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_ParseAddress_System_String_System_String_System_Int32_
+  name: ParseAddress
+  nameWithType: ToyopucAddress.ParseAddress
+  fullName: Toyopuc.ToyopucAddress.ParseAddress
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Toyopuc.ParsedAddress
+  commentId: T:Toyopuc.ParsedAddress
+  parent: Toyopuc
+  href: Toyopuc.ParsedAddress.html
+  name: ParsedAddress
+  nameWithType: ParsedAddress
+  fullName: Toyopuc.ParsedAddress
+- uid: Toyopuc.ToyopucAddress.ParsePrefixedAddress*
+  commentId: Overload:Toyopuc.ToyopucAddress.ParsePrefixedAddress
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_ParsePrefixedAddress_System_String_System_String_System_Int32_
+  name: ParsePrefixedAddress
+  nameWithType: ToyopucAddress.ParsePrefixedAddress
+  fullName: Toyopuc.ToyopucAddress.ParsePrefixedAddress
+- uid: System.ValueTuple{System.Int32,Toyopuc.ParsedAddress}
+  commentId: T:System.ValueTuple{System.Int32,Toyopuc.ParsedAddress}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: (int ExNo, ParsedAddress Address)
+  nameWithType: (int ExNo, ParsedAddress Address)
+  fullName: (int ExNo, Toyopuc.ParsedAddress Address)
+  nameWithType.vb: (ExNo As Integer, Address As ParsedAddress)
+  fullName.vb: (ExNo As Integer, Address As Toyopuc.ParsedAddress)
+  name.vb: (ExNo As Integer, Address As ParsedAddress)
+  spec.csharp:
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,Toyopuc.ParsedAddress}.ExNo
+    name: ExNo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,toyopuc.parsedaddress-.exno
+  - name: ','
+  - name: " "
+  - uid: Toyopuc.ParsedAddress
+    name: ParsedAddress
+    href: Toyopuc.ParsedAddress.html
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,Toyopuc.ParsedAddress}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,toyopuc.parsedaddress-.address
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.Int32,Toyopuc.ParsedAddress}.ExNo
+    name: ExNo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,toyopuc.parsedaddress-.exno
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,Toyopuc.ParsedAddress}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,toyopuc.parsedaddress-.address
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Toyopuc.ParsedAddress
+    name: ParsedAddress
+    href: Toyopuc.ParsedAddress.html
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Toyopuc.ToyopucAddress.EncodeWordAddress*
+  commentId: Overload:Toyopuc.ToyopucAddress.EncodeWordAddress
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_EncodeWordAddress_Toyopuc_ParsedAddress_
+  name: EncodeWordAddress
+  nameWithType: ToyopucAddress.EncodeWordAddress
+  fullName: Toyopuc.ToyopucAddress.EncodeWordAddress
+- uid: Toyopuc.ToyopucAddress.EncodeByteAddress*
+  commentId: Overload:Toyopuc.ToyopucAddress.EncodeByteAddress
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_EncodeByteAddress_Toyopuc_ParsedAddress_
+  name: EncodeByteAddress
+  nameWithType: ToyopucAddress.EncodeByteAddress
+  fullName: Toyopuc.ToyopucAddress.EncodeByteAddress
+- uid: Toyopuc.ToyopucAddress.EncodeBitAddress*
+  commentId: Overload:Toyopuc.ToyopucAddress.EncodeBitAddress
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_EncodeBitAddress_Toyopuc_ParsedAddress_
+  name: EncodeBitAddress
+  nameWithType: ToyopucAddress.EncodeBitAddress
+  fullName: Toyopuc.ToyopucAddress.EncodeBitAddress
+- uid: Toyopuc.ToyopucAddress.EncodePc10BitAddress*
+  commentId: Overload:Toyopuc.ToyopucAddress.EncodePc10BitAddress
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_EncodePc10BitAddress_Toyopuc_ParsedAddress_
+  name: EncodePc10BitAddress
+  nameWithType: ToyopucAddress.EncodePc10BitAddress
+  fullName: Toyopuc.ToyopucAddress.EncodePc10BitAddress
+- uid: Toyopuc.ToyopucAddress.EncodeProgramWordAddress*
+  commentId: Overload:Toyopuc.ToyopucAddress.EncodeProgramWordAddress
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_EncodeProgramWordAddress_Toyopuc_ParsedAddress_
+  name: EncodeProgramWordAddress
+  nameWithType: ToyopucAddress.EncodeProgramWordAddress
+  fullName: Toyopuc.ToyopucAddress.EncodeProgramWordAddress
+- uid: Toyopuc.ToyopucAddress.EncodeProgramByteAddress*
+  commentId: Overload:Toyopuc.ToyopucAddress.EncodeProgramByteAddress
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_EncodeProgramByteAddress_Toyopuc_ParsedAddress_
+  name: EncodeProgramByteAddress
+  nameWithType: ToyopucAddress.EncodeProgramByteAddress
+  fullName: Toyopuc.ToyopucAddress.EncodeProgramByteAddress
+- uid: Toyopuc.ToyopucAddress.EncodeProgramBitAddress*
+  commentId: Overload:Toyopuc.ToyopucAddress.EncodeProgramBitAddress
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_EncodeProgramBitAddress_Toyopuc_ParsedAddress_
+  name: EncodeProgramBitAddress
+  nameWithType: ToyopucAddress.EncodeProgramBitAddress
+  fullName: Toyopuc.ToyopucAddress.EncodeProgramBitAddress
+- uid: System.ValueTuple{System.Int32,System.Int32}
+  commentId: T:System.ValueTuple{System.Int32,System.Int32}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: (int BitNo, int Address)
+  nameWithType: (int BitNo, int Address)
+  fullName: (int BitNo, int Address)
+  nameWithType.vb: (BitNo As Integer, Address As Integer)
+  fullName.vb: (BitNo As Integer, Address As Integer)
+  name.vb: (BitNo As Integer, Address As Integer)
+  spec.csharp:
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.BitNo
+    name: BitNo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.bitno
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.address
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.Int32,System.Int32}.BitNo
+    name: BitNo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.bitno
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.address
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: Toyopuc.ToyopucAddress.EncodeExNoBitU32*
+  commentId: Overload:Toyopuc.ToyopucAddress.EncodeExNoBitU32
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_EncodeExNoBitU32_System_Int32_System_Int32_
+  name: EncodeExNoBitU32
+  nameWithType: ToyopucAddress.EncodeExNoBitU32
+  fullName: Toyopuc.ToyopucAddress.EncodeExNoBitU32
+- uid: Toyopuc.ToyopucAddress.EncodeExNoByteU32*
+  commentId: Overload:Toyopuc.ToyopucAddress.EncodeExNoByteU32
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_EncodeExNoByteU32_System_Int32_System_Int32_
+  name: EncodeExNoByteU32
+  nameWithType: ToyopucAddress.EncodeExNoByteU32
+  fullName: Toyopuc.ToyopucAddress.EncodeExNoByteU32
+- uid: Toyopuc.ToyopucAddress.SplitU32Words*
+  commentId: Overload:Toyopuc.ToyopucAddress.SplitU32Words
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_SplitU32Words_System_Int32_
+  name: SplitU32Words
+  nameWithType: ToyopucAddress.SplitU32Words
+  fullName: Toyopuc.ToyopucAddress.SplitU32Words
+- uid: Toyopuc.ToyopucAddress.FrBlockExNo*
+  commentId: Overload:Toyopuc.ToyopucAddress.FrBlockExNo
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_FrBlockExNo_System_Int32_
+  name: FrBlockExNo
+  nameWithType: ToyopucAddress.FrBlockExNo
+  fullName: Toyopuc.ToyopucAddress.FrBlockExNo
+- uid: Toyopuc.ToyopucAddress.EncodeFrWordAddr32*
+  commentId: Overload:Toyopuc.ToyopucAddress.EncodeFrWordAddr32
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_EncodeFrWordAddr32_System_Int32_
+  name: EncodeFrWordAddr32
+  nameWithType: ToyopucAddress.EncodeFrWordAddr32
+  fullName: Toyopuc.ToyopucAddress.EncodeFrWordAddr32
+- uid: Toyopuc.ToyopucAddress.EncodeExtNoAddress*
+  commentId: Overload:Toyopuc.ToyopucAddress.EncodeExtNoAddress
+  href: Toyopuc.ToyopucAddress.html#Toyopuc_ToyopucAddress_EncodeExtNoAddress_System_String_System_Int32_System_String_
+  name: EncodeExtNoAddress
+  nameWithType: ToyopucAddress.EncodeExtNoAddress
+  fullName: Toyopuc.ToyopucAddress.EncodeExtNoAddress
+- uid: Toyopuc.ExtNoAddress
+  commentId: T:Toyopuc.ExtNoAddress
+  parent: Toyopuc
+  href: Toyopuc.ExtNoAddress.html
+  name: ExtNoAddress
+  nameWithType: ExtNoAddress
+  fullName: Toyopuc.ExtNoAddress

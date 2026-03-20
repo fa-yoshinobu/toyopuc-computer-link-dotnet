@@ -1,0 +1,2408 @@
+### YamlMime:ManagedReference
+items:
+- uid: Toyopuc.ToyopucProtocol
+  commentId: T:Toyopuc.ToyopucProtocol
+  id: ToyopucProtocol
+  parent: Toyopuc
+  children:
+  - Toyopuc.ToyopucProtocol.BuildBitRead(System.Int32)
+  - Toyopuc.ToyopucProtocol.BuildBitWrite(System.Int32,System.Int32)
+  - Toyopuc.ToyopucProtocol.BuildByteRead(System.Int32,System.Int32)
+  - Toyopuc.ToyopucProtocol.BuildByteWrite(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  - Toyopuc.ToyopucProtocol.BuildClockRead
+  - Toyopuc.ToyopucProtocol.BuildClockWrite(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  - Toyopuc.ToyopucProtocol.BuildCommand(System.Int32,System.Byte[])
+  - Toyopuc.ToyopucProtocol.BuildCpuStatusRead
+  - Toyopuc.ToyopucProtocol.BuildCpuStatusReadA0
+  - Toyopuc.ToyopucProtocol.BuildExtByteRead(System.Int32,System.Int32,System.Int32)
+  - Toyopuc.ToyopucProtocol.BuildExtByteWrite(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  - Toyopuc.ToyopucProtocol.BuildExtMultiRead(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  - Toyopuc.ToyopucProtocol.BuildExtMultiWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}})
+  - Toyopuc.ToyopucProtocol.BuildExtWordRead(System.Int32,System.Int32,System.Int32)
+  - Toyopuc.ToyopucProtocol.BuildExtWordWrite(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  - Toyopuc.ToyopucProtocol.BuildFrRegister(System.Int32)
+  - Toyopuc.ToyopucProtocol.BuildMultiByteRead(System.Collections.Generic.IEnumerable{System.Int32})
+  - Toyopuc.ToyopucProtocol.BuildMultiByteWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  - Toyopuc.ToyopucProtocol.BuildMultiWordRead(System.Collections.Generic.IEnumerable{System.Int32})
+  - Toyopuc.ToyopucProtocol.BuildMultiWordWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  - Toyopuc.ToyopucProtocol.BuildPc10BlockRead(System.Int32,System.Int32)
+  - Toyopuc.ToyopucProtocol.BuildPc10BlockWrite(System.Int32,System.Byte[])
+  - Toyopuc.ToyopucProtocol.BuildPc10MultiRead(System.Byte[])
+  - Toyopuc.ToyopucProtocol.BuildPc10MultiWrite(System.Byte[])
+  - Toyopuc.ToyopucProtocol.BuildRelayCommand(System.Int32,System.Int32,System.Byte[],System.Int32)
+  - Toyopuc.ToyopucProtocol.BuildRelayNested(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}},System.Byte[])
+  - Toyopuc.ToyopucProtocol.BuildWordRead(System.Int32,System.Int32)
+  - Toyopuc.ToyopucProtocol.BuildWordWrite(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  - Toyopuc.ToyopucProtocol.FtCommand
+  - Toyopuc.ToyopucProtocol.FtResponse
+  - Toyopuc.ToyopucProtocol.PackBcd(System.Int32)
+  - Toyopuc.ToyopucProtocol.PackExtBitSpec(System.Int32,System.Int32)
+  - Toyopuc.ToyopucProtocol.PackU16LittleEndian(System.Int32)
+  - Toyopuc.ToyopucProtocol.ParseClockData(System.Byte[])
+  - Toyopuc.ToyopucProtocol.ParseCpuStatusData(System.Byte[])
+  - Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0(System.Byte[])
+  - Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0Raw(System.Byte[])
+  - Toyopuc.ToyopucProtocol.ParseResponse(System.Byte[])
+  - Toyopuc.ToyopucProtocol.UnpackBcd(System.Int32)
+  - Toyopuc.ToyopucProtocol.UnpackU16LittleEndian(System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: ToyopucProtocol
+  nameWithType: ToyopucProtocol
+  fullName: Toyopuc.ToyopucProtocol
+  type: Class
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ToyopucProtocol
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 4
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static class ToyopucProtocol
+    content.vb: Public Module ToyopucProtocol
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Toyopuc.ToyopucProtocol.FtCommand
+  commentId: F:Toyopuc.ToyopucProtocol.FtCommand
+  id: FtCommand
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: FtCommand
+  nameWithType: ToyopucProtocol.FtCommand
+  fullName: Toyopuc.ToyopucProtocol.FtCommand
+  type: Field
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: FtCommand
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 6
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public const byte FtCommand = 0
+    return:
+      type: System.Byte
+    content.vb: Public Const FtCommand As Byte = 0
+- uid: Toyopuc.ToyopucProtocol.FtResponse
+  commentId: F:Toyopuc.ToyopucProtocol.FtResponse
+  id: FtResponse
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: FtResponse
+  nameWithType: ToyopucProtocol.FtResponse
+  fullName: Toyopuc.ToyopucProtocol.FtResponse
+  type: Field
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: FtResponse
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 7
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public const byte FtResponse = 128
+    return:
+      type: System.Byte
+    content.vb: Public Const FtResponse As Byte = 128
+- uid: Toyopuc.ToyopucProtocol.BuildCommand(System.Int32,System.Byte[])
+  commentId: M:Toyopuc.ToyopucProtocol.BuildCommand(System.Int32,System.Byte[])
+  id: BuildCommand(System.Int32,System.Byte[])
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildCommand(int, byte[]?)
+  nameWithType: ToyopucProtocol.BuildCommand(int, byte[]?)
+  fullName: Toyopuc.ToyopucProtocol.BuildCommand(int, byte[]?)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildCommand
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 49
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildCommand(int cmd, byte[]? data = null)
+    parameters:
+    - id: cmd
+      type: System.Int32
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildCommand(cmd As Integer, data As Byte() = Nothing) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildCommand*
+  nameWithType.vb: ToyopucProtocol.BuildCommand(Integer, Byte())
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildCommand(Integer, Byte())
+  name.vb: BuildCommand(Integer, Byte())
+- uid: Toyopuc.ToyopucProtocol.ParseResponse(System.Byte[])
+  commentId: M:Toyopuc.ToyopucProtocol.ParseResponse(System.Byte[])
+  id: ParseResponse(System.Byte[])
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: ParseResponse(byte[])
+  nameWithType: ToyopucProtocol.ParseResponse(byte[])
+  fullName: Toyopuc.ToyopucProtocol.ParseResponse(byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ParseResponse
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 61
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ResponseFrame ParseResponse(byte[] frame)
+    parameters:
+    - id: frame
+      type: System.Byte[]
+    return:
+      type: Toyopuc.ResponseFrame
+    content.vb: Public Shared Function ParseResponse(frame As Byte()) As ResponseFrame
+  overload: Toyopuc.ToyopucProtocol.ParseResponse*
+  nameWithType.vb: ToyopucProtocol.ParseResponse(Byte())
+  fullName.vb: Toyopuc.ToyopucProtocol.ParseResponse(Byte())
+  name.vb: ParseResponse(Byte())
+- uid: Toyopuc.ToyopucProtocol.PackU16LittleEndian(System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.PackU16LittleEndian(System.Int32)
+  id: PackU16LittleEndian(System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: PackU16LittleEndian(int)
+  nameWithType: ToyopucProtocol.PackU16LittleEndian(int)
+  fullName: Toyopuc.ToyopucProtocol.PackU16LittleEndian(int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: PackU16LittleEndian
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 86
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] PackU16LittleEndian(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function PackU16LittleEndian(value As Integer) As Byte()
+  overload: Toyopuc.ToyopucProtocol.PackU16LittleEndian*
+  nameWithType.vb: ToyopucProtocol.PackU16LittleEndian(Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.PackU16LittleEndian(Integer)
+  name.vb: PackU16LittleEndian(Integer)
+- uid: Toyopuc.ToyopucProtocol.UnpackU16LittleEndian(System.Byte[])
+  commentId: M:Toyopuc.ToyopucProtocol.UnpackU16LittleEndian(System.Byte[])
+  id: UnpackU16LittleEndian(System.Byte[])
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: UnpackU16LittleEndian(byte[])
+  nameWithType: ToyopucProtocol.UnpackU16LittleEndian(byte[])
+  fullName: Toyopuc.ToyopucProtocol.UnpackU16LittleEndian(byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: UnpackU16LittleEndian
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 93
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int[] UnpackU16LittleEndian(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Int32[]
+    content.vb: Public Shared Function UnpackU16LittleEndian(data As Byte()) As Integer()
+  overload: Toyopuc.ToyopucProtocol.UnpackU16LittleEndian*
+  nameWithType.vb: ToyopucProtocol.UnpackU16LittleEndian(Byte())
+  fullName.vb: Toyopuc.ToyopucProtocol.UnpackU16LittleEndian(Byte())
+  name.vb: UnpackU16LittleEndian(Byte())
+- uid: Toyopuc.ToyopucProtocol.PackExtBitSpec(System.Int32,System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.PackExtBitSpec(System.Int32,System.Int32)
+  id: PackExtBitSpec(System.Int32,System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: PackExtBitSpec(int, int)
+  nameWithType: ToyopucProtocol.PackExtBitSpec(int, int)
+  fullName: Toyopuc.ToyopucProtocol.PackExtBitSpec(int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: PackExtBitSpec
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 109
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int PackExtBitSpec(int number, int bit)
+    parameters:
+    - id: number
+      type: System.Int32
+    - id: bit
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function PackExtBitSpec(number As Integer, bit As Integer) As Integer
+  overload: Toyopuc.ToyopucProtocol.PackExtBitSpec*
+  nameWithType.vb: ToyopucProtocol.PackExtBitSpec(Integer, Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.PackExtBitSpec(Integer, Integer)
+  name.vb: PackExtBitSpec(Integer, Integer)
+- uid: Toyopuc.ToyopucProtocol.PackBcd(System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.PackBcd(System.Int32)
+  id: PackBcd(System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: PackBcd(int)
+  nameWithType: ToyopucProtocol.PackBcd(int)
+  fullName: Toyopuc.ToyopucProtocol.PackBcd(int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: PackBcd
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 124
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int PackBcd(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function PackBcd(value As Integer) As Integer
+  overload: Toyopuc.ToyopucProtocol.PackBcd*
+  nameWithType.vb: ToyopucProtocol.PackBcd(Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.PackBcd(Integer)
+  name.vb: PackBcd(Integer)
+- uid: Toyopuc.ToyopucProtocol.UnpackBcd(System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.UnpackBcd(System.Int32)
+  id: UnpackBcd(System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: UnpackBcd(int)
+  nameWithType: ToyopucProtocol.UnpackBcd(int)
+  fullName: Toyopuc.ToyopucProtocol.UnpackBcd(int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: UnpackBcd
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 134
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static int UnpackBcd(int value)
+    parameters:
+    - id: value
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function UnpackBcd(value As Integer) As Integer
+  overload: Toyopuc.ToyopucProtocol.UnpackBcd*
+  nameWithType.vb: ToyopucProtocol.UnpackBcd(Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.UnpackBcd(Integer)
+  name.vb: UnpackBcd(Integer)
+- uid: Toyopuc.ToyopucProtocol.BuildClockRead
+  commentId: M:Toyopuc.ToyopucProtocol.BuildClockRead
+  id: BuildClockRead
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildClockRead()
+  nameWithType: ToyopucProtocol.BuildClockRead()
+  fullName: Toyopuc.ToyopucProtocol.BuildClockRead()
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildClockRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 146
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildClockRead()
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildClockRead() As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildClockRead*
+- uid: Toyopuc.ToyopucProtocol.BuildCpuStatusRead
+  commentId: M:Toyopuc.ToyopucProtocol.BuildCpuStatusRead
+  id: BuildCpuStatusRead
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildCpuStatusRead()
+  nameWithType: ToyopucProtocol.BuildCpuStatusRead()
+  fullName: Toyopuc.ToyopucProtocol.BuildCpuStatusRead()
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildCpuStatusRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 154
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildCpuStatusRead()
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildCpuStatusRead() As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildCpuStatusRead*
+- uid: Toyopuc.ToyopucProtocol.BuildCpuStatusReadA0
+  commentId: M:Toyopuc.ToyopucProtocol.BuildCpuStatusReadA0
+  id: BuildCpuStatusReadA0
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildCpuStatusReadA0()
+  nameWithType: ToyopucProtocol.BuildCpuStatusReadA0()
+  fullName: Toyopuc.ToyopucProtocol.BuildCpuStatusReadA0()
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildCpuStatusReadA0
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 162
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildCpuStatusReadA0()
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildCpuStatusReadA0() As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildCpuStatusReadA0*
+- uid: Toyopuc.ToyopucProtocol.BuildClockWrite(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.BuildClockWrite(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: BuildClockWrite(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildClockWrite(int, int, int, int, int, int, int)
+  nameWithType: ToyopucProtocol.BuildClockWrite(int, int, int, int, int, int, int)
+  fullName: Toyopuc.ToyopucProtocol.BuildClockWrite(int, int, int, int, int, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildClockWrite
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 170
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildClockWrite(int second, int minute, int hour, int day, int month, int year2Digit, int weekday)
+    parameters:
+    - id: second
+      type: System.Int32
+    - id: minute
+      type: System.Int32
+    - id: hour
+      type: System.Int32
+    - id: day
+      type: System.Int32
+    - id: month
+      type: System.Int32
+    - id: year2Digit
+      type: System.Int32
+    - id: weekday
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildClockWrite(second As Integer, minute As Integer, hour As Integer, day As Integer, month As Integer, year2Digit As Integer, weekday As Integer) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildClockWrite*
+  nameWithType.vb: ToyopucProtocol.BuildClockWrite(Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildClockWrite(Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+  name.vb: BuildClockWrite(Integer, Integer, Integer, Integer, Integer, Integer, Integer)
+- uid: Toyopuc.ToyopucProtocol.ParseClockData(System.Byte[])
+  commentId: M:Toyopuc.ToyopucProtocol.ParseClockData(System.Byte[])
+  id: ParseClockData(System.Byte[])
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: ParseClockData(byte[])
+  nameWithType: ToyopucProtocol.ParseClockData(byte[])
+  fullName: Toyopuc.ToyopucProtocol.ParseClockData(byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ParseClockData
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 197
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static ClockData ParseClockData(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: Toyopuc.ClockData
+    content.vb: Public Shared Function ParseClockData(data As Byte()) As ClockData
+  overload: Toyopuc.ToyopucProtocol.ParseClockData*
+  nameWithType.vb: ToyopucProtocol.ParseClockData(Byte())
+  fullName.vb: Toyopuc.ToyopucProtocol.ParseClockData(Byte())
+  name.vb: ParseClockData(Byte())
+- uid: Toyopuc.ToyopucProtocol.ParseCpuStatusData(System.Byte[])
+  commentId: M:Toyopuc.ToyopucProtocol.ParseCpuStatusData(System.Byte[])
+  id: ParseCpuStatusData(System.Byte[])
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: ParseCpuStatusData(byte[])
+  nameWithType: ToyopucProtocol.ParseCpuStatusData(byte[])
+  fullName: Toyopuc.ToyopucProtocol.ParseCpuStatusData(byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ParseCpuStatusData
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 214
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static CpuStatusData ParseCpuStatusData(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: Toyopuc.CpuStatusData
+    content.vb: Public Shared Function ParseCpuStatusData(data As Byte()) As CpuStatusData
+  overload: Toyopuc.ToyopucProtocol.ParseCpuStatusData*
+  nameWithType.vb: ToyopucProtocol.ParseCpuStatusData(Byte())
+  fullName.vb: Toyopuc.ToyopucProtocol.ParseCpuStatusData(Byte())
+  name.vb: ParseCpuStatusData(Byte())
+- uid: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0(System.Byte[])
+  commentId: M:Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0(System.Byte[])
+  id: ParseCpuStatusDataA0(System.Byte[])
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: ParseCpuStatusDataA0(byte[])
+  nameWithType: ToyopucProtocol.ParseCpuStatusDataA0(byte[])
+  fullName: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0(byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ParseCpuStatusDataA0
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 224
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static CpuStatusData ParseCpuStatusDataA0(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: Toyopuc.CpuStatusData
+    content.vb: Public Shared Function ParseCpuStatusDataA0(data As Byte()) As CpuStatusData
+  overload: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0*
+  nameWithType.vb: ToyopucProtocol.ParseCpuStatusDataA0(Byte())
+  fullName.vb: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0(Byte())
+  name.vb: ParseCpuStatusDataA0(Byte())
+- uid: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0Raw(System.Byte[])
+  commentId: M:Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0Raw(System.Byte[])
+  id: ParseCpuStatusDataA0Raw(System.Byte[])
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: ParseCpuStatusDataA0Raw(byte[])
+  nameWithType: ToyopucProtocol.ParseCpuStatusDataA0Raw(byte[])
+  fullName: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0Raw(byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ParseCpuStatusDataA0Raw
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 234
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] ParseCpuStatusDataA0Raw(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function ParseCpuStatusDataA0Raw(data As Byte()) As Byte()
+  overload: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0Raw*
+  nameWithType.vb: ToyopucProtocol.ParseCpuStatusDataA0Raw(Byte())
+  fullName.vb: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0Raw(Byte())
+  name.vb: ParseCpuStatusDataA0Raw(Byte())
+- uid: Toyopuc.ToyopucProtocol.BuildWordRead(System.Int32,System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.BuildWordRead(System.Int32,System.Int32)
+  id: BuildWordRead(System.Int32,System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildWordRead(int, int)
+  nameWithType: ToyopucProtocol.BuildWordRead(int, int)
+  fullName: Toyopuc.ToyopucProtocol.BuildWordRead(int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildWordRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 239
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildWordRead(int address, int count)
+    parameters:
+    - id: address
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildWordRead(address As Integer, count As Integer) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildWordRead*
+  nameWithType.vb: ToyopucProtocol.BuildWordRead(Integer, Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildWordRead(Integer, Integer)
+  name.vb: BuildWordRead(Integer, Integer)
+- uid: Toyopuc.ToyopucProtocol.BuildWordWrite(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  commentId: M:Toyopuc.ToyopucProtocol.BuildWordWrite(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  id: BuildWordWrite(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildWordWrite(int, IEnumerable<int>)
+  nameWithType: ToyopucProtocol.BuildWordWrite(int, IEnumerable<int>)
+  fullName: Toyopuc.ToyopucProtocol.BuildWordWrite(int, System.Collections.Generic.IEnumerable<int>)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildWordWrite
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 247
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildWordWrite(int address, IEnumerable<int> values)
+    parameters:
+    - id: address
+      type: System.Int32
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildWordWrite(address As Integer, values As IEnumerable(Of Integer)) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildWordWrite*
+  nameWithType.vb: ToyopucProtocol.BuildWordWrite(Integer, IEnumerable(Of Integer))
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildWordWrite(Integer, System.Collections.Generic.IEnumerable(Of Integer))
+  name.vb: BuildWordWrite(Integer, IEnumerable(Of Integer))
+- uid: Toyopuc.ToyopucProtocol.BuildByteRead(System.Int32,System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.BuildByteRead(System.Int32,System.Int32)
+  id: BuildByteRead(System.Int32,System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildByteRead(int, int)
+  nameWithType: ToyopucProtocol.BuildByteRead(int, int)
+  fullName: Toyopuc.ToyopucProtocol.BuildByteRead(int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildByteRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 260
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildByteRead(int address, int count)
+    parameters:
+    - id: address
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildByteRead(address As Integer, count As Integer) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildByteRead*
+  nameWithType.vb: ToyopucProtocol.BuildByteRead(Integer, Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildByteRead(Integer, Integer)
+  name.vb: BuildByteRead(Integer, Integer)
+- uid: Toyopuc.ToyopucProtocol.BuildByteWrite(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  commentId: M:Toyopuc.ToyopucProtocol.BuildByteWrite(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  id: BuildByteWrite(System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildByteWrite(int, IEnumerable<int>)
+  nameWithType: ToyopucProtocol.BuildByteWrite(int, IEnumerable<int>)
+  fullName: Toyopuc.ToyopucProtocol.BuildByteWrite(int, System.Collections.Generic.IEnumerable<int>)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildByteWrite
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 268
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildByteWrite(int address, IEnumerable<int> values)
+    parameters:
+    - id: address
+      type: System.Int32
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildByteWrite(address As Integer, values As IEnumerable(Of Integer)) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildByteWrite*
+  nameWithType.vb: ToyopucProtocol.BuildByteWrite(Integer, IEnumerable(Of Integer))
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildByteWrite(Integer, System.Collections.Generic.IEnumerable(Of Integer))
+  name.vb: BuildByteWrite(Integer, IEnumerable(Of Integer))
+- uid: Toyopuc.ToyopucProtocol.BuildBitRead(System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.BuildBitRead(System.Int32)
+  id: BuildBitRead(System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildBitRead(int)
+  nameWithType: ToyopucProtocol.BuildBitRead(int)
+  fullName: Toyopuc.ToyopucProtocol.BuildBitRead(int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildBitRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 281
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildBitRead(int address)
+    parameters:
+    - id: address
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildBitRead(address As Integer) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildBitRead*
+  nameWithType.vb: ToyopucProtocol.BuildBitRead(Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildBitRead(Integer)
+  name.vb: BuildBitRead(Integer)
+- uid: Toyopuc.ToyopucProtocol.BuildBitWrite(System.Int32,System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.BuildBitWrite(System.Int32,System.Int32)
+  id: BuildBitWrite(System.Int32,System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildBitWrite(int, int)
+  nameWithType: ToyopucProtocol.BuildBitWrite(int, int)
+  fullName: Toyopuc.ToyopucProtocol.BuildBitWrite(int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildBitWrite
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 288
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildBitWrite(int address, int value)
+    parameters:
+    - id: address
+      type: System.Int32
+    - id: value
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildBitWrite(address As Integer, value As Integer) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildBitWrite*
+  nameWithType.vb: ToyopucProtocol.BuildBitWrite(Integer, Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildBitWrite(Integer, Integer)
+  name.vb: BuildBitWrite(Integer, Integer)
+- uid: Toyopuc.ToyopucProtocol.BuildMultiWordRead(System.Collections.Generic.IEnumerable{System.Int32})
+  commentId: M:Toyopuc.ToyopucProtocol.BuildMultiWordRead(System.Collections.Generic.IEnumerable{System.Int32})
+  id: BuildMultiWordRead(System.Collections.Generic.IEnumerable{System.Int32})
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildMultiWordRead(IEnumerable<int>)
+  nameWithType: ToyopucProtocol.BuildMultiWordRead(IEnumerable<int>)
+  fullName: Toyopuc.ToyopucProtocol.BuildMultiWordRead(System.Collections.Generic.IEnumerable<int>)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildMultiWordRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 296
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildMultiWordRead(IEnumerable<int> addresses)
+    parameters:
+    - id: addresses
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildMultiWordRead(addresses As IEnumerable(Of Integer)) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildMultiWordRead*
+  nameWithType.vb: ToyopucProtocol.BuildMultiWordRead(IEnumerable(Of Integer))
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildMultiWordRead(System.Collections.Generic.IEnumerable(Of Integer))
+  name.vb: BuildMultiWordRead(IEnumerable(Of Integer))
+- uid: Toyopuc.ToyopucProtocol.BuildMultiWordWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  commentId: M:Toyopuc.ToyopucProtocol.BuildMultiWordWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  id: BuildMultiWordWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildMultiWordWrite(IEnumerable<(int Address, int Value)>)
+  nameWithType: ToyopucProtocol.BuildMultiWordWrite(IEnumerable<(int Address, int Value)>)
+  fullName: Toyopuc.ToyopucProtocol.BuildMultiWordWrite(System.Collections.Generic.IEnumerable<(int Address, int Value)>)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildMultiWordWrite
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 308
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildMultiWordWrite(IEnumerable<(int Address, int Value)> pairs)
+    parameters:
+    - id: pairs
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildMultiWordWrite(pairs As IEnumerable(Of (Address As Integer, Value As Integer))) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildMultiWordWrite*
+  nameWithType.vb: ToyopucProtocol.BuildMultiWordWrite(IEnumerable(Of (Address As Integer, Value As Integer)))
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildMultiWordWrite(System.Collections.Generic.IEnumerable(Of (Address As Integer, Value As Integer)))
+  name.vb: BuildMultiWordWrite(IEnumerable(Of (Address As Integer, Value As Integer)))
+- uid: Toyopuc.ToyopucProtocol.BuildMultiByteRead(System.Collections.Generic.IEnumerable{System.Int32})
+  commentId: M:Toyopuc.ToyopucProtocol.BuildMultiByteRead(System.Collections.Generic.IEnumerable{System.Int32})
+  id: BuildMultiByteRead(System.Collections.Generic.IEnumerable{System.Int32})
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildMultiByteRead(IEnumerable<int>)
+  nameWithType: ToyopucProtocol.BuildMultiByteRead(IEnumerable<int>)
+  fullName: Toyopuc.ToyopucProtocol.BuildMultiByteRead(System.Collections.Generic.IEnumerable<int>)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildMultiByteRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 321
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildMultiByteRead(IEnumerable<int> addresses)
+    parameters:
+    - id: addresses
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildMultiByteRead(addresses As IEnumerable(Of Integer)) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildMultiByteRead*
+  nameWithType.vb: ToyopucProtocol.BuildMultiByteRead(IEnumerable(Of Integer))
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildMultiByteRead(System.Collections.Generic.IEnumerable(Of Integer))
+  name.vb: BuildMultiByteRead(IEnumerable(Of Integer))
+- uid: Toyopuc.ToyopucProtocol.BuildMultiByteWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  commentId: M:Toyopuc.ToyopucProtocol.BuildMultiByteWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  id: BuildMultiByteWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildMultiByteWrite(IEnumerable<(int Address, int Value)>)
+  nameWithType: ToyopucProtocol.BuildMultiByteWrite(IEnumerable<(int Address, int Value)>)
+  fullName: Toyopuc.ToyopucProtocol.BuildMultiByteWrite(System.Collections.Generic.IEnumerable<(int Address, int Value)>)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildMultiByteWrite
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 333
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildMultiByteWrite(IEnumerable<(int Address, int Value)> pairs)
+    parameters:
+    - id: pairs
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildMultiByteWrite(pairs As IEnumerable(Of (Address As Integer, Value As Integer))) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildMultiByteWrite*
+  nameWithType.vb: ToyopucProtocol.BuildMultiByteWrite(IEnumerable(Of (Address As Integer, Value As Integer)))
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildMultiByteWrite(System.Collections.Generic.IEnumerable(Of (Address As Integer, Value As Integer)))
+  name.vb: BuildMultiByteWrite(IEnumerable(Of (Address As Integer, Value As Integer)))
+- uid: Toyopuc.ToyopucProtocol.BuildExtWordRead(System.Int32,System.Int32,System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.BuildExtWordRead(System.Int32,System.Int32,System.Int32)
+  id: BuildExtWordRead(System.Int32,System.Int32,System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildExtWordRead(int, int, int)
+  nameWithType: ToyopucProtocol.BuildExtWordRead(int, int, int)
+  fullName: Toyopuc.ToyopucProtocol.BuildExtWordRead(int, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildExtWordRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 346
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildExtWordRead(int number, int address, int count)
+    parameters:
+    - id: number
+      type: System.Int32
+    - id: address
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildExtWordRead(number As Integer, address As Integer, count As Integer) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildExtWordRead*
+  nameWithType.vb: ToyopucProtocol.BuildExtWordRead(Integer, Integer, Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildExtWordRead(Integer, Integer, Integer)
+  name.vb: BuildExtWordRead(Integer, Integer, Integer)
+- uid: Toyopuc.ToyopucProtocol.BuildExtWordWrite(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  commentId: M:Toyopuc.ToyopucProtocol.BuildExtWordWrite(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  id: BuildExtWordWrite(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildExtWordWrite(int, int, IEnumerable<int>)
+  nameWithType: ToyopucProtocol.BuildExtWordWrite(int, int, IEnumerable<int>)
+  fullName: Toyopuc.ToyopucProtocol.BuildExtWordWrite(int, int, System.Collections.Generic.IEnumerable<int>)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildExtWordWrite
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 355
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildExtWordWrite(int number, int address, IEnumerable<int> values)
+    parameters:
+    - id: number
+      type: System.Int32
+    - id: address
+      type: System.Int32
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildExtWordWrite(number As Integer, address As Integer, values As IEnumerable(Of Integer)) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildExtWordWrite*
+  nameWithType.vb: ToyopucProtocol.BuildExtWordWrite(Integer, Integer, IEnumerable(Of Integer))
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildExtWordWrite(Integer, Integer, System.Collections.Generic.IEnumerable(Of Integer))
+  name.vb: BuildExtWordWrite(Integer, Integer, IEnumerable(Of Integer))
+- uid: Toyopuc.ToyopucProtocol.BuildExtByteRead(System.Int32,System.Int32,System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.BuildExtByteRead(System.Int32,System.Int32,System.Int32)
+  id: BuildExtByteRead(System.Int32,System.Int32,System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildExtByteRead(int, int, int)
+  nameWithType: ToyopucProtocol.BuildExtByteRead(int, int, int)
+  fullName: Toyopuc.ToyopucProtocol.BuildExtByteRead(int, int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildExtByteRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 369
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildExtByteRead(int number, int address, int count)
+    parameters:
+    - id: number
+      type: System.Int32
+    - id: address
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildExtByteRead(number As Integer, address As Integer, count As Integer) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildExtByteRead*
+  nameWithType.vb: ToyopucProtocol.BuildExtByteRead(Integer, Integer, Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildExtByteRead(Integer, Integer, Integer)
+  name.vb: BuildExtByteRead(Integer, Integer, Integer)
+- uid: Toyopuc.ToyopucProtocol.BuildExtByteWrite(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  commentId: M:Toyopuc.ToyopucProtocol.BuildExtByteWrite(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  id: BuildExtByteWrite(System.Int32,System.Int32,System.Collections.Generic.IEnumerable{System.Int32})
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildExtByteWrite(int, int, IEnumerable<int>)
+  nameWithType: ToyopucProtocol.BuildExtByteWrite(int, int, IEnumerable<int>)
+  fullName: Toyopuc.ToyopucProtocol.BuildExtByteWrite(int, int, System.Collections.Generic.IEnumerable<int>)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildExtByteWrite
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 378
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildExtByteWrite(int number, int address, IEnumerable<int> values)
+    parameters:
+    - id: number
+      type: System.Int32
+    - id: address
+      type: System.Int32
+    - id: values
+      type: System.Collections.Generic.IEnumerable{System.Int32}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildExtByteWrite(number As Integer, address As Integer, values As IEnumerable(Of Integer)) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildExtByteWrite*
+  nameWithType.vb: ToyopucProtocol.BuildExtByteWrite(Integer, Integer, IEnumerable(Of Integer))
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildExtByteWrite(Integer, Integer, System.Collections.Generic.IEnumerable(Of Integer))
+  name.vb: BuildExtByteWrite(Integer, Integer, IEnumerable(Of Integer))
+- uid: Toyopuc.ToyopucProtocol.BuildExtMultiRead(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  commentId: M:Toyopuc.ToyopucProtocol.BuildExtMultiRead(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  id: BuildExtMultiRead(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildExtMultiRead(IEnumerable<(int No, int Bit, int Address)>, IEnumerable<(int No, int Address)>, IEnumerable<(int No, int Address)>)
+  nameWithType: ToyopucProtocol.BuildExtMultiRead(IEnumerable<(int No, int Bit, int Address)>, IEnumerable<(int No, int Address)>, IEnumerable<(int No, int Address)>)
+  fullName: Toyopuc.ToyopucProtocol.BuildExtMultiRead(System.Collections.Generic.IEnumerable<(int No, int Bit, int Address)>, System.Collections.Generic.IEnumerable<(int No, int Address)>, System.Collections.Generic.IEnumerable<(int No, int Address)>)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildExtMultiRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 392
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildExtMultiRead(IEnumerable<(int No, int Bit, int Address)> bitPoints, IEnumerable<(int No, int Address)> bytePoints, IEnumerable<(int No, int Address)> wordPoints)
+    parameters:
+    - id: bitPoints
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}}
+    - id: bytePoints
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}}
+    - id: wordPoints
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildExtMultiRead(bitPoints As IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer)), bytePoints As IEnumerable(Of (No As Integer, Address As Integer)), wordPoints As IEnumerable(Of (No As Integer, Address As Integer))) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildExtMultiRead*
+  nameWithType.vb: ToyopucProtocol.BuildExtMultiRead(IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer)), IEnumerable(Of (No As Integer, Address As Integer)), IEnumerable(Of (No As Integer, Address As Integer)))
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildExtMultiRead(System.Collections.Generic.IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer)), System.Collections.Generic.IEnumerable(Of (No As Integer, Address As Integer)), System.Collections.Generic.IEnumerable(Of (No As Integer, Address As Integer)))
+  name.vb: BuildExtMultiRead(IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer)), IEnumerable(Of (No As Integer, Address As Integer)), IEnumerable(Of (No As Integer, Address As Integer)))
+- uid: Toyopuc.ToyopucProtocol.BuildExtMultiWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}})
+  commentId: M:Toyopuc.ToyopucProtocol.BuildExtMultiWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}})
+  id: BuildExtMultiWrite(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}},System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}})
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildExtMultiWrite(IEnumerable<(int No, int Bit, int Address, int Value)>, IEnumerable<(int No, int Address, int Value)>, IEnumerable<(int No, int Address, int Value)>)
+  nameWithType: ToyopucProtocol.BuildExtMultiWrite(IEnumerable<(int No, int Bit, int Address, int Value)>, IEnumerable<(int No, int Address, int Value)>, IEnumerable<(int No, int Address, int Value)>)
+  fullName: Toyopuc.ToyopucProtocol.BuildExtMultiWrite(System.Collections.Generic.IEnumerable<(int No, int Bit, int Address, int Value)>, System.Collections.Generic.IEnumerable<(int No, int Address, int Value)>, System.Collections.Generic.IEnumerable<(int No, int Address, int Value)>)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildExtMultiWrite
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 430
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildExtMultiWrite(IEnumerable<(int No, int Bit, int Address, int Value)> bitPoints, IEnumerable<(int No, int Address, int Value)> bytePoints, IEnumerable<(int No, int Address, int Value)> wordPoints)
+    parameters:
+    - id: bitPoints
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}}
+    - id: bytePoints
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}}
+    - id: wordPoints
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildExtMultiWrite(bitPoints As IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer, Value As Integer)), bytePoints As IEnumerable(Of (No As Integer, Address As Integer, Value As Integer)), wordPoints As IEnumerable(Of (No As Integer, Address As Integer, Value As Integer))) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildExtMultiWrite*
+  nameWithType.vb: ToyopucProtocol.BuildExtMultiWrite(IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer, Value As Integer)), IEnumerable(Of (No As Integer, Address As Integer, Value As Integer)), IEnumerable(Of (No As Integer, Address As Integer, Value As Integer)))
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildExtMultiWrite(System.Collections.Generic.IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer, Value As Integer)), System.Collections.Generic.IEnumerable(Of (No As Integer, Address As Integer, Value As Integer)), System.Collections.Generic.IEnumerable(Of (No As Integer, Address As Integer, Value As Integer)))
+  name.vb: BuildExtMultiWrite(IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer, Value As Integer)), IEnumerable(Of (No As Integer, Address As Integer, Value As Integer)), IEnumerable(Of (No As Integer, Address As Integer, Value As Integer)))
+- uid: Toyopuc.ToyopucProtocol.BuildPc10BlockRead(System.Int32,System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.BuildPc10BlockRead(System.Int32,System.Int32)
+  id: BuildPc10BlockRead(System.Int32,System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildPc10BlockRead(int, int)
+  nameWithType: ToyopucProtocol.BuildPc10BlockRead(int, int)
+  fullName: Toyopuc.ToyopucProtocol.BuildPc10BlockRead(int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildPc10BlockRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 472
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildPc10BlockRead(int address32, int count)
+    parameters:
+    - id: address32
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildPc10BlockRead(address32 As Integer, count As Integer) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildPc10BlockRead*
+  nameWithType.vb: ToyopucProtocol.BuildPc10BlockRead(Integer, Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildPc10BlockRead(Integer, Integer)
+  name.vb: BuildPc10BlockRead(Integer, Integer)
+- uid: Toyopuc.ToyopucProtocol.BuildPc10BlockWrite(System.Int32,System.Byte[])
+  commentId: M:Toyopuc.ToyopucProtocol.BuildPc10BlockWrite(System.Int32,System.Byte[])
+  id: BuildPc10BlockWrite(System.Int32,System.Byte[])
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildPc10BlockWrite(int, byte[])
+  nameWithType: ToyopucProtocol.BuildPc10BlockWrite(int, byte[])
+  fullName: Toyopuc.ToyopucProtocol.BuildPc10BlockWrite(int, byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildPc10BlockWrite
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 481
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildPc10BlockWrite(int address32, byte[] dataBytes)
+    parameters:
+    - id: address32
+      type: System.Int32
+    - id: dataBytes
+      type: System.Byte[]
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildPc10BlockWrite(address32 As Integer, dataBytes As Byte()) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildPc10BlockWrite*
+  nameWithType.vb: ToyopucProtocol.BuildPc10BlockWrite(Integer, Byte())
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildPc10BlockWrite(Integer, Byte())
+  name.vb: BuildPc10BlockWrite(Integer, Byte())
+- uid: Toyopuc.ToyopucProtocol.BuildPc10MultiRead(System.Byte[])
+  commentId: M:Toyopuc.ToyopucProtocol.BuildPc10MultiRead(System.Byte[])
+  id: BuildPc10MultiRead(System.Byte[])
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildPc10MultiRead(byte[])
+  nameWithType: ToyopucProtocol.BuildPc10MultiRead(byte[])
+  fullName: Toyopuc.ToyopucProtocol.BuildPc10MultiRead(byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildPc10MultiRead
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 494
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildPc10MultiRead(byte[] payload)
+    parameters:
+    - id: payload
+      type: System.Byte[]
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildPc10MultiRead(payload As Byte()) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildPc10MultiRead*
+  nameWithType.vb: ToyopucProtocol.BuildPc10MultiRead(Byte())
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildPc10MultiRead(Byte())
+  name.vb: BuildPc10MultiRead(Byte())
+- uid: Toyopuc.ToyopucProtocol.BuildPc10MultiWrite(System.Byte[])
+  commentId: M:Toyopuc.ToyopucProtocol.BuildPc10MultiWrite(System.Byte[])
+  id: BuildPc10MultiWrite(System.Byte[])
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildPc10MultiWrite(byte[])
+  nameWithType: ToyopucProtocol.BuildPc10MultiWrite(byte[])
+  fullName: Toyopuc.ToyopucProtocol.BuildPc10MultiWrite(byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildPc10MultiWrite
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 499
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildPc10MultiWrite(byte[] payload)
+    parameters:
+    - id: payload
+      type: System.Byte[]
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildPc10MultiWrite(payload As Byte()) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildPc10MultiWrite*
+  nameWithType.vb: ToyopucProtocol.BuildPc10MultiWrite(Byte())
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildPc10MultiWrite(Byte())
+  name.vb: BuildPc10MultiWrite(Byte())
+- uid: Toyopuc.ToyopucProtocol.BuildFrRegister(System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.BuildFrRegister(System.Int32)
+  id: BuildFrRegister(System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildFrRegister(int)
+  nameWithType: ToyopucProtocol.BuildFrRegister(int)
+  fullName: Toyopuc.ToyopucProtocol.BuildFrRegister(int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildFrRegister
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 504
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildFrRegister(int exNo)
+    parameters:
+    - id: exNo
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildFrRegister(exNo As Integer) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildFrRegister*
+  nameWithType.vb: ToyopucProtocol.BuildFrRegister(Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildFrRegister(Integer)
+  name.vb: BuildFrRegister(Integer)
+- uid: Toyopuc.ToyopucProtocol.BuildRelayCommand(System.Int32,System.Int32,System.Byte[],System.Int32)
+  commentId: M:Toyopuc.ToyopucProtocol.BuildRelayCommand(System.Int32,System.Int32,System.Byte[],System.Int32)
+  id: BuildRelayCommand(System.Int32,System.Int32,System.Byte[],System.Int32)
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildRelayCommand(int, int, byte[], int)
+  nameWithType: ToyopucProtocol.BuildRelayCommand(int, int, byte[], int)
+  fullName: Toyopuc.ToyopucProtocol.BuildRelayCommand(int, int, byte[], int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildRelayCommand
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 511
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildRelayCommand(int linkNo, int stationNo, byte[] innerPayload, int enq = 5)
+    parameters:
+    - id: linkNo
+      type: System.Int32
+    - id: stationNo
+      type: System.Int32
+    - id: innerPayload
+      type: System.Byte[]
+    - id: enq
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildRelayCommand(linkNo As Integer, stationNo As Integer, innerPayload As Byte(), enq As Integer = 5) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildRelayCommand*
+  nameWithType.vb: ToyopucProtocol.BuildRelayCommand(Integer, Integer, Byte(), Integer)
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildRelayCommand(Integer, Integer, Byte(), Integer)
+  name.vb: BuildRelayCommand(Integer, Integer, Byte(), Integer)
+- uid: Toyopuc.ToyopucProtocol.BuildRelayNested(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}},System.Byte[])
+  commentId: M:Toyopuc.ToyopucProtocol.BuildRelayNested(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}},System.Byte[])
+  id: BuildRelayNested(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}},System.Byte[])
+  parent: Toyopuc.ToyopucProtocol
+  langs:
+  - csharp
+  - vb
+  name: BuildRelayNested(IEnumerable<(int LinkNo, int StationNo)>, byte[])
+  nameWithType: ToyopucProtocol.BuildRelayNested(IEnumerable<(int LinkNo, int StationNo)>, byte[])
+  fullName: Toyopuc.ToyopucProtocol.BuildRelayNested(System.Collections.Generic.IEnumerable<(int LinkNo, int StationNo)>, byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucProtocol.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: BuildRelayNested
+    path: src/Toyopuc/ToyopucProtocol.cs
+    startLine: 524
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static byte[] BuildRelayNested(IEnumerable<(int LinkNo, int StationNo)> hops, byte[] innerPayload)
+    parameters:
+    - id: hops
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}}
+    - id: innerPayload
+      type: System.Byte[]
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function BuildRelayNested(hops As IEnumerable(Of (LinkNo As Integer, StationNo As Integer)), innerPayload As Byte()) As Byte()
+  overload: Toyopuc.ToyopucProtocol.BuildRelayNested*
+  nameWithType.vb: ToyopucProtocol.BuildRelayNested(IEnumerable(Of (LinkNo As Integer, StationNo As Integer)), Byte())
+  fullName.vb: Toyopuc.ToyopucProtocol.BuildRelayNested(System.Collections.Generic.IEnumerable(Of (LinkNo As Integer, StationNo As Integer)), Byte())
+  name.vb: BuildRelayNested(IEnumerable(Of (LinkNo As Integer, StationNo As Integer)), Byte())
+references:
+- uid: Toyopuc
+  commentId: N:Toyopuc
+  href: Toyopuc.html
+  name: Toyopuc
+  nameWithType: Toyopuc
+  fullName: Toyopuc
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Byte
+  commentId: T:System.Byte
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte
+  nameWithType: byte
+  fullName: byte
+  nameWithType.vb: Byte
+  fullName.vb: Byte
+  name.vb: Byte
+- uid: Toyopuc.ToyopucProtocol.BuildCommand*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildCommand
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildCommand_System_Int32_System_Byte___
+  name: BuildCommand
+  nameWithType: ToyopucProtocol.BuildCommand
+  fullName: Toyopuc.ToyopucProtocol.BuildCommand
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: Toyopuc.ToyopucProtocol.ParseResponse*
+  commentId: Overload:Toyopuc.ToyopucProtocol.ParseResponse
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_ParseResponse_System_Byte___
+  name: ParseResponse
+  nameWithType: ToyopucProtocol.ParseResponse
+  fullName: Toyopuc.ToyopucProtocol.ParseResponse
+- uid: Toyopuc.ResponseFrame
+  commentId: T:Toyopuc.ResponseFrame
+  parent: Toyopuc
+  href: Toyopuc.ResponseFrame.html
+  name: ResponseFrame
+  nameWithType: ResponseFrame
+  fullName: Toyopuc.ResponseFrame
+- uid: Toyopuc.ToyopucProtocol.PackU16LittleEndian*
+  commentId: Overload:Toyopuc.ToyopucProtocol.PackU16LittleEndian
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_PackU16LittleEndian_System_Int32_
+  name: PackU16LittleEndian
+  nameWithType: ToyopucProtocol.PackU16LittleEndian
+  fullName: Toyopuc.ToyopucProtocol.PackU16LittleEndian
+- uid: Toyopuc.ToyopucProtocol.UnpackU16LittleEndian*
+  commentId: Overload:Toyopuc.ToyopucProtocol.UnpackU16LittleEndian
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_UnpackU16LittleEndian_System_Byte___
+  name: UnpackU16LittleEndian
+  nameWithType: ToyopucProtocol.UnpackU16LittleEndian
+  fullName: Toyopuc.ToyopucProtocol.UnpackU16LittleEndian
+- uid: System.Int32[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int[]
+  nameWithType: int[]
+  fullName: int[]
+  nameWithType.vb: Integer()
+  fullName.vb: Integer()
+  name.vb: Integer()
+  spec.csharp:
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: (
+  - name: )
+- uid: Toyopuc.ToyopucProtocol.PackExtBitSpec*
+  commentId: Overload:Toyopuc.ToyopucProtocol.PackExtBitSpec
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_PackExtBitSpec_System_Int32_System_Int32_
+  name: PackExtBitSpec
+  nameWithType: ToyopucProtocol.PackExtBitSpec
+  fullName: Toyopuc.ToyopucProtocol.PackExtBitSpec
+- uid: Toyopuc.ToyopucProtocol.PackBcd*
+  commentId: Overload:Toyopuc.ToyopucProtocol.PackBcd
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_PackBcd_System_Int32_
+  name: PackBcd
+  nameWithType: ToyopucProtocol.PackBcd
+  fullName: Toyopuc.ToyopucProtocol.PackBcd
+- uid: Toyopuc.ToyopucProtocol.UnpackBcd*
+  commentId: Overload:Toyopuc.ToyopucProtocol.UnpackBcd
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_UnpackBcd_System_Int32_
+  name: UnpackBcd
+  nameWithType: ToyopucProtocol.UnpackBcd
+  fullName: Toyopuc.ToyopucProtocol.UnpackBcd
+- uid: Toyopuc.ToyopucProtocol.BuildClockRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildClockRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildClockRead
+  name: BuildClockRead
+  nameWithType: ToyopucProtocol.BuildClockRead
+  fullName: Toyopuc.ToyopucProtocol.BuildClockRead
+- uid: Toyopuc.ToyopucProtocol.BuildCpuStatusRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildCpuStatusRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildCpuStatusRead
+  name: BuildCpuStatusRead
+  nameWithType: ToyopucProtocol.BuildCpuStatusRead
+  fullName: Toyopuc.ToyopucProtocol.BuildCpuStatusRead
+- uid: Toyopuc.ToyopucProtocol.BuildCpuStatusReadA0*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildCpuStatusReadA0
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildCpuStatusReadA0
+  name: BuildCpuStatusReadA0
+  nameWithType: ToyopucProtocol.BuildCpuStatusReadA0
+  fullName: Toyopuc.ToyopucProtocol.BuildCpuStatusReadA0
+- uid: Toyopuc.ToyopucProtocol.BuildClockWrite*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildClockWrite
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildClockWrite_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_System_Int32_
+  name: BuildClockWrite
+  nameWithType: ToyopucProtocol.BuildClockWrite
+  fullName: Toyopuc.ToyopucProtocol.BuildClockWrite
+- uid: Toyopuc.ToyopucProtocol.ParseClockData*
+  commentId: Overload:Toyopuc.ToyopucProtocol.ParseClockData
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_ParseClockData_System_Byte___
+  name: ParseClockData
+  nameWithType: ToyopucProtocol.ParseClockData
+  fullName: Toyopuc.ToyopucProtocol.ParseClockData
+- uid: Toyopuc.ClockData
+  commentId: T:Toyopuc.ClockData
+  parent: Toyopuc
+  href: Toyopuc.ClockData.html
+  name: ClockData
+  nameWithType: ClockData
+  fullName: Toyopuc.ClockData
+- uid: Toyopuc.ToyopucProtocol.ParseCpuStatusData*
+  commentId: Overload:Toyopuc.ToyopucProtocol.ParseCpuStatusData
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_ParseCpuStatusData_System_Byte___
+  name: ParseCpuStatusData
+  nameWithType: ToyopucProtocol.ParseCpuStatusData
+  fullName: Toyopuc.ToyopucProtocol.ParseCpuStatusData
+- uid: Toyopuc.CpuStatusData
+  commentId: T:Toyopuc.CpuStatusData
+  parent: Toyopuc
+  href: Toyopuc.CpuStatusData.html
+  name: CpuStatusData
+  nameWithType: CpuStatusData
+  fullName: Toyopuc.CpuStatusData
+- uid: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0*
+  commentId: Overload:Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_ParseCpuStatusDataA0_System_Byte___
+  name: ParseCpuStatusDataA0
+  nameWithType: ToyopucProtocol.ParseCpuStatusDataA0
+  fullName: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0
+- uid: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0Raw*
+  commentId: Overload:Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0Raw
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_ParseCpuStatusDataA0Raw_System_Byte___
+  name: ParseCpuStatusDataA0Raw
+  nameWithType: ToyopucProtocol.ParseCpuStatusDataA0Raw
+  fullName: Toyopuc.ToyopucProtocol.ParseCpuStatusDataA0Raw
+- uid: Toyopuc.ToyopucProtocol.BuildWordRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildWordRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildWordRead_System_Int32_System_Int32_
+  name: BuildWordRead
+  nameWithType: ToyopucProtocol.BuildWordRead
+  fullName: Toyopuc.ToyopucProtocol.BuildWordRead
+- uid: Toyopuc.ToyopucProtocol.BuildWordWrite*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildWordWrite
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildWordWrite_System_Int32_System_Collections_Generic_IEnumerable_System_Int32__
+  name: BuildWordWrite
+  nameWithType: ToyopucProtocol.BuildWordWrite
+  fullName: Toyopuc.ToyopucProtocol.BuildWordWrite
+- uid: System.Collections.Generic.IEnumerable{System.Int32}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Int32}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<int>
+  nameWithType: IEnumerable<int>
+  fullName: System.Collections.Generic.IEnumerable<int>
+  nameWithType.vb: IEnumerable(Of Integer)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of Integer)
+  name.vb: IEnumerable(Of Integer)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Toyopuc.ToyopucProtocol.BuildByteRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildByteRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildByteRead_System_Int32_System_Int32_
+  name: BuildByteRead
+  nameWithType: ToyopucProtocol.BuildByteRead
+  fullName: Toyopuc.ToyopucProtocol.BuildByteRead
+- uid: Toyopuc.ToyopucProtocol.BuildByteWrite*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildByteWrite
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildByteWrite_System_Int32_System_Collections_Generic_IEnumerable_System_Int32__
+  name: BuildByteWrite
+  nameWithType: ToyopucProtocol.BuildByteWrite
+  fullName: Toyopuc.ToyopucProtocol.BuildByteWrite
+- uid: Toyopuc.ToyopucProtocol.BuildBitRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildBitRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildBitRead_System_Int32_
+  name: BuildBitRead
+  nameWithType: ToyopucProtocol.BuildBitRead
+  fullName: Toyopuc.ToyopucProtocol.BuildBitRead
+- uid: Toyopuc.ToyopucProtocol.BuildBitWrite*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildBitWrite
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildBitWrite_System_Int32_System_Int32_
+  name: BuildBitWrite
+  nameWithType: ToyopucProtocol.BuildBitWrite
+  fullName: Toyopuc.ToyopucProtocol.BuildBitWrite
+- uid: Toyopuc.ToyopucProtocol.BuildMultiWordRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildMultiWordRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildMultiWordRead_System_Collections_Generic_IEnumerable_System_Int32__
+  name: BuildMultiWordRead
+  nameWithType: ToyopucProtocol.BuildMultiWordRead
+  fullName: Toyopuc.ToyopucProtocol.BuildMultiWordRead
+- uid: Toyopuc.ToyopucProtocol.BuildMultiWordWrite*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildMultiWordWrite
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildMultiWordWrite_System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32___
+  name: BuildMultiWordWrite
+  nameWithType: ToyopucProtocol.BuildMultiWordWrite
+  fullName: Toyopuc.ToyopucProtocol.BuildMultiWordWrite
+- uid: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<(int Address, int Value)>
+  nameWithType: IEnumerable<(int Address, int Value)>
+  fullName: System.Collections.Generic.IEnumerable<(int Address, int Value)>
+  nameWithType.vb: IEnumerable(Of (Address As Integer, Value As Integer))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of (Address As Integer, Value As Integer))
+  name.vb: IEnumerable(Of (Address As Integer, Value As Integer))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.address
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.Value
+    name: Value
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.value
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Int32,System.Int32}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.address
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.Value
+    name: Value
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.value
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: )
+- uid: Toyopuc.ToyopucProtocol.BuildMultiByteRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildMultiByteRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildMultiByteRead_System_Collections_Generic_IEnumerable_System_Int32__
+  name: BuildMultiByteRead
+  nameWithType: ToyopucProtocol.BuildMultiByteRead
+  fullName: Toyopuc.ToyopucProtocol.BuildMultiByteRead
+- uid: Toyopuc.ToyopucProtocol.BuildMultiByteWrite*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildMultiByteWrite
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildMultiByteWrite_System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32___
+  name: BuildMultiByteWrite
+  nameWithType: ToyopucProtocol.BuildMultiByteWrite
+  fullName: Toyopuc.ToyopucProtocol.BuildMultiByteWrite
+- uid: Toyopuc.ToyopucProtocol.BuildExtWordRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildExtWordRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildExtWordRead_System_Int32_System_Int32_System_Int32_
+  name: BuildExtWordRead
+  nameWithType: ToyopucProtocol.BuildExtWordRead
+  fullName: Toyopuc.ToyopucProtocol.BuildExtWordRead
+- uid: Toyopuc.ToyopucProtocol.BuildExtWordWrite*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildExtWordWrite
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildExtWordWrite_System_Int32_System_Int32_System_Collections_Generic_IEnumerable_System_Int32__
+  name: BuildExtWordWrite
+  nameWithType: ToyopucProtocol.BuildExtWordWrite
+  fullName: Toyopuc.ToyopucProtocol.BuildExtWordWrite
+- uid: Toyopuc.ToyopucProtocol.BuildExtByteRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildExtByteRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildExtByteRead_System_Int32_System_Int32_System_Int32_
+  name: BuildExtByteRead
+  nameWithType: ToyopucProtocol.BuildExtByteRead
+  fullName: Toyopuc.ToyopucProtocol.BuildExtByteRead
+- uid: Toyopuc.ToyopucProtocol.BuildExtByteWrite*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildExtByteWrite
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildExtByteWrite_System_Int32_System_Int32_System_Collections_Generic_IEnumerable_System_Int32__
+  name: BuildExtByteWrite
+  nameWithType: ToyopucProtocol.BuildExtByteWrite
+  fullName: Toyopuc.ToyopucProtocol.BuildExtByteWrite
+- uid: Toyopuc.ToyopucProtocol.BuildExtMultiRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildExtMultiRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildExtMultiRead_System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32_System_Int32___System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32___System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32___
+  name: BuildExtMultiRead
+  nameWithType: ToyopucProtocol.BuildExtMultiRead
+  fullName: Toyopuc.ToyopucProtocol.BuildExtMultiRead
+- uid: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<(int No, int Bit, int Address)>
+  nameWithType: IEnumerable<(int No, int Bit, int Address)>
+  fullName: System.Collections.Generic.IEnumerable<(int No, int Bit, int Address)>
+  nameWithType.vb: IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer))
+  name.vb: IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32}.No
+    name: No
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32-.no
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32}.Bit
+    name: Bit
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32-.bit
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32-.address
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32}.No
+    name: No
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32-.no
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32}.Bit
+    name: Bit
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32-.bit
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32-.address
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: )
+- uid: Toyopuc.ToyopucProtocol.BuildExtMultiWrite*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildExtMultiWrite
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildExtMultiWrite_System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32_System_Int32_System_Int32___System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32_System_Int32___System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32_System_Int32___
+  name: BuildExtMultiWrite
+  nameWithType: ToyopucProtocol.BuildExtMultiWrite
+  fullName: Toyopuc.ToyopucProtocol.BuildExtMultiWrite
+- uid: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<(int No, int Bit, int Address, int Value)>
+  nameWithType: IEnumerable<(int No, int Bit, int Address, int Value)>
+  fullName: System.Collections.Generic.IEnumerable<(int No, int Bit, int Address, int Value)>
+  nameWithType.vb: IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer, Value As Integer))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer, Value As Integer))
+  name.vb: IEnumerable(Of (No As Integer, Bit As Integer, Address As Integer, Value As Integer))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}.No
+    name: No
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32,system.int32-.no
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}.Bit
+    name: Bit
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32,system.int32-.bit
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32,system.int32-.address
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}.Value
+    name: Value
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32,system.int32-.value
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}.No
+    name: No
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32,system.int32-.no
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}.Bit
+    name: Bit
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32,system.int32-.bit
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32,system.int32-.address
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32,System.Int32,System.Int32}.Value
+    name: Value
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32,system.int32,system.int32-.value
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: )
+- uid: Toyopuc.ToyopucProtocol.BuildPc10BlockRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildPc10BlockRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildPc10BlockRead_System_Int32_System_Int32_
+  name: BuildPc10BlockRead
+  nameWithType: ToyopucProtocol.BuildPc10BlockRead
+  fullName: Toyopuc.ToyopucProtocol.BuildPc10BlockRead
+- uid: Toyopuc.ToyopucProtocol.BuildPc10BlockWrite*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildPc10BlockWrite
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildPc10BlockWrite_System_Int32_System_Byte___
+  name: BuildPc10BlockWrite
+  nameWithType: ToyopucProtocol.BuildPc10BlockWrite
+  fullName: Toyopuc.ToyopucProtocol.BuildPc10BlockWrite
+- uid: Toyopuc.ToyopucProtocol.BuildPc10MultiRead*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildPc10MultiRead
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildPc10MultiRead_System_Byte___
+  name: BuildPc10MultiRead
+  nameWithType: ToyopucProtocol.BuildPc10MultiRead
+  fullName: Toyopuc.ToyopucProtocol.BuildPc10MultiRead
+- uid: Toyopuc.ToyopucProtocol.BuildPc10MultiWrite*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildPc10MultiWrite
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildPc10MultiWrite_System_Byte___
+  name: BuildPc10MultiWrite
+  nameWithType: ToyopucProtocol.BuildPc10MultiWrite
+  fullName: Toyopuc.ToyopucProtocol.BuildPc10MultiWrite
+- uid: Toyopuc.ToyopucProtocol.BuildFrRegister*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildFrRegister
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildFrRegister_System_Int32_
+  name: BuildFrRegister
+  nameWithType: ToyopucProtocol.BuildFrRegister
+  fullName: Toyopuc.ToyopucProtocol.BuildFrRegister
+- uid: Toyopuc.ToyopucProtocol.BuildRelayCommand*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildRelayCommand
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildRelayCommand_System_Int32_System_Int32_System_Byte___System_Int32_
+  name: BuildRelayCommand
+  nameWithType: ToyopucProtocol.BuildRelayCommand
+  fullName: Toyopuc.ToyopucProtocol.BuildRelayCommand
+- uid: Toyopuc.ToyopucProtocol.BuildRelayNested*
+  commentId: Overload:Toyopuc.ToyopucProtocol.BuildRelayNested
+  href: Toyopuc.ToyopucProtocol.html#Toyopuc_ToyopucProtocol_BuildRelayNested_System_Collections_Generic_IEnumerable_System_ValueTuple_System_Int32_System_Int32___System_Byte___
+  name: BuildRelayNested
+  nameWithType: ToyopucProtocol.BuildRelayNested
+  fullName: Toyopuc.ToyopucProtocol.BuildRelayNested

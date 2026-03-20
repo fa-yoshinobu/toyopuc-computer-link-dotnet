@@ -1,0 +1,459 @@
+### YamlMime:ManagedReference
+items:
+- uid: Toyopuc.TransportTraceFrame
+  commentId: T:Toyopuc.TransportTraceFrame
+  id: TransportTraceFrame
+  parent: Toyopuc
+  children:
+  - Toyopuc.TransportTraceFrame.#ctor(System.Byte[],System.Byte[])
+  - Toyopuc.TransportTraceFrame.Rx
+  - Toyopuc.TransportTraceFrame.Tx
+  langs:
+  - csharp
+  - vb
+  name: TransportTraceFrame
+  nameWithType: TransportTraceFrame
+  fullName: Toyopuc.TransportTraceFrame
+  type: Class
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: TransportTraceFrame
+    path: src/Toyopuc/Models.cs
+    startLine: 6
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: 'public sealed record TransportTraceFrame : IEquatable<TransportTraceFrame>'
+    content.vb: Public NotInheritable Class TransportTraceFrame Implements IEquatable(Of TransportTraceFrame)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Toyopuc.TransportTraceFrame}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Toyopuc.TransportTraceFrame.#ctor(System.Byte[],System.Byte[])
+  commentId: M:Toyopuc.TransportTraceFrame.#ctor(System.Byte[],System.Byte[])
+  id: '#ctor(System.Byte[],System.Byte[])'
+  parent: Toyopuc.TransportTraceFrame
+  langs:
+  - csharp
+  - vb
+  name: TransportTraceFrame(byte[], byte[]?)
+  nameWithType: TransportTraceFrame.TransportTraceFrame(byte[], byte[]?)
+  fullName: Toyopuc.TransportTraceFrame.TransportTraceFrame(byte[], byte[]?)
+  type: Constructor
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: .ctor
+    path: src/Toyopuc/Models.cs
+    startLine: 6
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public TransportTraceFrame(byte[] Tx, byte[]? Rx)
+    parameters:
+    - id: Tx
+      type: System.Byte[]
+    - id: Rx
+      type: System.Byte[]
+    content.vb: Public Sub New(Tx As Byte(), Rx As Byte())
+  overload: Toyopuc.TransportTraceFrame.#ctor*
+  nameWithType.vb: TransportTraceFrame.New(Byte(), Byte())
+  fullName.vb: Toyopuc.TransportTraceFrame.New(Byte(), Byte())
+  name.vb: New(Byte(), Byte())
+- uid: Toyopuc.TransportTraceFrame.Tx
+  commentId: P:Toyopuc.TransportTraceFrame.Tx
+  id: Tx
+  parent: Toyopuc.TransportTraceFrame
+  langs:
+  - csharp
+  - vb
+  name: Tx
+  nameWithType: TransportTraceFrame.Tx
+  fullName: Toyopuc.TransportTraceFrame.Tx
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Tx
+    path: src/Toyopuc/Models.cs
+    startLine: 6
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public byte[] Tx { get; init; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public Property Tx As Byte()
+  overload: Toyopuc.TransportTraceFrame.Tx*
+- uid: Toyopuc.TransportTraceFrame.Rx
+  commentId: P:Toyopuc.TransportTraceFrame.Rx
+  id: Rx
+  parent: Toyopuc.TransportTraceFrame
+  langs:
+  - csharp
+  - vb
+  name: Rx
+  nameWithType: TransportTraceFrame.Rx
+  fullName: Toyopuc.TransportTraceFrame.Rx
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Rx
+    path: src/Toyopuc/Models.cs
+    startLine: 6
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public byte[]? Rx { get; init; }
+    parameters: []
+    return:
+      type: System.Byte[]
+    content.vb: Public Property Rx As Byte()
+  overload: Toyopuc.TransportTraceFrame.Rx*
+references:
+- uid: Toyopuc
+  commentId: N:Toyopuc
+  href: Toyopuc.html
+  name: Toyopuc
+  nameWithType: Toyopuc
+  fullName: Toyopuc
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{Toyopuc.TransportTraceFrame}
+  commentId: T:System.IEquatable{Toyopuc.TransportTraceFrame}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<TransportTraceFrame>
+  nameWithType: IEquatable<TransportTraceFrame>
+  fullName: System.IEquatable<Toyopuc.TransportTraceFrame>
+  nameWithType.vb: IEquatable(Of TransportTraceFrame)
+  fullName.vb: System.IEquatable(Of Toyopuc.TransportTraceFrame)
+  name.vb: IEquatable(Of TransportTraceFrame)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Toyopuc.TransportTraceFrame
+    name: TransportTraceFrame
+    href: Toyopuc.TransportTraceFrame.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Toyopuc.TransportTraceFrame
+    name: TransportTraceFrame
+    href: Toyopuc.TransportTraceFrame.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Toyopuc.TransportTraceFrame.#ctor*
+  commentId: Overload:Toyopuc.TransportTraceFrame.#ctor
+  href: Toyopuc.TransportTraceFrame.html#Toyopuc_TransportTraceFrame__ctor_System_Byte___System_Byte___
+  name: TransportTraceFrame
+  nameWithType: TransportTraceFrame.TransportTraceFrame
+  fullName: Toyopuc.TransportTraceFrame.TransportTraceFrame
+  nameWithType.vb: TransportTraceFrame.New
+  fullName.vb: Toyopuc.TransportTraceFrame.New
+  name.vb: New
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: Toyopuc.TransportTraceFrame.Tx*
+  commentId: Overload:Toyopuc.TransportTraceFrame.Tx
+  href: Toyopuc.TransportTraceFrame.html#Toyopuc_TransportTraceFrame_Tx
+  name: Tx
+  nameWithType: TransportTraceFrame.Tx
+  fullName: Toyopuc.TransportTraceFrame.Tx
+- uid: Toyopuc.TransportTraceFrame.Rx*
+  commentId: Overload:Toyopuc.TransportTraceFrame.Rx
+  href: Toyopuc.TransportTraceFrame.html#Toyopuc_TransportTraceFrame_Rx
+  name: Rx
+  nameWithType: TransportTraceFrame.Rx
+  fullName: Toyopuc.TransportTraceFrame.Rx

@@ -1,0 +1,496 @@
+### YamlMime:ManagedReference
+items:
+- uid: Toyopuc.ExtNoAddress
+  commentId: T:Toyopuc.ExtNoAddress
+  id: ExtNoAddress
+  parent: Toyopuc
+  children:
+  - Toyopuc.ExtNoAddress.#ctor(System.Int32,System.Int32,System.String)
+  - Toyopuc.ExtNoAddress.Address
+  - Toyopuc.ExtNoAddress.No
+  - Toyopuc.ExtNoAddress.Unit
+  langs:
+  - csharp
+  - vb
+  name: ExtNoAddress
+  nameWithType: ExtNoAddress
+  fullName: Toyopuc.ExtNoAddress
+  type: Class
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ExtNoAddress
+    path: src/Toyopuc/Models.cs
+    startLine: 125
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: 'public sealed record ExtNoAddress : IEquatable<ExtNoAddress>'
+    content.vb: Public NotInheritable Class ExtNoAddress Implements IEquatable(Of ExtNoAddress)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Toyopuc.ExtNoAddress}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Toyopuc.ExtNoAddress.#ctor(System.Int32,System.Int32,System.String)
+  commentId: M:Toyopuc.ExtNoAddress.#ctor(System.Int32,System.Int32,System.String)
+  id: '#ctor(System.Int32,System.Int32,System.String)'
+  parent: Toyopuc.ExtNoAddress
+  langs:
+  - csharp
+  - vb
+  name: ExtNoAddress(int, int, string)
+  nameWithType: ExtNoAddress.ExtNoAddress(int, int, string)
+  fullName: Toyopuc.ExtNoAddress.ExtNoAddress(int, int, string)
+  type: Constructor
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: .ctor
+    path: src/Toyopuc/Models.cs
+    startLine: 125
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public ExtNoAddress(int No, int Address, string Unit)
+    parameters:
+    - id: No
+      type: System.Int32
+    - id: Address
+      type: System.Int32
+    - id: Unit
+      type: System.String
+    content.vb: Public Sub New(No As Integer, Address As Integer, Unit As String)
+  overload: Toyopuc.ExtNoAddress.#ctor*
+  nameWithType.vb: ExtNoAddress.New(Integer, Integer, String)
+  fullName.vb: Toyopuc.ExtNoAddress.New(Integer, Integer, String)
+  name.vb: New(Integer, Integer, String)
+- uid: Toyopuc.ExtNoAddress.No
+  commentId: P:Toyopuc.ExtNoAddress.No
+  id: No
+  parent: Toyopuc.ExtNoAddress
+  langs:
+  - csharp
+  - vb
+  name: No
+  nameWithType: ExtNoAddress.No
+  fullName: Toyopuc.ExtNoAddress.No
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: No
+    path: src/Toyopuc/Models.cs
+    startLine: 126
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int No { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property No As Integer
+  overload: Toyopuc.ExtNoAddress.No*
+- uid: Toyopuc.ExtNoAddress.Address
+  commentId: P:Toyopuc.ExtNoAddress.Address
+  id: Address
+  parent: Toyopuc.ExtNoAddress
+  langs:
+  - csharp
+  - vb
+  name: Address
+  nameWithType: ExtNoAddress.Address
+  fullName: Toyopuc.ExtNoAddress.Address
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Address
+    path: src/Toyopuc/Models.cs
+    startLine: 127
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int Address { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Address As Integer
+  overload: Toyopuc.ExtNoAddress.Address*
+- uid: Toyopuc.ExtNoAddress.Unit
+  commentId: P:Toyopuc.ExtNoAddress.Unit
+  id: Unit
+  parent: Toyopuc.ExtNoAddress
+  langs:
+  - csharp
+  - vb
+  name: Unit
+  nameWithType: ExtNoAddress.Unit
+  fullName: Toyopuc.ExtNoAddress.Unit
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/Models.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Unit
+    path: src/Toyopuc/Models.cs
+    startLine: 128
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public string Unit { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Unit As String
+  overload: Toyopuc.ExtNoAddress.Unit*
+references:
+- uid: Toyopuc
+  commentId: N:Toyopuc
+  href: Toyopuc.html
+  name: Toyopuc
+  nameWithType: Toyopuc
+  fullName: Toyopuc
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{Toyopuc.ExtNoAddress}
+  commentId: T:System.IEquatable{Toyopuc.ExtNoAddress}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ExtNoAddress>
+  nameWithType: IEquatable<ExtNoAddress>
+  fullName: System.IEquatable<Toyopuc.ExtNoAddress>
+  nameWithType.vb: IEquatable(Of ExtNoAddress)
+  fullName.vb: System.IEquatable(Of Toyopuc.ExtNoAddress)
+  name.vb: IEquatable(Of ExtNoAddress)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Toyopuc.ExtNoAddress
+    name: ExtNoAddress
+    href: Toyopuc.ExtNoAddress.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Toyopuc.ExtNoAddress
+    name: ExtNoAddress
+    href: Toyopuc.ExtNoAddress.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Toyopuc.ExtNoAddress.#ctor*
+  commentId: Overload:Toyopuc.ExtNoAddress.#ctor
+  href: Toyopuc.ExtNoAddress.html#Toyopuc_ExtNoAddress__ctor_System_Int32_System_Int32_System_String_
+  name: ExtNoAddress
+  nameWithType: ExtNoAddress.ExtNoAddress
+  fullName: Toyopuc.ExtNoAddress.ExtNoAddress
+  nameWithType.vb: ExtNoAddress.New
+  fullName.vb: Toyopuc.ExtNoAddress.New
+  name.vb: New
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: Toyopuc.ExtNoAddress.No*
+  commentId: Overload:Toyopuc.ExtNoAddress.No
+  href: Toyopuc.ExtNoAddress.html#Toyopuc_ExtNoAddress_No
+  name: No
+  nameWithType: ExtNoAddress.No
+  fullName: Toyopuc.ExtNoAddress.No
+- uid: Toyopuc.ExtNoAddress.Address*
+  commentId: Overload:Toyopuc.ExtNoAddress.Address
+  href: Toyopuc.ExtNoAddress.html#Toyopuc_ExtNoAddress_Address
+  name: Address
+  nameWithType: ExtNoAddress.Address
+  fullName: Toyopuc.ExtNoAddress.Address
+- uid: Toyopuc.ExtNoAddress.Unit*
+  commentId: Overload:Toyopuc.ExtNoAddress.Unit
+  href: Toyopuc.ExtNoAddress.html#Toyopuc_ExtNoAddress_Unit
+  name: Unit
+  nameWithType: ExtNoAddress.Unit
+  fullName: Toyopuc.ExtNoAddress.Unit

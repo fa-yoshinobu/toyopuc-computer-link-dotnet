@@ -1,0 +1,953 @@
+### YamlMime:ManagedReference
+items:
+- uid: Toyopuc.ToyopucRelay
+  commentId: T:Toyopuc.ToyopucRelay
+  id: ToyopucRelay
+  parent: Toyopuc
+  children:
+  - Toyopuc.ToyopucRelay.FormatRelayHop(System.Int32,System.Int32)
+  - Toyopuc.ToyopucRelay.NormalizeRelayHops(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  - Toyopuc.ToyopucRelay.NormalizeRelayHops(System.Object)
+  - Toyopuc.ToyopucRelay.ParseRelayHops(System.String)
+  - Toyopuc.ToyopucRelay.ParseRelayInnerResponse(System.Byte[])
+  - Toyopuc.ToyopucRelay.UnwrapRelayResponseChain(Toyopuc.ResponseFrame)
+  langs:
+  - csharp
+  - vb
+  name: ToyopucRelay
+  nameWithType: ToyopucRelay
+  fullName: Toyopuc.ToyopucRelay
+  type: Class
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucRelay.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ToyopucRelay
+    path: src/Toyopuc/ToyopucRelay.cs
+    startLine: 5
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static class ToyopucRelay
+    content.vb: Public Module ToyopucRelay
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Toyopuc.ToyopucRelay.ParseRelayHops(System.String)
+  commentId: M:Toyopuc.ToyopucRelay.ParseRelayHops(System.String)
+  id: ParseRelayHops(System.String)
+  parent: Toyopuc.ToyopucRelay
+  langs:
+  - csharp
+  - vb
+  name: ParseRelayHops(string)
+  nameWithType: ToyopucRelay.ParseRelayHops(string)
+  fullName: Toyopuc.ToyopucRelay.ParseRelayHops(string)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucRelay.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ParseRelayHops
+    path: src/Toyopuc/ToyopucRelay.cs
+    startLine: 15
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static IReadOnlyList<(int LinkNo, int StationNo)> ParseRelayHops(string text)
+    parameters:
+    - id: text
+      type: System.String
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.ValueTuple{System.Int32,System.Int32}}
+    content.vb: Public Shared Function ParseRelayHops(text As String) As IReadOnlyList(Of (LinkNo As Integer, StationNo As Integer))
+  overload: Toyopuc.ToyopucRelay.ParseRelayHops*
+  nameWithType.vb: ToyopucRelay.ParseRelayHops(String)
+  fullName.vb: Toyopuc.ToyopucRelay.ParseRelayHops(String)
+  name.vb: ParseRelayHops(String)
+- uid: Toyopuc.ToyopucRelay.NormalizeRelayHops(System.Object)
+  commentId: M:Toyopuc.ToyopucRelay.NormalizeRelayHops(System.Object)
+  id: NormalizeRelayHops(System.Object)
+  parent: Toyopuc.ToyopucRelay
+  langs:
+  - csharp
+  - vb
+  name: NormalizeRelayHops(object)
+  nameWithType: ToyopucRelay.NormalizeRelayHops(object)
+  fullName: Toyopuc.ToyopucRelay.NormalizeRelayHops(object)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucRelay.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: NormalizeRelayHops
+    path: src/Toyopuc/ToyopucRelay.cs
+    startLine: 70
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static IReadOnlyList<(int LinkNo, int StationNo)> NormalizeRelayHops(object hops)
+    parameters:
+    - id: hops
+      type: System.Object
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.ValueTuple{System.Int32,System.Int32}}
+    content.vb: Public Shared Function NormalizeRelayHops(hops As Object) As IReadOnlyList(Of (LinkNo As Integer, StationNo As Integer))
+  overload: Toyopuc.ToyopucRelay.NormalizeRelayHops*
+  nameWithType.vb: ToyopucRelay.NormalizeRelayHops(Object)
+  fullName.vb: Toyopuc.ToyopucRelay.NormalizeRelayHops(Object)
+  name.vb: NormalizeRelayHops(Object)
+- uid: Toyopuc.ToyopucRelay.NormalizeRelayHops(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  commentId: M:Toyopuc.ToyopucRelay.NormalizeRelayHops(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  id: NormalizeRelayHops(System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}})
+  parent: Toyopuc.ToyopucRelay
+  langs:
+  - csharp
+  - vb
+  name: NormalizeRelayHops(IEnumerable<(int LinkNo, int StationNo)>)
+  nameWithType: ToyopucRelay.NormalizeRelayHops(IEnumerable<(int LinkNo, int StationNo)>)
+  fullName: Toyopuc.ToyopucRelay.NormalizeRelayHops(System.Collections.Generic.IEnumerable<(int LinkNo, int StationNo)>)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucRelay.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: NormalizeRelayHops
+    path: src/Toyopuc/ToyopucRelay.cs
+    startLine: 80
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static IReadOnlyList<(int LinkNo, int StationNo)> NormalizeRelayHops(IEnumerable<(int LinkNo, int StationNo)> hops)
+    parameters:
+    - id: hops
+      type: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}}
+    return:
+      type: System.Collections.Generic.IReadOnlyList{System.ValueTuple{System.Int32,System.Int32}}
+    content.vb: Public Shared Function NormalizeRelayHops(hops As IEnumerable(Of (LinkNo As Integer, StationNo As Integer))) As IReadOnlyList(Of (LinkNo As Integer, StationNo As Integer))
+  overload: Toyopuc.ToyopucRelay.NormalizeRelayHops*
+  nameWithType.vb: ToyopucRelay.NormalizeRelayHops(IEnumerable(Of (LinkNo As Integer, StationNo As Integer)))
+  fullName.vb: Toyopuc.ToyopucRelay.NormalizeRelayHops(System.Collections.Generic.IEnumerable(Of (LinkNo As Integer, StationNo As Integer)))
+  name.vb: NormalizeRelayHops(IEnumerable(Of (LinkNo As Integer, StationNo As Integer)))
+- uid: Toyopuc.ToyopucRelay.FormatRelayHop(System.Int32,System.Int32)
+  commentId: M:Toyopuc.ToyopucRelay.FormatRelayHop(System.Int32,System.Int32)
+  id: FormatRelayHop(System.Int32,System.Int32)
+  parent: Toyopuc.ToyopucRelay
+  langs:
+  - csharp
+  - vb
+  name: FormatRelayHop(int, int)
+  nameWithType: ToyopucRelay.FormatRelayHop(int, int)
+  fullName: Toyopuc.ToyopucRelay.FormatRelayHop(int, int)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucRelay.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: FormatRelayHop
+    path: src/Toyopuc/ToyopucRelay.cs
+    startLine: 111
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static string FormatRelayHop(int linkNo, int stationNo)
+    parameters:
+    - id: linkNo
+      type: System.Int32
+    - id: stationNo
+      type: System.Int32
+    return:
+      type: System.String
+    content.vb: Public Shared Function FormatRelayHop(linkNo As Integer, stationNo As Integer) As String
+  overload: Toyopuc.ToyopucRelay.FormatRelayHop*
+  nameWithType.vb: ToyopucRelay.FormatRelayHop(Integer, Integer)
+  fullName.vb: Toyopuc.ToyopucRelay.FormatRelayHop(Integer, Integer)
+  name.vb: FormatRelayHop(Integer, Integer)
+- uid: Toyopuc.ToyopucRelay.ParseRelayInnerResponse(System.Byte[])
+  commentId: M:Toyopuc.ToyopucRelay.ParseRelayInnerResponse(System.Byte[])
+  id: ParseRelayInnerResponse(System.Byte[])
+  parent: Toyopuc.ToyopucRelay
+  langs:
+  - csharp
+  - vb
+  name: ParseRelayInnerResponse(byte[])
+  nameWithType: ToyopucRelay.ParseRelayInnerResponse(byte[])
+  fullName: Toyopuc.ToyopucRelay.ParseRelayInnerResponse(byte[])
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucRelay.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ParseRelayInnerResponse
+    path: src/Toyopuc/ToyopucRelay.cs
+    startLine: 116
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static (ResponseFrame Response, byte[] Padding) ParseRelayInnerResponse(byte[] innerRaw)
+    parameters:
+    - id: innerRaw
+      type: System.Byte[]
+    return:
+      type: System.ValueTuple{Toyopuc.ResponseFrame,System.Byte[]}
+    content.vb: Public Shared Function ParseRelayInnerResponse(innerRaw As Byte()) As (Response As ResponseFrame, Padding As Byte())
+  overload: Toyopuc.ToyopucRelay.ParseRelayInnerResponse*
+  nameWithType.vb: ToyopucRelay.ParseRelayInnerResponse(Byte())
+  fullName.vb: Toyopuc.ToyopucRelay.ParseRelayInnerResponse(Byte())
+  name.vb: ParseRelayInnerResponse(Byte())
+- uid: Toyopuc.ToyopucRelay.UnwrapRelayResponseChain(Toyopuc.ResponseFrame)
+  commentId: M:Toyopuc.ToyopucRelay.UnwrapRelayResponseChain(Toyopuc.ResponseFrame)
+  id: UnwrapRelayResponseChain(Toyopuc.ResponseFrame)
+  parent: Toyopuc.ToyopucRelay
+  langs:
+  - csharp
+  - vb
+  name: UnwrapRelayResponseChain(ResponseFrame)
+  nameWithType: ToyopucRelay.UnwrapRelayResponseChain(ResponseFrame)
+  fullName: Toyopuc.ToyopucRelay.UnwrapRelayResponseChain(Toyopuc.ResponseFrame)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucRelay.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: UnwrapRelayResponseChain
+    path: src/Toyopuc/ToyopucRelay.cs
+    startLine: 140
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public static (IReadOnlyList<RelayLayer> Layers, ResponseFrame? FinalResponse) UnwrapRelayResponseChain(ResponseFrame response)
+    parameters:
+    - id: response
+      type: Toyopuc.ResponseFrame
+    return:
+      type: System.ValueTuple{System.Collections.Generic.IReadOnlyList{Toyopuc.RelayLayer},Toyopuc.ResponseFrame}
+    content.vb: Public Shared Function UnwrapRelayResponseChain(response As ResponseFrame) As (Layers As IReadOnlyList(Of RelayLayer), FinalResponse As ResponseFrame)
+  overload: Toyopuc.ToyopucRelay.UnwrapRelayResponseChain*
+references:
+- uid: Toyopuc
+  commentId: N:Toyopuc
+  href: Toyopuc.html
+  name: Toyopuc
+  nameWithType: Toyopuc
+  fullName: Toyopuc
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  name: MemberwiseClone()
+  nameWithType: object.MemberwiseClone()
+  fullName: object.MemberwiseClone()
+  nameWithType.vb: Object.MemberwiseClone()
+  fullName.vb: Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: Toyopuc.ToyopucRelay.ParseRelayHops*
+  commentId: Overload:Toyopuc.ToyopucRelay.ParseRelayHops
+  href: Toyopuc.ToyopucRelay.html#Toyopuc_ToyopucRelay_ParseRelayHops_System_String_
+  name: ParseRelayHops
+  nameWithType: ToyopucRelay.ParseRelayHops
+  fullName: Toyopuc.ToyopucRelay.ParseRelayHops
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.IReadOnlyList{System.ValueTuple{System.Int32,System.Int32}}
+  commentId: T:System.Collections.Generic.IReadOnlyList{System.ValueTuple{System.Int32,System.Int32}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<(int LinkNo, int StationNo)>
+  nameWithType: IReadOnlyList<(int LinkNo, int StationNo)>
+  fullName: System.Collections.Generic.IReadOnlyList<(int LinkNo, int StationNo)>
+  nameWithType.vb: IReadOnlyList(Of (LinkNo As Integer, StationNo As Integer))
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of (LinkNo As Integer, StationNo As Integer))
+  name.vb: IReadOnlyList(Of (LinkNo As Integer, StationNo As Integer))
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.LinkNo
+    name: LinkNo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.linkno
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.StationNo
+    name: StationNo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.stationno
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Int32,System.Int32}.LinkNo
+    name: LinkNo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.linkno
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.StationNo
+    name: StationNo
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.stationno
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Toyopuc.ToyopucRelay.NormalizeRelayHops*
+  commentId: Overload:Toyopuc.ToyopucRelay.NormalizeRelayHops
+  href: Toyopuc.ToyopucRelay.html#Toyopuc_ToyopucRelay_NormalizeRelayHops_System_Object_
+  name: NormalizeRelayHops
+  nameWithType: ToyopucRelay.NormalizeRelayHops
+  fullName: Toyopuc.ToyopucRelay.NormalizeRelayHops
+- uid: System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}}
+  commentId: T:System.Collections.Generic.IEnumerable{System.ValueTuple{System.Int32,System.Int32}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<(int Address, int Value)>
+  nameWithType: IEnumerable<(int Address, int Value)>
+  fullName: System.Collections.Generic.IEnumerable<(int Address, int Value)>
+  nameWithType.vb: IEnumerable(Of (Address As Integer, Value As Integer))
+  fullName.vb: System.Collections.Generic.IEnumerable(Of (Address As Integer, Value As Integer))
+  name.vb: IEnumerable(Of (Address As Integer, Value As Integer))
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: (
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.address
+  - name: ','
+  - name: " "
+  - uid: System.Int32
+    name: int
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.Value
+    name: Value
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.value
+  - name: )
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: (
+  - uid: System.ValueTuple{System.Int32,System.Int32}.Address
+    name: Address
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.address
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Int32,System.Int32}.Value
+    name: Value
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.int32,system.int32-.value
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Int32
+    name: Integer
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.int32
+  - name: )
+  - name: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ienumerable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Toyopuc.ToyopucRelay.FormatRelayHop*
+  commentId: Overload:Toyopuc.ToyopucRelay.FormatRelayHop
+  href: Toyopuc.ToyopucRelay.html#Toyopuc_ToyopucRelay_FormatRelayHop_System_Int32_System_Int32_
+  name: FormatRelayHop
+  nameWithType: ToyopucRelay.FormatRelayHop
+  fullName: Toyopuc.ToyopucRelay.FormatRelayHop
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: Toyopuc.ToyopucRelay.ParseRelayInnerResponse*
+  commentId: Overload:Toyopuc.ToyopucRelay.ParseRelayInnerResponse
+  href: Toyopuc.ToyopucRelay.html#Toyopuc_ToyopucRelay_ParseRelayInnerResponse_System_Byte___
+  name: ParseRelayInnerResponse
+  nameWithType: ToyopucRelay.ParseRelayInnerResponse
+  fullName: Toyopuc.ToyopucRelay.ParseRelayInnerResponse
+- uid: System.Byte[]
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.byte
+  name: byte[]
+  nameWithType: byte[]
+  fullName: byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+- uid: System.ValueTuple{Toyopuc.ResponseFrame,System.Byte[]}
+  commentId: T:System.ValueTuple{Toyopuc.ResponseFrame,System.Byte[]}
+  parent: System
+  definition: System.ValueTuple`2
+  href: Toyopuc.ResponseFrame.html
+  name: (ResponseFrame Response, byte[] Padding)
+  nameWithType: (ResponseFrame Response, byte[] Padding)
+  fullName: (Toyopuc.ResponseFrame Response, byte[] Padding)
+  nameWithType.vb: (Response As ResponseFrame, Padding As Byte())
+  fullName.vb: (Response As Toyopuc.ResponseFrame, Padding As Byte())
+  name.vb: (Response As ResponseFrame, Padding As Byte())
+  spec.csharp:
+  - name: (
+  - uid: Toyopuc.ResponseFrame
+    name: ResponseFrame
+    href: Toyopuc.ResponseFrame.html
+  - name: " "
+  - uid: System.ValueTuple{Toyopuc.ResponseFrame,System.Byte[]}.Response
+    name: Response
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-toyopuc.responseframe,system.byte[]-.response
+  - name: ','
+  - name: " "
+  - uid: System.Byte
+    name: byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: '['
+  - name: ']'
+  - name: " "
+  - uid: System.ValueTuple{Toyopuc.ResponseFrame,System.Byte[]}.Padding
+    name: Padding
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-toyopuc.responseframe,system.byte[]-.padding
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{Toyopuc.ResponseFrame,System.Byte[]}.Response
+    name: Response
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-toyopuc.responseframe,system.byte[]-.response
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Toyopuc.ResponseFrame
+    name: ResponseFrame
+    href: Toyopuc.ResponseFrame.html
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{Toyopuc.ResponseFrame,System.Byte[]}.Padding
+    name: Padding
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-toyopuc.responseframe,system.byte[]-.padding
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Byte
+    name: Byte
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.byte
+  - name: (
+  - name: )
+  - name: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  name: (T1, T2)
+  nameWithType: (T1, T2)
+  fullName: (T1, T2)
+  spec.csharp:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+  spec.vb:
+  - name: (
+  - name: T1
+  - name: ','
+  - name: " "
+  - name: T2
+  - name: )
+- uid: Toyopuc.ToyopucRelay.UnwrapRelayResponseChain*
+  commentId: Overload:Toyopuc.ToyopucRelay.UnwrapRelayResponseChain
+  href: Toyopuc.ToyopucRelay.html#Toyopuc_ToyopucRelay_UnwrapRelayResponseChain_Toyopuc_ResponseFrame_
+  name: UnwrapRelayResponseChain
+  nameWithType: ToyopucRelay.UnwrapRelayResponseChain
+  fullName: Toyopuc.ToyopucRelay.UnwrapRelayResponseChain
+- uid: Toyopuc.ResponseFrame
+  commentId: T:Toyopuc.ResponseFrame
+  parent: Toyopuc
+  href: Toyopuc.ResponseFrame.html
+  name: ResponseFrame
+  nameWithType: ResponseFrame
+  fullName: Toyopuc.ResponseFrame
+- uid: System.ValueTuple{System.Collections.Generic.IReadOnlyList{Toyopuc.RelayLayer},Toyopuc.ResponseFrame}
+  commentId: T:System.ValueTuple{System.Collections.Generic.IReadOnlyList{Toyopuc.RelayLayer},Toyopuc.ResponseFrame}
+  parent: System
+  definition: System.ValueTuple`2
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: (IReadOnlyList<RelayLayer> Layers, ResponseFrame FinalResponse)
+  nameWithType: (IReadOnlyList<RelayLayer> Layers, ResponseFrame FinalResponse)
+  fullName: (System.Collections.Generic.IReadOnlyList<Toyopuc.RelayLayer> Layers, Toyopuc.ResponseFrame FinalResponse)
+  nameWithType.vb: (Layers As IReadOnlyList(Of RelayLayer), FinalResponse As ResponseFrame)
+  fullName.vb: (Layers As System.Collections.Generic.IReadOnlyList(Of Toyopuc.RelayLayer), FinalResponse As Toyopuc.ResponseFrame)
+  name.vb: (Layers As IReadOnlyList(Of RelayLayer), FinalResponse As ResponseFrame)
+  spec.csharp:
+  - name: (
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: Toyopuc.RelayLayer
+    name: RelayLayer
+    href: Toyopuc.RelayLayer.html
+  - name: '>'
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.IReadOnlyList{Toyopuc.RelayLayer},Toyopuc.ResponseFrame}.Layers
+    name: Layers
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ireadonlylist-toyopuc.relaylayer-,toyopuc.responseframe-.layers
+  - name: ','
+  - name: " "
+  - uid: Toyopuc.ResponseFrame
+    name: ResponseFrame
+    href: Toyopuc.ResponseFrame.html
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.IReadOnlyList{Toyopuc.RelayLayer},Toyopuc.ResponseFrame}.FinalResponse
+    name: FinalResponse
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ireadonlylist-toyopuc.relaylayer-,toyopuc.responseframe-.finalresponse
+  - name: )
+  spec.vb:
+  - name: (
+  - uid: System.ValueTuple{System.Collections.Generic.IReadOnlyList{Toyopuc.RelayLayer},Toyopuc.ResponseFrame}.Layers
+    name: Layers
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ireadonlylist-toyopuc.relaylayer-,toyopuc.responseframe-.layers
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Toyopuc.RelayLayer
+    name: RelayLayer
+    href: Toyopuc.RelayLayer.html
+  - name: )
+  - name: ','
+  - name: " "
+  - uid: System.ValueTuple{System.Collections.Generic.IReadOnlyList{Toyopuc.RelayLayer},Toyopuc.ResponseFrame}.FinalResponse
+    name: FinalResponse
+    href: https://learn.microsoft.com/dotnet/api/system.valuetuple-system.collections.generic.ireadonlylist-toyopuc.relaylayer-,toyopuc.responseframe-.finalresponse
+  - name: " "
+  - name: As
+  - name: " "
+  - uid: Toyopuc.ResponseFrame
+    name: ResponseFrame
+    href: Toyopuc.ResponseFrame.html
+  - name: )

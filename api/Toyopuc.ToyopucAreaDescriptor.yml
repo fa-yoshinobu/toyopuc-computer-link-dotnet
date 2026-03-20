@@ -1,0 +1,1258 @@
+### YamlMime:ManagedReference
+items:
+- uid: Toyopuc.ToyopucAreaDescriptor
+  commentId: T:Toyopuc.ToyopucAreaDescriptor
+  id: ToyopucAreaDescriptor
+  parent: Toyopuc
+  children:
+  - Toyopuc.ToyopucAreaDescriptor.#ctor(System.String,System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Boolean,System.Int32,System.Int32,System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange})
+  - Toyopuc.ToyopucAreaDescriptor.AddressWidth
+  - Toyopuc.ToyopucAreaDescriptor.Area
+  - Toyopuc.ToyopucAreaDescriptor.DerivedAddressWidth
+  - Toyopuc.ToyopucAreaDescriptor.DirectRange
+  - Toyopuc.ToyopucAreaDescriptor.DirectRanges
+  - Toyopuc.ToyopucAreaDescriptor.GetAddressWidth(System.String,System.Boolean)
+  - Toyopuc.ToyopucAreaDescriptor.GetRanges(System.Boolean,System.Boolean)
+  - Toyopuc.ToyopucAreaDescriptor.GetRanges(System.Boolean,System.String,System.Boolean)
+  - Toyopuc.ToyopucAreaDescriptor.PackedAddressWidth
+  - Toyopuc.ToyopucAreaDescriptor.PackedDirectRange
+  - Toyopuc.ToyopucAreaDescriptor.PackedDirectRangesOverride
+  - Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRange
+  - Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRangesOverride
+  - Toyopuc.ToyopucAreaDescriptor.PrefixedRange
+  - Toyopuc.ToyopucAreaDescriptor.PrefixedRanges
+  - Toyopuc.ToyopucAreaDescriptor.SuggestedStartStep
+  - Toyopuc.ToyopucAreaDescriptor.SupportsDirect
+  - Toyopuc.ToyopucAreaDescriptor.SupportsPackedWord
+  - Toyopuc.ToyopucAreaDescriptor.SupportsPrefixed
+  - Toyopuc.ToyopucAreaDescriptor.UsesDerivedAccess(System.String,System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: ToyopucAreaDescriptor
+  nameWithType: ToyopucAreaDescriptor
+  fullName: Toyopuc.ToyopucAreaDescriptor
+  type: Class
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: ToyopucAreaDescriptor
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 10
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: 'public sealed record ToyopucAreaDescriptor : IEquatable<ToyopucAreaDescriptor>'
+    content.vb: Public NotInheritable Class ToyopucAreaDescriptor Implements IEquatable(Of ToyopucAreaDescriptor)
+  inheritance:
+  - System.Object
+  implements:
+  - System.IEquatable{Toyopuc.ToyopucAreaDescriptor}
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+- uid: Toyopuc.ToyopucAreaDescriptor.#ctor(System.String,System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Boolean,System.Int32,System.Int32,System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange})
+  commentId: M:Toyopuc.ToyopucAreaDescriptor.#ctor(System.String,System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Boolean,System.Int32,System.Int32,System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange})
+  id: '#ctor(System.String,System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Boolean,System.Int32,System.Int32,System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange},System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange})'
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: ToyopucAreaDescriptor(string, IReadOnlyList<ToyopucAddressRange>, IReadOnlyList<ToyopucAddressRange>, bool, int, int, IReadOnlyList<ToyopucAddressRange>?, IReadOnlyList<ToyopucAddressRange>?)
+  nameWithType: ToyopucAreaDescriptor.ToyopucAreaDescriptor(string, IReadOnlyList<ToyopucAddressRange>, IReadOnlyList<ToyopucAddressRange>, bool, int, int, IReadOnlyList<ToyopucAddressRange>?, IReadOnlyList<ToyopucAddressRange>?)
+  fullName: Toyopuc.ToyopucAreaDescriptor.ToyopucAreaDescriptor(string, System.Collections.Generic.IReadOnlyList<Toyopuc.ToyopucAddressRange>, System.Collections.Generic.IReadOnlyList<Toyopuc.ToyopucAddressRange>, bool, int, int, System.Collections.Generic.IReadOnlyList<Toyopuc.ToyopucAddressRange>?, System.Collections.Generic.IReadOnlyList<Toyopuc.ToyopucAddressRange>?)
+  type: Constructor
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: .ctor
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 10
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public ToyopucAreaDescriptor(string Area, IReadOnlyList<ToyopucAddressRange> DirectRanges, IReadOnlyList<ToyopucAddressRange> PrefixedRanges, bool SupportsPackedWord, int AddressWidth, int SuggestedStartStep, IReadOnlyList<ToyopucAddressRange>? PackedDirectRangesOverride = null, IReadOnlyList<ToyopucAddressRange>? PackedPrefixedRangesOverride = null)
+    parameters:
+    - id: Area
+      type: System.String
+    - id: DirectRanges
+      type: System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+    - id: PrefixedRanges
+      type: System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+    - id: SupportsPackedWord
+      type: System.Boolean
+    - id: AddressWidth
+      type: System.Int32
+    - id: SuggestedStartStep
+      type: System.Int32
+    - id: PackedDirectRangesOverride
+      type: System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+    - id: PackedPrefixedRangesOverride
+      type: System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+    content.vb: Public Sub New(Area As String, DirectRanges As IReadOnlyList(Of ToyopucAddressRange), PrefixedRanges As IReadOnlyList(Of ToyopucAddressRange), SupportsPackedWord As Boolean, AddressWidth As Integer, SuggestedStartStep As Integer, PackedDirectRangesOverride As IReadOnlyList(Of ToyopucAddressRange) = Nothing, PackedPrefixedRangesOverride As IReadOnlyList(Of ToyopucAddressRange) = Nothing)
+  overload: Toyopuc.ToyopucAreaDescriptor.#ctor*
+  nameWithType.vb: ToyopucAreaDescriptor.New(String, IReadOnlyList(Of ToyopucAddressRange), IReadOnlyList(Of ToyopucAddressRange), Boolean, Integer, Integer, IReadOnlyList(Of ToyopucAddressRange), IReadOnlyList(Of ToyopucAddressRange))
+  fullName.vb: Toyopuc.ToyopucAreaDescriptor.New(String, System.Collections.Generic.IReadOnlyList(Of Toyopuc.ToyopucAddressRange), System.Collections.Generic.IReadOnlyList(Of Toyopuc.ToyopucAddressRange), Boolean, Integer, Integer, System.Collections.Generic.IReadOnlyList(Of Toyopuc.ToyopucAddressRange), System.Collections.Generic.IReadOnlyList(Of Toyopuc.ToyopucAddressRange))
+  name.vb: New(String, IReadOnlyList(Of ToyopucAddressRange), IReadOnlyList(Of ToyopucAddressRange), Boolean, Integer, Integer, IReadOnlyList(Of ToyopucAddressRange), IReadOnlyList(Of ToyopucAddressRange))
+- uid: Toyopuc.ToyopucAreaDescriptor.Area
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.Area
+  id: Area
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: Area
+  nameWithType: ToyopucAreaDescriptor.Area
+  fullName: Toyopuc.ToyopucAreaDescriptor.Area
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: Area
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 11
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public string Area { get; init; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Area As String
+  overload: Toyopuc.ToyopucAreaDescriptor.Area*
+- uid: Toyopuc.ToyopucAreaDescriptor.DirectRanges
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.DirectRanges
+  id: DirectRanges
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: DirectRanges
+  nameWithType: ToyopucAreaDescriptor.DirectRanges
+  fullName: Toyopuc.ToyopucAreaDescriptor.DirectRanges
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: DirectRanges
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 12
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public IReadOnlyList<ToyopucAddressRange> DirectRanges { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+    content.vb: Public Property DirectRanges As IReadOnlyList(Of ToyopucAddressRange)
+  overload: Toyopuc.ToyopucAreaDescriptor.DirectRanges*
+- uid: Toyopuc.ToyopucAreaDescriptor.PrefixedRanges
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.PrefixedRanges
+  id: PrefixedRanges
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: PrefixedRanges
+  nameWithType: ToyopucAreaDescriptor.PrefixedRanges
+  fullName: Toyopuc.ToyopucAreaDescriptor.PrefixedRanges
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: PrefixedRanges
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 13
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public IReadOnlyList<ToyopucAddressRange> PrefixedRanges { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+    content.vb: Public Property PrefixedRanges As IReadOnlyList(Of ToyopucAddressRange)
+  overload: Toyopuc.ToyopucAreaDescriptor.PrefixedRanges*
+- uid: Toyopuc.ToyopucAreaDescriptor.SupportsPackedWord
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.SupportsPackedWord
+  id: SupportsPackedWord
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: SupportsPackedWord
+  nameWithType: ToyopucAreaDescriptor.SupportsPackedWord
+  fullName: Toyopuc.ToyopucAreaDescriptor.SupportsPackedWord
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: SupportsPackedWord
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 14
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool SupportsPackedWord { get; init; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property SupportsPackedWord As Boolean
+  overload: Toyopuc.ToyopucAreaDescriptor.SupportsPackedWord*
+- uid: Toyopuc.ToyopucAreaDescriptor.AddressWidth
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.AddressWidth
+  id: AddressWidth
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: AddressWidth
+  nameWithType: ToyopucAreaDescriptor.AddressWidth
+  fullName: Toyopuc.ToyopucAreaDescriptor.AddressWidth
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: AddressWidth
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 15
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int AddressWidth { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property AddressWidth As Integer
+  overload: Toyopuc.ToyopucAreaDescriptor.AddressWidth*
+- uid: Toyopuc.ToyopucAreaDescriptor.SuggestedStartStep
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.SuggestedStartStep
+  id: SuggestedStartStep
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: SuggestedStartStep
+  nameWithType: ToyopucAreaDescriptor.SuggestedStartStep
+  fullName: Toyopuc.ToyopucAreaDescriptor.SuggestedStartStep
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: SuggestedStartStep
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 16
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int SuggestedStartStep { get; init; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property SuggestedStartStep As Integer
+  overload: Toyopuc.ToyopucAreaDescriptor.SuggestedStartStep*
+- uid: Toyopuc.ToyopucAreaDescriptor.PackedDirectRangesOverride
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.PackedDirectRangesOverride
+  id: PackedDirectRangesOverride
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: PackedDirectRangesOverride
+  nameWithType: ToyopucAreaDescriptor.PackedDirectRangesOverride
+  fullName: Toyopuc.ToyopucAreaDescriptor.PackedDirectRangesOverride
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: PackedDirectRangesOverride
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 17
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public IReadOnlyList<ToyopucAddressRange>? PackedDirectRangesOverride { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+    content.vb: Public Property PackedDirectRangesOverride As IReadOnlyList(Of ToyopucAddressRange)
+  overload: Toyopuc.ToyopucAreaDescriptor.PackedDirectRangesOverride*
+- uid: Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRangesOverride
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRangesOverride
+  id: PackedPrefixedRangesOverride
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: PackedPrefixedRangesOverride
+  nameWithType: ToyopucAreaDescriptor.PackedPrefixedRangesOverride
+  fullName: Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRangesOverride
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: PackedPrefixedRangesOverride
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 18
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public IReadOnlyList<ToyopucAddressRange>? PackedPrefixedRangesOverride { get; init; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+    content.vb: Public Property PackedPrefixedRangesOverride As IReadOnlyList(Of ToyopucAddressRange)
+  overload: Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRangesOverride*
+- uid: Toyopuc.ToyopucAreaDescriptor.DirectRange
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.DirectRange
+  id: DirectRange
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: DirectRange
+  nameWithType: ToyopucAreaDescriptor.DirectRange
+  fullName: Toyopuc.ToyopucAreaDescriptor.DirectRange
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: DirectRange
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 20
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public ToyopucAddressRange? DirectRange { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressRange
+    content.vb: Public ReadOnly Property DirectRange As ToyopucAddressRange
+  overload: Toyopuc.ToyopucAreaDescriptor.DirectRange*
+- uid: Toyopuc.ToyopucAreaDescriptor.PrefixedRange
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.PrefixedRange
+  id: PrefixedRange
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: PrefixedRange
+  nameWithType: ToyopucAreaDescriptor.PrefixedRange
+  fullName: Toyopuc.ToyopucAreaDescriptor.PrefixedRange
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: PrefixedRange
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 22
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public ToyopucAddressRange? PrefixedRange { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressRange
+    content.vb: Public ReadOnly Property PrefixedRange As ToyopucAddressRange
+  overload: Toyopuc.ToyopucAreaDescriptor.PrefixedRange*
+- uid: Toyopuc.ToyopucAreaDescriptor.PackedAddressWidth
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.PackedAddressWidth
+  id: PackedAddressWidth
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: PackedAddressWidth
+  nameWithType: ToyopucAreaDescriptor.PackedAddressWidth
+  fullName: Toyopuc.ToyopucAreaDescriptor.PackedAddressWidth
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: PackedAddressWidth
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 24
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int PackedAddressWidth { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property PackedAddressWidth As Integer
+  overload: Toyopuc.ToyopucAreaDescriptor.PackedAddressWidth*
+- uid: Toyopuc.ToyopucAreaDescriptor.DerivedAddressWidth
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.DerivedAddressWidth
+  id: DerivedAddressWidth
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: DerivedAddressWidth
+  nameWithType: ToyopucAreaDescriptor.DerivedAddressWidth
+  fullName: Toyopuc.ToyopucAreaDescriptor.DerivedAddressWidth
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: DerivedAddressWidth
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 26
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int DerivedAddressWidth { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property DerivedAddressWidth As Integer
+  overload: Toyopuc.ToyopucAreaDescriptor.DerivedAddressWidth*
+- uid: Toyopuc.ToyopucAreaDescriptor.PackedDirectRange
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.PackedDirectRange
+  id: PackedDirectRange
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: PackedDirectRange
+  nameWithType: ToyopucAreaDescriptor.PackedDirectRange
+  fullName: Toyopuc.ToyopucAreaDescriptor.PackedDirectRange
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: PackedDirectRange
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 28
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public ToyopucAddressRange? PackedDirectRange { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressRange
+    content.vb: Public ReadOnly Property PackedDirectRange As ToyopucAddressRange
+  overload: Toyopuc.ToyopucAreaDescriptor.PackedDirectRange*
+- uid: Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRange
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRange
+  id: PackedPrefixedRange
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: PackedPrefixedRange
+  nameWithType: ToyopucAreaDescriptor.PackedPrefixedRange
+  fullName: Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRange
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: PackedPrefixedRange
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 30
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public ToyopucAddressRange? PackedPrefixedRange { get; }
+    parameters: []
+    return:
+      type: Toyopuc.ToyopucAddressRange
+    content.vb: Public ReadOnly Property PackedPrefixedRange As ToyopucAddressRange
+  overload: Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRange*
+- uid: Toyopuc.ToyopucAreaDescriptor.SupportsDirect
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.SupportsDirect
+  id: SupportsDirect
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: SupportsDirect
+  nameWithType: ToyopucAreaDescriptor.SupportsDirect
+  fullName: Toyopuc.ToyopucAreaDescriptor.SupportsDirect
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: SupportsDirect
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 32
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool SupportsDirect { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property SupportsDirect As Boolean
+  overload: Toyopuc.ToyopucAreaDescriptor.SupportsDirect*
+- uid: Toyopuc.ToyopucAreaDescriptor.SupportsPrefixed
+  commentId: P:Toyopuc.ToyopucAreaDescriptor.SupportsPrefixed
+  id: SupportsPrefixed
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: SupportsPrefixed
+  nameWithType: ToyopucAreaDescriptor.SupportsPrefixed
+  fullName: Toyopuc.ToyopucAreaDescriptor.SupportsPrefixed
+  type: Property
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: SupportsPrefixed
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 34
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool SupportsPrefixed { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property SupportsPrefixed As Boolean
+  overload: Toyopuc.ToyopucAreaDescriptor.SupportsPrefixed*
+- uid: Toyopuc.ToyopucAreaDescriptor.UsesDerivedAccess(System.String,System.Boolean)
+  commentId: M:Toyopuc.ToyopucAreaDescriptor.UsesDerivedAccess(System.String,System.Boolean)
+  id: UsesDerivedAccess(System.String,System.Boolean)
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: UsesDerivedAccess(string, bool)
+  nameWithType: ToyopucAreaDescriptor.UsesDerivedAccess(string, bool)
+  fullName: Toyopuc.ToyopucAreaDescriptor.UsesDerivedAccess(string, bool)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: UsesDerivedAccess
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 36
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public bool UsesDerivedAccess(string unit, bool packed = false)
+    parameters:
+    - id: unit
+      type: System.String
+    - id: packed
+      type: System.Boolean
+    return:
+      type: System.Boolean
+    content.vb: Public Function UsesDerivedAccess(unit As String, packed As Boolean = False) As Boolean
+  overload: Toyopuc.ToyopucAreaDescriptor.UsesDerivedAccess*
+  nameWithType.vb: ToyopucAreaDescriptor.UsesDerivedAccess(String, Boolean)
+  fullName.vb: Toyopuc.ToyopucAreaDescriptor.UsesDerivedAccess(String, Boolean)
+  name.vb: UsesDerivedAccess(String, Boolean)
+- uid: Toyopuc.ToyopucAreaDescriptor.GetAddressWidth(System.String,System.Boolean)
+  commentId: M:Toyopuc.ToyopucAreaDescriptor.GetAddressWidth(System.String,System.Boolean)
+  id: GetAddressWidth(System.String,System.Boolean)
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: GetAddressWidth(string, bool)
+  nameWithType: ToyopucAreaDescriptor.GetAddressWidth(string, bool)
+  fullName: Toyopuc.ToyopucAreaDescriptor.GetAddressWidth(string, bool)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: GetAddressWidth
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 46
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public int GetAddressWidth(string unit, bool packed = false)
+    parameters:
+    - id: unit
+      type: System.String
+    - id: packed
+      type: System.Boolean
+    return:
+      type: System.Int32
+    content.vb: Public Function GetAddressWidth(unit As String, packed As Boolean = False) As Integer
+  overload: Toyopuc.ToyopucAreaDescriptor.GetAddressWidth*
+  nameWithType.vb: ToyopucAreaDescriptor.GetAddressWidth(String, Boolean)
+  fullName.vb: Toyopuc.ToyopucAreaDescriptor.GetAddressWidth(String, Boolean)
+  name.vb: GetAddressWidth(String, Boolean)
+- uid: Toyopuc.ToyopucAreaDescriptor.GetRanges(System.Boolean,System.Boolean)
+  commentId: M:Toyopuc.ToyopucAreaDescriptor.GetRanges(System.Boolean,System.Boolean)
+  id: GetRanges(System.Boolean,System.Boolean)
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: GetRanges(bool, bool)
+  nameWithType: ToyopucAreaDescriptor.GetRanges(bool, bool)
+  fullName: Toyopuc.ToyopucAreaDescriptor.GetRanges(bool, bool)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: GetRanges
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 51
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public IReadOnlyList<ToyopucAddressRange> GetRanges(bool prefixed, bool packed)
+    parameters:
+    - id: prefixed
+      type: System.Boolean
+    - id: packed
+      type: System.Boolean
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+    content.vb: Public Function GetRanges(prefixed As Boolean, packed As Boolean) As IReadOnlyList(Of ToyopucAddressRange)
+  overload: Toyopuc.ToyopucAreaDescriptor.GetRanges*
+  nameWithType.vb: ToyopucAreaDescriptor.GetRanges(Boolean, Boolean)
+  fullName.vb: Toyopuc.ToyopucAreaDescriptor.GetRanges(Boolean, Boolean)
+  name.vb: GetRanges(Boolean, Boolean)
+- uid: Toyopuc.ToyopucAreaDescriptor.GetRanges(System.Boolean,System.String,System.Boolean)
+  commentId: M:Toyopuc.ToyopucAreaDescriptor.GetRanges(System.Boolean,System.String,System.Boolean)
+  id: GetRanges(System.Boolean,System.String,System.Boolean)
+  parent: Toyopuc.ToyopucAreaDescriptor
+  langs:
+  - csharp
+  - vb
+  name: GetRanges(bool, string, bool)
+  nameWithType: ToyopucAreaDescriptor.GetRanges(bool, string, bool)
+  fullName: Toyopuc.ToyopucAreaDescriptor.GetRanges(bool, string, bool)
+  type: Method
+  source:
+    remote:
+      path: src/Toyopuc/ToyopucDeviceProfile.cs
+      branch: main
+      repo: https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet.git
+    id: GetRanges
+    path: src/Toyopuc/ToyopucDeviceProfile.cs
+    startLine: 71
+  assemblies:
+  - Toyopuc
+  namespace: Toyopuc
+  syntax:
+    content: public IReadOnlyList<ToyopucAddressRange> GetRanges(bool prefixed, string unit, bool packed = false)
+    parameters:
+    - id: prefixed
+      type: System.Boolean
+    - id: unit
+      type: System.String
+    - id: packed
+      type: System.Boolean
+    return:
+      type: System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+    content.vb: Public Function GetRanges(prefixed As Boolean, unit As String, packed As Boolean = False) As IReadOnlyList(Of ToyopucAddressRange)
+  overload: Toyopuc.ToyopucAreaDescriptor.GetRanges*
+  nameWithType.vb: ToyopucAreaDescriptor.GetRanges(Boolean, String, Boolean)
+  fullName.vb: Toyopuc.ToyopucAreaDescriptor.GetRanges(Boolean, String, Boolean)
+  name.vb: GetRanges(Boolean, String, Boolean)
+references:
+- uid: Toyopuc
+  commentId: N:Toyopuc
+  href: Toyopuc.html
+  name: Toyopuc
+  nameWithType: Toyopuc
+  fullName: Toyopuc
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object
+  name: object
+  nameWithType: object
+  fullName: object
+  nameWithType.vb: Object
+  fullName.vb: Object
+  name.vb: Object
+- uid: System.IEquatable{Toyopuc.ToyopucAreaDescriptor}
+  commentId: T:System.IEquatable{Toyopuc.ToyopucAreaDescriptor}
+  parent: System
+  definition: System.IEquatable`1
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<ToyopucAreaDescriptor>
+  nameWithType: IEquatable<ToyopucAreaDescriptor>
+  fullName: System.IEquatable<Toyopuc.ToyopucAreaDescriptor>
+  nameWithType.vb: IEquatable(Of ToyopucAreaDescriptor)
+  fullName.vb: System.IEquatable(Of Toyopuc.ToyopucAreaDescriptor)
+  name.vb: IEquatable(Of ToyopucAreaDescriptor)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - uid: Toyopuc.ToyopucAreaDescriptor
+    name: ToyopucAreaDescriptor
+    href: Toyopuc.ToyopucAreaDescriptor.html
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Toyopuc.ToyopucAreaDescriptor
+    name: ToyopucAreaDescriptor
+    href: Toyopuc.ToyopucAreaDescriptor.html
+  - name: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  name: Equals(object)
+  nameWithType: object.Equals(object)
+  fullName: object.Equals(object)
+  nameWithType.vb: Object.Equals(Object)
+  fullName.vb: Object.Equals(Object)
+  name.vb: Equals(Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  name: Equals(object, object)
+  nameWithType: object.Equals(object, object)
+  fullName: object.Equals(object, object)
+  nameWithType.vb: Object.Equals(Object, Object)
+  fullName.vb: Object.Equals(Object, Object)
+  name.vb: Equals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  name: GetHashCode()
+  nameWithType: object.GetHashCode()
+  fullName: object.GetHashCode()
+  nameWithType.vb: Object.GetHashCode()
+  fullName.vb: Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gethashcode
+  - name: (
+  - name: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  name: GetType()
+  nameWithType: object.GetType()
+  fullName: object.GetType()
+  nameWithType.vb: Object.GetType()
+  fullName.vb: Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.gettype
+  - name: (
+  - name: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  name: ReferenceEquals(object, object)
+  nameWithType: object.ReferenceEquals(object, object)
+  fullName: object.ReferenceEquals(object, object)
+  nameWithType.vb: Object.ReferenceEquals(Object, Object)
+  fullName.vb: Object.ReferenceEquals(Object, Object)
+  name.vb: ReferenceEquals(Object, Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.referenceequals
+  - name: (
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: ','
+  - name: " "
+  - uid: System.Object
+    name: Object
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object
+  - name: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  name: ToString()
+  nameWithType: object.ToString()
+  fullName: object.ToString()
+  nameWithType.vb: Object.ToString()
+  fullName.vb: Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.object.tostring
+  - name: (
+  - name: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IEquatable`1
+  commentId: T:System.IEquatable`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  name: IEquatable<T>
+  nameWithType: IEquatable<T>
+  fullName: System.IEquatable<T>
+  nameWithType.vb: IEquatable(Of T)
+  fullName.vb: System.IEquatable(Of T)
+  name.vb: IEquatable(Of T)
+  spec.csharp:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.IEquatable`1
+    name: IEquatable
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.iequatable-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: Toyopuc.ToyopucAreaDescriptor.#ctor*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.#ctor
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor__ctor_System_String_System_Collections_Generic_IReadOnlyList_Toyopuc_ToyopucAddressRange__System_Collections_Generic_IReadOnlyList_Toyopuc_ToyopucAddressRange__System_Boolean_System_Int32_System_Int32_System_Collections_Generic_IReadOnlyList_Toyopuc_ToyopucAddressRange__System_Collections_Generic_IReadOnlyList_Toyopuc_ToyopucAddressRange__
+  name: ToyopucAreaDescriptor
+  nameWithType: ToyopucAreaDescriptor.ToyopucAreaDescriptor
+  fullName: Toyopuc.ToyopucAreaDescriptor.ToyopucAreaDescriptor
+  nameWithType.vb: ToyopucAreaDescriptor.New
+  fullName.vb: Toyopuc.ToyopucAreaDescriptor.New
+  name.vb: New
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.string
+  name: string
+  nameWithType: string
+  fullName: string
+  nameWithType.vb: String
+  fullName.vb: String
+  name.vb: String
+- uid: System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+  commentId: T:System.Collections.Generic.IReadOnlyList{Toyopuc.ToyopucAddressRange}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IReadOnlyList`1
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<ToyopucAddressRange>
+  nameWithType: IReadOnlyList<ToyopucAddressRange>
+  fullName: System.Collections.Generic.IReadOnlyList<Toyopuc.ToyopucAddressRange>
+  nameWithType.vb: IReadOnlyList(Of ToyopucAddressRange)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of Toyopuc.ToyopucAddressRange)
+  name.vb: IReadOnlyList(Of ToyopucAddressRange)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - uid: Toyopuc.ToyopucAddressRange
+    name: ToyopucAddressRange
+    href: Toyopuc.ToyopucAddressRange.html
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - uid: Toyopuc.ToyopucAddressRange
+    name: ToyopucAddressRange
+    href: Toyopuc.ToyopucAddressRange.html
+  - name: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.boolean
+  name: bool
+  nameWithType: bool
+  fullName: bool
+  nameWithType.vb: Boolean
+  fullName.vb: Boolean
+  name.vb: Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.int32
+  name: int
+  nameWithType: int
+  fullName: int
+  nameWithType.vb: Integer
+  fullName.vb: Integer
+  name.vb: Integer
+- uid: System.Collections.Generic.IReadOnlyList`1
+  commentId: T:System.Collections.Generic.IReadOnlyList`1
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  name: IReadOnlyList<T>
+  nameWithType: IReadOnlyList<T>
+  fullName: System.Collections.Generic.IReadOnlyList<T>
+  nameWithType.vb: IReadOnlyList(Of T)
+  fullName.vb: System.Collections.Generic.IReadOnlyList(Of T)
+  name.vb: IReadOnlyList(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: <
+  - name: T
+  - name: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IReadOnlyList`1
+    name: IReadOnlyList
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic.ireadonlylist-1
+  - name: (
+  - name: Of
+  - name: " "
+  - name: T
+  - name: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  href: https://learn.microsoft.com/dotnet/api/system
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+  spec.csharp:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+  spec.vb:
+  - uid: System
+    name: System
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system
+  - name: .
+  - uid: System.Collections
+    name: Collections
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections
+  - name: .
+  - uid: System.Collections.Generic
+    name: Generic
+    isExternal: true
+    href: https://learn.microsoft.com/dotnet/api/system.collections.generic
+- uid: Toyopuc.ToyopucAreaDescriptor.Area*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.Area
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_Area
+  name: Area
+  nameWithType: ToyopucAreaDescriptor.Area
+  fullName: Toyopuc.ToyopucAreaDescriptor.Area
+- uid: Toyopuc.ToyopucAreaDescriptor.DirectRanges*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.DirectRanges
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_DirectRanges
+  name: DirectRanges
+  nameWithType: ToyopucAreaDescriptor.DirectRanges
+  fullName: Toyopuc.ToyopucAreaDescriptor.DirectRanges
+- uid: Toyopuc.ToyopucAreaDescriptor.PrefixedRanges*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.PrefixedRanges
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_PrefixedRanges
+  name: PrefixedRanges
+  nameWithType: ToyopucAreaDescriptor.PrefixedRanges
+  fullName: Toyopuc.ToyopucAreaDescriptor.PrefixedRanges
+- uid: Toyopuc.ToyopucAreaDescriptor.SupportsPackedWord*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.SupportsPackedWord
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_SupportsPackedWord
+  name: SupportsPackedWord
+  nameWithType: ToyopucAreaDescriptor.SupportsPackedWord
+  fullName: Toyopuc.ToyopucAreaDescriptor.SupportsPackedWord
+- uid: Toyopuc.ToyopucAreaDescriptor.AddressWidth*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.AddressWidth
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_AddressWidth
+  name: AddressWidth
+  nameWithType: ToyopucAreaDescriptor.AddressWidth
+  fullName: Toyopuc.ToyopucAreaDescriptor.AddressWidth
+- uid: Toyopuc.ToyopucAreaDescriptor.SuggestedStartStep*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.SuggestedStartStep
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_SuggestedStartStep
+  name: SuggestedStartStep
+  nameWithType: ToyopucAreaDescriptor.SuggestedStartStep
+  fullName: Toyopuc.ToyopucAreaDescriptor.SuggestedStartStep
+- uid: Toyopuc.ToyopucAreaDescriptor.PackedDirectRangesOverride*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.PackedDirectRangesOverride
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_PackedDirectRangesOverride
+  name: PackedDirectRangesOverride
+  nameWithType: ToyopucAreaDescriptor.PackedDirectRangesOverride
+  fullName: Toyopuc.ToyopucAreaDescriptor.PackedDirectRangesOverride
+- uid: Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRangesOverride*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRangesOverride
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_PackedPrefixedRangesOverride
+  name: PackedPrefixedRangesOverride
+  nameWithType: ToyopucAreaDescriptor.PackedPrefixedRangesOverride
+  fullName: Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRangesOverride
+- uid: Toyopuc.ToyopucAreaDescriptor.DirectRange*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.DirectRange
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_DirectRange
+  name: DirectRange
+  nameWithType: ToyopucAreaDescriptor.DirectRange
+  fullName: Toyopuc.ToyopucAreaDescriptor.DirectRange
+- uid: Toyopuc.ToyopucAddressRange
+  commentId: T:Toyopuc.ToyopucAddressRange
+  parent: Toyopuc
+  href: Toyopuc.ToyopucAddressRange.html
+  name: ToyopucAddressRange
+  nameWithType: ToyopucAddressRange
+  fullName: Toyopuc.ToyopucAddressRange
+- uid: Toyopuc.ToyopucAreaDescriptor.PrefixedRange*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.PrefixedRange
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_PrefixedRange
+  name: PrefixedRange
+  nameWithType: ToyopucAreaDescriptor.PrefixedRange
+  fullName: Toyopuc.ToyopucAreaDescriptor.PrefixedRange
+- uid: Toyopuc.ToyopucAreaDescriptor.PackedAddressWidth*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.PackedAddressWidth
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_PackedAddressWidth
+  name: PackedAddressWidth
+  nameWithType: ToyopucAreaDescriptor.PackedAddressWidth
+  fullName: Toyopuc.ToyopucAreaDescriptor.PackedAddressWidth
+- uid: Toyopuc.ToyopucAreaDescriptor.DerivedAddressWidth*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.DerivedAddressWidth
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_DerivedAddressWidth
+  name: DerivedAddressWidth
+  nameWithType: ToyopucAreaDescriptor.DerivedAddressWidth
+  fullName: Toyopuc.ToyopucAreaDescriptor.DerivedAddressWidth
+- uid: Toyopuc.ToyopucAreaDescriptor.PackedDirectRange*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.PackedDirectRange
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_PackedDirectRange
+  name: PackedDirectRange
+  nameWithType: ToyopucAreaDescriptor.PackedDirectRange
+  fullName: Toyopuc.ToyopucAreaDescriptor.PackedDirectRange
+- uid: Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRange*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRange
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_PackedPrefixedRange
+  name: PackedPrefixedRange
+  nameWithType: ToyopucAreaDescriptor.PackedPrefixedRange
+  fullName: Toyopuc.ToyopucAreaDescriptor.PackedPrefixedRange
+- uid: Toyopuc.ToyopucAreaDescriptor.SupportsDirect*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.SupportsDirect
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_SupportsDirect
+  name: SupportsDirect
+  nameWithType: ToyopucAreaDescriptor.SupportsDirect
+  fullName: Toyopuc.ToyopucAreaDescriptor.SupportsDirect
+- uid: Toyopuc.ToyopucAreaDescriptor.SupportsPrefixed*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.SupportsPrefixed
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_SupportsPrefixed
+  name: SupportsPrefixed
+  nameWithType: ToyopucAreaDescriptor.SupportsPrefixed
+  fullName: Toyopuc.ToyopucAreaDescriptor.SupportsPrefixed
+- uid: Toyopuc.ToyopucAreaDescriptor.UsesDerivedAccess*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.UsesDerivedAccess
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_UsesDerivedAccess_System_String_System_Boolean_
+  name: UsesDerivedAccess
+  nameWithType: ToyopucAreaDescriptor.UsesDerivedAccess
+  fullName: Toyopuc.ToyopucAreaDescriptor.UsesDerivedAccess
+- uid: Toyopuc.ToyopucAreaDescriptor.GetAddressWidth*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.GetAddressWidth
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_GetAddressWidth_System_String_System_Boolean_
+  name: GetAddressWidth
+  nameWithType: ToyopucAreaDescriptor.GetAddressWidth
+  fullName: Toyopuc.ToyopucAreaDescriptor.GetAddressWidth
+- uid: Toyopuc.ToyopucAreaDescriptor.GetRanges*
+  commentId: Overload:Toyopuc.ToyopucAreaDescriptor.GetRanges
+  href: Toyopuc.ToyopucAreaDescriptor.html#Toyopuc_ToyopucAreaDescriptor_GetRanges_System_Boolean_System_Boolean_
+  name: GetRanges
+  nameWithType: ToyopucAreaDescriptor.GetRanges
+  fullName: Toyopuc.ToyopucAreaDescriptor.GetRanges
