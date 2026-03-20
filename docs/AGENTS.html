@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Agent Guide: Toyopuc Computer Link .NET | TOYOPUC Computer Link .NET Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Agent Guide: Toyopuc Computer Link .NET | TOYOPUC Computer Link .NET Documentation ">
+      
+      
+      <link rel="icon" href="favicon.ico">
+      <link rel="stylesheet" href="public/docfx.min.css">
+      <link rel="stylesheet" href="public/main.css">
+      <meta name="docfx:navrel" content="toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/AGENTS.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="index.html">
+            <img id="logo" class="svg" src="logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="agent-guide-toyopuc-computer-link-net">Agent Guide: Toyopuc Computer Link .NET</h1>
+
+<p>This repository is part of the PLC Communication Workspace and follows the global standards defined in <code>D:\PLC_COMM_PROJ\AGENTS.md</code>.</p>
+<h2 id="1-project-specific-context">1. Project-Specific Context</h2>
+<ul>
+<li>Protocol: TOYOPUC Computer Link (JTEKT)</li>
+<li>Authoritative Source: JTEKT or Toyoda specifications</li>
+<li>Language: .NET 9.0 (C#)</li>
+<li>Role: Core communication library for TOYOPUC-Plus, Nano 10GX, and related models</li>
+</ul>
+<h2 id="2-mandatory-rules">2. Mandatory Rules</h2>
+<ul>
+<li>Language: All code, comments, and documentation must be in English.</li>
+<li>Encoding: Use UTF-8 without BOM.</li>
+<li>Static analysis: Changes must pass <code>dotnet build</code> and formatting or analyzer checks.</li>
+<li>Documentation structure: Keep user guidance in <code>docsrc/user/</code> and maintainer guidance in <code>docsrc/maintainer/</code>.</li>
+</ul>
+<h2 id="3-development-workflow">3. Development Workflow</h2>
+<ul>
+<li>Log remaining work in <code>TODO.md</code> when that file exists.</li>
+<li>Update <code>CHANGELOG.md</code> for externally visible changes.</li>
+<li>Keep protocol behavior aligned with the Python port when practical.</li>
+</ul>
+<h2 id="4-api-naming-policy">4. API Naming Policy</h2>
+<p>Detailed naming policy lives in <code>docsrc/maintainer/API_UNIFICATION_POLICY.md</code>.</p>
+<p>Public API rules:</p>
+<ul>
+<li>Canonical client class names are <code>ToyopucClient</code> for the low-level API and <code>ToyopucDeviceClient</code> for the string-device API.</li>
+<li>High-level string-device access uses <code>Read</code>, <code>Write</code>, <code>ReadMany</code>, <code>WriteMany</code>, <code>ReadFr</code>, <code>WriteFr</code>, and <code>CommitFr</code>.</li>
+<li>Low-level protocol access uses explicit names such as <code>ReadWords</code>, <code>WriteWords</code>, <code>ReadBit</code>, <code>ReadClock</code>, and <code>ReadCpuStatus</code>.</li>
+<li>32-bit helpers should use <code>ReadDWord</code>, <code>WriteDWord</code>, <code>ReadDWords</code>, <code>WriteDWords</code>, <code>ReadFloat32</code>, and <code>WriteFloat32</code> style names.</li>
+<li>Async names keep the same base word and add the <code>.NET</code> <code>Async</code> suffix.</li>
+</ul>
+<p>Private or helper naming rules:</p>
+<ul>
+<li>Avoid vague names like <code>ReadOne</code>, <code>WriteOne</code>, or <code>Offset</code> when the helper operates on a resolved device model.</li>
+<li>Prefer names such as <code>ReadResolvedDevice</code>, <code>WriteResolvedDevice</code>, <code>RelayReadResolvedDevice</code>, and <code>OffsetResolvedDevice</code>.</li>
+<li>Batch helpers should include the grouping concept in the name, for example <code>ReadResolvedBatch</code> or <code>WritePc10WordBatch</code>.</li>
+<li>32-bit codec helpers should include both type and word order, for example <code>PackUInt32LowWordFirst</code> or <code>UnpackFloat32LowWordFirst</code>.</li>
+</ul>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/AGENTS.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          PLC Communication Workspace - fa-yoshinobu
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

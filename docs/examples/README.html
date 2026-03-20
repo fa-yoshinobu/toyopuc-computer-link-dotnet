@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Examples | TOYOPUC Computer Link .NET Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Examples | TOYOPUC Computer Link .NET Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/examples/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="examples">Examples</h1>
+
+<p>Use <code>examples/Toyopuc.SmokeTest</code> for .NET validation.
+Use <code>examples/Toyopuc.MinimalRead</code> as the smallest read-only integration sample.
+Use <code>examples/Toyopuc.WriteLimitProbe</code> for safe write-limit confirmation with after-failure re-read and chunked restore.
+Use <code>examples/Toyopuc.BitPatternProbe</code> for sampled 16-bit bit-write vs <code>W/L/H</code> readback validation with immediate restore.
+Use <code>examples/Toyopuc.DeviceMonitor</code> for a Windows table-style monitor UI.
+Use <code>examples/Toyopuc.SoakMonitor</code> for dedicated long-duration polling and reconnect observation.
+Use <a href="d:/Github/toyopucdriver/docsrc/internal/VALIDATION.md">VALIDATION.md</a> as the test checklist.</p>
+<p>When <code>--profile</code> is supplied, basic families <code>P/K/V/T/C/L/X/Y/M/S/N/R/D</code> must be written as <code>P1-*</code>, <code>P2-*</code>, or <code>P3-*</code>.</p>
+<p>Start the simulator from the upstream Python repository:
+<a href="https://github.com/fa-yoshinobu/pytoyopuc-computerlink"><code>fa-yoshinobu/pytoyopuc-computerlink</code></a></p>
+<pre><code class="lang-powershell">git clone https://github.com/fa-yoshinobu/pytoyopuc-computerlink
+cd pytoyopuc-computerlink
+python -m tools.sim_server --host 127.0.0.1 --port 15000
+</code></pre>
+<p>Run the smoke test:</p>
+<pre><code class="lang-powershell">cd d:\Github\toyopucdriver
+dotnet run --project examples\Toyopuc.SmokeTest -- --host 127.0.0.1 --port 15000 --protocol tcp
+</code></pre>
+<p>Run the minimal read example:</p>
+<pre><code class="lang-powershell">cd d:\Github\toyopucdriver
+dotnet run --project examples\Toyopuc.MinimalRead -- 192.168.250.101 1025 tcp P1-D0000 &quot;TOYOPUC-Plus:Plus Extended mode&quot;
+</code></pre>
+<p>Run the direct write-limit probe:</p>
+<pre><code class="lang-powershell">cd d:\Github\toyopucdriver
+powershell -ExecutionPolicy Bypass -File examples\probe_direct_length_limits.ps1
+</code></pre>
+<p>Run the sampled bit-to-packed readback probe:</p>
+<pre><code class="lang-powershell">cd d:\Github\toyopucdriver
+dotnet run --project examples\Toyopuc.BitPatternProbe -- --profile &quot;PC10G:PC10 mode&quot; --csv logs\bit_pattern_pc10g_direct.csv --summary-json logs\bit_pattern_pc10g_direct.json
+</code></pre>
+<p>On the verified direct <code>PC10G</code> target, <code>V</code> / <code>EV</code> include known target-specific packed readback exceptions. The probe records those cases as expected mismatches and still requires restore to succeed.</p>
+<p>Run the Windows device monitor:</p>
+<pre><code class="lang-powershell">cd d:\Github\toyopucdriver
+dotnet run --project examples\Toyopuc.DeviceMonitor
+</code></pre>
+<p>Reference screenshot:</p>
+<p><img src="../screenshot/DeviceMonitor.png" alt="Toyopuc DeviceMonitor screenshot"></p>
+<p>Publish a single-file Windows executable:</p>
+<pre><code class="lang-powershell">cd d:\Github\toyopucdriver
+dotnet publish examples\Toyopuc.DeviceMonitor -c Release -p:PublishProfile=win-x64-single-file -o artifacts\publish\Toyopuc.DeviceMonitor
+</code></pre>
+<p>Or use:</p>
+<pre><code class="lang-bat">cd d:\Github\toyopucdriver
+device_monitor_release.bat
+</code></pre>
+<p>Run the dedicated soak monitor:</p>
+<pre><code class="lang-powershell">cd d:\Github\toyopucdriver
+dotnet run --project examples\Toyopuc.SoakMonitor -- --host 192.168.250.101 --port 1025 --protocol tcp --profile &quot;Nano 10GX:Compatible mode&quot; --hops &quot;P1-L2:N4,P1-L2:N6,P1-L2:N2&quot; --devices P1-D0000,P1-M0000,U08000 --interval 2s --duration 30m --retries 3 --log logs\soak.log --poll-csv logs\soak.csv --summary-json logs\soak_summary.json
+</code></pre>
+<p>Publish a single-file Windows executable:</p>
+<pre><code class="lang-powershell">cd d:\Github\toyopucdriver
+dotnet publish examples\Toyopuc.SoakMonitor -c Release -p:PublishProfile=win-x64-single-file -o artifacts\publish\Toyopuc.SoakMonitor
+</code></pre>
+<p>Or use:</p>
+<pre><code class="lang-bat">cd d:\Github\toyopucdriver
+soak_monitor_release.bat
+</code></pre>
+<p>For the recommended Nano 10GX relay core watch set, use:</p>
+<pre><code class="lang-bat">cd d:\Github\toyopucdriver
+soak_monitor_10gx_core.bat
+</code></pre>
+<p>This batch uses:</p>
+<ul>
+<li>profile: <code>Nano 10GX:Compatible mode</code></li>
+<li>hops: <code>P1-L2:N4,P1-L2:N6,P1-L2:N2</code></li>
+<li>devices: <code>P1-D0000,P1-M0000,U08000,EB00000,FR000000</code></li>
+<li>interval: <code>5s</code></li>
+<li>duration: <code>30m</code></li>
+</ul>
+<p>Output files:</p>
+<ul>
+<li><code>logs\soak_10gx_core.log</code></li>
+<li><code>logs\soak_10gx_core.csv</code></li>
+<li><code>logs\soak_10gx_core.json</code></li>
+</ul>
+<p>Useful variants:</p>
+<ul>
+<li><code>soak_monitor_10gx_core.bat --2h</code></li>
+<li><code>soak_monitor_10gx_core.bat --duration 45m --interval 2s</code></li>
+<li><code>soak_monitor_10gx_core.bat --skip-build --verbose</code></li>
+</ul>
+<p>The monitor UI supports:</p>
+<ul>
+<li><code>tcp</code> and <code>udp</code></li>
+<li><code>Generic</code>, <code>TOYOPUC-Plus:Plus Standard mode</code>, <code>TOYOPUC-Plus:Plus Extended mode</code>, <code>Nano 10GX:Nano 10GX mode</code>, <code>Nano 10GX:Compatible mode</code>, <code>PC10G:PC10 standard/PC3JG mode</code>, <code>PC10G:PC10 mode</code>, <code>PC3JX:PC3 separate mode</code>, <code>PC3JX:Plus expansion mode</code>, <code>PC3JG:PC3JG mode</code>, and <code>PC3JG:PC3 separate mode</code> profiles</li>
+<li>connection settings dialog for transport/profile/relay setup</li>
+<li>program/device/start selection</li>
+<li>fixed 16-point table from the selected start address</li>
+<li>table polling with auto refresh</li>
+<li>manual read and write</li>
+<li>separate clock window</li>
+<li>PLC clock set from the clock window</li>
+<li>separate CPU status window with all decoded fields</li>
+</ul>
+<p>Write/readback test:</p>
+<pre><code class="lang-powershell">dotnet run --project examples\Toyopuc.SmokeTest -- --host 127.0.0.1 --port 15000 --protocol tcp --device P1-D0000 --write-value 0x1234
+</code></pre>
+<p>Verbose frame dump plus file log:</p>
+<pre><code class="lang-powershell">dotnet run --project examples\Toyopuc.SmokeTest -- --host 127.0.0.1 --port 15000 --protocol tcp --device P1-D0000 --write-value 0x1234 --verbose --log logs\smoke.log
+</code></pre>
+<p>TOYOPUC-Plus over TCP 1025:</p>
+<pre><code class="lang-powershell">dotnet run --project examples\Toyopuc.SmokeTest -- --host 192.168.250.101 --port 1025 --protocol tcp --profile &quot;TOYOPUC-Plus:Plus Extended mode&quot; --device P1-D0000 --write-value 0x1234 --verbose --log logs\plus.log
+</code></pre>
+<p>TOYOPUC-Plus read-only suite:</p>
+<pre><code class="lang-powershell">dotnet run --project examples\Toyopuc.SmokeTest -- --host 192.168.250.101 --port 1025 --protocol tcp --profile &quot;TOYOPUC-Plus:Plus Extended mode&quot; --suite &quot;TOYOPUC-Plus:Plus Extended mode&quot; --verbose --log logs\plus_suite.log
+</code></pre>
+<p>This suite reads representative addresses and reports <code>OK</code>, <code>SKIP</code>, or <code>NG</code>.
+On the current TOYOPUC-Plus path, <code>U08000</code>, <code>EB00000</code>, and <code>FR000000</code> are expected to show <code>SKIP</code>.</p>
+<p>Nano 10GX read-only suite:</p>
+<pre><code class="lang-powershell">dotnet run --project examples\Toyopuc.SmokeTest -- --host 192.168.250.101 --port 1025 --protocol tcp --profile &quot;Nano 10GX:Compatible mode&quot; --suite &quot;Nano 10GX:Compatible mode&quot; --verbose --log logs\10gx_suite.log
+</code></pre>
+<p>Exhaustive Nano 10GX read-only suite generated from the profile catalog:</p>
+<pre><code class="lang-powershell">dotnet run --project examples\Toyopuc.SmokeTest -- --host 192.168.250.101 --port 1025 --protocol tcp --profile &quot;Nano 10GX:Compatible mode&quot; --hops &quot;P1-L2:N4,P1-L2:N6,P1-L2:N2&quot; --suite &quot;full:Nano 10GX:Compatible mode&quot; --verbose --log logs\relay_suite_10gx_full.log
+</code></pre>
+<p>On a Nano 10GX target, <code>U08000</code>, <code>EB00000</code>, and <code>FR000000</code> are expected to be readable.</p>
+<p>Relay write/readback with restore:</p>
+<pre><code class="lang-powershell">dotnet run --project examples\Toyopuc.SmokeTest -- --host 192.168.250.101 --port 1025 --protocol tcp --profile &quot;Nano 10GX:Compatible mode&quot; --hops &quot;P1-L2:N4,P1-L2:N6,P1-L2:N2&quot; --device P1-D0000 --write-value 0x1357 --restore-after-write --verbose --log logs\relay_write_restore.log
+</code></pre>
+<p>On the verified Nano 10GX relay target, packed-word access aliases <code>ET/EC</code>, <code>EX/EY</code>, and <code>GX/GY</code>. Validate those pairs one at a time instead of assigning different values in a single <code>--devices</code> write.</p>
+<p>Relay FR write + commit with restore:</p>
+<pre><code class="lang-powershell">dotnet run --project examples\Toyopuc.SmokeTest -- --host 192.168.250.101 --port 1025 --protocol tcp --profile &quot;Nano 10GX:Compatible mode&quot; --hops &quot;P1-L2:N4,P1-L2:N6,P1-L2:N2&quot; --fr-device FR000000 --fr-write-value 0x55AB --fr-commit --restore-after-write --verbose --log logs\relay_fr_commit_restore.log
+</code></pre>
+<p>FR test:</p>
+<pre><code class="lang-powershell">dotnet run --project examples\Toyopuc.SmokeTest -- --host 127.0.0.1 --port 15000 --protocol tcp --fr-device FR000000 --fr-write-value 0x1234 --fr-commit
+</code></pre>
+<p>Validation runner:</p>
+<pre><code class="lang-powershell">powershell -ExecutionPolicy Bypass -File examples\run_validation.ps1 -Target plus
+powershell -ExecutionPolicy Bypass -File examples\run_validation.ps1 -Target relay-10gx
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/examples/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          PLC Communication Workspace - fa-yoshinobu
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

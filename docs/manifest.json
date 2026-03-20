@@ -11,11 +11,51 @@
       }
     },
     {
+      "type": "Conceptual",
+      "source_relative_path": "AGENTS.md",
+      "output": {
+        ".html": {
+          "relative_path": "AGENTS.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "CHANGELOG.md",
+      "output": {
+        ".html": {
+          "relative_path": "CHANGELOG.html"
+        }
+      },
+      "version": ""
+    },
+    {
       "type": "Resource",
       "source_relative_path": "README.md",
       "output": {
         "resource": {
           "relative_path": "README.md"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "README.md",
+      "output": {
+        ".html": {
+          "relative_path": "README.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "TODO.md",
+      "output": {
+        ".html": {
+          "relative_path": "TODO.html"
         }
       },
       "version": ""
@@ -149,6 +189,16 @@
         },
         ".json": {
           "relative_path": "docsrc/user/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "examples/README.md",
+      "output": {
+        ".html": {
+          "relative_path": "examples/README.html"
         }
       },
       "version": ""
@@ -422,326 +472,6 @@
         },
         ".json": {
           "relative_path": "api/toc.json"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/Exceptions.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/Exceptions.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/Models.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/Models.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucAddress.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucAddress.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucAddressingOptions.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucAddressingOptions.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucClient.Async.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucClient.Async.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucClient.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucClient.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucDeviceCatalog.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucDeviceCatalog.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucDeviceClient.Async.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucDeviceClient.Async.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucDeviceClient.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucDeviceClient.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucDeviceProfile.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucDeviceProfile.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucDeviceProfiles.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucDeviceProfiles.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucDeviceResolver.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucDeviceResolver.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucProtocol.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucProtocol.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/ToyopucRelay.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/ToyopucRelay.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/obj/Debug/net9.0/Toyopuc.AssemblyInfo.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/obj/Debug/net9.0/Toyopuc.AssemblyInfo.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/obj/Debug/net9.0/Toyopuc.GlobalUsings.g.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/obj/Debug/net9.0/Toyopuc.GlobalUsings.g.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/obj/Release/net9.0/Toyopuc.AssemblyInfo.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/obj/Release/net9.0/Toyopuc.AssemblyInfo.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/obj/Release/net9.0/Toyopuc.GlobalUsings.g.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/obj/Release/net9.0/Toyopuc.GlobalUsings.g.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/obj/Release/net9.0/win-x64/Toyopuc.AssemblyInfo.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/obj/Release/net9.0/win-x64/Toyopuc.AssemblyInfo.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "src/Toyopuc/obj/Release/net9.0/win-x64/Toyopuc.GlobalUsings.g.cs",
-      "output": {
-        "resource": {
-          "relative_path": "src/Toyopuc/obj/Release/net9.0/win-x64/Toyopuc.GlobalUsings.g.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/AddressAndResolverTests.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/AddressAndResolverTests.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/DeviceMonitorCatalogHelperTests.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/DeviceMonitorCatalogHelperTests.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/ExampleCliContractTests.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/ExampleCliContractTests.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/ExampleEntryPointTests.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/ExampleEntryPointTests.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/LibraryResolverContractTests.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/LibraryResolverContractTests.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/ProfileMatrixCsvTests.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/ProfileMatrixCsvTests.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/ProtocolAndClientTests.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/ProtocolAndClientTests.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/ResolverMatrixTests.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/ResolverMatrixTests.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/obj/Debug/net9.0/Toyopuc.Tests.AssemblyInfo.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/obj/Debug/net9.0/Toyopuc.Tests.AssemblyInfo.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/obj/Debug/net9.0/Toyopuc.Tests.GlobalUsings.g.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/obj/Debug/net9.0/Toyopuc.Tests.GlobalUsings.g.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/obj/Release/net9.0/win-x64/Toyopuc.Tests.AssemblyInfo.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/obj/Release/net9.0/win-x64/Toyopuc.Tests.AssemblyInfo.cs"
-        }
-      },
-      "version": ""
-    },
-    {
-      "type": "Resource",
-      "source_relative_path": "tests/Toyopuc.Tests/obj/Release/net9.0/win-x64/Toyopuc.Tests.GlobalUsings.g.cs",
-      "output": {
-        "resource": {
-          "relative_path": "tests/Toyopuc.Tests/obj/Release/net9.0/win-x64/Toyopuc.Tests.GlobalUsings.g.cs"
         }
       },
       "version": ""

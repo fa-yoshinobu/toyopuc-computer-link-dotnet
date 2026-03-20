@@ -18,7 +18,7 @@
         "dest": "api"
       },
       {
-        "files": ["docsrc/**/*.md", "docsrc/**/toc.yml"]
+        "files": ["**/*.md", "**/toc.yml"]
       },
       {
         "files": ["index.md", "toc.yml"]
@@ -26,7 +26,7 @@
     ],
     "resource": [
       {
-        "files": ["docsrc/user/assets/**", "docsrc/maintainer/assets/**", "docsrc/maintainer/*.csv", "src/**/*.cs", "tests/**/*.cs", "README.md"]
+        "files": ["docsrc/user/assets/**", "docsrc/maintainer/assets/**", "docsrc/maintainer/*.csv", "README.md"]
       }
     ],
     "dest": "docs",
@@ -42,4 +42,7 @@
     ]
   }
 }
+
+
+
 
