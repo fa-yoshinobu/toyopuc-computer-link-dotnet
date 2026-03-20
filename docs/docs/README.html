@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>(JTEKT TOYOPUC) Computer Link .NET | TOYOPUC Computer Link .NET Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="(JTEKT TOYOPUC) Computer Link .NET | TOYOPUC Computer Link .NET Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docs/README.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="jtekt-toyopuc-computer-link-net">(JTEKT TOYOPUC) Computer Link .NET</h1>
+
+<p><a href="https://dotnet.microsoft.com/download/dotnet/9.0"><img src="https://img.shields.io/badge/.NET-9.0-purple.svg" alt=".NET 9.0"></a>
+<a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
+<a href="https://learn.microsoft.com/en-us/dotnet/core/tools/dotnet-format"><img src="https://img.shields.io/badge/Lint-dotnet%20format-blue.svg" alt="Static Analysis: dotnet format"></a></p>
+<p>A modern, high-performance .NET client library for JTEKT TOYOPUC computer-link communication. Supporting TOYOPUC-Plus, Nano 10GX, and other compatible models.</p>
+<h2 id="key-features">Key Features</h2>
+<ul>
+<li><strong>Modern .NET</strong>: Built on .NET 9.0 with native async/await support.</li>
+<li><strong>Single-File Distribution</strong>: Capable of producing self-contained, single-file executables.</li>
+<li><strong>Industrial Reliability</strong>: Optimized for high-frequency monitoring and data collection.</li>
+<li><strong>Zero Mojibake</strong>: English-only documentation and strict UTF-8 standards.</li>
+<li><strong>CI-Ready</strong>: Built-in quality checks and publishing via <code>run_ci.bat</code>.</li>
+</ul>
+<h2 id="quick-start">Quick Start</h2>
+<h3 id="installation">Installation</h3>
+<pre><code class="lang-bash"># Add NuGet package (Coming Soon)
+# dotnet add package Toyopuc
+</code></pre>
+<h3 id="basic-usage">Basic Usage</h3>
+<pre><code class="lang-csharp">using Toyopuc;
+
+// Connect to a TOYOPUC PLC
+using var client = new ToyopucDeviceClient(&quot;192.168.1.5&quot;, 1025);
+
+// Read P1-D0000 (Program 1, Word)
+var value = await client.ReadAsync(&quot;P1-D0000&quot;);
+Console.WriteLine($&quot;Value: {value}&quot;);
+
+// Write to P1-M0000 (Program 1, Bit)
+await client.WriteAsync(&quot;P1-M0000&quot;, true);
+</code></pre>
+<h2 id="documentation">Documentation</h2>
+<p>Follows the workspace-wide hierarchical documentation policy:</p>
+<ul>
+<li><a href="docsrc/user/USER_GUIDE.md"><strong>User Guide</strong></a>: Connection setup and API reference.</li>
+<li><a href="docsrc/user/TROUBLESHOOTING.md"><strong>Troubleshooting</strong></a>: Common issues and FAQ.</li>
+<li><a href="docsrc/validation/reports/"><strong>QA Reports</strong></a>: Formal evidence of communication with real Toyopuc hardware.</li>
+<li><a href="docsrc/maintainer/ARCHITECTURE.md"><strong>Architecture</strong></a>: Design philosophy and background.</li>
+<li><a href="docsrc/maintainer/RELEASE_PROCESS.md"><strong>Release Process</strong></a>: Details on building and NuGet packaging.</li>
+</ul>
+<h2 id="development-and-ci">Development and CI</h2>
+<p>Quality is managed via <code>run_ci.bat</code>.</p>
+<h3 id="local-ci-and-publish">Local CI and Publish</h3>
+<pre><code class="lang-bash">run_ci.bat
+</code></pre>
+<p>Validates the code and publishes a self-contained Single-File EXE to the <code>publish/</code> directory.</p>
+<h2 id="license">License</h2>
+<p>Distributed under the <a href="LICENSE">MIT License</a>.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docs/README.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          PLC Communication Workspace - fa-yoshinobu
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
