@@ -12,7 +12,7 @@ This repository is part of the PLC Communication Workspace and follows the globa
 - Language: All code, comments, and documentation must be in English.
 - Encoding: Use UTF-8 without BOM.
 - Static analysis: Changes must pass `dotnet build` and formatting or analyzer checks.
-- Documentation structure: Keep user guidance in `docs/user/` and maintainer guidance in `docs/maintainer/`.
+- Documentation structure: Keep user guidance in `docsrc/user/` and maintainer guidance in `docsrc/maintainer/`.
 
 ## 3. Development Workflow
 - Log remaining work in `TODO.md` when that file exists.
@@ -21,7 +21,7 @@ This repository is part of the PLC Communication Workspace and follows the globa
 
 ## 4. API Naming Policy
 
-Detailed naming policy lives in `docs/maintainer/API_UNIFICATION_POLICY.md`.
+Detailed naming policy lives in `docsrc/maintainer/API_UNIFICATION_POLICY.md`.
 
 Public API rules:
 
@@ -37,3 +37,4 @@ Private or helper naming rules:
 - Prefer names such as `ReadResolvedDevice`, `WriteResolvedDevice`, `RelayReadResolvedDevice`, and `OffsetResolvedDevice`.
 - Batch helpers should include the grouping concept in the name, for example `ReadResolvedBatch` or `WritePc10WordBatch`.
 - 32-bit codec helpers should include both type and word order, for example `PackUInt32LowWordFirst` or `UnpackFloat32LowWordFirst`.
+

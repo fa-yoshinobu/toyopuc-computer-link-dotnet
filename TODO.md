@@ -3,7 +3,7 @@
 This file tracks the remaining tasks and known issues for the Toyopuc Computer Link .NET library.
 
 ## 1. Validation and Test Stability
-- [ ] **Formal Hardware Evidence**: Add `docs/validation/reports/` entries for the current `ToyopucDeviceClient`, async APIs, and 32-bit helper coverage.
+- [ ] **Formal Hardware Evidence**: Add `docsrc/validation/reports/` entries for the current `ToyopucDeviceClient`, async APIs, and 32-bit helper coverage.
 - [ ] **Example Test Dependency**: Resolve or redesign the `ExampleEntryPointTests` dependency on the missing `soak_monitor_10gx_core.bat` asset.
 - [ ] **Smoke / Soak Coverage**: Re-run the example applications against current hardware and capture the results as reproducible reports.
 
@@ -13,3 +13,4 @@ This file tracks the remaining tasks and known issues for the Toyopuc Computer L
 
 ## 3. Quality Maintenance
 - [ ] **Analyzer Pass**: Run `dotnet format` and the full analyzer set on the whole solution after the naming changes settle.
+

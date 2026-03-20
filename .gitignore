@@ -7,3 +7,5 @@ sample/
 *.snupkg
 
 publish/
+
+_site/

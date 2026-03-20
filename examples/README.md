@@ -6,7 +6,7 @@ Use `examples/Toyopuc.WriteLimitProbe` for safe write-limit confirmation with af
 Use `examples/Toyopuc.BitPatternProbe` for sampled 16-bit bit-write vs `W/L/H` readback validation with immediate restore.
 Use `examples/Toyopuc.DeviceMonitor` for a Windows table-style monitor UI.
 Use `examples/Toyopuc.SoakMonitor` for dedicated long-duration polling and reconnect observation.
-Use [VALIDATION.md](d:/Github/toyopucdriver/docs/internal/VALIDATION.md) as the test checklist.
+Use [VALIDATION.md](d:/Github/toyopucdriver/docsrc/internal/VALIDATION.md) as the test checklist.
 
 When `--profile` is supplied, basic families `P/K/V/T/C/L/X/Y/M/S/N/R/D` must be written as `P1-*`, `P2-*`, or `P3-*`.
 
@@ -202,3 +202,4 @@ Validation runner:
 powershell -ExecutionPolicy Bypass -File examples\run_validation.ps1 -Target plus
 powershell -ExecutionPolicy Bypass -File examples\run_validation.ps1 -Target relay-10gx
 ```
+
