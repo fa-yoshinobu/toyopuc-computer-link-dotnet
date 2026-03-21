@@ -1,6 +1,6 @@
 using System.Buffers.Binary;
 
-namespace Toyopuc;
+namespace PlcComm.Toyopuc;
 
 public static class ToyopucProtocol
 {

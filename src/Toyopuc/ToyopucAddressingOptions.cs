@@ -1,4 +1,4 @@
-namespace Toyopuc;
+namespace PlcComm.Toyopuc;
 
 public sealed record ToyopucAddressingOptions(
     bool UseUpperUPc10 = true,

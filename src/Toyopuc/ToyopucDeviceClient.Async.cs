@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Toyopuc;
+namespace PlcComm.Toyopuc;
 
 public partial class ToyopucDeviceClient
 {

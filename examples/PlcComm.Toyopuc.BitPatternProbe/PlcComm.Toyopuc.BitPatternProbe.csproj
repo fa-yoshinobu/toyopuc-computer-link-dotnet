@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Toyopuc\PlcComm.Toyopuc.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <Version>0.1.2</Version>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>PlcComm.Toyopuc.BitPatternProbe</AssemblyName>
+    <Title>PlcComm.Toyopuc Bit Pattern Probe</Title>
+    <Product>PlcComm.Toyopuc Bit Pattern Probe</Product>
+    <Description>Writes 16 bits, then verifies packed word and byte reads with immediate restore.</Description>
+  </PropertyGroup>
+
+</Project>
+
+
+

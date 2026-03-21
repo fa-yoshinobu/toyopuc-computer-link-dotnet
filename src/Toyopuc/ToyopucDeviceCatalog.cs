@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace Toyopuc;
+namespace PlcComm.Toyopuc;
 
 public static class ToyopucDeviceCatalog
 {

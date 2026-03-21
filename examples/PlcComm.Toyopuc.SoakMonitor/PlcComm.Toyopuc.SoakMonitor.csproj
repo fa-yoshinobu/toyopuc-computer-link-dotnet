@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Toyopuc\PlcComm.Toyopuc.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net9.0</TargetFramework>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>PlcComm.Toyopuc.SoakMonitor</AssemblyName>
+    <Title>PlcComm.Toyopuc SoakMonitor</Title>
+    <Product>PlcComm.Toyopuc SoakMonitor</Product>
+    <Description>Dedicated long-duration monitoring CLI for the PlcComm.Toyopuc .NET library.</Description>
+  </PropertyGroup>
+
+  <Target Name="DeletePublishSidecars" AfterTargets="Publish">
+    <ItemGroup>
+      <PublishSidecars Include="$(PublishDir)*.pdb" />
+      <PublishSidecars Include="$(PublishDir)*.xml" />
+    </ItemGroup>
+    <Delete Files="@(PublishSidecars)" />
+  </Target>
+
+</Project>

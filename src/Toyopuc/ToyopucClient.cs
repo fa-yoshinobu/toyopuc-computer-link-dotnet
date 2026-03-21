@@ -2,7 +2,7 @@ using System.Buffers;
 using System.Net;
 using System.Net.Sockets;
 
-namespace Toyopuc;
+namespace PlcComm.Toyopuc;
 
 public partial class ToyopucClient : IDisposable, IAsyncDisposable
 {
@@ -53,8 +53,8 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
         string host,
         int port,
         int localPort = 0,
-        string protocol = "tcp",
-        double timeout = 3.0,
+        ToyopucTransportMode transport = ToyopucTransportMode.Tcp,
+        TimeSpan timeout = default,
         int retries = 0,
         double retryDelay = 0.2,
         int recvBufsize = 8192)
@@ -62,8 +62,8 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
         Host = host;
         Port = port;
         LocalPort = localPort;
-        Protocol = protocol.ToLowerInvariant();
-        Timeout = timeout;
+        Transport = transport;
+        Timeout = timeout == default ? TimeSpan.FromSeconds(3) : timeout;
         Retries = Math.Max(0, retries);
         RetryDelay = retryDelay;
         RecvBufsize = recvBufsize;
@@ -72,11 +72,12 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
     public string Host { get; }
     public int Port { get; }
     public int LocalPort { get; }
-    public string Protocol { get; }
-    public double Timeout { get; }
+    public ToyopucTransportMode Transport { get; }
+    public TimeSpan Timeout { get; set; }
     public int Retries { get; }
     public double RetryDelay { get; }
     public int RecvBufsize { get; }
+    public bool IsOpen => _socket is not null;
     public bool CaptureTraceFrames { get; set; }
     public Action<ToyopucTraceFrame>? TraceHook { get; set; }
 
@@ -85,7 +86,7 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
     public IReadOnlyList<TransportTraceFrame> TraceFrames =>
         _traceFrames.Select(static frame => new TransportTraceFrame(frame.Tx.ToArray(), frame.Rx?.ToArray())).ToArray();
 
-    public virtual void Connect()
+    public virtual void Open()
     {
         if (_socket is not null)
         {
@@ -96,13 +97,13 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
         _remoteEndPoint = new IPEndPoint(remoteAddress, Port);
 
         Socket socket;
-        if (Protocol == "tcp")
+        if (Transport == ToyopucTransportMode.Tcp)
         {
             socket = new Socket(remoteAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
             ConfigureSocket(socket);
             ConnectWithTimeout(socket, _remoteEndPoint, Timeout);
         }
-        else if (Protocol == "udp")
+        else
         {
             socket = new Socket(remoteAddress.AddressFamily, SocketType.Dgram, ProtocolType.Udp);
             ConfigureSocket(socket);
@@ -110,10 +111,6 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
             {
                 socket.Bind(CreateAnyEndPoint(remoteAddress.AddressFamily, LocalPort));
             }
-        }
-        else
-        {
-            throw new ArgumentException("protocol must be 'tcp' or 'udp'", nameof(Protocol));
         }
 
         _socket = socket;
@@ -779,7 +776,7 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
             attempt++;
             if (_socket is null)
             {
-                Connect();
+                Open();
             }
 
             _lastTx = payload;
@@ -789,7 +786,7 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
             try
             {
                 byte[] frame;
-                if (Protocol == "tcp")
+                if (Transport == ToyopucTransportMode.Tcp)
                 {
                     Span<byte> header = stackalloc byte[4];
                     SendAll(payload);
@@ -903,10 +900,10 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
         return new IPEndPoint(addressFamily == AddressFamily.InterNetworkV6 ? IPAddress.IPv6Any : IPAddress.Any, port);
     }
 
-    private static void ConnectWithTimeout(Socket socket, EndPoint endPoint, double timeoutSeconds)
+    private static void ConnectWithTimeout(Socket socket, EndPoint endPoint, TimeSpan timeout)
     {
         var result = socket.BeginConnect(endPoint, null, null);
-        if (!result.AsyncWaitHandle.WaitOne(TimeSpan.FromSeconds(timeoutSeconds)))
+        if (!result.AsyncWaitHandle.WaitOne(timeout))
         {
             socket.Dispose();
             throw new TimeoutException("Timed out while connecting");
@@ -917,7 +914,7 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
 
     private void ConfigureSocket(Socket socket)
     {
-        var timeoutMs = Math.Max(1, (int)Math.Ceiling(Timeout * 1000.0));
+        var timeoutMs = Math.Max(1, (int)Timeout.TotalMilliseconds);
         socket.ReceiveTimeout = timeoutMs;
         socket.SendTimeout = timeoutMs;
         if (socket.SocketType == SocketType.Stream && socket.ProtocolType == ProtocolType.Tcp)

@@ -1,7 +1,7 @@
 using System.Globalization;
 using System.Text.RegularExpressions;
 
-namespace Toyopuc;
+namespace PlcComm.Toyopuc;
 
 public static class ToyopucRelay
 {

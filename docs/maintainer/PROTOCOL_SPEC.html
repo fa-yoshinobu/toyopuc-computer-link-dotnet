@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>TOYOPUC Computer Link Protocol Spec (.NET) | TOYOPUC Computer Link .NET Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="TOYOPUC Computer Link Protocol Spec (.NET) | TOYOPUC Computer Link .NET Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docsrc/maintainer/PROTOCOL_SPEC.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="toyopuc-computer-link-protocol-spec-net">TOYOPUC Computer Link Protocol Spec (.NET)</h1>
+
+<p>This document is a working protocol summary for the TOYOPUC 2ET Ethernet module.</p>
+<p>It is not a verbatim manufacturer manual. It is a reorganized implementation note based on the current code and verified hardware behavior.</p>
+<p>Related documents:</p>
+<ul>
+<li><a href="ARCHITECTURE.html">ARCHITECTURE.md</a></li>
+<li><a href="TESTING_GUIDE.html">TESTING_GUIDE.md</a></li>
+<li><a href="VALIDATION.html">VALIDATION.md</a></li>
+</ul>
+<p>Status labels:</p>
+<ul>
+<li><code>verified</code>: behavior confirmed on current hardware</li>
+<li><code>implementation rule</code>: behavior intentionally used by this project</li>
+<li><code>summary</code>: reorganized description for easier implementation</li>
+</ul>
+<h2 id="1-frame-format">1. Frame Format</h2>
+<p>Common command frame:</p>
+<pre><code class="lang-text">+------+------+------+------+------+-------------------+
+| FT   | RC   | LL   | LH   | CMD  | DATA              |
++------+------+------+------+------+-------------------+
+</code></pre>
+<ul>
+<li><code>FT</code>: frame type</li>
+<li><code>RC</code>: response code</li>
+<li><code>LL/LH</code>: payload length (little-endian), excluding the 5-byte header</li>
+<li><code>CMD</code>: command code</li>
+<li><code>DATA</code>: command payload</li>
+</ul>
+<h3 id="ft--rc">FT / RC</h3>
+<ul>
+<li>request: <code>FT=0x00</code>, <code>RC=0x00</code></li>
+<li>response: <code>FT=0x80</code>, <code>RC=0x00</code> on success</li>
+<li><code>RC != 0x00</code> means PLC-side error or rejection</li>
+</ul>
+<h3 id="error-response-codes">Error Response Codes</h3>
+<p>If the PLC returns a NAK response, the detailed error code may appear:</p>
+<ul>
+<li>in the <code>CMD</code> byte, for example <code>80 10 01 00 40</code></li>
+<li>or in the response data, depending on command path</li>
+</ul>
+<p><code>RC=0x10</code> is treated as NAK; the client tries both forms when formatting the error.</p>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x11</code></td>
+<td>CPU module hardware failure</td>
+</tr>
+<tr>
+<td><code>0x20</code></td>
+<td>Relay command ENQ fixed data is not <code>0x05</code></td>
+</tr>
+<tr>
+<td><code>0x21</code></td>
+<td>Invalid transfer number in relay command</td>
+</tr>
+<tr>
+<td><code>0x23</code></td>
+<td>Invalid command code</td>
+</tr>
+<tr>
+<td><code>0x24</code></td>
+<td>Invalid subcommand code</td>
+</tr>
+<tr>
+<td><code>0x25</code></td>
+<td>Invalid command-format data byte</td>
+</tr>
+<tr>
+<td><code>0x26</code></td>
+<td>Invalid number of data points</td>
+</tr>
+<tr>
+<td><code>0x27</code></td>
+<td>Address out of range</td>
+</tr>
+<tr>
+<td><code>0x28</code></td>
+<td>Data value out of range</td>
+</tr>
+<tr>
+<td><code>0x40</code></td>
+<td>Address out of range (alternate form)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-command-groups">2. Command Groups</h2>
+<h3 id="basic-area-cmd1c25">Basic Area (CMD=1C–25)</h3>
+<table>
+<thead>
+<tr>
+<th>CMD</th>
+<th>Name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x1C</code></td>
+<td><code>ReadWords</code></td>
+<td>read N contiguous words</td>
+</tr>
+<tr>
+<td><code>0x1D</code></td>
+<td><code>WriteWords</code></td>
+<td>write N contiguous words</td>
+</tr>
+<tr>
+<td><code>0x1E</code></td>
+<td><code>ReadBytes</code></td>
+<td>read N contiguous bytes</td>
+</tr>
+<tr>
+<td><code>0x1F</code></td>
+<td><code>WriteBytes</code></td>
+<td>write N contiguous bytes</td>
+</tr>
+<tr>
+<td><code>0x20</code></td>
+<td><code>ReadBit</code></td>
+<td>read 1 bit</td>
+</tr>
+<tr>
+<td><code>0x21</code></td>
+<td><code>WriteBit</code></td>
+<td>write 1 bit</td>
+</tr>
+<tr>
+<td><code>0x22</code></td>
+<td><code>ReadWordsMulti</code></td>
+<td>read non-contiguous words</td>
+</tr>
+<tr>
+<td><code>0x23</code></td>
+<td><code>WriteWordsMulti</code></td>
+<td>write non-contiguous words</td>
+</tr>
+<tr>
+<td><code>0x24</code></td>
+<td><code>ReadBytesMulti</code></td>
+<td>read non-contiguous bytes</td>
+</tr>
+<tr>
+<td><code>0x25</code></td>
+<td><code>WriteBytesMulti</code></td>
+<td>write non-contiguous bytes</td>
+</tr>
+</tbody>
+</table>
+<h3 id="clock--status-cmd32">Clock / Status (CMD=32)</h3>
+<p>Sub-command structure: <code>CMD=32</code>, <code>SUB_HI</code>, <code>SUB_LO</code></p>
+<table>
+<thead>
+<tr>
+<th>Sub</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x70 0x00</code></td>
+<td><code>ReadClock</code></td>
+</tr>
+<tr>
+<td><code>0x71 0x00</code></td>
+<td><code>WriteClock</code></td>
+</tr>
+<tr>
+<td><code>0x11 0x00</code></td>
+<td><code>ReadCpuStatus</code></td>
+</tr>
+<tr>
+<td><code>0xA0 0x00</code></td>
+<td><code>ReadCpuStatusA0</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-area-cmd9499">Extended Area (CMD=94–99)</h3>
+<table>
+<thead>
+<tr>
+<th>CMD</th>
+<th>Name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0x94</code></td>
+<td><code>ReadExtWords</code></td>
+<td>read extended-area words</td>
+</tr>
+<tr>
+<td><code>0x95</code></td>
+<td><code>WriteExtWords</code></td>
+<td>write extended-area words</td>
+</tr>
+<tr>
+<td><code>0x96</code></td>
+<td><code>ReadExtBytes</code></td>
+<td>read extended-area bytes</td>
+</tr>
+<tr>
+<td><code>0x97</code></td>
+<td><code>WriteExtBytes</code></td>
+<td>write extended-area bytes</td>
+</tr>
+<tr>
+<td><code>0x98</code></td>
+<td><code>ReadExtMulti</code></td>
+<td>multi-point extended read</td>
+</tr>
+<tr>
+<td><code>0x99</code></td>
+<td><code>WriteExtMulti</code></td>
+<td>multi-point extended write</td>
+</tr>
+</tbody>
+</table>
+<h3 id="pc10-commands-cmdc2c5">PC10 Commands (CMD=C2–C5)</h3>
+<table>
+<thead>
+<tr>
+<th>CMD</th>
+<th>Name</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0xC2</code></td>
+<td><code>Pc10BlockRead</code></td>
+<td>32-bit address block read</td>
+</tr>
+<tr>
+<td><code>0xC3</code></td>
+<td><code>Pc10BlockWrite</code></td>
+<td>32-bit address block write</td>
+</tr>
+<tr>
+<td><code>0xC4</code></td>
+<td><code>Pc10MultiRead</code></td>
+<td>multi-point PC10 read</td>
+</tr>
+<tr>
+<td><code>0xC5</code></td>
+<td><code>Pc10MultiWrite</code></td>
+<td>multi-point PC10 write</td>
+</tr>
+</tbody>
+</table>
+<p>PC10 addressing uses a 32-bit address: low word first, then high word.</p>
+<p>FR access uses PC10 block commands with <code>Ex No. = 0x40–0x7F</code>.</p>
+<h3 id="fr-register-cmdca">FR Register (CMD=CA)</h3>
+<ul>
+<li><code>CMD=CA</code>, payload: <code>[Ex No.]</code></li>
+<li>Commits a previously written FR block to non-volatile storage.</li>
+</ul>
+<h3 id="relay-command-cmd60">Relay Command (CMD=60)</h3>
+<p>Single outer frame wraps an inner command frame.</p>
+<pre><code class="lang-text">[ENQ=05] [link] [exchange_lo] [exchange_hi] [inner_frame]
+</code></pre>
+<p>Nested relay is supported by wrapping additional relay frames.</p>
+<h2 id="3-address-tables">3. Address Tables</h2>
+<h3 id="basic-area">Basic Area</h3>
+<table>
+<thead>
+<tr>
+<th>Area</th>
+<th>Address Range</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>P (word)</td>
+<td>0x0000 – varies by model</td>
+</tr>
+<tr>
+<td>L (word)</td>
+<td>0x0000 – varies by model</td>
+</tr>
+</tbody>
+</table>
+<h3 id="extended-area-ex-no">Extended Area (Ex No.)</h3>
+<table>
+<thead>
+<tr>
+<th>Ex No.</th>
+<th>Area</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0x00–0x3F</td>
+<td>Extended I/O</td>
+</tr>
+<tr>
+<td>0x40–0x7F</td>
+<td>FR area (via PC10)</td>
+</tr>
+<tr>
+<td>0x80–0xFF</td>
+<td>Manufacturer reserved</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-implementation-notes">4. Implementation Notes</h2>
+<h3 id="word-endianness">Word Endianness</h3>
+<p>All multi-byte values are little-endian (low byte first).</p>
+<h3 id="32-bit-values">32-Bit Values</h3>
+<p>32-bit values span two consecutive 16-bit words: low word first.
+<code>ToyopucClient.ReadDWords</code> / <code>WriteDWords</code> handle this packing automatically.</p>
+<h3 id="bcd-clock-encoding">BCD Clock Encoding</h3>
+<p><code>ReadClock</code> / <code>WriteClock</code> values use BCD encoding for year, month, day, hour, minute, second.
+The .NET library converts automatically between <code>DateTime</code> and BCD.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docsrc/maintainer/PROTOCOL_SPEC.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          PLC Communication Workspace - fa-yoshinobu
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,7 +1,7 @@
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Toyopuc;
+namespace PlcComm.Toyopuc;
 
 public partial class ToyopucClient
 {
@@ -55,9 +55,9 @@ public partial class ToyopucClient
         WriteWords(address, PackFloat32LowWordFirstToWords(values));
     }
 
-    public virtual Task ConnectAsync(CancellationToken cancellationToken = default)
+    public virtual Task OpenAsync(CancellationToken cancellationToken = default)
     {
-        return RunAsync(Connect, cancellationToken);
+        return RunAsync(Open, cancellationToken);
     }
 
     public virtual Task CloseAsync(CancellationToken cancellationToken = default)

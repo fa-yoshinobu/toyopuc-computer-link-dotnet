@@ -1,4 +1,4 @@
-namespace Toyopuc;
+namespace PlcComm.Toyopuc;
 
 public static class ToyopucDeviceProfiles
 {

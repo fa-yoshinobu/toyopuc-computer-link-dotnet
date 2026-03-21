@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Globalization;
 
-namespace Toyopuc;
+namespace PlcComm.Toyopuc;
 
 public partial class ToyopucDeviceClient : ToyopucClient
 {
@@ -39,14 +39,14 @@ public partial class ToyopucDeviceClient : ToyopucClient
         string host,
         int port,
         int localPort = 0,
-        string protocol = "tcp",
-        double timeout = 3.0,
+        ToyopucTransportMode transport = ToyopucTransportMode.Tcp,
+        TimeSpan timeout = default,
         int retries = 0,
         double retryDelay = 0.2,
         int recvBufsize = 8192,
         ToyopucAddressingOptions? addressingOptions = null,
         string? deviceProfile = null)
-        : base(host, port, localPort, protocol, timeout, retries, retryDelay, recvBufsize)
+        : base(host, port, localPort, transport, timeout, retries, retryDelay, recvBufsize)
     {
         DeviceProfile = string.IsNullOrWhiteSpace(deviceProfile)
             ? null

@@ -1,11 +1,16 @@
-bin/
-obj/
+**/bin/
+**/obj/
+.vs/
+.idea/
+*.user
+*.suo
+TestResults/
 logs/
 artifacts/
-sample/
+local_folder/
+publish/
+build_check.log
 *.nupkg
 *.snupkg
-
-publish/
 
 _site/

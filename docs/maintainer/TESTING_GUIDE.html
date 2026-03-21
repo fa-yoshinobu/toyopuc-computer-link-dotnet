@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Testing Guide | TOYOPUC Computer Link .NET Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Testing Guide | TOYOPUC Computer Link .NET Documentation ">
+      
+      
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="../toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docsrc/maintainer/TESTING_GUIDE.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href="../index.html">
+            <img id="logo" class="svg" src="../logo.svg" alt="">
+            
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+
+      <div class="content">
+        <div class="actionbar">
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="testing-guide">Testing Guide</h1>
+
+<p>This document describes the test structure and verification approach for <code>Toyopuc.Net</code>.</p>
+<p>Related documents:</p>
+<ul>
+<li><a href="ARCHITECTURE.html">ARCHITECTURE.md</a></li>
+<li><a href="PROTOCOL_SPEC.html">PROTOCOL_SPEC.md</a></li>
+<li><a href="VALIDATION.html">VALIDATION.md</a></li>
+</ul>
+<h2 id="unit--integration-tests">Unit / Integration Tests</h2>
+<p>The automated test suite is under <code>tests/Toyopuc.Tests/</code>.</p>
+<p>Run with:</p>
+<pre><code class="lang-powershell">dotnet test Toyopuc.sln -v normal
+</code></pre>
+<p>Expected result: all tests pass, 0 warnings.</p>
+<h2 id="simulator">Simulator</h2>
+<p><code>scripts/sim_server.py</code> in <code>plc-comm-computerlink-python</code> is a development helper.</p>
+<p>Currently supported commands in the simulator:</p>
+<ul>
+<li>basic single-point: <code>CMD=1C/1D/1E/1F/20/21</code></li>
+<li>basic multi-point: <code>CMD=22/23/24/25</code></li>
+<li>extended single/contiguous: <code>CMD=94/95/96/97</code></li>
+<li>extended multi-point: <code>CMD=98/99</code></li>
+<li>PC10 block/multi: <code>CMD=C2/C3/C4/C5</code></li>
+<li>relay: <code>CMD=60</code></li>
+<li>clock: <code>CMD=32 70 00</code> / <code>CMD=32 71 00</code></li>
+<li>CPU status: <code>CMD=32 11 00</code></li>
+</ul>
+<p>Not modeled accurately enough to treat as hardware-equivalent:</p>
+<ul>
+<li>FR commit behavior</li>
+<li>Hardware-specific NAK / error responses</li>
+</ul>
+<h2 id="hardware-verification">Hardware Verification</h2>
+<p>Verified hardware targets:</p>
+<ul>
+<li><code>TOYOPUC-Plus CPU (TCC-6740)</code> + <code>Plus EX2 (TCU-6858)</code> via UDP</li>
+<li>Single-hop, two-hop, and three-hop relay paths verified</li>
+</ul>
+<h3 id="relay-verification">Relay Verification</h3>
+<p>Verified relay configurations (from <code>plc-comm-computerlink-python</code> testing):</p>
+<ul>
+<li><code>P1-L2:N2</code> (single-hop)</li>
+<li><code>P1-L2:N2 -&gt; P1-L2:N4</code> (two-hop)</li>
+<li><code>P1-L2:N2 -&gt; P1-L2:N4 -&gt; P1-L2:N6</code> (three-hop)</li>
+</ul>
+<p>Verified inner commands over relay:</p>
+<ul>
+<li><code>CMD=32 / 11 00</code> CPU status read</li>
+<li><code>CMD=32 / 70 00</code> clock read</li>
+<li><code>CMD=1C</code> word read</li>
+<li><code>CMD=C2</code> / <code>CMD=C3</code> FR read/write</li>
+<li><code>CMD=CA</code> FR commit with completion wait</li>
+</ul>
+<h2 id="cross-library-parity">Cross-Library Parity</h2>
+<p>The .NET library is kept in sync with <code>plc-comm-computerlink-python</code>.</p>
+<p>When adding or changing a method, verify:</p>
+<ol>
+<li>The equivalent Python method exists and has the same semantics.</li>
+<li>The <code>.Async</code> counterpart exists in <code>ToyopucClient.Async.cs</code>.</li>
+<li>The relay variant exists where applicable.</li>
+</ol>
+<h2 id="ci">CI</h2>
+<p>CI runs on every push via <code>.github/workflows/ci.yml</code>:</p>
+<pre><code class="lang-powershell">dotnet build Toyopuc.sln
+dotnet test Toyopuc.sln --no-build
+</code></pre>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docsrc/maintainer/TESTING_GUIDE.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          PLC Communication Workspace - fa-yoshinobu
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

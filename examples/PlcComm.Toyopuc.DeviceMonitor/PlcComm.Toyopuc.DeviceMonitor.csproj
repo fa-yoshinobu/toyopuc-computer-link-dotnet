@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Toyopuc\PlcComm.Toyopuc.csproj" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationHighDpiMode>PerMonitorV2</ApplicationHighDpiMode>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AssemblyName>PlcComm.Toyopuc.DeviceMonitor</AssemblyName>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <Title>PlcComm.Toyopuc DeviceMonitor</Title>
+    <Product>PlcComm.Toyopuc DeviceMonitor</Product>
+    <Description>Windows device monitor for the PlcComm.Toyopuc .NET library.</Description>
+    <FileDescription>Windows device monitor for the PlcComm.Toyopuc .NET library.</FileDescription>
+    <Company>fa-yoshinobu</Company>
+    <Authors>fa-yoshinobu</Authors>
+    <Copyright>Copyright (c) 2026 fa-yoshinobu</Copyright>
+  </PropertyGroup>
+
+  <Target Name="CleanupSingleFilePublishArtifacts" AfterTargets="Publish" Condition="'$(PublishSingleFile)' == 'true'">
+    <ItemGroup>
+      <SingleFilePublishExtras Include="$(PublishDir)*.pdb;$(PublishDir)*.xml" />
+    </ItemGroup>
+    <Delete Files="@(SingleFilePublishExtras)" />
+  </Target>
+
+</Project>

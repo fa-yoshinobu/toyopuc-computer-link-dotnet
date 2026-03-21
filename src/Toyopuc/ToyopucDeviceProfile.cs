@@ -1,4 +1,4 @@
-namespace Toyopuc;
+namespace PlcComm.Toyopuc;
 
 public sealed record ToyopucAddressRange(int Start, int End)
 {
