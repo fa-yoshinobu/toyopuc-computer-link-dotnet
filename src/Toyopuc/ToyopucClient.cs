@@ -78,6 +78,7 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
     public double RetryDelay { get; }
     public int RecvBufsize { get; }
     public bool CaptureTraceFrames { get; set; }
+    public Action<ToyopucTraceFrame>? TraceHook { get; set; }
 
     public byte[]? LastTx => _lastTx?.ToArray();
     public byte[]? LastRx => _lastRx?.ToArray();
@@ -146,6 +147,11 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
     public void ClearTraceFrames()
     {
         _traceFrames.Clear();
+    }
+
+    private void FireTrace(ToyopucTraceDirection direction, byte[] data)
+    {
+        TraceHook?.Invoke(new ToyopucTraceFrame(direction, data.ToArray(), DateTime.UtcNow));
     }
 
     public ResponseFrame SendRaw(int cmd, byte[]? data = null)
@@ -778,6 +784,7 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
 
             _lastTx = payload;
             _lastRx = null;
+            FireTrace(ToyopucTraceDirection.Send, payload);
 
             try
             {
@@ -798,6 +805,7 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
                 }
 
                 _lastRx = frame;
+                FireTrace(ToyopucTraceDirection.Receive, frame);
                 if (CaptureTraceFrames)
                 {
                     _traceFrames.Add(new TransportTraceFrame(payload.ToArray(), frame.ToArray()));

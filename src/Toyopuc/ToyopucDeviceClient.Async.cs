@@ -15,7 +15,7 @@ public partial class ToyopucDeviceClient
         WriteDWords(device, new[] { value });
     }
 
-    public uint[] ReadDWords(object device, int count)
+    public uint[] ReadDWords(object device, int count, bool atomicTransfer = false)
     {
         var resolved = ResolveDeviceObject(device);
         EnsureWordResolvedDevice(resolved, nameof(device), "ReadDWords()");
@@ -24,14 +24,14 @@ public partial class ToyopucDeviceClient
             throw new ArgumentOutOfRangeException(nameof(count), "count must be >= 1");
         }
 
-        return UnpackUInt32LowWordFirst(ReadResolvedWordValues(resolved, checked(count * 2)));
+        return UnpackUInt32LowWordFirst(ReadResolvedWordValues(resolved, checked(count * 2), atomicTransfer));
     }
 
-    public void WriteDWords(object device, IEnumerable<uint> values)
+    public void WriteDWords(object device, IEnumerable<uint> values, bool atomicTransfer = false)
     {
         var resolved = ResolveDeviceObject(device);
         EnsureWordResolvedDevice(resolved, nameof(device), "WriteDWords()");
-        WriteResolvedWordValues(resolved, PackUInt32LowWordFirstToWords(values));
+        WriteResolvedWordValues(resolved, PackUInt32LowWordFirstToWords(values), atomicTransfer);
     }
 
     public float ReadFloat32(object device)
@@ -44,7 +44,7 @@ public partial class ToyopucDeviceClient
         WriteFloat32s(device, new[] { value });
     }
 
-    public float[] ReadFloat32s(object device, int count)
+    public float[] ReadFloat32s(object device, int count, bool atomicTransfer = false)
     {
         var resolved = ResolveDeviceObject(device);
         EnsureWordResolvedDevice(resolved, nameof(device), "ReadFloat32s()");
@@ -53,14 +53,14 @@ public partial class ToyopucDeviceClient
             throw new ArgumentOutOfRangeException(nameof(count), "count must be >= 1");
         }
 
-        return UnpackFloat32LowWordFirst(ReadResolvedWordValues(resolved, checked(count * 2)));
+        return UnpackFloat32LowWordFirst(ReadResolvedWordValues(resolved, checked(count * 2), atomicTransfer));
     }
 
-    public void WriteFloat32s(object device, IEnumerable<float> values)
+    public void WriteFloat32s(object device, IEnumerable<float> values, bool atomicTransfer = false)
     {
         var resolved = ResolveDeviceObject(device);
         EnsureWordResolvedDevice(resolved, nameof(device), "WriteFloat32s()");
-        WriteResolvedWordValues(resolved, PackFloat32LowWordFirstToWords(values));
+        WriteResolvedWordValues(resolved, PackFloat32LowWordFirstToWords(values), atomicTransfer);
     }
 
     public uint RelayReadDWord(object hops, object device)
@@ -73,7 +73,7 @@ public partial class ToyopucDeviceClient
         RelayWriteDWords(hops, device, new[] { value });
     }
 
-    public uint[] RelayReadDWords(object hops, object device, int count)
+    public uint[] RelayReadDWords(object hops, object device, int count, bool atomicTransfer = false)
     {
         var resolved = ResolveDeviceObject(device);
         EnsureWordResolvedDevice(resolved, nameof(device), "RelayReadDWords()");
@@ -82,14 +82,14 @@ public partial class ToyopucDeviceClient
             throw new ArgumentOutOfRangeException(nameof(count), "count must be >= 1");
         }
 
-        return UnpackUInt32LowWordFirst(RelayReadResolvedWordValues(hops, resolved, checked(count * 2)));
+        return UnpackUInt32LowWordFirst(RelayReadResolvedWordValues(hops, resolved, checked(count * 2), atomicTransfer));
     }
 
-    public void RelayWriteDWords(object hops, object device, IEnumerable<uint> values)
+    public void RelayWriteDWords(object hops, object device, IEnumerable<uint> values, bool atomicTransfer = false)
     {
         var resolved = ResolveDeviceObject(device);
         EnsureWordResolvedDevice(resolved, nameof(device), "RelayWriteDWords()");
-        RelayWriteResolvedWordValues(hops, resolved, PackUInt32LowWordFirstToWords(values));
+        RelayWriteResolvedWordValues(hops, resolved, PackUInt32LowWordFirstToWords(values), atomicTransfer);
     }
 
     public float RelayReadFloat32(object hops, object device)
@@ -102,7 +102,7 @@ public partial class ToyopucDeviceClient
         RelayWriteFloat32s(hops, device, new[] { value });
     }
 
-    public float[] RelayReadFloat32s(object hops, object device, int count)
+    public float[] RelayReadFloat32s(object hops, object device, int count, bool atomicTransfer = false)
     {
         var resolved = ResolveDeviceObject(device);
         EnsureWordResolvedDevice(resolved, nameof(device), "RelayReadFloat32s()");
@@ -111,14 +111,14 @@ public partial class ToyopucDeviceClient
             throw new ArgumentOutOfRangeException(nameof(count), "count must be >= 1");
         }
 
-        return UnpackFloat32LowWordFirst(RelayReadResolvedWordValues(hops, resolved, checked(count * 2)));
+        return UnpackFloat32LowWordFirst(RelayReadResolvedWordValues(hops, resolved, checked(count * 2), atomicTransfer));
     }
 
-    public void RelayWriteFloat32s(object hops, object device, IEnumerable<float> values)
+    public void RelayWriteFloat32s(object hops, object device, IEnumerable<float> values, bool atomicTransfer = false)
     {
         var resolved = ResolveDeviceObject(device);
         EnsureWordResolvedDevice(resolved, nameof(device), "RelayWriteFloat32s()");
-        RelayWriteResolvedWordValues(hops, resolved, PackFloat32LowWordFirstToWords(values));
+        RelayWriteResolvedWordValues(hops, resolved, PackFloat32LowWordFirstToWords(values), atomicTransfer);
     }
 
     public Task<ResolvedDevice> ResolveDeviceAsync(string device, CancellationToken cancellationToken = default)
@@ -245,14 +245,14 @@ public partial class ToyopucDeviceClient
         return RunAsync(() => WriteDWord(device, value), cancellationToken);
     }
 
-    public Task<uint[]> ReadDWordsAsync(object device, int count, CancellationToken cancellationToken = default)
+    public Task<uint[]> ReadDWordsAsync(object device, int count, bool atomicTransfer = false, CancellationToken cancellationToken = default)
     {
-        return RunAsync(() => ReadDWords(device, count), cancellationToken);
+        return RunAsync(() => ReadDWords(device, count, atomicTransfer), cancellationToken);
     }
 
-    public Task WriteDWordsAsync(object device, IEnumerable<uint> values, CancellationToken cancellationToken = default)
+    public Task WriteDWordsAsync(object device, IEnumerable<uint> values, bool atomicTransfer = false, CancellationToken cancellationToken = default)
     {
-        return RunAsync(() => WriteDWords(device, values), cancellationToken);
+        return RunAsync(() => WriteDWords(device, values, atomicTransfer), cancellationToken);
     }
 
     public Task<float> ReadFloat32Async(object device, CancellationToken cancellationToken = default)
@@ -265,14 +265,14 @@ public partial class ToyopucDeviceClient
         return RunAsync(() => WriteFloat32(device, value), cancellationToken);
     }
 
-    public Task<float[]> ReadFloat32sAsync(object device, int count, CancellationToken cancellationToken = default)
+    public Task<float[]> ReadFloat32sAsync(object device, int count, bool atomicTransfer = false, CancellationToken cancellationToken = default)
     {
-        return RunAsync(() => ReadFloat32s(device, count), cancellationToken);
+        return RunAsync(() => ReadFloat32s(device, count, atomicTransfer), cancellationToken);
     }
 
-    public Task WriteFloat32sAsync(object device, IEnumerable<float> values, CancellationToken cancellationToken = default)
+    public Task WriteFloat32sAsync(object device, IEnumerable<float> values, bool atomicTransfer = false, CancellationToken cancellationToken = default)
     {
-        return RunAsync(() => WriteFloat32s(device, values), cancellationToken);
+        return RunAsync(() => WriteFloat32s(device, values, atomicTransfer), cancellationToken);
     }
 
     public Task<uint> RelayReadDWordAsync(object hops, object device, CancellationToken cancellationToken = default)
@@ -285,14 +285,14 @@ public partial class ToyopucDeviceClient
         return RunAsync(() => RelayWriteDWord(hops, device, value), cancellationToken);
     }
 
-    public Task<uint[]> RelayReadDWordsAsync(object hops, object device, int count, CancellationToken cancellationToken = default)
+    public Task<uint[]> RelayReadDWordsAsync(object hops, object device, int count, bool atomicTransfer = false, CancellationToken cancellationToken = default)
     {
-        return RunAsync(() => RelayReadDWords(hops, device, count), cancellationToken);
+        return RunAsync(() => RelayReadDWords(hops, device, count, atomicTransfer), cancellationToken);
     }
 
-    public Task RelayWriteDWordsAsync(object hops, object device, IEnumerable<uint> values, CancellationToken cancellationToken = default)
+    public Task RelayWriteDWordsAsync(object hops, object device, IEnumerable<uint> values, bool atomicTransfer = false, CancellationToken cancellationToken = default)
     {
-        return RunAsync(() => RelayWriteDWords(hops, device, values), cancellationToken);
+        return RunAsync(() => RelayWriteDWords(hops, device, values, atomicTransfer), cancellationToken);
     }
 
     public Task<float> RelayReadFloat32Async(object hops, object device, CancellationToken cancellationToken = default)
@@ -305,17 +305,17 @@ public partial class ToyopucDeviceClient
         return RunAsync(() => RelayWriteFloat32(hops, device, value), cancellationToken);
     }
 
-    public Task<float[]> RelayReadFloat32sAsync(object hops, object device, int count, CancellationToken cancellationToken = default)
+    public Task<float[]> RelayReadFloat32sAsync(object hops, object device, int count, bool atomicTransfer = false, CancellationToken cancellationToken = default)
     {
-        return RunAsync(() => RelayReadFloat32s(hops, device, count), cancellationToken);
+        return RunAsync(() => RelayReadFloat32s(hops, device, count, atomicTransfer), cancellationToken);
     }
 
-    public Task RelayWriteFloat32sAsync(object hops, object device, IEnumerable<float> values, CancellationToken cancellationToken = default)
+    public Task RelayWriteFloat32sAsync(object hops, object device, IEnumerable<float> values, bool atomicTransfer = false, CancellationToken cancellationToken = default)
     {
-        return RunAsync(() => RelayWriteFloat32s(hops, device, values), cancellationToken);
+        return RunAsync(() => RelayWriteFloat32s(hops, device, values, atomicTransfer), cancellationToken);
     }
 
-    private int[] ReadResolvedWordValues(ResolvedDevice resolved, int wordCount)
+    private int[] ReadResolvedWordValues(ResolvedDevice resolved, int wordCount, bool atomicTransfer = false)
     {
         if (wordCount < 1)
         {
@@ -327,7 +327,7 @@ public partial class ToyopucDeviceClient
             return new[] { ToInt32Invariant(ReadOne(resolved)) & 0xFFFF };
         }
 
-        var values = ReadRuns(ResolveSequentialDevices(resolved, wordCount), splitPc10BlockBoundaries: true);
+        var values = ReadRuns(ResolveSequentialDevices(resolved, wordCount), splitPc10BlockBoundaries: !atomicTransfer);
         var words = new int[values.Length];
         for (var i = 0; i < values.Length; i++)
         {
@@ -337,7 +337,7 @@ public partial class ToyopucDeviceClient
         return words;
     }
 
-    private int[] RelayReadResolvedWordValues(object hops, ResolvedDevice resolved, int wordCount)
+    private int[] RelayReadResolvedWordValues(object hops, ResolvedDevice resolved, int wordCount, bool atomicTransfer = false)
     {
         if (wordCount < 1)
         {
@@ -349,7 +349,7 @@ public partial class ToyopucDeviceClient
             return new[] { ToInt32Invariant(RelayReadOne(hops, resolved)) & 0xFFFF };
         }
 
-        var values = RelayReadRuns(hops, ResolveSequentialDevices(resolved, wordCount), splitPc10BlockBoundaries: true);
+        var values = RelayReadRuns(hops, ResolveSequentialDevices(resolved, wordCount), splitPc10BlockBoundaries: !atomicTransfer);
         var words = new int[values.Length];
         for (var i = 0; i < values.Length; i++)
         {
@@ -359,7 +359,7 @@ public partial class ToyopucDeviceClient
         return words;
     }
 
-    private void WriteResolvedWordValues(ResolvedDevice resolved, IReadOnlyList<int> wordValues)
+    private void WriteResolvedWordValues(ResolvedDevice resolved, IReadOnlyList<int> wordValues, bool atomicTransfer = false)
     {
         if (wordValues.Count < 1)
         {
@@ -378,10 +378,10 @@ public partial class ToyopucDeviceClient
             boxedValues[i] = wordValues[i];
         }
 
-        WriteRuns(ResolveSequentialWriteItems(resolved, boxedValues), splitPc10BlockBoundaries: true);
+        WriteRuns(ResolveSequentialWriteItems(resolved, boxedValues), splitPc10BlockBoundaries: !atomicTransfer);
     }
 
-    private void RelayWriteResolvedWordValues(object hops, ResolvedDevice resolved, IReadOnlyList<int> wordValues)
+    private void RelayWriteResolvedWordValues(object hops, ResolvedDevice resolved, IReadOnlyList<int> wordValues, bool atomicTransfer = false)
     {
         if (wordValues.Count < 1)
         {
@@ -400,7 +400,7 @@ public partial class ToyopucDeviceClient
             boxedValues[i] = wordValues[i];
         }
 
-        RelayWriteRuns(hops, ResolveSequentialWriteItems(resolved, boxedValues), splitPc10BlockBoundaries: true);
+        RelayWriteRuns(hops, ResolveSequentialWriteItems(resolved, boxedValues), splitPc10BlockBoundaries: !atomicTransfer);
     }
 
     private static void EnsureWordResolvedDevice(ResolvedDevice resolved, string paramName, string methodName)

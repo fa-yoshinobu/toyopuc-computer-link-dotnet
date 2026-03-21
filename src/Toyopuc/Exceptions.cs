@@ -34,7 +34,7 @@ public class ToyopucProtocolError : ToyopucError
     }
 }
 
-public class ToyopucTimeoutError : ToyopucError
+public class ToyopucTimeoutError : ToyopucProtocolError
 {
     public ToyopucTimeoutError()
     {

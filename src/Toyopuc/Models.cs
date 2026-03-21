@@ -6,6 +6,13 @@ public sealed record ResponseFrame(byte Ft, byte Rc, byte Cmd, byte[] Data);
 
 public sealed record TransportTraceFrame(byte[] Tx, byte[]? Rx);
 
+public enum ToyopucTraceDirection { Send, Receive }
+
+public sealed record ToyopucTraceFrame(
+    ToyopucTraceDirection Direction,
+    byte[] Data,
+    DateTime Timestamp);
+
 public sealed record ClockData(
     int Second,
     int Minute,

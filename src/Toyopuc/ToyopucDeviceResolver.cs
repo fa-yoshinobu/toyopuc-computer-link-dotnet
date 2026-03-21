@@ -298,7 +298,9 @@ public static class ToyopucDeviceResolver
                 }
             }
 
-            throw new ArgumentException($"Unknown packed word area: {device}", nameof(device));
+            throw new ArgumentException(
+                $"Unknown packed word area in '{device}'. Valid packed-word areas: {string.Join(", ", PackedWordAreaCandidates.Select(a => a + "W"))}.",
+                nameof(device));
         }
 
         if (body.EndsWith('L') || body.EndsWith('H'))
@@ -312,7 +314,9 @@ public static class ToyopucDeviceResolver
                 }
             }
 
-            throw new ArgumentException($"Unknown address area: {device}", nameof(device));
+            throw new ArgumentException(
+                $"Unknown byte address area in '{device}'. Valid areas: {string.Join(", ", ByteAreaCandidates.Select(a => a + "L/H"))}.",
+                nameof(device));
         }
 
         foreach (var candidate in DefaultAreaCandidates)
@@ -323,7 +327,9 @@ public static class ToyopucDeviceResolver
             }
         }
 
-        throw new ArgumentException($"Unknown address area: {device}", nameof(device));
+        throw new ArgumentException(
+            $"Unknown device area in '{device}'. Valid areas: {string.Join(", ", DefaultAreaCandidates)}.",
+            nameof(device));
     }
 
     private static int Pc10UAddress32(int index, bool byteAddress = false, bool high = false)
