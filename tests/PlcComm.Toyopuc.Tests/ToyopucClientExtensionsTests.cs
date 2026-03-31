@@ -97,6 +97,24 @@ public sealed class ToyopucClientExtensionsTests
         Assert.Equal([Convert.ToHexString(expected)], server.ReceivedFrames.ToArray());
     }
 
+    [Fact]
+    public async Task WriteWordsSingleRequestAsync_UsesOneExtWordWriteForProgramDevices()
+    {
+        var expected = ToyopucProtocol.BuildExtWordWrite(0x01, 0x1000, new[] { 0x1234, 0x5678 });
+        await using var server = new ScriptedToyopucServer(_ => BuildResponse(0x95, Array.Empty<byte>()));
+
+        await using var client = new ToyopucDeviceClient(
+            "127.0.0.1",
+            server.Port,
+            transport: ToyopucTransportMode.Tcp,
+            timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds),
+            addressingOptions: ToyopucAddressingOptions.Pc10GMode);
+
+        await client.WriteWordsSingleRequestAsync("P1-D0000", new ushort[] { 0x1234, 0x5678 });
+
+        Assert.Equal([Convert.ToHexString(expected)], server.ReceivedFrames.ToArray());
+    }
+
     private static byte[] BuildResponse(int cmd, byte[] data)
     {
         var length = 1 + data.Length;

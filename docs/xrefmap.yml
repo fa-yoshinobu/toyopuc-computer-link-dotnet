@@ -1058,6 +1058,251 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ParsedAddress.Unit
   nameWithType: ParsedAddress.Unit
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient
+  name: QueuedToyopucDeviceClient
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html
+  commentId: T:PlcComm.Toyopuc.QueuedToyopucDeviceClient
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient
+  nameWithType: QueuedToyopucDeviceClient
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.#ctor(PlcComm.Toyopuc.ToyopucDeviceClient,System.Object)
+  name: QueuedToyopucDeviceClient(ToyopucDeviceClient, object?)
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient__ctor_PlcComm_Toyopuc_ToyopucDeviceClient_System_Object_
+  commentId: M:PlcComm.Toyopuc.QueuedToyopucDeviceClient.#ctor(PlcComm.Toyopuc.ToyopucDeviceClient,System.Object)
+  name.vb: New(ToyopucDeviceClient, Object)
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.QueuedToyopucDeviceClient(PlcComm.Toyopuc.ToyopucDeviceClient, object?)
+  fullName.vb: PlcComm.Toyopuc.QueuedToyopucDeviceClient.New(PlcComm.Toyopuc.ToyopucDeviceClient, Object)
+  nameWithType: QueuedToyopucDeviceClient.QueuedToyopucDeviceClient(ToyopucDeviceClient, object?)
+  nameWithType.vb: QueuedToyopucDeviceClient.New(ToyopucDeviceClient, Object)
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.#ctor*
+  name: QueuedToyopucDeviceClient
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient__ctor_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.QueuedToyopucDeviceClient
+  fullName.vb: PlcComm.Toyopuc.QueuedToyopucDeviceClient.New
+  nameWithType: QueuedToyopucDeviceClient.QueuedToyopucDeviceClient
+  nameWithType.vb: QueuedToyopucDeviceClient.New
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.AddressingOptions
+  name: AddressingOptions
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_AddressingOptions
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.AddressingOptions
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.AddressingOptions
+  nameWithType: QueuedToyopucDeviceClient.AddressingOptions
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.AddressingOptions*
+  name: AddressingOptions
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_AddressingOptions_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.AddressingOptions
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.AddressingOptions
+  nameWithType: QueuedToyopucDeviceClient.AddressingOptions
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.CaptureTraceFrames
+  name: CaptureTraceFrames
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_CaptureTraceFrames
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.CaptureTraceFrames
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.CaptureTraceFrames
+  nameWithType: QueuedToyopucDeviceClient.CaptureTraceFrames
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.CaptureTraceFrames*
+  name: CaptureTraceFrames
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_CaptureTraceFrames_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.CaptureTraceFrames
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.CaptureTraceFrames
+  nameWithType: QueuedToyopucDeviceClient.CaptureTraceFrames
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.DeviceProfile
+  name: DeviceProfile
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_DeviceProfile
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.DeviceProfile
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.DeviceProfile
+  nameWithType: QueuedToyopucDeviceClient.DeviceProfile
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.DeviceProfile*
+  name: DeviceProfile
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_DeviceProfile_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.DeviceProfile
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.DeviceProfile
+  nameWithType: QueuedToyopucDeviceClient.DeviceProfile
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Dispose
+  name: Dispose()
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_Dispose
+  commentId: M:PlcComm.Toyopuc.QueuedToyopucDeviceClient.Dispose
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Dispose()
+  nameWithType: QueuedToyopucDeviceClient.Dispose()
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Dispose*
+  name: Dispose
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_Dispose_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.Dispose
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Dispose
+  nameWithType: QueuedToyopucDeviceClient.Dispose
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.DisposeAsync
+  name: DisposeAsync()
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_DisposeAsync
+  commentId: M:PlcComm.Toyopuc.QueuedToyopucDeviceClient.DisposeAsync
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.DisposeAsync()
+  nameWithType: QueuedToyopucDeviceClient.DisposeAsync()
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.DisposeAsync*
+  name: DisposeAsync
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_DisposeAsync_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.DisposeAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.DisposeAsync
+  nameWithType: QueuedToyopucDeviceClient.DisposeAsync
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.ExecuteAsync(System.Func{PlcComm.Toyopuc.ToyopucDeviceClient,System.Threading.Tasks.Task},System.Threading.CancellationToken)
+  name: ExecuteAsync(Func<ToyopucDeviceClient, Task>, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_ExecuteAsync_System_Func_PlcComm_Toyopuc_ToyopucDeviceClient_System_Threading_Tasks_Task__System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.QueuedToyopucDeviceClient.ExecuteAsync(System.Func{PlcComm.Toyopuc.ToyopucDeviceClient,System.Threading.Tasks.Task},System.Threading.CancellationToken)
+  name.vb: ExecuteAsync(Func(Of ToyopucDeviceClient, Task), CancellationToken)
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.ExecuteAsync(System.Func<PlcComm.Toyopuc.ToyopucDeviceClient, System.Threading.Tasks.Task>, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.QueuedToyopucDeviceClient.ExecuteAsync(System.Func(Of PlcComm.Toyopuc.ToyopucDeviceClient, System.Threading.Tasks.Task), System.Threading.CancellationToken)
+  nameWithType: QueuedToyopucDeviceClient.ExecuteAsync(Func<ToyopucDeviceClient, Task>, CancellationToken)
+  nameWithType.vb: QueuedToyopucDeviceClient.ExecuteAsync(Func(Of ToyopucDeviceClient, Task), CancellationToken)
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.ExecuteAsync*
+  name: ExecuteAsync
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_ExecuteAsync_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.ExecuteAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.ExecuteAsync
+  nameWithType: QueuedToyopucDeviceClient.ExecuteAsync
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.ExecuteAsync``1(System.Func{PlcComm.Toyopuc.ToyopucDeviceClient,System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
+  name: ExecuteAsync<T>(Func<ToyopucDeviceClient, Task<T>>, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_ExecuteAsync__1_System_Func_PlcComm_Toyopuc_ToyopucDeviceClient_System_Threading_Tasks_Task___0___System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.QueuedToyopucDeviceClient.ExecuteAsync``1(System.Func{PlcComm.Toyopuc.ToyopucDeviceClient,System.Threading.Tasks.Task{``0}},System.Threading.CancellationToken)
+  name.vb: ExecuteAsync(Of T)(Func(Of ToyopucDeviceClient, Task(Of T)), CancellationToken)
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.ExecuteAsync<T>(System.Func<PlcComm.Toyopuc.ToyopucDeviceClient, System.Threading.Tasks.Task<T>>, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.QueuedToyopucDeviceClient.ExecuteAsync(Of T)(System.Func(Of PlcComm.Toyopuc.ToyopucDeviceClient, System.Threading.Tasks.Task(Of T)), System.Threading.CancellationToken)
+  nameWithType: QueuedToyopucDeviceClient.ExecuteAsync<T>(Func<ToyopucDeviceClient, Task<T>>, CancellationToken)
+  nameWithType.vb: QueuedToyopucDeviceClient.ExecuteAsync(Of T)(Func(Of ToyopucDeviceClient, Task(Of T)), CancellationToken)
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Host
+  name: Host
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_Host
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.Host
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Host
+  nameWithType: QueuedToyopucDeviceClient.Host
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Host*
+  name: Host
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_Host_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.Host
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Host
+  nameWithType: QueuedToyopucDeviceClient.Host
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.InnerClient
+  name: InnerClient
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_InnerClient
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.InnerClient
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.InnerClient
+  nameWithType: QueuedToyopucDeviceClient.InnerClient
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.InnerClient*
+  name: InnerClient
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_InnerClient_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.InnerClient
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.InnerClient
+  nameWithType: QueuedToyopucDeviceClient.InnerClient
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.IsOpen
+  name: IsOpen
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_IsOpen
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.IsOpen
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.IsOpen
+  nameWithType: QueuedToyopucDeviceClient.IsOpen
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.IsOpen*
+  name: IsOpen
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_IsOpen_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.IsOpen
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.IsOpen
+  nameWithType: QueuedToyopucDeviceClient.IsOpen
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.OpenAsync(System.Threading.CancellationToken)
+  name: OpenAsync(CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_OpenAsync_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.QueuedToyopucDeviceClient.OpenAsync(System.Threading.CancellationToken)
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.OpenAsync(System.Threading.CancellationToken)
+  nameWithType: QueuedToyopucDeviceClient.OpenAsync(CancellationToken)
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.OpenAsync*
+  name: OpenAsync
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_OpenAsync_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.OpenAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.OpenAsync
+  nameWithType: QueuedToyopucDeviceClient.OpenAsync
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Port
+  name: Port
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_Port
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.Port
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Port
+  nameWithType: QueuedToyopucDeviceClient.Port
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Port*
+  name: Port
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_Port_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.Port
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Port
+  nameWithType: QueuedToyopucDeviceClient.Port
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.RelayHops
+  name: RelayHops
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_RelayHops
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.RelayHops
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.RelayHops
+  nameWithType: QueuedToyopucDeviceClient.RelayHops
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.RelayHops*
+  name: RelayHops
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_RelayHops_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.RelayHops
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.RelayHops
+  nameWithType: QueuedToyopucDeviceClient.RelayHops
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Timeout
+  name: Timeout
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_Timeout
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.Timeout
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Timeout
+  nameWithType: QueuedToyopucDeviceClient.Timeout
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Timeout*
+  name: Timeout
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_Timeout_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.Timeout
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Timeout
+  nameWithType: QueuedToyopucDeviceClient.Timeout
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.TraceHook
+  name: TraceHook
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_TraceHook
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.TraceHook
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.TraceHook
+  nameWithType: QueuedToyopucDeviceClient.TraceHook
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.TraceHook*
+  name: TraceHook
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_TraceHook_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.TraceHook
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.TraceHook
+  nameWithType: QueuedToyopucDeviceClient.TraceHook
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Transport
+  name: Transport
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_Transport
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.Transport
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Transport
+  nameWithType: QueuedToyopucDeviceClient.Transport
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Transport*
+  name: Transport
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_Transport_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.Transport
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.Transport
+  nameWithType: QueuedToyopucDeviceClient.Transport
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.UsesRelay
+  name: UsesRelay
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_UsesRelay
+  commentId: P:PlcComm.Toyopuc.QueuedToyopucDeviceClient.UsesRelay
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.UsesRelay
+  nameWithType: QueuedToyopucDeviceClient.UsesRelay
+- uid: PlcComm.Toyopuc.QueuedToyopucDeviceClient.UsesRelay*
+  name: UsesRelay
+  href: api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html#PlcComm_Toyopuc_QueuedToyopucDeviceClient_UsesRelay_
+  commentId: Overload:PlcComm.Toyopuc.QueuedToyopucDeviceClient.UsesRelay
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.QueuedToyopucDeviceClient.UsesRelay
+  nameWithType: QueuedToyopucDeviceClient.UsesRelay
 - uid: PlcComm.Toyopuc.RelayLayer
   name: RelayLayer
   href: api/obj/api/PlcComm.Toyopuc.RelayLayer.html
@@ -1580,6 +1825,28 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucAddress.EncodeWordAddress
   nameWithType: ToyopucAddress.EncodeWordAddress
+- uid: PlcComm.Toyopuc.ToyopucAddress.Format(PlcComm.Toyopuc.ResolvedDevice)
+  name: Format(ResolvedDevice)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_Format_PlcComm_Toyopuc_ResolvedDevice_
+  commentId: M:PlcComm.Toyopuc.ToyopucAddress.Format(PlcComm.Toyopuc.ResolvedDevice)
+  fullName: PlcComm.Toyopuc.ToyopucAddress.Format(PlcComm.Toyopuc.ResolvedDevice)
+  nameWithType: ToyopucAddress.Format(ResolvedDevice)
+- uid: PlcComm.Toyopuc.ToyopucAddress.Format(PlcComm.Toyopuc.ResolvedDevice,System.Int32)
+  name: Format(ResolvedDevice, int)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_Format_PlcComm_Toyopuc_ResolvedDevice_System_Int32_
+  commentId: M:PlcComm.Toyopuc.ToyopucAddress.Format(PlcComm.Toyopuc.ResolvedDevice,System.Int32)
+  name.vb: Format(ResolvedDevice, Integer)
+  fullName: PlcComm.Toyopuc.ToyopucAddress.Format(PlcComm.Toyopuc.ResolvedDevice, int)
+  fullName.vb: PlcComm.Toyopuc.ToyopucAddress.Format(PlcComm.Toyopuc.ResolvedDevice, Integer)
+  nameWithType: ToyopucAddress.Format(ResolvedDevice, int)
+  nameWithType.vb: ToyopucAddress.Format(ResolvedDevice, Integer)
+- uid: PlcComm.Toyopuc.ToyopucAddress.Format*
+  name: Format
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_Format_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucAddress.Format
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucAddress.Format
+  nameWithType: ToyopucAddress.Format
 - uid: PlcComm.Toyopuc.ToyopucAddress.FrBlockExNo(System.Int32)
   name: FrBlockExNo(int)
   href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_FrBlockExNo_System_Int32_
@@ -1596,6 +1863,38 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucAddress.FrBlockExNo
   nameWithType: ToyopucAddress.FrBlockExNo
+- uid: PlcComm.Toyopuc.ToyopucAddress.Normalize(System.String,PlcComm.Toyopuc.ToyopucAddressingOptions,System.String)
+  name: Normalize(string, ToyopucAddressingOptions?, string?)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_Normalize_System_String_PlcComm_Toyopuc_ToyopucAddressingOptions_System_String_
+  commentId: M:PlcComm.Toyopuc.ToyopucAddress.Normalize(System.String,PlcComm.Toyopuc.ToyopucAddressingOptions,System.String)
+  name.vb: Normalize(String, ToyopucAddressingOptions, String)
+  fullName: PlcComm.Toyopuc.ToyopucAddress.Normalize(string, PlcComm.Toyopuc.ToyopucAddressingOptions?, string?)
+  fullName.vb: PlcComm.Toyopuc.ToyopucAddress.Normalize(String, PlcComm.Toyopuc.ToyopucAddressingOptions, String)
+  nameWithType: ToyopucAddress.Normalize(string, ToyopucAddressingOptions?, string?)
+  nameWithType.vb: ToyopucAddress.Normalize(String, ToyopucAddressingOptions, String)
+- uid: PlcComm.Toyopuc.ToyopucAddress.Normalize*
+  name: Normalize
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_Normalize_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucAddress.Normalize
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucAddress.Normalize
+  nameWithType: ToyopucAddress.Normalize
+- uid: PlcComm.Toyopuc.ToyopucAddress.Parse(System.String,PlcComm.Toyopuc.ToyopucAddressingOptions,System.String)
+  name: Parse(string, ToyopucAddressingOptions?, string?)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_Parse_System_String_PlcComm_Toyopuc_ToyopucAddressingOptions_System_String_
+  commentId: M:PlcComm.Toyopuc.ToyopucAddress.Parse(System.String,PlcComm.Toyopuc.ToyopucAddressingOptions,System.String)
+  name.vb: Parse(String, ToyopucAddressingOptions, String)
+  fullName: PlcComm.Toyopuc.ToyopucAddress.Parse(string, PlcComm.Toyopuc.ToyopucAddressingOptions?, string?)
+  fullName.vb: PlcComm.Toyopuc.ToyopucAddress.Parse(String, PlcComm.Toyopuc.ToyopucAddressingOptions, String)
+  nameWithType: ToyopucAddress.Parse(string, ToyopucAddressingOptions?, string?)
+  nameWithType.vb: ToyopucAddress.Parse(String, ToyopucAddressingOptions, String)
+- uid: PlcComm.Toyopuc.ToyopucAddress.Parse*
+  name: Parse
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_Parse_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucAddress.Parse
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucAddress.Parse
+  nameWithType: ToyopucAddress.Parse
 - uid: PlcComm.Toyopuc.ToyopucAddress.ParseAddress(System.String,System.String,System.Int32)
   name: ParseAddress(string, string, int)
   href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_ParseAddress_System_String_System_String_System_Int32_
@@ -1644,6 +1943,31 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucAddress.SplitU32Words
   nameWithType: ToyopucAddress.SplitU32Words
+- uid: PlcComm.Toyopuc.ToyopucAddress.TryParse(System.String,PlcComm.Toyopuc.ResolvedDevice@)
+  name: TryParse(string, out ResolvedDevice?)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_TryParse_System_String_PlcComm_Toyopuc_ResolvedDevice__
+  commentId: M:PlcComm.Toyopuc.ToyopucAddress.TryParse(System.String,PlcComm.Toyopuc.ResolvedDevice@)
+  name.vb: TryParse(String, ResolvedDevice)
+  fullName: PlcComm.Toyopuc.ToyopucAddress.TryParse(string, out PlcComm.Toyopuc.ResolvedDevice?)
+  fullName.vb: PlcComm.Toyopuc.ToyopucAddress.TryParse(String, PlcComm.Toyopuc.ResolvedDevice)
+  nameWithType: ToyopucAddress.TryParse(string, out ResolvedDevice?)
+  nameWithType.vb: ToyopucAddress.TryParse(String, ResolvedDevice)
+- uid: PlcComm.Toyopuc.ToyopucAddress.TryParse(System.String,PlcComm.Toyopuc.ToyopucAddressingOptions,System.String,PlcComm.Toyopuc.ResolvedDevice@)
+  name: TryParse(string, ToyopucAddressingOptions?, string?, out ResolvedDevice?)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_TryParse_System_String_PlcComm_Toyopuc_ToyopucAddressingOptions_System_String_PlcComm_Toyopuc_ResolvedDevice__
+  commentId: M:PlcComm.Toyopuc.ToyopucAddress.TryParse(System.String,PlcComm.Toyopuc.ToyopucAddressingOptions,System.String,PlcComm.Toyopuc.ResolvedDevice@)
+  name.vb: TryParse(String, ToyopucAddressingOptions, String, ResolvedDevice)
+  fullName: PlcComm.Toyopuc.ToyopucAddress.TryParse(string, PlcComm.Toyopuc.ToyopucAddressingOptions?, string?, out PlcComm.Toyopuc.ResolvedDevice?)
+  fullName.vb: PlcComm.Toyopuc.ToyopucAddress.TryParse(String, PlcComm.Toyopuc.ToyopucAddressingOptions, String, PlcComm.Toyopuc.ResolvedDevice)
+  nameWithType: ToyopucAddress.TryParse(string, ToyopucAddressingOptions?, string?, out ResolvedDevice?)
+  nameWithType.vb: ToyopucAddress.TryParse(String, ToyopucAddressingOptions, String, ResolvedDevice)
+- uid: PlcComm.Toyopuc.ToyopucAddress.TryParse*
+  name: TryParse
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucAddress.html#PlcComm_Toyopuc_ToyopucAddress_TryParse_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucAddress.TryParse
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucAddress.TryParse
+  nameWithType: ToyopucAddress.TryParse
 - uid: PlcComm.Toyopuc.ToyopucAddressRange
   name: ToyopucAddressRange
   href: api/obj/api/PlcComm.Toyopuc.ToyopucAddressRange.html
@@ -4569,6 +4893,187 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucClient.WriteWordsMultiAsync
   nameWithType: ToyopucClient.WriteWordsMultiAsync
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions
+  name: ToyopucConnectionOptions
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html
+  commentId: T:PlcComm.Toyopuc.ToyopucConnectionOptions
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions
+  nameWithType: ToyopucConnectionOptions
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.#ctor(System.String)
+  name: ToyopucConnectionOptions(string)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions__ctor_System_String_
+  commentId: M:PlcComm.Toyopuc.ToyopucConnectionOptions.#ctor(System.String)
+  name.vb: New(String)
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.ToyopucConnectionOptions(string)
+  fullName.vb: PlcComm.Toyopuc.ToyopucConnectionOptions.New(String)
+  nameWithType: ToyopucConnectionOptions.ToyopucConnectionOptions(string)
+  nameWithType.vb: ToyopucConnectionOptions.New(String)
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.#ctor*
+  name: ToyopucConnectionOptions
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions__ctor_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.#ctor
+  isSpec: "True"
+  name.vb: New
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.ToyopucConnectionOptions
+  fullName.vb: PlcComm.Toyopuc.ToyopucConnectionOptions.New
+  nameWithType: ToyopucConnectionOptions.ToyopucConnectionOptions
+  nameWithType.vb: ToyopucConnectionOptions.New
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.DeviceProfile
+  name: DeviceProfile
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_DeviceProfile
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.DeviceProfile
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.DeviceProfile
+  nameWithType: ToyopucConnectionOptions.DeviceProfile
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.DeviceProfile*
+  name: DeviceProfile
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_DeviceProfile_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.DeviceProfile
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.DeviceProfile
+  nameWithType: ToyopucConnectionOptions.DeviceProfile
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveRetryDelay
+  name: EffectiveRetryDelay
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_EffectiveRetryDelay
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveRetryDelay
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveRetryDelay
+  nameWithType: ToyopucConnectionOptions.EffectiveRetryDelay
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveRetryDelay*
+  name: EffectiveRetryDelay
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_EffectiveRetryDelay_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveRetryDelay
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveRetryDelay
+  nameWithType: ToyopucConnectionOptions.EffectiveRetryDelay
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveTimeout
+  name: EffectiveTimeout
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_EffectiveTimeout
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveTimeout
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveTimeout
+  nameWithType: ToyopucConnectionOptions.EffectiveTimeout
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveTimeout*
+  name: EffectiveTimeout
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_EffectiveTimeout_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveTimeout
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.EffectiveTimeout
+  nameWithType: ToyopucConnectionOptions.EffectiveTimeout
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.Host
+  name: Host
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_Host
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.Host
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.Host
+  nameWithType: ToyopucConnectionOptions.Host
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.Host*
+  name: Host
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_Host_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.Host
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.Host
+  nameWithType: ToyopucConnectionOptions.Host
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.LocalPort
+  name: LocalPort
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_LocalPort
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.LocalPort
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.LocalPort
+  nameWithType: ToyopucConnectionOptions.LocalPort
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.LocalPort*
+  name: LocalPort
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_LocalPort_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.LocalPort
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.LocalPort
+  nameWithType: ToyopucConnectionOptions.LocalPort
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.Port
+  name: Port
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_Port
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.Port
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.Port
+  nameWithType: ToyopucConnectionOptions.Port
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.Port*
+  name: Port
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_Port_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.Port
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.Port
+  nameWithType: ToyopucConnectionOptions.Port
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.RecvBufsize
+  name: RecvBufsize
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_RecvBufsize
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.RecvBufsize
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.RecvBufsize
+  nameWithType: ToyopucConnectionOptions.RecvBufsize
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.RecvBufsize*
+  name: RecvBufsize
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_RecvBufsize_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.RecvBufsize
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.RecvBufsize
+  nameWithType: ToyopucConnectionOptions.RecvBufsize
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.RelayHops
+  name: RelayHops
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_RelayHops
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.RelayHops
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.RelayHops
+  nameWithType: ToyopucConnectionOptions.RelayHops
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.RelayHops*
+  name: RelayHops
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_RelayHops_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.RelayHops
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.RelayHops
+  nameWithType: ToyopucConnectionOptions.RelayHops
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.Retries
+  name: Retries
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_Retries
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.Retries
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.Retries
+  nameWithType: ToyopucConnectionOptions.Retries
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.Retries*
+  name: Retries
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_Retries_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.Retries
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.Retries
+  nameWithType: ToyopucConnectionOptions.Retries
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.RetryDelay
+  name: RetryDelay
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_RetryDelay
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.RetryDelay
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.RetryDelay
+  nameWithType: ToyopucConnectionOptions.RetryDelay
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.RetryDelay*
+  name: RetryDelay
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_RetryDelay_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.RetryDelay
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.RetryDelay
+  nameWithType: ToyopucConnectionOptions.RetryDelay
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.Timeout
+  name: Timeout
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_Timeout
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.Timeout
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.Timeout
+  nameWithType: ToyopucConnectionOptions.Timeout
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.Timeout*
+  name: Timeout
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_Timeout_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.Timeout
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.Timeout
+  nameWithType: ToyopucConnectionOptions.Timeout
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.Transport
+  name: Transport
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_Transport
+  commentId: P:PlcComm.Toyopuc.ToyopucConnectionOptions.Transport
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.Transport
+  nameWithType: ToyopucConnectionOptions.Transport
+- uid: PlcComm.Toyopuc.ToyopucConnectionOptions.Transport*
+  name: Transport
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html#PlcComm_Toyopuc_ToyopucConnectionOptions_Transport_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucConnectionOptions.Transport
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucConnectionOptions.Transport
+  nameWithType: ToyopucConnectionOptions.Transport
 - uid: PlcComm.Toyopuc.ToyopucDeviceCatalog
   name: ToyopucDeviceCatalog
   href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceCatalog.html
@@ -5881,6 +6386,12 @@ references:
   commentId: T:PlcComm.Toyopuc.ToyopucDeviceClientExtensions
   fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions
   nameWithType: ToyopucDeviceClientExtensions
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.OpenAndConnectAsync(PlcComm.Toyopuc.ToyopucConnectionOptions,System.Threading.CancellationToken)
+  name: OpenAndConnectAsync(ToyopucConnectionOptions, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_OpenAndConnectAsync_PlcComm_Toyopuc_ToyopucConnectionOptions_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.OpenAndConnectAsync(PlcComm.Toyopuc.ToyopucConnectionOptions,System.Threading.CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.OpenAndConnectAsync(PlcComm.Toyopuc.ToyopucConnectionOptions, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.OpenAndConnectAsync(ToyopucConnectionOptions, CancellationToken)
 - uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.OpenAndConnectAsync(System.String,System.Int32,System.Threading.CancellationToken)
   name: OpenAndConnectAsync(string, int, CancellationToken)
   href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_OpenAndConnectAsync_System_String_System_Int32_System_Threading_CancellationToken_
@@ -5897,6 +6408,15 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.OpenAndConnectAsync
   nameWithType: ToyopucDeviceClientExtensions.OpenAndConnectAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.PollAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.Collections.Generic.IEnumerable{System.String},System.TimeSpan,System.Threading.CancellationToken)
+  name: PollAsync(QueuedToyopucDeviceClient, IEnumerable<string>, TimeSpan, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_PollAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_Collections_Generic_IEnumerable_System_String__System_TimeSpan_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.PollAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.Collections.Generic.IEnumerable{System.String},System.TimeSpan,System.Threading.CancellationToken)
+  name.vb: PollAsync(QueuedToyopucDeviceClient, IEnumerable(Of String), TimeSpan, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.PollAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, System.Collections.Generic.IEnumerable<string>, System.TimeSpan, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.PollAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, System.Collections.Generic.IEnumerable(Of String), System.TimeSpan, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.PollAsync(QueuedToyopucDeviceClient, IEnumerable<string>, TimeSpan, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.PollAsync(QueuedToyopucDeviceClient, IEnumerable(Of String), TimeSpan, CancellationToken)
 - uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.PollAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.Collections.Generic.IEnumerable{System.String},System.TimeSpan,System.Threading.CancellationToken)
   name: PollAsync(ToyopucDeviceClient, IEnumerable<string>, TimeSpan, CancellationToken)
   href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_PollAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_Collections_Generic_IEnumerable_System_String__System_TimeSpan_System_Threading_CancellationToken_
@@ -5913,15 +6433,24 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.PollAsync
   nameWithType: ToyopucDeviceClientExtensions.PollAsync
-- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.Object,System.Int32,System.Threading.CancellationToken)
-  name: ReadDWordsAsync(ToyopucDeviceClient, object, int, CancellationToken)
-  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadDWordsAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_Object_System_Int32_System_Threading_CancellationToken_
-  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.Object,System.Int32,System.Threading.CancellationToken)
-  name.vb: ReadDWordsAsync(ToyopucDeviceClient, Object, Integer, CancellationToken)
-  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient, object, int, System.Threading.CancellationToken)
-  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient, Object, Integer, System.Threading.CancellationToken)
-  nameWithType: ToyopucDeviceClientExtensions.ReadDWordsAsync(ToyopucDeviceClient, object, int, CancellationToken)
-  nameWithType.vb: ToyopucDeviceClientExtensions.ReadDWordsAsync(ToyopucDeviceClient, Object, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name: ReadDWordsAsync(QueuedToyopucDeviceClient, string, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadDWordsAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadDWordsAsync(QueuedToyopucDeviceClient, String, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadDWordsAsync(QueuedToyopucDeviceClient, string, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadDWordsAsync(QueuedToyopucDeviceClient, String, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name: ReadDWordsAsync(ToyopucDeviceClient, string, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadDWordsAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadDWordsAsync(ToyopucDeviceClient, String, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient, string, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient, String, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadDWordsAsync(ToyopucDeviceClient, string, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadDWordsAsync(ToyopucDeviceClient, String, Integer, CancellationToken)
 - uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync*
   name: ReadDWordsAsync
   href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadDWordsAsync_
@@ -5929,6 +6458,65 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsAsync
   nameWithType: ToyopucDeviceClientExtensions.ReadDWordsAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Int32,System.Threading.CancellationToken)
+  name: ReadDWordsChunkedAsync(QueuedToyopucDeviceClient, string, int, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadDWordsChunkedAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_Int32_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadDWordsChunkedAsync(QueuedToyopucDeviceClient, String, Integer, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, int, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, Integer, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(QueuedToyopucDeviceClient, string, int, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(QueuedToyopucDeviceClient, String, Integer, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Int32,System.Threading.CancellationToken)
+  name: ReadDWordsChunkedAsync(ToyopucDeviceClient, string, int, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadDWordsChunkedAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_Int32_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadDWordsChunkedAsync(ToyopucDeviceClient, String, Integer, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient, string, int, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient, String, Integer, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(ToyopucDeviceClient, string, int, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync(ToyopucDeviceClient, String, Integer, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync*
+  name: ReadDWordsChunkedAsync
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadDWordsChunkedAsync_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync
+  nameWithType: ToyopucDeviceClientExtensions.ReadDWordsChunkedAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name: ReadDWordsSingleRequestAsync(QueuedToyopucDeviceClient, string, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadDWordsSingleRequestAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadDWordsSingleRequestAsync(QueuedToyopucDeviceClient, String, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(QueuedToyopucDeviceClient, string, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(QueuedToyopucDeviceClient, String, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name: ReadDWordsSingleRequestAsync(ToyopucDeviceClient, string, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadDWordsSingleRequestAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadDWordsSingleRequestAsync(ToyopucDeviceClient, String, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient, string, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient, String, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(ToyopucDeviceClient, string, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync(ToyopucDeviceClient, String, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync*
+  name: ReadDWordsSingleRequestAsync
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadDWordsSingleRequestAsync_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync
+  nameWithType: ToyopucDeviceClientExtensions.ReadDWordsSingleRequestAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadNamedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name: ReadNamedAsync(QueuedToyopucDeviceClient, IEnumerable<string>, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadNamedAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadNamedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
+  name.vb: ReadNamedAsync(QueuedToyopucDeviceClient, IEnumerable(Of String), CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadNamedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, System.Collections.Generic.IEnumerable<string>, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadNamedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, System.Collections.Generic.IEnumerable(Of String), System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadNamedAsync(QueuedToyopucDeviceClient, IEnumerable<string>, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadNamedAsync(QueuedToyopucDeviceClient, IEnumerable(Of String), CancellationToken)
 - uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadNamedAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.Collections.Generic.IEnumerable{System.String},System.Threading.CancellationToken)
   name: ReadNamedAsync(ToyopucDeviceClient, IEnumerable<string>, CancellationToken)
   href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadNamedAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_Collections_Generic_IEnumerable_System_String__System_Threading_CancellationToken_
@@ -5945,6 +6533,15 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadNamedAsync
   nameWithType: ToyopucDeviceClientExtensions.ReadNamedAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadTypedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.String,System.Threading.CancellationToken)
+  name: ReadTypedAsync(QueuedToyopucDeviceClient, string, string, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadTypedAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_String_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadTypedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.String,System.Threading.CancellationToken)
+  name.vb: ReadTypedAsync(QueuedToyopucDeviceClient, String, String, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadTypedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, string, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadTypedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, String, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadTypedAsync(QueuedToyopucDeviceClient, string, string, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadTypedAsync(QueuedToyopucDeviceClient, String, String, CancellationToken)
 - uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadTypedAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.String,System.Threading.CancellationToken)
   name: ReadTypedAsync(ToyopucDeviceClient, string, string, CancellationToken)
   href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadTypedAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_String_System_Threading_CancellationToken_
@@ -5961,15 +6558,24 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadTypedAsync
   nameWithType: ToyopucDeviceClientExtensions.ReadTypedAsync
-- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.Object,System.Int32,System.Threading.CancellationToken)
-  name: ReadWordsAsync(ToyopucDeviceClient, object, int, CancellationToken)
-  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadWordsAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_Object_System_Int32_System_Threading_CancellationToken_
-  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.Object,System.Int32,System.Threading.CancellationToken)
-  name.vb: ReadWordsAsync(ToyopucDeviceClient, Object, Integer, CancellationToken)
-  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient, object, int, System.Threading.CancellationToken)
-  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient, Object, Integer, System.Threading.CancellationToken)
-  nameWithType: ToyopucDeviceClientExtensions.ReadWordsAsync(ToyopucDeviceClient, object, int, CancellationToken)
-  nameWithType.vb: ToyopucDeviceClientExtensions.ReadWordsAsync(ToyopucDeviceClient, Object, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name: ReadWordsAsync(QueuedToyopucDeviceClient, string, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadWordsAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadWordsAsync(QueuedToyopucDeviceClient, String, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadWordsAsync(QueuedToyopucDeviceClient, string, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadWordsAsync(QueuedToyopucDeviceClient, String, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name: ReadWordsAsync(ToyopucDeviceClient, string, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadWordsAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadWordsAsync(ToyopucDeviceClient, String, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient, string, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync(PlcComm.Toyopuc.ToyopucDeviceClient, String, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadWordsAsync(ToyopucDeviceClient, string, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadWordsAsync(ToyopucDeviceClient, String, Integer, CancellationToken)
 - uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync*
   name: ReadWordsAsync
   href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadWordsAsync_
@@ -5977,6 +6583,65 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsAsync
   nameWithType: ToyopucDeviceClientExtensions.ReadWordsAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Int32,System.Threading.CancellationToken)
+  name: ReadWordsChunkedAsync(QueuedToyopucDeviceClient, string, int, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadWordsChunkedAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_Int32_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadWordsChunkedAsync(QueuedToyopucDeviceClient, String, Integer, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, int, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, Integer, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(QueuedToyopucDeviceClient, string, int, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(QueuedToyopucDeviceClient, String, Integer, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Int32,System.Threading.CancellationToken)
+  name: ReadWordsChunkedAsync(ToyopucDeviceClient, string, int, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadWordsChunkedAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_Int32_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadWordsChunkedAsync(ToyopucDeviceClient, String, Integer, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient, string, int, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient, String, Integer, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(ToyopucDeviceClient, string, int, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadWordsChunkedAsync(ToyopucDeviceClient, String, Integer, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsChunkedAsync*
+  name: ReadWordsChunkedAsync
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadWordsChunkedAsync_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsChunkedAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsChunkedAsync
+  nameWithType: ToyopucDeviceClientExtensions.ReadWordsChunkedAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name: ReadWordsSingleRequestAsync(QueuedToyopucDeviceClient, string, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadWordsSingleRequestAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadWordsSingleRequestAsync(QueuedToyopucDeviceClient, String, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(QueuedToyopucDeviceClient, string, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(QueuedToyopucDeviceClient, String, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name: ReadWordsSingleRequestAsync(ToyopucDeviceClient, string, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadWordsSingleRequestAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Threading.CancellationToken)
+  name.vb: ReadWordsSingleRequestAsync(ToyopucDeviceClient, String, Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient, string, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient, String, Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(ToyopucDeviceClient, string, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync(ToyopucDeviceClient, String, Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync*
+  name: ReadWordsSingleRequestAsync
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_ReadWordsSingleRequestAsync_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync
+  nameWithType: ToyopucDeviceClientExtensions.ReadWordsSingleRequestAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteBitInWordAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Boolean,System.Threading.CancellationToken)
+  name: WriteBitInWordAsync(QueuedToyopucDeviceClient, string, int, bool, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteBitInWordAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_Int32_System_Boolean_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteBitInWordAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Int32,System.Boolean,System.Threading.CancellationToken)
+  name.vb: WriteBitInWordAsync(QueuedToyopucDeviceClient, String, Integer, Boolean, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteBitInWordAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, int, bool, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteBitInWordAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, Integer, Boolean, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.WriteBitInWordAsync(QueuedToyopucDeviceClient, string, int, bool, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.WriteBitInWordAsync(QueuedToyopucDeviceClient, String, Integer, Boolean, CancellationToken)
 - uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteBitInWordAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Int32,System.Boolean,System.Threading.CancellationToken)
   name: WriteBitInWordAsync(ToyopucDeviceClient, string, int, bool, CancellationToken)
   href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteBitInWordAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_Int32_System_Boolean_System_Threading_CancellationToken_
@@ -5993,6 +6658,65 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteBitInWordAsync
   nameWithType: ToyopucDeviceClientExtensions.WriteBitInWordAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt32},System.Int32,System.Threading.CancellationToken)
+  name: WriteDWordsChunkedAsync(QueuedToyopucDeviceClient, string, IReadOnlyList<uint>, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteDWordsChunkedAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_Collections_Generic_IReadOnlyList_System_UInt32__System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt32},System.Int32,System.Threading.CancellationToken)
+  name.vb: WriteDWordsChunkedAsync(QueuedToyopucDeviceClient, String, IReadOnlyList(Of UInteger), Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, System.Collections.Generic.IReadOnlyList<uint>, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, System.Collections.Generic.IReadOnlyList(Of UInteger), Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(QueuedToyopucDeviceClient, string, IReadOnlyList<uint>, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(QueuedToyopucDeviceClient, String, IReadOnlyList(Of UInteger), Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt32},System.Int32,System.Threading.CancellationToken)
+  name: WriteDWordsChunkedAsync(ToyopucDeviceClient, string, IReadOnlyList<uint>, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteDWordsChunkedAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_Collections_Generic_IReadOnlyList_System_UInt32__System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt32},System.Int32,System.Threading.CancellationToken)
+  name.vb: WriteDWordsChunkedAsync(ToyopucDeviceClient, String, IReadOnlyList(Of UInteger), Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient, string, System.Collections.Generic.IReadOnlyList<uint>, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient, String, System.Collections.Generic.IReadOnlyList(Of UInteger), Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(ToyopucDeviceClient, string, IReadOnlyList<uint>, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync(ToyopucDeviceClient, String, IReadOnlyList(Of UInteger), Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync*
+  name: WriteDWordsChunkedAsync
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteDWordsChunkedAsync_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync
+  nameWithType: ToyopucDeviceClientExtensions.WriteDWordsChunkedAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt32},System.Threading.CancellationToken)
+  name: WriteDWordsSingleRequestAsync(QueuedToyopucDeviceClient, string, IReadOnlyList<uint>, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteDWordsSingleRequestAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_Collections_Generic_IReadOnlyList_System_UInt32__System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt32},System.Threading.CancellationToken)
+  name.vb: WriteDWordsSingleRequestAsync(QueuedToyopucDeviceClient, String, IReadOnlyList(Of UInteger), CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, System.Collections.Generic.IReadOnlyList<uint>, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, System.Collections.Generic.IReadOnlyList(Of UInteger), System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(QueuedToyopucDeviceClient, string, IReadOnlyList<uint>, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(QueuedToyopucDeviceClient, String, IReadOnlyList(Of UInteger), CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt32},System.Threading.CancellationToken)
+  name: WriteDWordsSingleRequestAsync(ToyopucDeviceClient, string, IReadOnlyList<uint>, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteDWordsSingleRequestAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_Collections_Generic_IReadOnlyList_System_UInt32__System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt32},System.Threading.CancellationToken)
+  name.vb: WriteDWordsSingleRequestAsync(ToyopucDeviceClient, String, IReadOnlyList(Of UInteger), CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient, string, System.Collections.Generic.IReadOnlyList<uint>, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient, String, System.Collections.Generic.IReadOnlyList(Of UInteger), System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(ToyopucDeviceClient, string, IReadOnlyList<uint>, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync(ToyopucDeviceClient, String, IReadOnlyList(Of UInteger), CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync*
+  name: WriteDWordsSingleRequestAsync
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteDWordsSingleRequestAsync_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync
+  nameWithType: ToyopucDeviceClientExtensions.WriteDWordsSingleRequestAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteTypedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.String,System.Object,System.Threading.CancellationToken)
+  name: WriteTypedAsync(QueuedToyopucDeviceClient, string, string, object, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteTypedAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_String_System_Object_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteTypedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.String,System.Object,System.Threading.CancellationToken)
+  name.vb: WriteTypedAsync(QueuedToyopucDeviceClient, String, String, Object, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteTypedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, string, object, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteTypedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, String, Object, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.WriteTypedAsync(QueuedToyopucDeviceClient, string, string, object, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.WriteTypedAsync(QueuedToyopucDeviceClient, String, String, Object, CancellationToken)
 - uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteTypedAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.String,System.Object,System.Threading.CancellationToken)
   name: WriteTypedAsync(ToyopucDeviceClient, string, string, object, CancellationToken)
   href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteTypedAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_String_System_Object_System_Threading_CancellationToken_
@@ -6009,6 +6733,75 @@ references:
   isSpec: "True"
   fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteTypedAsync
   nameWithType: ToyopucDeviceClientExtensions.WriteTypedAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt16},System.Int32,System.Threading.CancellationToken)
+  name: WriteWordsChunkedAsync(QueuedToyopucDeviceClient, string, IReadOnlyList<ushort>, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteWordsChunkedAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_Collections_Generic_IReadOnlyList_System_UInt16__System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt16},System.Int32,System.Threading.CancellationToken)
+  name.vb: WriteWordsChunkedAsync(QueuedToyopucDeviceClient, String, IReadOnlyList(Of UShort), Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, System.Collections.Generic.IReadOnlyList<ushort>, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, System.Collections.Generic.IReadOnlyList(Of UShort), Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(QueuedToyopucDeviceClient, string, IReadOnlyList<ushort>, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(QueuedToyopucDeviceClient, String, IReadOnlyList(Of UShort), Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt16},System.Int32,System.Threading.CancellationToken)
+  name: WriteWordsChunkedAsync(ToyopucDeviceClient, string, IReadOnlyList<ushort>, int, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteWordsChunkedAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_Collections_Generic_IReadOnlyList_System_UInt16__System_Int32_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt16},System.Int32,System.Threading.CancellationToken)
+  name.vb: WriteWordsChunkedAsync(ToyopucDeviceClient, String, IReadOnlyList(Of UShort), Integer, CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient, string, System.Collections.Generic.IReadOnlyList<ushort>, int, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(PlcComm.Toyopuc.ToyopucDeviceClient, String, System.Collections.Generic.IReadOnlyList(Of UShort), Integer, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(ToyopucDeviceClient, string, IReadOnlyList<ushort>, int, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.WriteWordsChunkedAsync(ToyopucDeviceClient, String, IReadOnlyList(Of UShort), Integer, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsChunkedAsync*
+  name: WriteWordsChunkedAsync
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteWordsChunkedAsync_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsChunkedAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsChunkedAsync
+  nameWithType: ToyopucDeviceClientExtensions.WriteWordsChunkedAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt16},System.Threading.CancellationToken)
+  name: WriteWordsSingleRequestAsync(QueuedToyopucDeviceClient, string, IReadOnlyList<ushort>, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteWordsSingleRequestAsync_PlcComm_Toyopuc_QueuedToyopucDeviceClient_System_String_System_Collections_Generic_IReadOnlyList_System_UInt16__System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt16},System.Threading.CancellationToken)
+  name.vb: WriteWordsSingleRequestAsync(QueuedToyopucDeviceClient, String, IReadOnlyList(Of UShort), CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, string, System.Collections.Generic.IReadOnlyList<ushort>, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(PlcComm.Toyopuc.QueuedToyopucDeviceClient, String, System.Collections.Generic.IReadOnlyList(Of UShort), System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(QueuedToyopucDeviceClient, string, IReadOnlyList<ushort>, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(QueuedToyopucDeviceClient, String, IReadOnlyList(Of UShort), CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt16},System.Threading.CancellationToken)
+  name: WriteWordsSingleRequestAsync(ToyopucDeviceClient, string, IReadOnlyList<ushort>, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteWordsSingleRequestAsync_PlcComm_Toyopuc_ToyopucDeviceClient_System_String_System_Collections_Generic_IReadOnlyList_System_UInt16__System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient,System.String,System.Collections.Generic.IReadOnlyList{System.UInt16},System.Threading.CancellationToken)
+  name.vb: WriteWordsSingleRequestAsync(ToyopucDeviceClient, String, IReadOnlyList(Of UShort), CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient, string, System.Collections.Generic.IReadOnlyList<ushort>, System.Threading.CancellationToken)
+  fullName.vb: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(PlcComm.Toyopuc.ToyopucDeviceClient, String, System.Collections.Generic.IReadOnlyList(Of UShort), System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(ToyopucDeviceClient, string, IReadOnlyList<ushort>, CancellationToken)
+  nameWithType.vb: ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync(ToyopucDeviceClient, String, IReadOnlyList(Of UShort), CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync*
+  name: WriteWordsSingleRequestAsync
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html#PlcComm_Toyopuc_ToyopucDeviceClientExtensions_WriteWordsSingleRequestAsync_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync
+  nameWithType: ToyopucDeviceClientExtensions.WriteWordsSingleRequestAsync
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientFactory
+  name: ToyopucDeviceClientFactory
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientFactory.html
+  commentId: T:PlcComm.Toyopuc.ToyopucDeviceClientFactory
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientFactory
+  nameWithType: ToyopucDeviceClientFactory
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientFactory.OpenAndConnectAsync(PlcComm.Toyopuc.ToyopucConnectionOptions,System.Threading.CancellationToken)
+  name: OpenAndConnectAsync(ToyopucConnectionOptions, CancellationToken)
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientFactory.html#PlcComm_Toyopuc_ToyopucDeviceClientFactory_OpenAndConnectAsync_PlcComm_Toyopuc_ToyopucConnectionOptions_System_Threading_CancellationToken_
+  commentId: M:PlcComm.Toyopuc.ToyopucDeviceClientFactory.OpenAndConnectAsync(PlcComm.Toyopuc.ToyopucConnectionOptions,System.Threading.CancellationToken)
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientFactory.OpenAndConnectAsync(PlcComm.Toyopuc.ToyopucConnectionOptions, System.Threading.CancellationToken)
+  nameWithType: ToyopucDeviceClientFactory.OpenAndConnectAsync(ToyopucConnectionOptions, CancellationToken)
+- uid: PlcComm.Toyopuc.ToyopucDeviceClientFactory.OpenAndConnectAsync*
+  name: OpenAndConnectAsync
+  href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientFactory.html#PlcComm_Toyopuc_ToyopucDeviceClientFactory_OpenAndConnectAsync_
+  commentId: Overload:PlcComm.Toyopuc.ToyopucDeviceClientFactory.OpenAndConnectAsync
+  isSpec: "True"
+  fullName: PlcComm.Toyopuc.ToyopucDeviceClientFactory.OpenAndConnectAsync
+  nameWithType: ToyopucDeviceClientFactory.OpenAndConnectAsync
 - uid: PlcComm.Toyopuc.ToyopucDeviceProfile
   name: ToyopucDeviceProfile
   href: api/obj/api/PlcComm.Toyopuc.ToyopucDeviceProfile.html

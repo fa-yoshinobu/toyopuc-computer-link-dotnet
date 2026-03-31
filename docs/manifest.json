@@ -105,6 +105,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/obj/api/PlcComm.Toyopuc.QueuedToyopucDeviceClient.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/PlcComm.Toyopuc.RelayLayer.yml",
       "output": {
         ".html": {
@@ -185,6 +195,16 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/obj/api/PlcComm.Toyopuc.ToyopucConnectionOptions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "obj/api/PlcComm.Toyopuc.ToyopucDeviceCatalog.yml",
       "output": {
         ".html": {
@@ -209,6 +229,16 @@
       "output": {
         ".html": {
           "relative_path": "api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientExtensions.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/PlcComm.Toyopuc.ToyopucDeviceClientFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/obj/api/PlcComm.Toyopuc.ToyopucDeviceClientFactory.html"
         }
       },
       "version": ""
