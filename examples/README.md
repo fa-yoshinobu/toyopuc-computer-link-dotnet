@@ -9,11 +9,15 @@ If you want the shortest path, start with one of these:
 - `examples/PlcComm.Toyopuc.MinimalRead`
   Smallest read-only example. Reads CPU status, clock, and one device.
 - `examples/PlcComm.Toyopuc.HighLevelSample`
-  High-level cookbook that demonstrates single reads, writes, typed helpers, snapshots, block reads, FR access, and polling.
+  High-level cookbook that demonstrates single reads, writes, typed helpers, snapshots, contiguous block reads, FR access, and polling.
 - `examples/PlcComm.Toyopuc.SoakMonitor`
   Long-duration polling with reconnect and CSV logging.
 
 When `--profile` is supplied, basic families `P/K/V/T/C/L/X/Y/M/S/N/R/D` should use `P1-*`, `P2-*`, or `P3-*`.
+
+The newer explicit APIs such as `ToyopucDeviceClientFactory.OpenAndConnectAsync`,
+`ReadWordsSingleRequestAsync`, and `ReadWordsChunkedAsync` use the same device
+syntax shown in these examples.
 
 ## Quick Commands
 

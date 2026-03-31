@@ -1,3 +1,5 @@
+using System.Diagnostics.CodeAnalysis;
+using System.Globalization;
 using System.Text.RegularExpressions;
 
 namespace PlcComm.Toyopuc;
@@ -156,6 +158,72 @@ public static class ToyopucAddress
     static ToyopucAddress()
     {
         (ProgramBitWordSegments, ProgramBitByteSegments) = DeriveProgramSegmentsFromBitSegments();
+    }
+
+    /// <summary>Parses a canonical device string into a resolved device shape.</summary>
+    public static ResolvedDevice Parse(string text, ToyopucAddressingOptions? options = null, string? profile = null)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(text);
+        return ToyopucDeviceResolver.ResolveDevice(text.Trim(), options, profile);
+    }
+
+    /// <summary>Attempts to parse a canonical device string into a resolved device shape.</summary>
+    public static bool TryParse(string text, [NotNullWhen(true)] out ResolvedDevice? address)
+        => TryParse(text, null, null, out address);
+
+    /// <summary>Attempts to parse a canonical device string into a resolved device shape.</summary>
+    public static bool TryParse(
+        string text,
+        ToyopucAddressingOptions? options,
+        string? profile,
+        [NotNullWhen(true)] out ResolvedDevice? address)
+    {
+        try
+        {
+            address = Parse(text, options, profile);
+            return true;
+        }
+        catch (Exception ex) when (ex is ArgumentException or ToyopucProtocolError)
+        {
+            address = null;
+            return false;
+        }
+    }
+
+    /// <summary>Formats a resolved device back to canonical text.</summary>
+    public static string Format(ResolvedDevice address)
+    {
+        ArgumentNullException.ThrowIfNull(address);
+        return Format(address, address.Index);
+    }
+
+    /// <summary>Formats a resolved device using an explicit index override.</summary>
+    public static string Format(ResolvedDevice address, int index)
+    {
+        ArgumentNullException.ThrowIfNull(address);
+
+        if (address.Unit == "byte")
+        {
+            var suffix = address.High ? "H" : "L";
+            var descriptor = ToyopucDeviceCatalog.GetAreaDescriptor(address.Area);
+            var byteWidth = descriptor.GetAddressWidth("byte");
+            return address.Prefix is not null
+                ? $"{address.Prefix}-{address.Area}{index.ToString($"X{byteWidth}", CultureInfo.InvariantCulture)}{suffix}"
+                : $"{address.Area}{index.ToString($"X{byteWidth}", CultureInfo.InvariantCulture)}{suffix}";
+        }
+
+        var descriptorForUnit = ToyopucDeviceCatalog.GetAreaDescriptor(address.Area);
+        var width = descriptorForUnit.GetAddressWidth(address.Unit, address.Packed);
+        var packedSuffix = address.Packed && address.Unit == "word" ? "W" : string.Empty;
+        return address.Prefix is not null
+            ? $"{address.Prefix}-{address.Area}{index.ToString($"X{width}", CultureInfo.InvariantCulture)}{packedSuffix}"
+            : $"{address.Area}{index.ToString($"X{width}", CultureInfo.InvariantCulture)}{packedSuffix}";
+    }
+
+    /// <summary>Normalizes a device string to canonical casing and width.</summary>
+    public static string Normalize(string text, ToyopucAddressingOptions? options = null, string? profile = null)
+    {
+        return Format(Parse(text, options, profile));
     }
 
     public static ParsedAddress ParseAddress(string text, string unit, int radix = 16)

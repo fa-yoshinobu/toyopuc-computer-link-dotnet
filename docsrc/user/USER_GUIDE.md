@@ -5,22 +5,30 @@ Use it when you want to read and write TOYOPUC devices by device string such as 
 
 ## Choose an API
 
-Use `ToyopucDeviceClient` as the main client type.
+Use `QueuedToyopucDeviceClient` as the main application client type. Create it
+through `ToyopucDeviceClientFactory.OpenAndConnectAsync`.
 On top of that client, use these high-level helpers when they match your task:
 
 - `ReadTypedAsync` / `WriteTypedAsync`
 - `ReadNamedAsync`
-- `ReadWordsAsync` / `ReadDWordsAsync`
+- `ReadWordsSingleRequestAsync` / `ReadDWordsSingleRequestAsync`
+- `ReadWordsChunkedAsync` / `ReadDWordsChunkedAsync`
 - `WriteBitInWordAsync`
 - `PollAsync`
+- `ToyopucAddress.Normalize`
 
 ## Quick Start
 
 ```csharp
 using PlcComm.Toyopuc;
 
-await using var client = new ToyopucDeviceClient("192.168.250.100", 1025);
-await client.OpenAsync();
+var options = new ToyopucConnectionOptions("192.168.250.100")
+{
+    Port = 1025,
+    DeviceProfile = "TOYOPUC-Plus:Plus Extended mode",
+};
+
+await using var client = await ToyopucDeviceClientFactory.OpenAndConnectAsync(options);
 
 var word = await client.ReadAsync("P1-D0000");
 Console.WriteLine($"P1-D0000 = {word}");
@@ -45,6 +53,13 @@ await client.WriteAsync("P1-M0000", 1);
   decimal or hexadecimal device number
 
 When a profile is in use, basic families `P/K/V/T/C/L/X/Y/M/S/N/R/D` should be written as `P1-*`, `P2-*`, or `P3-*`.
+
+Use `ToyopucAddress.Normalize` when you want a stable string form:
+
+```csharp
+string canonical = ToyopucAddress.Normalize("p1-d0000", profile: "TOYOPUC-Plus:Plus Extended mode");
+Console.WriteLine(canonical); // P1-D0000
+```
 
 ### Common Device Families
 
@@ -124,8 +139,15 @@ await client.WriteTypedAsync("P1-D0200", "S", -100);
 ### Read Contiguous Blocks
 
 ```csharp
-ushort[] words = await client.ReadWordsAsync("P1-D0000", 10);
-uint[] dwords = await client.ReadDWordsAsync("P1-D0200", 4);
+ushort[] words = await client.ReadWordsSingleRequestAsync("P1-D0000", 10);
+uint[] dwords = await client.ReadDWordsSingleRequestAsync("P1-D0200", 4);
+```
+
+Use explicit chunked helpers only when multi-request splitting is acceptable:
+
+```csharp
+ushort[] longWords = await client.ReadWordsChunkedAsync("P1-D0000", 200, maxWordsPerRequest: 64);
+uint[] longDwords = await client.ReadDWordsChunkedAsync("P1-D0200", 40, maxDwordsPerRequest: 32);
 ```
 
 ### Change One Bit Inside a Word
@@ -195,6 +217,9 @@ var status = await client.RelayReadCpuStatusAsync("P1-L2:N2");
 var wordValue = await client.RelayReadWordsAsync("P1-L2:N2", "P1-D0000", count: 1);
 await client.RelayWriteAsync("P1-L2:N2", "P1-M0000", 1);
 ```
+
+If relay hops are stable for the whole session, you can also set them in
+`ToyopucConnectionOptions.RelayHops` and use one shared queued client.
 
 ## Error Handling
 

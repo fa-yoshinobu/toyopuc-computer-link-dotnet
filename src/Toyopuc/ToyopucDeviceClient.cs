@@ -2604,21 +2604,6 @@ public partial class ToyopucDeviceClient : ToyopucClient
 
     private static string BuildResolvedText(ResolvedDevice resolved, int index)
     {
-        if (resolved.Unit == "byte")
-        {
-            var suffix = resolved.High ? "H" : "L";
-            var descriptor = ToyopucDeviceCatalog.GetAreaDescriptor(resolved.Area);
-            var byteWidth = descriptor.GetAddressWidth("byte");
-            return resolved.Prefix is not null
-                ? $"{resolved.Prefix}-{resolved.Area}{index.ToString($"X{byteWidth}", CultureInfo.InvariantCulture)}{suffix}"
-                : $"{resolved.Area}{index.ToString($"X{byteWidth}", CultureInfo.InvariantCulture)}{suffix}";
-        }
-
-        var genericDescriptor = ToyopucDeviceCatalog.GetAreaDescriptor(resolved.Area);
-        var width = genericDescriptor.GetAddressWidth(resolved.Unit, resolved.Packed);
-        var packedSuffix = resolved.Packed && resolved.Unit == "word" ? "W" : string.Empty;
-        return resolved.Prefix is not null
-            ? $"{resolved.Prefix}-{resolved.Area}{index.ToString($"X{width}", CultureInfo.InvariantCulture)}{packedSuffix}"
-            : $"{resolved.Area}{index.ToString($"X{width}", CultureInfo.InvariantCulture)}{packedSuffix}";
+        return ToyopucAddress.Format(resolved, index);
     }
 }

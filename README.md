@@ -10,13 +10,17 @@
 ![Illustration](https://raw.githubusercontent.com/fa-yoshinobu/plc-comm-computerlink-dotnet/main/docsrc/assets/toyopuc.png)
 
 A user-focused .NET library for JTEKT TOYOPUC Computer Link communication.
-The recommended entry point is the high-level `ToyopucDeviceClient` API.
+The recommended entry point is the high-level queued client created by
+`ToyopucDeviceClientFactory`.
 
 ## Key Features
 
 - High-level device access such as `P1-D0000`, `P1-M0000`, `ES0000`, and `FR000000`
+- Explicit connection options and optional relay-hops setup
 - Typed helpers for `U`, `S`, `D`, `L`, and `F`
-- Snapshot helpers such as `ReadManyAsync`, `ReadNamedAsync`, `ReadWordsAsync`, `ReadDWordsAsync`, and `PollAsync`
+- Snapshot helpers such as `ReadManyAsync`, `ReadNamedAsync`, and `PollAsync`
+- Explicit single-request and chunked contiguous block helpers
+- Public address parsing and normalization helpers
 - FR file-register helpers and relay helpers for common application work
 - Ready-to-run examples for minimal reads, cookbook-style usage, monitoring, and soak runs
 
@@ -45,8 +49,13 @@ You can also reference `src/Toyopuc/PlcComm.Toyopuc.csproj` directly from a loca
 ```csharp
 using PlcComm.Toyopuc;
 
-await using var client = new ToyopucDeviceClient("192.168.250.100", 1025);
-await client.OpenAsync();
+var options = new ToyopucConnectionOptions("192.168.250.100")
+{
+    Port = 1025,
+    DeviceProfile = "TOYOPUC-Plus:Plus Extended mode",
+};
+
+await using var client = await ToyopucDeviceClientFactory.OpenAndConnectAsync(options);
 
 var word = await client.ReadAsync("P1-D0000");
 Console.WriteLine($"P1-D0000 = {word}");
@@ -67,16 +76,29 @@ Basic area families `P/K/V/T/C/L/X/Y/M/S/N/R/D` should use a `P1-`, `P2-`, or `P
 
 - Read or write one device: `ReadAsync`, `WriteAsync`
 - Read several devices together: `ReadManyAsync`, `ReadNamedAsync`
-- Read 32-bit integers or float32 values: `ReadDWordsAsync`, `ReadTypedAsync`
+- Read 32-bit integers or float32 values: `ReadDWordsSingleRequestAsync`, `ReadTypedAsync`
 - Change one flag bit inside a word: `WriteBitInWordAsync`
-- Read contiguous word blocks: `ReadWordsAsync`, `ReadDWordsAsync`
+- Read contiguous word blocks: `ReadWordsSingleRequestAsync`, `ReadDWordsSingleRequestAsync`
+- Read large contiguous ranges explicitly: `ReadWordsChunkedAsync`, `ReadDWordsChunkedAsync`
 - Persist FR data: `ReadFrAsync`, `WriteFrAsync`, `CommitFrAsync`
 - Poll a small watch list repeatedly: `PollAsync`
+
+Address helper:
+
+```csharp
+string canonical = ToyopucAddress.Normalize("p1-d0000", profile: "TOYOPUC-Plus:Plus Extended mode");
+Console.WriteLine(canonical); // P1-D0000
+```
+
+Use `*SingleRequestAsync` when one logical request must remain one protocol
+operation. Use `*ChunkedAsync` only when protocol-defined boundary splitting is
+acceptable for that device family and data set.
 
 ## User Docs
 
 - [User Guide](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docsrc/user/USER_GUIDE.md)
 - [Examples Guide](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/examples/README.md)
+- [High-Level API Contract](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/HIGH_LEVEL_API_CONTRACT.md)
 
 Start with these example programs:
 
