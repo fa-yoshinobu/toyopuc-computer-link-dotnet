@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.4] - 2026-04-01
+
 ### Changed
 - Refreshed the README, user docs, examples, and generated DocFX output after the unified `SingleRequest` and `Chunked` helper split.
 - Added regression coverage for atomic single-request writes on program devices so the documented high-level contract stays verified.
