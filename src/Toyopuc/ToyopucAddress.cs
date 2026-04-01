@@ -4,6 +4,17 @@ using System.Text.RegularExpressions;
 
 namespace PlcComm.Toyopuc;
 
+/// <summary>
+/// Public helpers for TOYOPUC address parsing, formatting, normalization, and low-level encoding.
+/// </summary>
+/// <remarks>
+/// This type serves two audiences:
+/// <list type="bullet">
+/// <item><description>Applications that need canonical address text for generated documentation or UI.</description></item>
+/// <item><description>Low-level tooling that needs to encode resolved addresses into transport-specific numeric forms.</description></item>
+/// </list>
+/// The higher-level parse, format, and normalize methods are the recommended public entry points for most callers.
+/// </remarks>
 public static class ToyopucAddress
 {
     private sealed record Segment(int Start, int End, int BaseAddress);
@@ -161,6 +172,10 @@ public static class ToyopucAddress
     }
 
     /// <summary>Parses a canonical device string into a resolved device shape.</summary>
+    /// <param name="text">Canonical or profile-aware device text such as <c>D0000</c>, <c>P1-D0000</c>, or <c>M0000</c>.</param>
+    /// <param name="options">Optional explicit addressing options.</param>
+    /// <param name="profile">Optional device profile name used to resolve profile-specific address rules.</param>
+    /// <returns>The resolved device shape.</returns>
     public static ResolvedDevice Parse(string text, ToyopucAddressingOptions? options = null, string? profile = null)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(text);
@@ -168,10 +183,18 @@ public static class ToyopucAddress
     }
 
     /// <summary>Attempts to parse a canonical device string into a resolved device shape.</summary>
+    /// <param name="text">Device text to parse.</param>
+    /// <param name="address">When this method returns <see langword="true"/>, receives the resolved device.</param>
+    /// <returns><see langword="true"/> when parsing succeeds; otherwise <see langword="false"/>.</returns>
     public static bool TryParse(string text, [NotNullWhen(true)] out ResolvedDevice? address)
         => TryParse(text, null, null, out address);
 
     /// <summary>Attempts to parse a canonical device string into a resolved device shape.</summary>
+    /// <param name="text">Device text to parse.</param>
+    /// <param name="options">Optional explicit addressing options.</param>
+    /// <param name="profile">Optional profile name used by the resolver.</param>
+    /// <param name="address">When this method returns <see langword="true"/>, receives the resolved device.</param>
+    /// <returns><see langword="true"/> when parsing succeeds; otherwise <see langword="false"/>.</returns>
     public static bool TryParse(
         string text,
         ToyopucAddressingOptions? options,
@@ -191,6 +214,8 @@ public static class ToyopucAddress
     }
 
     /// <summary>Formats a resolved device back to canonical text.</summary>
+    /// <param name="address">Resolved device to format.</param>
+    /// <returns>Canonical uppercase device text.</returns>
     public static string Format(ResolvedDevice address)
     {
         ArgumentNullException.ThrowIfNull(address);
@@ -198,6 +223,9 @@ public static class ToyopucAddress
     }
 
     /// <summary>Formats a resolved device using an explicit index override.</summary>
+    /// <param name="address">Resolved device metadata to reuse.</param>
+    /// <param name="index">Explicit logical index to format.</param>
+    /// <returns>Canonical uppercase device text for the supplied index.</returns>
     public static string Format(ResolvedDevice address, int index)
     {
         ArgumentNullException.ThrowIfNull(address);
@@ -221,6 +249,10 @@ public static class ToyopucAddress
     }
 
     /// <summary>Normalizes a device string to canonical casing and width.</summary>
+    /// <param name="text">Input device text in any supported spelling.</param>
+    /// <param name="options">Optional explicit addressing options.</param>
+    /// <param name="profile">Optional profile name used by the resolver.</param>
+    /// <returns>The canonical representation returned by <see cref="Format(ResolvedDevice)"/>.</returns>
     public static string Normalize(string text, ToyopucAddressingOptions? options = null, string? profile = null)
     {
         return Format(Parse(text, options, profile));

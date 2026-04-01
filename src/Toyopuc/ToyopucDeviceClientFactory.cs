@@ -3,6 +3,10 @@ namespace PlcComm.Toyopuc;
 /// <summary>
 /// Factory helpers for creating connected queued TOYOPUC clients.
 /// </summary>
+/// <remarks>
+/// This factory is the preferred application entry point when you want explicit profile,
+/// relay, retry, and timeout settings captured in one documented type.
+/// </remarks>
 public static class ToyopucDeviceClientFactory
 {
     /// <summary>
@@ -11,6 +15,15 @@ public static class ToyopucDeviceClientFactory
     /// <param name="options">Explicit connection options.</param>
     /// <param name="cancellationToken">Cancellation token.</param>
     /// <returns>A connected queued client.</returns>
+    /// <exception cref="ArgumentNullException"><paramref name="options"/> is <see langword="null"/>.</exception>
+    /// <exception cref="ArgumentException">The host name is empty or whitespace.</exception>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// A configured port, local port, or receive buffer size falls outside the supported range.
+    /// </exception>
+    /// <remarks>
+    /// When <see cref="ToyopucConnectionOptions.RelayHops"/> is supplied, the returned queued client keeps
+    /// the normalized relay chain available through <see cref="QueuedToyopucDeviceClient.RelayHops"/>.
+    /// </remarks>
     public static async Task<QueuedToyopucDeviceClient> OpenAndConnectAsync(
         ToyopucConnectionOptions options,
         CancellationToken cancellationToken = default)

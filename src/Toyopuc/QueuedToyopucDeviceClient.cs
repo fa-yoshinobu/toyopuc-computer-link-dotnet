@@ -5,6 +5,10 @@ namespace PlcComm.Toyopuc;
 /// <summary>
 /// A wrapper for <see cref="ToyopucDeviceClient"/> that serializes compound async operations.
 /// </summary>
+/// <remarks>
+/// Use this wrapper when one TOYOPUC transport session must serve multiple high-level reads,
+/// writes, poll cycles, or relay operations without overlapping command lifetimes.
+/// </remarks>
 public sealed class QueuedToyopucDeviceClient : IAsyncDisposable, IDisposable
 {
     private readonly ToyopucDeviceClient _client;
@@ -23,9 +27,14 @@ public sealed class QueuedToyopucDeviceClient : IAsyncDisposable, IDisposable
     }
 
     /// <summary>Gets the wrapped low-level client.</summary>
+    /// <remarks>
+    /// Use <see cref="ExecuteAsync{T}(Func{ToyopucDeviceClient, Task{T}}, CancellationToken)"/> when you need
+    /// direct client access while preserving serialized execution.
+    /// </remarks>
     public ToyopucDeviceClient InnerClient => _client;
 
     /// <summary>Gets the configured relay hops, if any.</summary>
+    /// <remarks>The returned sequence is already normalized to link/station tuples.</remarks>
     public IReadOnlyList<(int LinkNo, int StationNo)>? RelayHops => _relayHops;
 
     /// <summary>Gets a value indicating whether relay mode is enabled.</summary>
@@ -71,6 +80,7 @@ public sealed class QueuedToyopucDeviceClient : IAsyncDisposable, IDisposable
     public bool IsOpen => _client.IsOpen;
 
     /// <summary>Opens the connection asynchronously with exclusive access.</summary>
+    /// <remarks>Relay and direct sessions both flow through this gate-protected open path.</remarks>
     public async Task OpenAsync(CancellationToken cancellationToken = default)
     {
         await _gate.WaitAsync(cancellationToken).ConfigureAwait(false);
@@ -85,6 +95,10 @@ public sealed class QueuedToyopucDeviceClient : IAsyncDisposable, IDisposable
     }
 
     /// <summary>Executes an async operation with exclusive access to the wrapped client.</summary>
+    /// <typeparam name="T">Result type produced by the custom operation.</typeparam>
+    /// <param name="operation">Delegate that receives the wrapped <see cref="ToyopucDeviceClient"/>.</param>
+    /// <param name="cancellationToken">Cancellation token used while waiting for exclusive access.</param>
+    /// <returns>The value returned by <paramref name="operation"/>.</returns>
     public async Task<T> ExecuteAsync<T>(
         Func<ToyopucDeviceClient, Task<T>> operation,
         CancellationToken cancellationToken = default)
@@ -102,6 +116,8 @@ public sealed class QueuedToyopucDeviceClient : IAsyncDisposable, IDisposable
     }
 
     /// <summary>Executes an async operation with exclusive access to the wrapped client.</summary>
+    /// <param name="operation">Delegate that receives the wrapped <see cref="ToyopucDeviceClient"/>.</param>
+    /// <param name="cancellationToken">Cancellation token used while waiting for exclusive access.</param>
     public async Task ExecuteAsync(
         Func<ToyopucDeviceClient, Task> operation,
         CancellationToken cancellationToken = default)
