@@ -10,27 +10,26 @@
 ![Illustration](https://raw.githubusercontent.com/fa-yoshinobu/plc-comm-computerlink-dotnet/main/docsrc/assets/toyopuc.png)
 
 A user-focused .NET library for JTEKT TOYOPUC Computer Link communication.
-The recommended entry point is the high-level queued client created by
-`ToyopucDeviceClientFactory`.
+The recommended entry point is the high-level queued client created by `ToyopucDeviceClientFactory`.
 
-## Key Features
+This README intentionally covers the public high-level API only:
 
-- High-level device access such as `P1-D0000`, `P1-M0000`, `ES0000`, and `FR000000`
-- Explicit connection options and optional relay-hops setup
-- Typed helpers for `U`, `S`, `D`, `L`, and `F`
-- Snapshot helpers such as `ReadManyAsync`, `ReadNamedAsync`, and `PollAsync`
-- Explicit single-request and chunked contiguous block helpers
-- Public address parsing and normalization helpers
-- FR file-register helpers and relay helpers for common application work
-- Ready-to-run examples for minimal reads, cookbook-style usage, monitoring, and soak runs
+- `ToyopucConnectionOptions`
+- `ToyopucDeviceClientFactory.OpenAndConnectAsync`
+- `ReadAsync` / `WriteAsync`
+- `ReadTypedAsync` / `WriteTypedAsync`
+- `WriteBitInWordAsync`
+- `ReadManyAsync` / `ReadNamedAsync`
+- `PollAsync`
+- `ReadWordsSingleRequestAsync` / `ReadDWordsSingleRequestAsync`
+- `ReadWordsChunkedAsync` / `ReadDWordsChunkedAsync`
+- `ReadFrAsync` / `WriteFrAsync` / `CommitFrAsync`
 
 ## Quick Start
 
 ### Installation
 
-Install from NuGet:
-
-- Package page: https://www.nuget.org/packages/PlcComm.Toyopuc/
+- Package page: <https://www.nuget.org/packages/PlcComm.Toyopuc/>
 
 ```powershell
 dotnet add package PlcComm.Toyopuc
@@ -42,9 +41,7 @@ Or add a package reference directly:
 <PackageReference Include="PlcComm.Toyopuc" Version="0.1.3" />
 ```
 
-You can also reference `src/Toyopuc/PlcComm.Toyopuc.csproj` directly from a local solution during development.
-
-### High-level example
+### High-Level Example
 
 ```csharp
 using PlcComm.Toyopuc;
@@ -72,30 +69,23 @@ Console.WriteLine(snapshot["P1-D0000"]);
 
 Basic area families `P/K/V/T/C/L/X/Y/M/S/N/R/D` should use a `P1-`, `P2-`, or `P3-` prefix when a profile is in use.
 
-## Common User Tasks
+## Supported PLC Registers
 
-- Read or write one device: `ReadAsync`, `WriteAsync`
-- Read several devices together: `ReadManyAsync`, `ReadNamedAsync`
-- Read 32-bit integers or float32 values: `ReadDWordsSingleRequestAsync`, `ReadTypedAsync`
-- Change one flag bit inside a word: `WriteBitInWordAsync`
-- Read contiguous word blocks: `ReadWordsSingleRequestAsync`, `ReadDWordsSingleRequestAsync`
-- Read large contiguous ranges explicitly: `ReadWordsChunkedAsync`, `ReadDWordsChunkedAsync`
-- Persist FR data: `ReadFrAsync`, `WriteFrAsync`, `CommitFrAsync`
-- Poll a small watch list repeatedly: `PollAsync`
+Start with these public high-level families first:
 
-Address helper:
+- prefixed word/register areas: `P1-D0000`, `P1-S0000`, `P1-N0100`, `P1-R0000`
+- prefixed bit/control areas: `P1-M0000`, `P1-X0000`, `P1-Y0000`, `P1-T0000`
+- extension areas: `ES0000`, `EN0000`
+- FR storage: `FR000000`
+- typed and bit views: `P1-D0100:S`, `P1-D0200:D`, `P1-D0300:F`, `P1-D0000.3`
 
-```csharp
-string canonical = ToyopucAddress.Normalize("p1-d0000", profile: "TOYOPUC-Plus:Plus Extended mode");
-Console.WriteLine(canonical); // P1-D0000
-```
+See the full public table in [Supported PLC Registers](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docsrc/user/SUPPORTED_REGISTERS.md).
 
-Use `*SingleRequestAsync` when one logical request must remain one protocol
-operation. Use `*ChunkedAsync` only when protocol-defined boundary splitting is
-acceptable for that device family and data set.
+## Public Documentation
 
-## User Docs
-
+- [Getting Started](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docsrc/user/GETTING_STARTED.md)
+- [Supported PLC Registers](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docsrc/user/SUPPORTED_REGISTERS.md)
+- [Latest Communication Verification](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docsrc/user/LATEST_COMMUNICATION_VERIFICATION.md)
 - [User Guide](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/docsrc/user/USER_GUIDE.md)
 - [Examples Guide](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/examples/README.md)
 - [High-Level API Contract](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/HIGH_LEVEL_API_CONTRACT.md)
@@ -106,7 +96,18 @@ Start with these example programs:
 - `examples/PlcComm.Toyopuc.HighLevelSample`
 - `examples/PlcComm.Toyopuc.SoakMonitor`
 
-Engineering and validation documents remain under `docsrc/maintainer/`.
+Maintainer-only notes and retained evidence live under `internal_docs/`.
+
+## Common User Tasks
+
+- read or write one device: `ReadAsync`, `WriteAsync`
+- read several devices together: `ReadManyAsync`, `ReadNamedAsync`
+- read 32-bit integers or float32 values: `ReadDWordsSingleRequestAsync`, `ReadTypedAsync`
+- change one flag bit inside a word: `WriteBitInWordAsync`
+- read contiguous word blocks: `ReadWordsSingleRequestAsync`, `ReadDWordsSingleRequestAsync`
+- read large contiguous ranges explicitly: `ReadWordsChunkedAsync`, `ReadDWordsChunkedAsync`
+- persist FR data: `ReadFrAsync`, `WriteFrAsync`, `CommitFrAsync`
+- poll a small watch list repeatedly: `PollAsync`
 
 ## Development and CI
 

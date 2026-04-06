@@ -110,6 +110,12 @@ public sealed class ExampleCliContractTests
     private static async Task EnsureProjectBuiltAsync(string relativeProjectPath)
     {
         var normalizedPath = relativeProjectPath.Replace('/', '\\');
+        if (File.Exists(GetExpectedAssemblyPath(normalizedPath)))
+        {
+            BuiltProjects.Add(normalizedPath);
+            return;
+        }
+
         if (BuiltProjects.Contains(normalizedPath))
         {
             return;
@@ -125,6 +131,7 @@ public sealed class ExampleCliContractTests
 
             var result = await RunDotnetAsync(
                 "build",
+                "--no-restore",
                 "--nologo",
                 "-v",
                 "quiet",
@@ -140,6 +147,14 @@ public sealed class ExampleCliContractTests
         {
             BuildGate.Release();
         }
+    }
+
+    private static string GetExpectedAssemblyPath(string relativeProjectPath)
+    {
+        var projectFileName = Path.GetFileNameWithoutExtension(relativeProjectPath);
+        var projectDirectory = Path.GetDirectoryName(relativeProjectPath) ?? string.Empty;
+
+        return Path.Combine(RepoRoot, projectDirectory, "bin", "Release", "net9.0", $"{projectFileName}.dll");
     }
 
     private static async Task<CliResult> RunDotnetAsync(params string[] args)

@@ -7,7 +7,7 @@ This is an internal implementation document.
 For protocol background and upstream model research, see:
 
 - [`plc-comm-computerlink-python/docsrc/user/MODEL_RANGES.md`](https://github.com/fa-yoshinobu/plc-comm-computerlink-python/blob/main/docsrc/user/MODEL_RANGES.md)
-- [`plc-comm-computerlink-python/docsrc/maintainer/TESTING_GUIDE.md`](https://github.com/fa-yoshinobu/plc-comm-computerlink-python/blob/main/docsrc/maintainer/TESTING_GUIDE.md)
+- [`plc-comm-computerlink-python/internal_docs/maintainer/TESTING_GUIDE.md`](https://github.com/fa-yoshinobu/plc-comm-computerlink-python/blob/main/internal_docs/maintainer/TESTING_GUIDE.md)
 - [`PYTHON_PORTING_NOTES.md`](PYTHON_PORTING_NOTES.md)
 
 ## Source Of Truth

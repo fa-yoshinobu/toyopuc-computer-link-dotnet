@@ -134,12 +134,12 @@ public sealed class ExampleEntryPointTests
     {
         var combined = string.Join(
             Environment.NewLine,
-            ReadRepoFile(@"docsrc\maintainer\VALIDATION.md"),
-            ReadRepoFile(@"docsrc\maintainer\TESTRESULTS.md"),
-            ReadRepoFile(@"docsrc\maintainer\RELEASE_PROCESS.md"),
-            ReadRepoFile(@"docsrc\maintainer\AUTOMATED_TEST_PLAN.md"),
-            ReadRepoFile(@"docsrc\maintainer\LIBRARY_PROFILE_SPEC.md"),
-            ReadRepoFile(@"docsrc\maintainer\TESTING_GUIDE.md"));
+            ReadRepoFile(@"internal_docs\maintainer\VALIDATION.md"),
+            ReadRepoFile(@"internal_docs\maintainer\TESTRESULTS.md"),
+            ReadRepoFile(@"internal_docs\maintainer\RELEASE_PROCESS.md"),
+            ReadRepoFile(@"internal_docs\maintainer\AUTOMATED_TEST_PLAN.md"),
+            ReadRepoFile(@"internal_docs\maintainer\LIBRARY_PROFILE_SPEC.md"),
+            ReadRepoFile(@"internal_docs\maintainer\TESTING_GUIDE.md"));
 
         Assert.DoesNotContain("examples/Toyopuc.", combined, StringComparison.Ordinal);
         Assert.DoesNotContain(@"examples\Toyopuc.", combined, StringComparison.Ordinal);
@@ -170,9 +170,9 @@ public sealed class ExampleEntryPointTests
     {
         var combined = string.Join(
             Environment.NewLine,
-            ReadRepoFile(@"docsrc\maintainer\LIBRARY_PROFILE_SPEC.md"),
-            ReadRepoFile(@"docsrc\maintainer\TESTING_GUIDE.md"),
-            ReadRepoFile(@"docsrc\maintainer\TESTRESULTS.md"));
+            ReadRepoFile(@"internal_docs\maintainer\LIBRARY_PROFILE_SPEC.md"),
+            ReadRepoFile(@"internal_docs\maintainer\TESTING_GUIDE.md"),
+            ReadRepoFile(@"internal_docs\maintainer\TESTRESULTS.md"));
 
         Assert.DoesNotContain("pytoyopuc-computerlink", combined, StringComparison.Ordinal);
         Assert.DoesNotContain("Toyopuc.Net", combined, StringComparison.Ordinal);

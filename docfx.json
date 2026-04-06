@@ -28,7 +28,7 @@
     ],
     "resource": [
       {
-        "files": ["docsrc/user/assets/**", "docsrc/maintainer/assets/**"]
+        "files": ["docsrc/user/assets/**"]
       }
     ],
     "dest": "docs",
