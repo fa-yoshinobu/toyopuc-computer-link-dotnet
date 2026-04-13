@@ -193,7 +193,15 @@ public sealed class ExampleEntryPointTests
 
     private static string ReadRepoFile(string relativePath)
     {
-        var fullPath = Path.Combine(RepoRoot, relativePath);
+        var fullPath = ResolveRepoPath(relativePath);
         return File.ReadAllText(fullPath);
+    }
+
+    private static string ResolveRepoPath(string relativePath)
+    {
+        var segments = relativePath
+            .Split(['\\', '/'], StringSplitOptions.RemoveEmptyEntries);
+
+        return Path.Combine([RepoRoot, .. segments]);
     }
 }

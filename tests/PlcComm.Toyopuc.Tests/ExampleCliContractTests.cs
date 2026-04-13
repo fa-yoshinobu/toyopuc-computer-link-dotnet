@@ -8,6 +8,9 @@ public sealed class ExampleCliContractTests
     private static readonly string RepoRoot = Path.GetFullPath(
         Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", ".."));
 
+    private const string BuildConfiguration = "Debug";
+    private const string TargetFramework = "net9.0";
+
     private static readonly SemaphoreSlim BuildGate = new(1, 1);
     private static readonly HashSet<string> BuiltProjects = new(StringComparer.OrdinalIgnoreCase);
 
@@ -92,14 +95,15 @@ public sealed class ExampleCliContractTests
 
     private static async Task<CliResult> RunProjectAsync(string relativeProjectPath, params string[] appArgs)
     {
-        await EnsureProjectBuiltAsync(relativeProjectPath);
+        var normalizedPath = NormalizeRelativePath(relativeProjectPath);
+        await EnsureProjectBuiltAsync(normalizedPath);
 
         var args = new List<string>
         {
             "run",
             "--no-build",
             "--project",
-            relativeProjectPath,
+            normalizedPath,
             "--",
         };
         args.AddRange(appArgs);
@@ -109,7 +113,7 @@ public sealed class ExampleCliContractTests
 
     private static async Task EnsureProjectBuiltAsync(string relativeProjectPath)
     {
-        var normalizedPath = relativeProjectPath.Replace('/', '\\');
+        var normalizedPath = NormalizeRelativePath(relativeProjectPath);
         if (File.Exists(GetExpectedAssemblyPath(normalizedPath)))
         {
             BuiltProjects.Add(normalizedPath);
@@ -135,6 +139,8 @@ public sealed class ExampleCliContractTests
                 "--nologo",
                 "-v",
                 "quiet",
+                "-c",
+                BuildConfiguration,
                 normalizedPath);
 
             Assert.True(
@@ -151,10 +157,11 @@ public sealed class ExampleCliContractTests
 
     private static string GetExpectedAssemblyPath(string relativeProjectPath)
     {
-        var projectFileName = Path.GetFileNameWithoutExtension(relativeProjectPath);
-        var projectDirectory = Path.GetDirectoryName(relativeProjectPath) ?? string.Empty;
+        var normalizedPath = NormalizeRelativePath(relativeProjectPath);
+        var projectFileName = Path.GetFileNameWithoutExtension(normalizedPath);
+        var projectDirectory = Path.GetDirectoryName(normalizedPath) ?? string.Empty;
 
-        return Path.Combine(RepoRoot, projectDirectory, "bin", "Release", "net9.0", $"{projectFileName}.dll");
+        return Path.Combine(RepoRoot, projectDirectory, "bin", BuildConfiguration, TargetFramework, $"{projectFileName}.dll");
     }
 
     private static async Task<CliResult> RunDotnetAsync(params string[] args)
@@ -243,5 +250,13 @@ public sealed class ExampleCliContractTests
                 "Stderr:",
                 Stderr);
         }
+    }
+
+    private static string NormalizeRelativePath(string relativePath)
+    {
+        var segments = relativePath
+            .Split(['\\', '/'], StringSplitOptions.RemoveEmptyEntries);
+
+        return Path.Combine(segments);
     }
 }
