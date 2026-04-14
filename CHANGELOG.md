@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.5] - 2026-04-14
+
+### Changed
+- Rebuilt the public Toyopuc docs around a beginner-first user flow and moved maintainer-only material under `internal_docs`.
+- Separated local and publish docs build steps and fixed the example/doc regression checks for the new documentation layout.
+
 ## [0.1.4] - 2026-04-01
 
 ### Changed
