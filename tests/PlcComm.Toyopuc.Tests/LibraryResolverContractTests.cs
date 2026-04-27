@@ -43,9 +43,6 @@ public sealed class LibraryResolverContractTests
 
     public static TheoryData<string, string?, string, bool, bool> DerivedAcceptCases => new()
     {
-        { "M17FW", null, "M", true, false },
-        { "M17FL", null, "M", false, true },
-        { "M17FH", null, "M", false, true },
         { "EP0FFW", null, "EP", true, false },
         { "EP0FFL", null, "EP", false, true },
         { "EP0FFH", null, "EP", false, true },
@@ -61,6 +58,9 @@ public sealed class LibraryResolverContractTests
         { "M0000W", null },
         { "M0000L", null },
         { "M0000H", null },
+        { "M17FW", null },
+        { "M17FL", null },
+        { "M17FH", null },
         { "EP0000W", null },
         { "EP0000L", null },
         { "EP0000H", null },

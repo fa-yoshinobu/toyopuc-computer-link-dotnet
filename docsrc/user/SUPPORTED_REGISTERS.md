@@ -42,7 +42,7 @@ Exact writable spans depend on the selected profile and hardware. Use this page 
 ## Addressing Notes
 
 - Start with `P1-D0000` and `P1-M0000`.
-- When a profile is in use, basic area families should use `P1-`, `P2-`, or `P3-`.
+- Basic area families `P/K/V/T/C/L/X/Y/M/S/N/R/D` require `P1-`, `P2-`, or `P3-`.
 - `FR` is a separate storage area and should not be the first beginner test.
 - Profile-specific range limits remain model-dependent.
 

@@ -64,7 +64,7 @@ Interpretation rules:
 - `DirectRanges.Count == 0` means direct access is not supported.
 - `PrefixedRanges.Count == 0` means `P1/P2/P3` access is not supported.
 - If `DirectRanges.Count > 1` or `PrefixedRanges.Count > 1`, the area has disjoint segments.
-- In the current profile set, basic families `P/K/V/T/C/L/X/Y/M/S/N/R/D` are modeled as `P1/P2/P3` only. The legacy unprefixed resolution path remains available only when no profile is enforced.
+- In the current profile set, basic families `P/K/V/T/C/L/X/Y/M/S/N/R/D` are modeled as `P1/P2/P3` only. High-level device resolution requires the `P1-`, `P2-`, or `P3-` prefix for these families.
 
 ## Library API Surface
 

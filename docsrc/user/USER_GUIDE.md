@@ -52,7 +52,7 @@ await client.WriteAsync("P1-M0000", 1);
 - `Address`
   decimal or hexadecimal device number
 
-When a profile is in use, basic families `P/K/V/T/C/L/X/Y/M/S/N/R/D` should be written as `P1-*`, `P2-*`, or `P3-*`.
+Basic families `P/K/V/T/C/L/X/Y/M/S/N/R/D` must be written as `P1-*`, `P2-*`, or `P3-*`.
 
 Use `ToyopucAddress.Normalize` when you want a stable string form:
 

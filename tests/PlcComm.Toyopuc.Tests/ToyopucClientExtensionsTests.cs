@@ -50,11 +50,11 @@ public sealed class ToyopucClientExtensionsTests
     {
         await using var server = new ScriptedToyopucServer(frame =>
         {
-            if (frame.SequenceEqual(ToyopucProtocol.BuildWordRead(0x1100, 2)))
+            if (frame.SequenceEqual(ToyopucProtocol.BuildWordRead(0x6100, 2)))
                 return BuildResponse(0x1C, new byte[] { 0x01, 0x00, 0x01, 0x00 });
-            if (frame.SequenceEqual(ToyopucProtocol.BuildWordRead(0x1102, 2)))
+            if (frame.SequenceEqual(ToyopucProtocol.BuildWordRead(0x6102, 2)))
                 return BuildResponse(0x1C, new byte[] { 0x02, 0x00, 0x02, 0x00 });
-            if (frame.SequenceEqual(ToyopucProtocol.BuildWordRead(0x1104, 2)))
+            if (frame.SequenceEqual(ToyopucProtocol.BuildWordRead(0x6104, 2)))
                 return BuildResponse(0x1C, new byte[] { 0x03, 0x00, 0x03, 0x00 });
             return BuildResponse(0x10, new byte[] { 0x40 });
         });
@@ -65,15 +65,15 @@ public sealed class ToyopucClientExtensionsTests
             transport: ToyopucTransportMode.Tcp,
             timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds));
 
-        var values = await client.ReadDWordsChunkedAsync("D0100", 3, 1);
+        var values = await client.ReadDWordsChunkedAsync("B0100", 3, 1);
 
         Assert.Equal(new uint[] { 0x00010001, 0x00020002, 0x00030003 }, values);
         Assert.Equal(
             new[]
             {
-                Convert.ToHexString(ToyopucProtocol.BuildWordRead(0x1100, 2)),
-                Convert.ToHexString(ToyopucProtocol.BuildWordRead(0x1102, 2)),
-                Convert.ToHexString(ToyopucProtocol.BuildWordRead(0x1104, 2)),
+                Convert.ToHexString(ToyopucProtocol.BuildWordRead(0x6100, 2)),
+                Convert.ToHexString(ToyopucProtocol.BuildWordRead(0x6102, 2)),
+                Convert.ToHexString(ToyopucProtocol.BuildWordRead(0x6104, 2)),
             },
             server.ReceivedFrames.ToArray());
     }
