@@ -25,6 +25,34 @@ public class AddressAndResolverTests
     }
 
     [Fact]
+    public void ResolveDevice_SingleLetterAreaCanBeFollowedByHexDigitF()
+    {
+        const string profile = "Nano 10GX:Compatible mode";
+        var options = ToyopucAddressingOptions.FromProfile(profile);
+
+        var parsed = ToyopucAddress.ParsePrefixedAddress("P1-DFFFF", "word").Address;
+        var upperU = ToyopucDeviceResolver.ResolveDevice("U0FFFF", options, profile);
+        var outOfRange = Assert.Throws<ArgumentException>(
+            () => ToyopucDeviceResolver.ResolveDevice("P1-DFFFF", options, profile));
+
+        Assert.Equal("D", parsed.Area);
+        Assert.Equal(0xFFFF, parsed.Index);
+        Assert.Equal("U", upperU.Area);
+        Assert.Equal(0x0FFFF, upperU.Index);
+        Assert.Equal("pc10-word", upperU.Scheme);
+        Assert.Contains("Address out of range", outOfRange.Message);
+        Assert.DoesNotContain("Unknown area", outOfRange.Message);
+    }
+
+    [Fact]
+    public void ParseAddress_UnknownAreaIsRejected()
+    {
+        var exception = Assert.Throws<ArgumentException>(() => ToyopucAddress.ParseAddress("QF00", "word"));
+
+        Assert.Contains("Unknown device area", exception.Message);
+    }
+
+    [Fact]
     public void ResolveDevice_UpperBitAddresses_SelectExpectedSchemes()
     {
         var prefixed = ToyopucDeviceResolver.ResolveDevice("P1-P1000", ToyopucAddressingOptions.Default);

@@ -38,7 +38,7 @@ dotnet add package PlcComm.Toyopuc
 Or add a package reference directly:
 
 ```xml
-<PackageReference Include="PlcComm.Toyopuc" Version="0.1.5" />
+<PackageReference Include="PlcComm.Toyopuc" Version="0.1.6" />
 ```
 
 ### High-Level Example

@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.6] - 2026-04-27
+
+### Fixed
+- Fixed TOYOPUC address parsing so single-letter areas such as `D` and `U` are not misread as unknown two-letter areas when the address starts with a hexadecimal `A-F` digit.
+- Kept unsupported areas as hard errors instead of falling back to another device interpretation.
+
 ## [0.1.5] - 2026-04-14
 
 ### Changed

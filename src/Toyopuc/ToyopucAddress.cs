@@ -27,6 +27,8 @@ public static class ToyopucAddress
         @"^(?<prefix>P[123])-(?<area>[A-Z]{1,2})(?<num>[0-9A-Fa-f]+)(?<suffix>[LHW])?$",
         RegexOptions.Compiled);
 
+    private static readonly string[] AdditionalAreaNames = ["EB", "FR"];
+
     private static readonly IReadOnlyDictionary<string, int> WordBase = new Dictionary<string, int>
     {
         ["P"] = 0x0000,
@@ -130,6 +132,8 @@ public static class ToyopucAddress
             ["GY"] = (0x07, 0x0000, 0x0000),
             ["GM"] = (0x07, 0x1000, 0x2000),
         };
+
+    private static readonly string[] KnownAreaCandidates = BuildKnownAreaCandidates();
 
     private static readonly IReadOnlyDictionary<string, Segment[]> ProgramBitSegments =
         new Dictionary<string, Segment[]>
@@ -260,34 +264,87 @@ public static class ToyopucAddress
 
     public static ParsedAddress ParseAddress(string text, string unit, int radix = 16)
     {
-        var match = AddressPattern.Match(text.Trim().ToUpperInvariant());
-        if (!match.Success)
+        var body = text.Trim().ToUpperInvariant();
+        if (!AddressPattern.IsMatch(body))
         {
             throw new ArgumentException($"Invalid address format: {text}", nameof(text));
         }
 
-        var area = match.Groups["area"].Value;
-        var number = Convert.ToInt32(match.Groups["num"].Value, radix);
-        var suffix = match.Groups["suffix"].Success ? match.Groups["suffix"].Value : null;
-        suffix = NormalizeSuffix(text, unit, suffix);
-        return new ParsedAddress(area, number, unit, suffix == "H", suffix == "W", match.Groups["num"].Value.Length);
+        return ParseAddressBody(body, text, unit, radix, nameof(text));
     }
 
     public static (int ExNo, ParsedAddress Address) ParsePrefixedAddress(string text, string unit, int radix = 16)
     {
-        var match = PrefixedAddressPattern.Match(text.Trim().ToUpperInvariant());
+        var normalized = text.Trim().ToUpperInvariant();
+        var match = PrefixedAddressPattern.Match(normalized);
         if (!match.Success)
         {
             throw new ArgumentException($"Invalid prefixed address format: {text}", nameof(text));
         }
 
         var prefix = match.Groups["prefix"].Value;
-        var area = match.Groups["area"].Value;
-        var number = Convert.ToInt32(match.Groups["num"].Value, radix);
-        var suffix = match.Groups["suffix"].Success ? match.Groups["suffix"].Value : null;
-        suffix = NormalizeSuffix(text, unit, suffix);
-        return (ProgramExNo[prefix], new ParsedAddress(area, number, unit, suffix == "H", suffix == "W", match.Groups["num"].Value.Length));
+        var body = normalized[(prefix.Length + 1)..];
+        return (ProgramExNo[prefix], ParseAddressBody(body, text, unit, radix, nameof(text)));
     }
+
+    private static ParsedAddress ParseAddressBody(string body, string originalText, string unit, int radix, string paramName)
+    {
+        var area = ResolveKnownArea(body, originalText, paramName);
+        var numberAndSuffix = body[area.Length..];
+        if (string.IsNullOrEmpty(numberAndSuffix))
+        {
+            throw new ArgumentException($"Invalid address format: {originalText}", paramName);
+        }
+
+        var suffix = IsAddressSuffix(numberAndSuffix[^1])
+            ? numberAndSuffix[^1].ToString()
+            : null;
+        var numberText = suffix is null ? numberAndSuffix : numberAndSuffix[..^1];
+        if (string.IsNullOrEmpty(numberText))
+        {
+            throw new ArgumentException($"Invalid address format: {originalText}", paramName);
+        }
+
+        int number;
+        try
+        {
+            number = Convert.ToInt32(numberText, radix);
+        }
+        catch (Exception exception) when (exception is FormatException or OverflowException or ArgumentException)
+        {
+            throw new ArgumentException($"Invalid address format: {originalText}", paramName, exception);
+        }
+
+        suffix = NormalizeSuffix(originalText, unit, suffix);
+        return new ParsedAddress(area, number, unit, suffix == "H", suffix == "W", numberText.Length);
+    }
+
+    private static string ResolveKnownArea(string body, string originalText, string paramName)
+    {
+        foreach (var candidate in KnownAreaCandidates)
+        {
+            if (body.StartsWith(candidate, StringComparison.Ordinal))
+            {
+                return candidate;
+            }
+        }
+
+        throw new ArgumentException($"Unknown device area in '{originalText}'.", paramName);
+    }
+
+    private static string[] BuildKnownAreaCandidates() =>
+        WordBase.Keys
+            .Concat(ByteBase.Keys)
+            .Concat(BitBase.Keys)
+            .Concat(ExtAreaMap.Keys)
+            .Concat(AdditionalAreaNames)
+            .Distinct(StringComparer.Ordinal)
+            .OrderByDescending(static area => area.Length)
+            .ThenBy(static area => area, StringComparer.Ordinal)
+            .ToArray();
+
+    private static bool IsAddressSuffix(char value) =>
+        value is 'L' or 'H' or 'W';
 
     public static int EncodeWordAddress(ParsedAddress address)
     {
