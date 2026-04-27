@@ -39,7 +39,7 @@ var options = new ToyopucConnectionOptions("192.168.250.100")
 await using var client = await ToyopucDeviceClientFactory.OpenAndConnectAsync(options);
 ```
 
-If a profile is in use, basic area families should use the correct `P1-`, `P2-`, or `P3-` prefix.
+Basic area families `P/K/V/T/C/L/X/Y/M/S/N/R/D` must use the correct `P1-`, `P2-`, or `P3-` prefix.
 
 ## First Successful Run
 

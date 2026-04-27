@@ -47,12 +47,12 @@ public class ProtocolAndClientTests
         {
             CaptureTraceFrames = true,
         };
-        var result = client.Read("D0100");
+        var result = client.Read("B0100");
 
         await serverTask;
 
         Assert.Equal(0x1234, Assert.IsType<int>(result));
-        Assert.Equal(ToyopucProtocol.BuildWordRead(0x1100, 1), requestFrame);
+        Assert.Equal(ToyopucProtocol.BuildWordRead(0x6100, 1), requestFrame);
         var trace = Assert.Single(client.TraceFrames);
         Assert.Equal(requestFrame, trace.Tx);
         Assert.Equal(BuildResponse(0x1C, new byte[] { 0x34, 0x12 }), trace.Rx);
@@ -75,12 +75,12 @@ public class ProtocolAndClientTests
         });
 
         using var client = new ToyopucDeviceClient("127.0.0.1", port, transport: ToyopucTransportMode.Tcp, timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds));
-        var result = client.ReadDWord("D0100");
+        var result = client.ReadDWord("B0100");
 
         await serverTask;
 
         Assert.Equal(0x12345678u, result);
-        Assert.Equal(ToyopucProtocol.BuildWordRead(0x1100, 2), requestFrame);
+        Assert.Equal(ToyopucProtocol.BuildWordRead(0x6100, 2), requestFrame);
     }
 
     [Fact]
@@ -125,12 +125,12 @@ public class ProtocolAndClientTests
         });
 
         using var client = new ToyopucDeviceClient("127.0.0.1", port, transport: ToyopucTransportMode.Tcp, timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds));
-        var result = client.ReadFloat32("D0100");
+        var result = client.ReadFloat32("B0100");
 
         await serverTask;
 
         Assert.Equal(1.5f, result);
-        Assert.Equal(ToyopucProtocol.BuildWordRead(0x1100, 2), requestFrame);
+        Assert.Equal(ToyopucProtocol.BuildWordRead(0x6100, 2), requestFrame);
     }
 
     [Fact]
@@ -150,12 +150,12 @@ public class ProtocolAndClientTests
         });
 
         using var client = new ToyopucDeviceClient("127.0.0.1", port, transport: ToyopucTransportMode.Tcp, timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds));
-        var result = await client.ReadDWordAsync("D0100");
+        var result = await client.ReadDWordAsync("B0100");
 
         await serverTask;
 
         Assert.Equal(0x12345678u, result);
-        Assert.Equal(ToyopucProtocol.BuildWordRead(0x1100, 2), requestFrame);
+        Assert.Equal(ToyopucProtocol.BuildWordRead(0x6100, 2), requestFrame);
     }
 
     [Fact]
@@ -175,11 +175,11 @@ public class ProtocolAndClientTests
         });
 
         using var client = new ToyopucDeviceClient("127.0.0.1", port, transport: ToyopucTransportMode.Tcp, timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds));
-        client.WriteFloat32("D0100", 1.5f);
+        client.WriteFloat32("B0100", 1.5f);
 
         await serverTask;
 
-        Assert.Equal(ToyopucProtocol.BuildWordWrite(0x1100, new[] { 0x0000, 0x3FC0 }), requestFrame);
+        Assert.Equal(ToyopucProtocol.BuildWordWrite(0x6100, new[] { 0x0000, 0x3FC0 }), requestFrame);
     }
 
     [Fact]
@@ -226,12 +226,12 @@ public class ProtocolAndClientTests
         {
             CaptureTraceFrames = true,
         };
-        var result = Assert.IsType<object[]>(client.Read("D0100", 3));
+        var result = Assert.IsType<object[]>(client.Read("B0100", 3));
 
         await serverTask;
 
         Assert.Equal(new object[] { 0x1111, 0x2222, 0x3333 }, result);
-        Assert.Equal(ToyopucProtocol.BuildWordRead(0x1100, 3), requestFrame);
+        Assert.Equal(ToyopucProtocol.BuildWordRead(0x6100, 3), requestFrame);
         Assert.Single(client.TraceFrames);
     }
 
@@ -318,13 +318,13 @@ public class ProtocolAndClientTests
         });
 
         using var client = new ToyopucDeviceClient("127.0.0.1", port, transport: ToyopucTransportMode.Tcp, timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds));
-        var result = client.Read("D0100");
+        var result = client.Read("B0100");
 
         await serverTask;
 
         Assert.Equal(0x1234, Assert.IsType<int>(result));
         Assert.Empty(client.TraceFrames);
-        Assert.Equal(ToyopucProtocol.BuildWordRead(0x1100, 1), client.LastTx);
+        Assert.Equal(ToyopucProtocol.BuildWordRead(0x6100, 1), client.LastTx);
         Assert.Equal(BuildResponse(0x1C, new byte[] { 0x34, 0x12 }), client.LastRx);
     }
 
@@ -348,12 +348,12 @@ public class ProtocolAndClientTests
         {
             CaptureTraceFrames = true,
         };
-        var result = client.ReadMany(new object[] { "D0100", "D0102" });
+        var result = client.ReadMany(new object[] { "B0100", "B0102" });
 
         await serverTask;
 
         Assert.Equal(new object[] { 0x1234, 0x5678 }, result);
-        Assert.Equal(ToyopucProtocol.BuildMultiWordRead(new[] { 0x1100, 0x1102 }), requestFrame);
+        Assert.Equal(ToyopucProtocol.BuildMultiWordRead(new[] { 0x6100, 0x6102 }), requestFrame);
         Assert.Single(client.TraceFrames);
     }
 
@@ -442,87 +442,29 @@ public class ProtocolAndClientTests
     }
 
     [Fact]
-    public async Task HighLevelClient_ReadManyPackedPc10Words_UsesSegmentedBlockReads()
+    public void HighLevelClient_RejectsUnprefixedPackedBasicDevices()
     {
-        using var listener = new TcpListener(IPAddress.Loopback, 0);
-        listener.Start();
-        var port = ((IPEndPoint)listener.LocalEndpoint).Port;
-
-        byte[]? firstRequest = null;
-        byte[]? secondRequest = null;
-        var serverTask = Task.Run(async () =>
-        {
-            using var serverClient = await listener.AcceptTcpClientAsync();
-            await using var stream = serverClient.GetStream();
-            firstRequest = await ReadFrameAsync(stream);
-            await stream.WriteAsync(BuildResponse(0xC2, new byte[] { 0x34, 0x12, 0x78, 0x56 }));
-            secondRequest = await ReadFrameAsync(stream);
-            await stream.WriteAsync(BuildResponse(0xC2, new byte[] { 0xBC, 0x9A }));
-        });
-
         using var client = new ToyopucDeviceClient(
             "127.0.0.1",
-            port,
+            1,
             transport: ToyopucTransportMode.Tcp,
             timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds),
-            addressingOptions: ToyopucAddressingOptions.Pc10GMode)
-        {
-            CaptureTraceFrames = true,
-        };
-        var result = client.ReadMany(new object[] { "M100W", "M101W", "M110W" });
+            addressingOptions: ToyopucAddressingOptions.Pc10GMode);
 
-        await serverTask;
-
-        Assert.Equal(new object[] { 0x1234, 0x5678, 0x9ABC }, result);
-        Assert.Equal(ToyopucProtocol.BuildPc10BlockRead(ToyopucAddress.EncodeExNoByteU32(0x00, 0x0500), 4), firstRequest);
-        Assert.Equal(ToyopucProtocol.BuildPc10BlockRead(ToyopucAddress.EncodeExNoByteU32(0x00, 0x0520), 2), secondRequest);
-        Assert.Equal(2, client.TraceFrames.Count);
+        Assert.Throws<ArgumentException>(() => client.ReadMany(new object[] { "M100W", "M101W", "M110W" }));
     }
 
     [Fact]
-    public async Task HighLevelClient_ReadsSequentialPc10Bits_UsesSingleMultiReadFrame()
+    public void HighLevelClient_RejectsUnprefixedBasicBitReads()
     {
-        using var listener = new TcpListener(IPAddress.Loopback, 0);
-        listener.Start();
-        var port = ((IPEndPoint)listener.LocalEndpoint).Port;
-
-        byte[]? requestFrame = null;
-        var serverTask = Task.Run(async () =>
-        {
-            using var serverClient = await listener.AcceptTcpClientAsync();
-            await using var stream = serverClient.GetStream();
-            requestFrame = await ReadFrameAsync(stream);
-            await stream.WriteAsync(BuildResponse(0xC4, new byte[] { 0x00, 0x00, 0x00, 0x00, 0x5A, 0xA5 }));
-        });
-
         using var client = new ToyopucDeviceClient(
             "127.0.0.1",
-            port,
+            1,
             transport: ToyopucTransportMode.Tcp,
             timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds),
-            addressingOptions: ToyopucAddressingOptions.Pc10GMode)
-        {
-            CaptureTraceFrames = true,
-        };
-        var result = Assert.IsType<object[]>(client.Read("P17F0", 16));
+            addressingOptions: ToyopucAddressingOptions.Pc10GMode);
 
-        await serverTask;
-
-        Assert.Equal(
-            new object[]
-            {
-                false, true, false, true, true, false, true, false,
-                true, false, true, false, false, true, false, true,
-            },
-            result);
-        Assert.Equal(
-            ToyopucProtocol.BuildPc10MultiRead(
-                BuildPc10MultiBitReadPayloadForTest(
-                    Enumerable.Range(0, 16)
-                        .Select(static offset => ToyopucAddress.EncodePc10BitAddress(new ParsedAddress("P", 0x17F0 + offset, "bit")))
-                        .ToArray())),
-            requestFrame);
-        Assert.Single(client.TraceFrames);
+        Assert.Throws<ArgumentException>(() => client.Read("P17F0", 16));
     }
 
     [Fact]
@@ -583,57 +525,29 @@ public class ProtocolAndClientTests
         {
             CaptureTraceFrames = true,
         };
-        client.Write("D0100", new[] { 0x1234, 0x5678 });
+        client.Write("B0100", new[] { 0x1234, 0x5678 });
 
         await serverTask;
 
-        Assert.Equal(ToyopucProtocol.BuildWordWrite(0x1100, new[] { 0x1234, 0x5678 }), requestFrame);
+        Assert.Equal(ToyopucProtocol.BuildWordWrite(0x6100, new[] { 0x1234, 0x5678 }), requestFrame);
         Assert.Single(client.TraceFrames);
     }
 
     [Fact]
-    public async Task HighLevelClient_WritesSequentialPc10Bits_UsesSingleMultiWriteFrame()
+    public void HighLevelClient_RejectsUnprefixedBasicBitWrites()
     {
-        using var listener = new TcpListener(IPAddress.Loopback, 0);
-        listener.Start();
-        var port = ((IPEndPoint)listener.LocalEndpoint).Port;
-
-        byte[]? requestFrame = null;
-        var serverTask = Task.Run(async () =>
-        {
-            using var serverClient = await listener.AcceptTcpClientAsync();
-            await using var stream = serverClient.GetStream();
-            requestFrame = await ReadFrameAsync(stream);
-            await stream.WriteAsync(BuildResponse(0xC5, Array.Empty<byte>()));
-        });
-
         using var client = new ToyopucDeviceClient(
             "127.0.0.1",
-            port,
+            1,
             transport: ToyopucTransportMode.Tcp,
             timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds),
-            addressingOptions: ToyopucAddressingOptions.Pc10GMode)
-        {
-            CaptureTraceFrames = true,
-        };
-        client.Write("P17F0", new[]
+            addressingOptions: ToyopucAddressingOptions.Pc10GMode);
+
+        Assert.Throws<ArgumentException>(() => client.Write("P17F0", new[]
         {
             false, true, false, true, true, false, true, false,
             true, false, true, false, false, true, false, true,
-        });
-
-        await serverTask;
-
-        Assert.Equal(
-            ToyopucProtocol.BuildPc10MultiWrite(
-                BuildPc10MultiBitWritePayloadForTest(
-                    Enumerable.Range(0, 16)
-                        .Select(static offset => (
-                            ToyopucAddress.EncodePc10BitAddress(new ParsedAddress("P", 0x17F0 + offset, "bit")),
-                            ((0xA55A >> offset) & 0x01)))
-                        .ToArray())),
-            requestFrame);
-        Assert.Single(client.TraceFrames);
+        }));
     }
 
     [Fact]
@@ -659,13 +573,13 @@ public class ProtocolAndClientTests
         client.WriteMany(
             new[]
             {
-                new KeyValuePair<object, object>("D0100", 0x1234),
-                new KeyValuePair<object, object>("D0102", 0x5678),
+                new KeyValuePair<object, object>("B0100", 0x1234),
+                new KeyValuePair<object, object>("B0102", 0x5678),
             });
 
         await serverTask;
 
-        Assert.Equal(ToyopucProtocol.BuildMultiWordWrite(new[] { (0x1100, 0x1234), (0x1102, 0x5678) }), requestFrame);
+        Assert.Equal(ToyopucProtocol.BuildMultiWordWrite(new[] { (0x6100, 0x1234), (0x6102, 0x5678) }), requestFrame);
         Assert.Single(client.TraceFrames);
     }
 

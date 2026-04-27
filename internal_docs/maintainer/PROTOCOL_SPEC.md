@@ -77,7 +77,7 @@ If the PLC returns a NAK response, the detailed error code may appear:
 | `0x24` | `ReadBytesMulti` | read non-contiguous bytes |
 | `0x25` | `WriteBytesMulti` | write non-contiguous bytes |
 
-### Clock / Status (CMD=32)
+### Clock / Status (CMD=32, CMD=A0)
 
 Sub-command structure: `CMD=32`, `SUB_HI`, `SUB_LO`
 
@@ -86,7 +86,7 @@ Sub-command structure: `CMD=32`, `SUB_HI`, `SUB_LO`
 | `0x70 0x00` | `ReadClock` |
 | `0x71 0x00` | `WriteClock` |
 | `0x11 0x00` | `ReadCpuStatus` |
-| `0xA0 0x00` | `ReadCpuStatusA0` |
+| `CMD=0xA0`, data `0x01 0x10` | `ReadCpuStatusA0` |
 
 ### Extended Area (CMD=94–99)
 

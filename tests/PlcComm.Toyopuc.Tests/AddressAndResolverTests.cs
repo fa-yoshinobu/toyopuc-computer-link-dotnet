@@ -3,15 +3,11 @@ namespace PlcComm.Toyopuc.Tests;
 public class AddressAndResolverTests
 {
     [Fact]
-    public void ResolveDevice_BasicWordAddress_SelectsBasicWordScheme()
+    public void ResolveDevice_UnprefixedBasicWordAddress_RequiresProgramPrefix()
     {
-        var resolved = ToyopucDeviceResolver.ResolveDevice("D0100");
+        var ex = Assert.Throws<ArgumentException>(() => ToyopucDeviceResolver.ResolveDevice("D0100"));
 
-        Assert.Equal("basic-word", resolved.Scheme);
-        Assert.Equal("word", resolved.Unit);
-        Assert.Equal("D", resolved.Area);
-        Assert.Equal(0x0100, resolved.Index);
-        Assert.Equal(0x1100, resolved.BasicAddress);
+        Assert.Contains("requires P1-/P2-/P3- prefix", ex.Message);
     }
 
     [Fact]
@@ -31,11 +27,9 @@ public class AddressAndResolverTests
     [Fact]
     public void ResolveDevice_UpperBitAddresses_SelectExpectedSchemes()
     {
-        var direct = ToyopucDeviceResolver.ResolveDevice("P1000", ToyopucAddressingOptions.Default);
         var prefixed = ToyopucDeviceResolver.ResolveDevice("P1-P1000", ToyopucAddressingOptions.Default);
 
-        Assert.Equal("pc10-bit", direct.Scheme);
-        Assert.Equal(0x1000, direct.Address32);
+        Assert.Throws<ArgumentException>(() => ToyopucDeviceResolver.ResolveDevice("P1000", ToyopucAddressingOptions.Default));
 
         Assert.Equal("program-bit", prefixed.Scheme);
         Assert.Equal(0x01, prefixed.No);
@@ -134,20 +128,13 @@ public class AddressAndResolverTests
     }
 
     [Fact]
-    public void ResolveDevice_WithOptions_UsesPc10AccessForUpperDerivedBasicBitAddresses()
+    public void ResolveDevice_WithOptions_RejectsUnprefixedDerivedBasicBitAddresses()
     {
         var options = ToyopucAddressingOptions.FromProfile("PC10G:PC10 mode");
 
-        var mWord = ToyopucDeviceResolver.ResolveDevice("M100W", options);
-        var mLow = ToyopucDeviceResolver.ResolveDevice("M100L", options);
-        var pWord = ToyopucDeviceResolver.ResolveDevice("P17FW", options);
-
-        Assert.Equal("pc10-word", mWord.Scheme);
-        Assert.Equal(0x0500, mWord.Address32);
-        Assert.Equal("pc10-byte", mLow.Scheme);
-        Assert.Equal(0x0500, mLow.Address32);
-        Assert.Equal("pc10-word", pWord.Scheme);
-        Assert.Equal(0x02FE, pWord.Address32);
+        Assert.Throws<ArgumentException>(() => ToyopucDeviceResolver.ResolveDevice("M100W", options));
+        Assert.Throws<ArgumentException>(() => ToyopucDeviceResolver.ResolveDevice("M100L", options));
+        Assert.Throws<ArgumentException>(() => ToyopucDeviceResolver.ResolveDevice("P17FW", options));
     }
 
     [Fact]
@@ -428,7 +415,7 @@ public class AddressAndResolverTests
         Assert.Throws<ArgumentException>(() => ToyopucDeviceResolver.ResolveDevice("GM1000W", options, profile));
         Assert.Throws<ArgumentException>(() => ToyopucDeviceResolver.ResolveDevice("GM1000L", options, profile));
 
-        var genericLowByte = ToyopucDeviceResolver.ResolveDevice("M17FL");
+        var genericLowByte = ToyopucDeviceResolver.ResolveDevice("P1-M17FL");
         Assert.Equal("M", genericLowByte.Area);
         Assert.Equal(0x17F, genericLowByte.Index);
         Assert.Equal("byte", genericLowByte.Unit);

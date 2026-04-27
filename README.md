@@ -38,7 +38,7 @@ dotnet add package PlcComm.Toyopuc
 Or add a package reference directly:
 
 ```xml
-<PackageReference Include="PlcComm.Toyopuc" Version="0.1.3" />
+<PackageReference Include="PlcComm.Toyopuc" Version="0.1.5" />
 ```
 
 ### High-Level Example
@@ -67,7 +67,7 @@ var snapshot = await client.ReadNamedAsync(["P1-D0000", "P1-D0200:F", "P1-D0000.
 Console.WriteLine(snapshot["P1-D0000"]);
 ```
 
-Basic area families `P/K/V/T/C/L/X/Y/M/S/N/R/D` should use a `P1-`, `P2-`, or `P3-` prefix when a profile is in use.
+Basic area families `P/K/V/T/C/L/X/Y/M/S/N/R/D` require a `P1-`, `P2-`, or `P3-` prefix.
 
 ## Supported PLC Registers
 

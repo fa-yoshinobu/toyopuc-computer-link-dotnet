@@ -12,6 +12,11 @@ public static class ToyopucDeviceResolver
         "S", "N", "R", "D", "B",
     };
 
+    private static readonly HashSet<string> PrefixRequiredAreas = new(StringComparer.Ordinal)
+    {
+        "P", "K", "V", "T", "C", "L", "X", "Y", "M", "S", "N", "R", "D",
+    };
+
     private static readonly HashSet<string> ExtBitAreas = new(StringComparer.Ordinal)
     {
         "EP", "EK", "EV", "ET", "EC", "EL", "EX", "EY", "EM", "GX", "GY", "GM",
@@ -60,6 +65,11 @@ public static class ToyopucDeviceResolver
             : ToyopucAddressingOptions.FromProfile(normalizedProfile);
         var (prefix, area, unit) = InferUnitAndArea(device);
         var text = device.Trim().ToUpperInvariant();
+
+        if (prefix is null && PrefixRequiredAreas.Contains(area))
+        {
+            throw new ArgumentException($"{area} area requires P1-/P2-/P3- prefix: {text}", nameof(device));
+        }
 
         if (prefix is not null)
         {
