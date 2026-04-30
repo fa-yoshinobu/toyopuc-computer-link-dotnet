@@ -168,6 +168,32 @@ public static class ToyopucProtocol
         return frame;
     }
 
+    public static byte[] BuildScanResume()
+    {
+        var frame = CreateCommandFrame(0x32, 2);
+        frame[5] = 0x01;
+        frame[6] = 0x00;
+        return frame;
+    }
+
+    public static byte[] BuildScanStop()
+    {
+        var frame = CreateCommandFrame(0x32, 3);
+        frame[5] = 0x02;
+        frame[6] = 0x00;
+        frame[7] = 0x01;
+        return frame;
+    }
+
+    public static byte[] BuildScanStopRelease()
+    {
+        var frame = CreateCommandFrame(0x32, 3);
+        frame[5] = 0x02;
+        frame[6] = 0x00;
+        frame[7] = 0x00;
+        return frame;
+    }
+
     public static byte[] BuildClockWrite(
         int second,
         int minute,

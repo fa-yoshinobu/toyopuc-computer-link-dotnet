@@ -330,6 +330,21 @@ public partial class ToyopucClient
         return RunAsync(() => RelayWriteClock(hops, value), cancellationToken);
     }
 
+    public Task RelayResumeScanAsync(object hops, CancellationToken cancellationToken = default)
+    {
+        return RunAsync(() => RelayResumeScan(hops), cancellationToken);
+    }
+
+    public Task RelayStopScanAsync(object hops, CancellationToken cancellationToken = default)
+    {
+        return RunAsync(() => RelayStopScan(hops), cancellationToken);
+    }
+
+    public Task RelayReleaseScanStopAsync(object hops, CancellationToken cancellationToken = default)
+    {
+        return RunAsync(() => RelayReleaseScanStop(hops), cancellationToken);
+    }
+
     public Task<CpuStatusData> RelayReadCpuStatusAsync(object hops, CancellationToken cancellationToken = default)
     {
         return RunAsync(() => RelayReadCpuStatus(hops), cancellationToken);
@@ -431,6 +446,21 @@ public partial class ToyopucClient
     public Task WriteClockAsync(DateTime value, CancellationToken cancellationToken = default)
     {
         return RunAsync(() => WriteClock(value), cancellationToken);
+    }
+
+    public Task ResumeScanAsync(CancellationToken cancellationToken = default)
+    {
+        return RunAsync(ResumeScan, cancellationToken);
+    }
+
+    public Task StopScanAsync(CancellationToken cancellationToken = default)
+    {
+        return RunAsync(StopScan, cancellationToken);
+    }
+
+    public Task ReleaseScanStopAsync(CancellationToken cancellationToken = default)
+    {
+        return RunAsync(ReleaseScanStop, cancellationToken);
     }
 
     protected Task RunAsync(Action action, CancellationToken cancellationToken = default)

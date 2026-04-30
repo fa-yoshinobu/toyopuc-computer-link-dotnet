@@ -16,6 +16,30 @@ public class ProtocolAndClientTests
     }
 
     [Fact]
+    public void BuildScanResumeFrame_MatchesExpectedBytes()
+    {
+        var frame = ToyopucProtocol.BuildScanResume();
+
+        Assert.Equal(new byte[] { 0x00, 0x00, 0x03, 0x00, 0x32, 0x01, 0x00 }, frame);
+    }
+
+    [Fact]
+    public void BuildScanStopFrame_MatchesExpectedBytes()
+    {
+        var frame = ToyopucProtocol.BuildScanStop();
+
+        Assert.Equal(new byte[] { 0x00, 0x00, 0x04, 0x00, 0x32, 0x02, 0x00, 0x01 }, frame);
+    }
+
+    [Fact]
+    public void BuildScanStopReleaseFrame_MatchesExpectedBytes()
+    {
+        var frame = ToyopucProtocol.BuildScanStopRelease();
+
+        Assert.Equal(new byte[] { 0x00, 0x00, 0x04, 0x00, 0x32, 0x02, 0x00, 0x00 }, frame);
+    }
+
+    [Fact]
     public void ParseCpuStatusData_ReturnsFlags()
     {
         var status = ToyopucProtocol.ParseCpuStatusData(new byte[] { 0x11, 0x00, 0x81, 0x20, 0x00, 0x00, 0x00, 0x00, 0x10, 0x02 });
@@ -56,6 +80,99 @@ public class ProtocolAndClientTests
         var trace = Assert.Single(client.TraceFrames);
         Assert.Equal(requestFrame, trace.Tx);
         Assert.Equal(BuildResponse(0x1C, new byte[] { 0x34, 0x12 }), trace.Rx);
+    }
+
+    [Fact]
+    public async Task Client_StopScan_UsesScanStopFrame()
+    {
+        using var listener = new TcpListener(IPAddress.Loopback, 0);
+        listener.Start();
+        var port = ((IPEndPoint)listener.LocalEndpoint).Port;
+
+        byte[]? requestFrame = null;
+        var serverTask = Task.Run(async () =>
+        {
+            using var serverClient = await listener.AcceptTcpClientAsync();
+            await using var stream = serverClient.GetStream();
+            requestFrame = await ReadFrameAsync(stream);
+            await stream.WriteAsync(BuildResponse(0x32, new byte[] { 0x02, 0x00 }));
+        });
+
+        using var client = new ToyopucClient("127.0.0.1", port, transport: ToyopucTransportMode.Tcp, timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds));
+        client.StopScan();
+
+        await serverTask;
+
+        Assert.Equal(ToyopucProtocol.BuildScanStop(), requestFrame);
+    }
+
+    [Fact]
+    public async Task Client_ResumeScanAsync_UsesScanResumeFrame()
+    {
+        using var listener = new TcpListener(IPAddress.Loopback, 0);
+        listener.Start();
+        var port = ((IPEndPoint)listener.LocalEndpoint).Port;
+
+        byte[]? requestFrame = null;
+        var serverTask = Task.Run(async () =>
+        {
+            using var serverClient = await listener.AcceptTcpClientAsync();
+            await using var stream = serverClient.GetStream();
+            requestFrame = await ReadFrameAsync(stream);
+            await stream.WriteAsync(BuildResponse(0x32, new byte[] { 0x01, 0x00 }));
+        });
+
+        using var client = new ToyopucClient("127.0.0.1", port, transport: ToyopucTransportMode.Tcp, timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds));
+        await client.ResumeScanAsync();
+
+        await serverTask;
+
+        Assert.Equal(ToyopucProtocol.BuildScanResume(), requestFrame);
+    }
+
+    [Fact]
+    public async Task Client_ReleaseScanStop_UsesScanStopReleaseFrame()
+    {
+        using var listener = new TcpListener(IPAddress.Loopback, 0);
+        listener.Start();
+        var port = ((IPEndPoint)listener.LocalEndpoint).Port;
+
+        byte[]? requestFrame = null;
+        var serverTask = Task.Run(async () =>
+        {
+            using var serverClient = await listener.AcceptTcpClientAsync();
+            await using var stream = serverClient.GetStream();
+            requestFrame = await ReadFrameAsync(stream);
+            await stream.WriteAsync(BuildResponse(0x32, new byte[] { 0x02, 0x00 }));
+        });
+
+        using var client = new ToyopucClient("127.0.0.1", port, transport: ToyopucTransportMode.Tcp, timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds));
+        client.ReleaseScanStop();
+
+        await serverTask;
+
+        Assert.Equal(ToyopucProtocol.BuildScanStopRelease(), requestFrame);
+    }
+
+    [Fact]
+    public async Task Client_StopScan_RejectsUnexpectedResponseBody()
+    {
+        using var listener = new TcpListener(IPAddress.Loopback, 0);
+        listener.Start();
+        var port = ((IPEndPoint)listener.LocalEndpoint).Port;
+
+        var serverTask = Task.Run(async () =>
+        {
+            using var serverClient = await listener.AcceptTcpClientAsync();
+            await using var stream = serverClient.GetStream();
+            await ReadFrameAsync(stream);
+            await stream.WriteAsync(BuildResponse(0x32, new byte[] { 0x01, 0x00 }));
+        });
+
+        using var client = new ToyopucClient("127.0.0.1", port, transport: ToyopucTransportMode.Tcp, timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds));
+        Assert.Throws<ToyopucProtocolError>(client.StopScan);
+
+        await serverTask;
     }
 
     [Fact]
