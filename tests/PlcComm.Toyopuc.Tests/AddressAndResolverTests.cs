@@ -301,6 +301,16 @@ public class AddressAndResolverTests
     }
 
     [Fact]
+    public void DeviceCatalog_FormatAddressRanges_UsesExplicitRangeSeparator()
+    {
+        var ranges = ToyopucDeviceCatalog.GetSupportedRanges("P", prefixed: true, "Generic");
+
+        var text = ToyopucDeviceCatalog.FormatAddressRanges("P1-P", ranges, width: 4);
+
+        Assert.Equal("P1-P0000..P1-P01FF, P1-P1000..P1-P17FF", text);
+    }
+
+    [Fact]
     public void DeviceProfiles_ToyopucPlusModes_ExposeExpectedRanges()
     {
         var standard = ToyopucDeviceProfiles.FromName("TOYOPUC-Plus:Plus Standard mode");

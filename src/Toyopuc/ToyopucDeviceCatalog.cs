@@ -62,6 +62,19 @@ public static class ToyopucDeviceCatalog
         return GetSupportedRanges(descriptor, prefixed, unit, packed);
     }
 
+    public static string FormatAddressRange(string familyCode, ToyopucAddressRange range, int width)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(familyCode);
+        return $"{FormatDeviceAddress(familyCode, range.Start, width)}..{FormatDeviceAddress(familyCode, range.End, width)}";
+    }
+
+    public static string FormatAddressRanges(string familyCode, IEnumerable<ToyopucAddressRange> ranges, int width)
+    {
+        ArgumentException.ThrowIfNullOrWhiteSpace(familyCode);
+        ArgumentNullException.ThrowIfNull(ranges);
+        return string.Join(", ", ranges.Select(range => FormatAddressRange(familyCode, range, width)));
+    }
+
     public static ToyopucAddressRange GetSupportedRange(string area, bool prefixed, string? profile = null)
     {
         return GetSupportedRange(area, prefixed, packed: false, profile);
@@ -283,5 +296,10 @@ public static class ToyopucDeviceCatalog
     private static bool WillOverflowNext(int value, int step)
     {
         return value > int.MaxValue - step;
+    }
+
+    private static string FormatDeviceAddress(string familyCode, int index, int width)
+    {
+        return $"{familyCode}{index.ToString($"X{width}", CultureInfo.InvariantCulture)}";
     }
 }
