@@ -468,6 +468,27 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
         }
     }
 
+    public void RelayResumeScan(object hops)
+    {
+        var response = SendViaRelay(hops, ToyopucProtocol.BuildScanResume());
+        EnsureCommand(response, 0x32, "Unexpected CMD in relay scan-resume response");
+        EnsureCommand32Data(response, new byte[] { 0x01, 0x00 }, "Unexpected relay scan-resume response body");
+    }
+
+    public void RelayStopScan(object hops)
+    {
+        var response = SendViaRelay(hops, ToyopucProtocol.BuildScanStop());
+        EnsureCommand(response, 0x32, "Unexpected CMD in relay scan-stop response");
+        EnsureCommand32Data(response, new byte[] { 0x02, 0x00 }, "Unexpected relay scan-stop response body");
+    }
+
+    public void RelayReleaseScanStop(object hops)
+    {
+        var response = SendViaRelay(hops, ToyopucProtocol.BuildScanStopRelease());
+        EnsureCommand(response, 0x32, "Unexpected CMD in relay scan-stop-release response");
+        EnsureCommand32Data(response, new byte[] { 0x02, 0x00 }, "Unexpected relay scan-stop-release response body");
+    }
+
     public CpuStatusData RelayReadCpuStatus(object hops)
     {
         var response = SendViaRelay(hops, ToyopucProtocol.BuildCpuStatusRead());
@@ -758,11 +779,40 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
         }
     }
 
+    public void ResumeScan()
+    {
+        var response = SendAndReceive(ToyopucProtocol.BuildScanResume());
+        EnsureCommand(response, 0x32);
+        EnsureCommand32Data(response, new byte[] { 0x01, 0x00 }, "Unexpected scan-resume response body");
+    }
+
+    public void StopScan()
+    {
+        var response = SendAndReceive(ToyopucProtocol.BuildScanStop());
+        EnsureCommand(response, 0x32);
+        EnsureCommand32Data(response, new byte[] { 0x02, 0x00 }, "Unexpected scan-stop response body");
+    }
+
+    public void ReleaseScanStop()
+    {
+        var response = SendAndReceive(ToyopucProtocol.BuildScanStopRelease());
+        EnsureCommand(response, 0x32);
+        EnsureCommand32Data(response, new byte[] { 0x02, 0x00 }, "Unexpected scan-stop-release response body");
+    }
+
     protected static void EnsureCommand(ResponseFrame response, int expectedCommand, string? message = null)
     {
         if (response.Cmd != expectedCommand)
         {
             throw new ToyopucProtocolError(message ?? "Unexpected CMD in response");
+        }
+    }
+
+    protected static void EnsureCommand32Data(ResponseFrame response, byte[] expectedData, string message)
+    {
+        if (!response.Data.SequenceEqual(expectedData))
+        {
+            throw new ToyopucProtocolError(message);
         }
     }
 
