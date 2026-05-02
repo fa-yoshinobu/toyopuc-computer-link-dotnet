@@ -3,7 +3,8 @@ param(
     [int]$Port = 1025,
     [ValidateSet("tcp", "udp")]
     [string]$Protocol = "tcp",
-    [string]$Profile = "PC10G:PC10 mode",
+    [Parameter(Mandatory = $true)]
+    [string]$Profile,
     [string]$Cases = "P1-D0000:622:623:0x4100,U00000:621:622:0x4200,U08000:621:622:0x4300,EB00000:621:622:0x4400",
     [string]$SummaryJson = "logs\\direct_length_limit_pc10g_rerun\\summary.json",
     [double]$TimeoutSeconds = 5.0,

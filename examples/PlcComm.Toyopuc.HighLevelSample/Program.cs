@@ -11,7 +11,15 @@ if (args.Contains("--help", StringComparer.OrdinalIgnoreCase)
 var host = args.ElementAtOrDefault(0) ?? "192.168.250.100";
 var port = TryParseInt32(args.ElementAtOrDefault(1), 1025);
 var transport = TryParseTransport(args.ElementAtOrDefault(2), ToyopucTransportMode.Tcp);
-var profileName = args.ElementAtOrDefault(3) ?? "TOYOPUC-Plus:Plus Extended mode";
+var profileName = args.ElementAtOrDefault(3);
+if (string.IsNullOrWhiteSpace(profileName))
+{
+    Console.Error.WriteLine("profile is required. Specify it explicitly; no device profile is inferred from defaults.");
+    PrintUsage();
+    Environment.ExitCode = 1;
+    return;
+}
+
 var profile = ToyopucAddressingOptions.FromProfile(profileName);
 
 await using var client = new ToyopucDeviceClient(
@@ -155,7 +163,9 @@ static void PrintUsage()
     Console.WriteLine("Toyopuc high-level sample");
     Console.WriteLine();
     Console.WriteLine("Usage:");
-    Console.WriteLine("  dotnet run --project examples\\PlcComm.Toyopuc.HighLevelSample -- [host] [port] [tcp|udp] [profile]");
+    Console.WriteLine("  dotnet run --project examples\\PlcComm.Toyopuc.HighLevelSample -- [host] [port] [tcp|udp] <profile>");
+    Console.WriteLine();
+    Console.WriteLine("Profile is required; the sample does not infer a device profile.");
     Console.WriteLine();
     Console.WriteLine("Examples:");
     Console.WriteLine("  dotnet run --project examples\\PlcComm.Toyopuc.HighLevelSample -- 192.168.250.100 1025 tcp \"TOYOPUC-Plus:Plus Extended mode\"");

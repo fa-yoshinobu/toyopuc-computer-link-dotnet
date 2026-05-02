@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.1.8] - 2026-05-02
+
+### Changed
+- Made profile-specific example apps and probe scripts reject omitted profile values instead of falling back to a default TOYOPUC model.
+- Refreshed the README/examples guidance to state that profile-driven live tools require an explicit profile.
+
 ## [0.1.7] - 2026-05-02
 
 ### Changed

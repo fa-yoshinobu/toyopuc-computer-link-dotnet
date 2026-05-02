@@ -13,7 +13,9 @@ If you want the shortest path, start with one of these:
 - `examples/PlcComm.Toyopuc.SoakMonitor`
   Long-duration polling with reconnect and CSV logging.
 
-When `--profile` is supplied, basic families `P/K/V/T/C/L/X/Y/M/S/N/R/D` should use `P1-*`, `P2-*`, or `P3-*`.
+Profile-specific examples require an explicit `profile` / `--profile`; they do
+not infer a TOYOPUC model when the value is omitted. With a profile selected,
+basic families `P/K/V/T/C/L/X/Y/M/S/N/R/D` should use `P1-*`, `P2-*`, or `P3-*`.
 
 The newer explicit APIs such as `ToyopucDeviceClientFactory.OpenAndConnectAsync`,
 `ToyopucConnectionOptions`, `ToyopucAddress.Normalize`,
@@ -85,7 +87,7 @@ These projects are useful for validation and investigation, but they are not the
 Write-limit probe:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File examples\probe_direct_length_limits.ps1
+powershell -ExecutionPolicy Bypass -File examples\probe_direct_length_limits.ps1 -Profile "PC10G:PC10 mode"
 ```
 
 Bit-pattern probe:

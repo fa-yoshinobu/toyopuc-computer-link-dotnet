@@ -9,7 +9,6 @@ public sealed class ExampleCliContractTests
         Path.Combine(AppContext.BaseDirectory, "..", "..", "..", "..", ".."));
 
     private const string BuildConfiguration = "Debug";
-    private const string TargetFramework = "net9.0";
 
     private static readonly SemaphoreSlim BuildGate = new(1, 1);
     private static readonly HashSet<string> BuiltProjects = new(StringComparer.OrdinalIgnoreCase);
@@ -34,7 +33,11 @@ public sealed class ExampleCliContractTests
     [InlineData(
         @"examples\PlcComm.Toyopuc.WriteLimitProbe\PlcComm.Toyopuc.WriteLimitProbe.csproj",
         "Toyopuc safe write-limit confirmation",
-        "default: PC10G:PC10 mode")]
+        "required; no device profile is inferred")]
+    [InlineData(
+        @"examples\PlcComm.Toyopuc.BitPatternProbe\PlcComm.Toyopuc.BitPatternProbe.csproj",
+        "Toyopuc bit-to-packed readback probe",
+        "required; no device profile is inferred")]
     public async Task ExampleCli_HelpOutput_ContainsStableUsage(
         string projectPath,
         string expectedHeader,
@@ -45,6 +48,19 @@ public sealed class ExampleCliContractTests
         Assert.Equal(0, result.ExitCode);
         Assert.Contains(expectedHeader, result.Stdout, StringComparison.Ordinal);
         Assert.Contains(expectedContract, result.Stdout, StringComparison.Ordinal);
+    }
+
+    [Theory]
+    [InlineData(@"examples\PlcComm.Toyopuc.HighLevelSample\PlcComm.Toyopuc.HighLevelSample.csproj")]
+    [InlineData(@"examples\PlcComm.Toyopuc.MinimalRead\PlcComm.Toyopuc.MinimalRead.csproj")]
+    [InlineData(@"examples\PlcComm.Toyopuc.WriteLimitProbe\PlcComm.Toyopuc.WriteLimitProbe.csproj")]
+    [InlineData(@"examples\PlcComm.Toyopuc.BitPatternProbe\PlcComm.Toyopuc.BitPatternProbe.csproj")]
+    public async Task ProfileSpecificExamples_RejectOmittedProfile(string projectPath)
+    {
+        var result = await RunProjectAsync(projectPath);
+
+        Assert.Equal(1, result.ExitCode);
+        Assert.Contains("profile is required", result.AllOutput, StringComparison.OrdinalIgnoreCase);
     }
 
     [Fact]
@@ -114,12 +130,6 @@ public sealed class ExampleCliContractTests
     private static async Task EnsureProjectBuiltAsync(string relativeProjectPath)
     {
         var normalizedPath = NormalizeRelativePath(relativeProjectPath);
-        if (File.Exists(GetExpectedAssemblyPath(normalizedPath)))
-        {
-            BuiltProjects.Add(normalizedPath);
-            return;
-        }
-
         if (BuiltProjects.Contains(normalizedPath))
         {
             return;
@@ -153,15 +163,6 @@ public sealed class ExampleCliContractTests
         {
             BuildGate.Release();
         }
-    }
-
-    private static string GetExpectedAssemblyPath(string relativeProjectPath)
-    {
-        var normalizedPath = NormalizeRelativePath(relativeProjectPath);
-        var projectFileName = Path.GetFileNameWithoutExtension(normalizedPath);
-        var projectDirectory = Path.GetDirectoryName(normalizedPath) ?? string.Empty;
-
-        return Path.Combine(RepoRoot, projectDirectory, "bin", BuildConfiguration, TargetFramework, $"{projectFileName}.dll");
     }
 
     private static async Task<CliResult> RunDotnetAsync(params string[] args)

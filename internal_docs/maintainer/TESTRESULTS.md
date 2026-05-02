@@ -1,6 +1,6 @@
 # Test Results
 
-Last updated: `2026-04-30`
+Last updated: `2026-05-02`
 
 This document records the latest checked results per target. Verification dates are section-specific.
 
@@ -290,7 +290,7 @@ Short reconnect probes also showed that validation should remain serialized.
 
 ## 3. Direct PC10G
 
-Verified: `2026-03-12`, `2026-04-30`
+Verified: `2026-03-12`, `2026-04-30`, `2026-05-02`
 
 Connection:
 
@@ -298,6 +298,38 @@ Connection:
 - port: `1025`
 - protocol: `tcp`
 - profile: `PC10G:PC10 mode`
+
+### Example Smoke / Soak Refresh
+
+Verified: `2026-05-02`
+
+Scope:
+
+- direct TCP connection to PC10G in `PC10G:PC10 mode`
+- `MinimalRead` read-only sample
+- `SmokeTest` read-only full suite
+- `SmokeTest` restored word and bit writes
+- `SoakMonitor` 60-second polling run
+
+Commands:
+
+```powershell
+dotnet build .\PlcComm.Toyopuc.sln -c Release
+dotnet run --project .\examples\PlcComm.Toyopuc.MinimalRead -- 192.168.250.100 1025 tcp P1-D0000 "PC10G:PC10 mode"
+dotnet run --project .\examples\PlcComm.Toyopuc.SmokeTest -- --host 192.168.250.100 --port 1025 --protocol tcp --timeout 5 --retries 3 --profile "PC10G:PC10 mode" --suite "full:PC10G:PC10 mode" --verbose --log logs\pc10g_suite_20260502_153036.log
+dotnet run --project .\examples\PlcComm.Toyopuc.SmokeTest -- --host 192.168.250.100 --port 1025 --protocol tcp --timeout 5 --retries 3 --profile "PC10G:PC10 mode" --device P1-D0100 --write-value 0x1234 --restore-after-write --verbose --log logs\pc10g_word_restore_20260502_153036.log
+dotnet run --project .\examples\PlcComm.Toyopuc.SmokeTest -- --host 192.168.250.100 --port 1025 --protocol tcp --timeout 5 --retries 3 --profile "PC10G:PC10 mode" --device P1-M0000 --toggle-bit-write --restore-after-write --verbose --log logs\pc10g_bit_restore_20260502_153036.log
+dotnet run --project .\examples\PlcComm.Toyopuc.SoakMonitor -- --host 192.168.250.100 --port 1025 --protocol tcp --timeout 5 --retries 3 --profile "PC10G:PC10 mode" --devices P1-D0000,P1-D0100,P1-M0000 --interval 1s --duration 60s --success-log-interval 15 --log logs\pc10g_soak_20260502_153036.log --poll-csv logs\pc10g_soak_20260502_153036.csv --summary-json logs\pc10g_soak_20260502_153036.json
+```
+
+Result:
+
+- release build: `OK` (0 warnings, 0 errors)
+- minimal sample: CPU status, clock, and `P1-D0000` read `OK`
+- full suite: `summary : suite=full:PC10G:PC10 mode ok=212 skip=0 ng=0`
+- restored word write: `P1-D0100 0x0000 -> 0x1234 -> 0x0000` (`OK`)
+- restored bit write: `P1-M0000 0 -> 1 -> 0` (`OK`)
+- 60-second soak: `stop=duration-complete polls=60 ok=60 ng=0 reconnects=0 sessions=1`
 
 Canonical command:
 

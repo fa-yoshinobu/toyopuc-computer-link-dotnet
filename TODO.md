@@ -4,4 +4,4 @@ This file tracks the remaining tasks and known issues for the Toyopuc Computer L
 
 ## 1. Active Follow-Up
 
-- [ ] **Smoke / Soak Coverage**: Re-run the example applications against current hardware and capture the results as reproducible reports.
+- [x] **Smoke / Soak Coverage**: Re-run the example applications against current hardware and capture the results as reproducible reports.

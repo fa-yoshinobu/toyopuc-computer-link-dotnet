@@ -72,7 +72,17 @@ internal static class Program
             return 0;
         }
 
-        var options = ProbeOptions.Parse(args, DefaultAreas);
+        ProbeOptions options;
+        try
+        {
+            options = ProbeOptions.Parse(args, DefaultAreas);
+        }
+        catch (Exception ex) when (ex is ArgumentException or ArgumentOutOfRangeException)
+        {
+            Console.Error.WriteLine(ex.Message);
+            return 1;
+        }
+
         var cases = BuildCases(options);
 
         Console.WriteLine(FormattableString.Invariant($"connect      : {options.Transport}://{options.Host}:{options.Port}"));
@@ -645,7 +655,7 @@ internal static class Program
         Console.WriteLine("  --host <name>           default: 192.168.250.100");
         Console.WriteLine("  --port <number>         default: 1025");
         Console.WriteLine("  --protocol <tcp|udp>    default: tcp");
-        Console.WriteLine("  --profile <name>        default: PC10G:PC10 mode");
+        Console.WriteLine("  --profile <name>        required; no device profile is inferred");
         Console.WriteLine("  --areas <csv>           default: P,K,V,T,C,L,X,Y,M,EP,EK,EV,ET,EC,EL,EX,EY,EM,GM,GX,GY");
         Console.WriteLine("  --sample-count <n>      default: 10");
         Console.WriteLine("  --timeout <seconds>     default: 5.0");
@@ -665,7 +675,7 @@ internal sealed record ProbeOptions
 
     public string Transport { get; init; } = "tcp";
 
-    public string Profile { get; init; } = "PC10G:PC10 mode";
+    public string Profile { get; init; } = string.Empty;
 
     public IReadOnlyList<string> Areas { get; init; } = Array.Empty<string>();
 
@@ -745,6 +755,11 @@ internal sealed record ProbeOptions
         if (options.RetryDelaySeconds < 0)
         {
             throw new ArgumentOutOfRangeException(nameof(args), "--retry-delay must be >= 0");
+        }
+
+        if (string.IsNullOrWhiteSpace(options.Profile))
+        {
+            throw new ArgumentException("--profile is required. Specify it explicitly; no device profile is inferred from defaults.", nameof(args));
         }
 
         return options with { Profile = ToyopucDeviceProfiles.NormalizeName(options.Profile) };

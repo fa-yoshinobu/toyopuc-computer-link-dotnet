@@ -12,7 +12,15 @@ var host = args.ElementAtOrDefault(0) ?? "192.168.250.100";
 var port = TryParseInt32(args.ElementAtOrDefault(1), 1025);
 var transport = Enum.Parse<ToyopucTransportMode>(args.ElementAtOrDefault(2) ?? "tcp", ignoreCase: true);
 var device = (args.ElementAtOrDefault(3) ?? "P1-D0000").ToUpperInvariant();
-var profileName = args.ElementAtOrDefault(4) ?? "TOYOPUC-Plus:Plus Extended mode";
+var profileName = args.ElementAtOrDefault(4);
+if (string.IsNullOrWhiteSpace(profileName))
+{
+    Console.Error.WriteLine("profile is required. Specify it explicitly; no device profile is inferred from defaults.");
+    PrintUsage();
+    Environment.ExitCode = 1;
+    return;
+}
+
 var profile = ToyopucAddressingOptions.FromProfile(profileName);
 
 using var plc = new ToyopucDeviceClient(
@@ -64,7 +72,9 @@ static void PrintUsage()
     Console.WriteLine("Toyopuc minimal read example");
     Console.WriteLine();
     Console.WriteLine("Usage:");
-    Console.WriteLine("  dotnet run --project examples\\PlcComm.Toyopuc.MinimalRead -- [host] [port] [tcp|udp] [device] [profile]");
+    Console.WriteLine("  dotnet run --project examples\\PlcComm.Toyopuc.MinimalRead -- [host] [port] [tcp|udp] [device] <profile>");
+    Console.WriteLine();
+    Console.WriteLine("Profile is required; the sample does not infer a device profile.");
     Console.WriteLine();
     Console.WriteLine("Examples:");
     Console.WriteLine("  dotnet run --project examples\\PlcComm.Toyopuc.MinimalRead -- 192.168.250.100 1025 tcp P1-D0000 \"TOYOPUC-Plus:Plus Extended mode\"");

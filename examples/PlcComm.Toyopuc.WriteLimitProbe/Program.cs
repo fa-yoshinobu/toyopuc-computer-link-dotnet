@@ -10,7 +10,18 @@ if (args.Contains("--help", StringComparer.OrdinalIgnoreCase)
     return;
 }
 
-var options = ProbeOptions.Parse(args);
+ProbeOptions options;
+try
+{
+    options = ProbeOptions.Parse(args);
+}
+catch (Exception ex) when (ex is ArgumentException or ArgumentOutOfRangeException)
+{
+    Console.Error.WriteLine(ex.Message);
+    Environment.ExitCode = 1;
+    return;
+}
+
 Directory.CreateDirectory(Path.GetDirectoryName(options.SummaryJsonPath)!);
 
 Console.WriteLine($"connect     : {options.Transport}://{options.Host}:{options.Port}");
@@ -199,7 +210,7 @@ static void PrintUsage()
     Console.WriteLine("  --host <name>              default: 192.168.250.100");
     Console.WriteLine("  --port <number>            default: 1025");
     Console.WriteLine("  --protocol <tcp|udp>       default: tcp");
-    Console.WriteLine("  --profile <name>           default: PC10G:PC10 mode");
+    Console.WriteLine("  --profile <name>           required; no device profile is inferred");
     Console.WriteLine("  --cases <spec,...>         default: P1-D0000:622:623:0x4100,U00000:621:622:0x4200,U08000:621:622:0x4300,EB00000:621:622:0x4400");
     Console.WriteLine("  --summary-json <path>      default: logs\\direct_length_limit_pc10g_rerun\\summary.json");
     Console.WriteLine("  --timeout <seconds>        default: 5.0");
@@ -219,7 +230,7 @@ sealed record ProbeOptions
 
     public string Transport { get; init; } = "tcp";
 
-    public string Profile { get; init; } = "PC10G:PC10 mode";
+    public string Profile { get; init; } = string.Empty;
 
     public IReadOnlyList<ProbeCase> Cases { get; init; } = ParseCases(DefaultCases);
 
@@ -291,6 +302,11 @@ sealed record ProbeOptions
         if (options.ChunkSize < 1)
         {
             throw new ArgumentOutOfRangeException(nameof(args), "--chunk-size must be >= 1");
+        }
+
+        if (string.IsNullOrWhiteSpace(options.Profile))
+        {
+            throw new ArgumentException("--profile is required. Specify it explicitly; no device profile is inferred from defaults.", nameof(args));
         }
 
         _ = options.AddressingOptions;

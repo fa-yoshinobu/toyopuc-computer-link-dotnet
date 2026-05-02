@@ -3,7 +3,8 @@ param(
     [int]$Port = 1025,
     [ValidateSet("tcp", "udp")]
     [string]$Protocol = "tcp",
-    [string]$Profile = "Nano 10GX:Compatible mode",
+    [Parameter(Mandatory = $true)]
+    [string]$Profile,
     [string]$Hops = "P1-L2:N4,P1-L2:N6,P1-L2:N2",
     [string]$LogDir = "logs\\relay_length_limit",
     [double]$ReadTimeoutSeconds = 10.0,

@@ -38,7 +38,7 @@ dotnet add package PlcComm.Toyopuc
 Or add a package reference directly:
 
 ```xml
-<PackageReference Include="PlcComm.Toyopuc" Version="0.1.7" />
+<PackageReference Include="PlcComm.Toyopuc" Version="0.1.8" />
 ```
 
 ### High-Level Example
@@ -96,7 +96,25 @@ Start with these example programs:
 - `examples/PlcComm.Toyopuc.HighLevelSample`
 - `examples/PlcComm.Toyopuc.SoakMonitor`
 
+Profile-specific example apps and probe scripts require an explicit profile
+argument; omitted profile values are rejected instead of being interpreted as a
+default TOYOPUC model.
+
 Maintainer-only notes and retained evidence live under `internal_docs/`.
+
+## Latest Communication Verification
+
+Latest direct `PC10G:PC10 mode` validation was refreshed on `2026-05-02` against
+`192.168.250.100:1025` over TCP.
+
+- release build: `OK`
+- full `SmokeTest` suite: `ok=212 skip=0 ng=0`
+- restored word write: `P1-D0100 0x0000 -> 0x1234 -> 0x0000`
+- restored bit write: `P1-M0000 0 -> 1 -> 0`
+- 60-second `SoakMonitor`: `polls=60 ok=60 ng=0 reconnects=0 sessions=1`
+
+Detailed retained evidence is in
+[`internal_docs/maintainer/TESTRESULTS.md`](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/blob/main/internal_docs/maintainer/TESTRESULTS.md).
 
 ## Common User Tasks
 
