@@ -1,6 +1,6 @@
 # Test Results
 
-Last updated: `2026-03-12`
+Last updated: `2026-04-30`
 
 This document records the latest checked results per target. Verification dates are section-specific.
 
@@ -290,7 +290,7 @@ Short reconnect probes also showed that validation should remain serialized.
 
 ## 3. Direct PC10G
 
-Verified: `2026-03-12`
+Verified: `2026-03-12`, `2026-04-30`
 
 Connection:
 
@@ -309,6 +309,22 @@ powershell -ExecutionPolicy Bypass -File examples\run_validation.ps1 -Target pc1
 
 - `run_validation.ps1 -Target pc10g-direct`: `OK`
 - Read-only suite: `summary : suite=PC10G:PC10 mode ok=212 skip=0 ng=0`
+- Read-only suite rerun on `2026-04-30` after scan-control and split-range formatter changes:
+  - command: `dotnet run --project examples\PlcComm.Toyopuc.SmokeTest -- --host 192.168.250.100 --port 1025 --protocol tcp --profile "PC10G:PC10 mode" --suite "PC10G:PC10 mode" --timeout 5 --retries 3 --verbose --log logs\pc10g_pc10_mode_suite_20260430.log`
+  - result: `summary : suite=PC10G:PC10 mode ok=212 skip=0 ng=0`
+  - CPU status before suite: `42 00 00 00 00 00 00 00`
+  - PC10 flags: `upper-u=on eb=on fr=on`
+  - split-range probes such as `P1-P0000`, `P1-P01FF`, `P1-P1000`, `P1-P17FF`, `P1-S0000`, `P1-S03FF`, `P1-S1000`, and `P1-S13FF` completed `OK`
+- Scan-control check on `2026-04-30`:
+  - target: `tcp://192.168.250.100:1025`
+  - sequence: `StopScan()`, `ReleaseScanStop()`, `ResumeScan()`
+  - result: all commands returned `OK`
+  - CPU status: before `42 00 00 00 00 00 00 00`, after stop `62 00 00 00 00 00 00 00`, after resume `82 00 00 00 00 00 00 0E`
+  - log: `logs\pc10g_pc10_mode_scan_control_20260430.log`
+- Short soak rerun on `2026-04-30`:
+  - command: `dotnet run --project examples\PlcComm.Toyopuc.SoakMonitor -- --host 192.168.250.100 --port 1025 --protocol tcp --profile "PC10G:PC10 mode" --devices P1-D0000,P1-P01F0,P1-P1000,P1-S03F0,P1-S1000,EB00000 --interval 1s --duration 2m --retries 3 --success-log-interval 30 --log logs\pc10g_pc10_mode_soak_2m_20260430.log --poll-csv logs\pc10g_pc10_mode_soak_2m_20260430.csv --summary-json logs\pc10g_pc10_mode_soak_2m_20260430.json`
+  - result: `stop=duration-complete polls=120 ok=120 ng=0 reconnects=0 sessions=1 elapsed=02:00`
+  - sampled devices included split-range boundary points `P1-P01F0`, `P1-P1000`, `P1-S03F0`, and `P1-S1000`
 - `device_profile_matrix_r2.csv` correction for `M` was confirmed in code and on hardware
   - `P1-M1000`, `P1-M17FF`, `P1-M100W`
   - `P2-M1000`, `P3-M1000`
