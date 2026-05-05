@@ -41,6 +41,7 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
     private const int FrBlockWords = 0x8000;
     private const int FrMaxIndex = 0x1FFFFF;
     private const int FrIoChunkWords = 0x0200;
+    public const int UdpReceiveBufferSize = 65535;
 
     private Socket? _socket;
     private IPEndPoint? _remoteEndPoint;
@@ -60,7 +61,7 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
         TimeSpan timeout = default,
         int retries = 0,
         TimeSpan retryDelay = default,
-        int recvBufsize = 8192)
+        int recvBufsize = UdpReceiveBufferSize)
     {
         Host = host;
         Port = port;
@@ -1040,7 +1041,7 @@ public partial class ToyopucClient : IDisposable, IAsyncDisposable
         }
 
         _socket.SendTo(payload, _remoteEndPoint);
-        var buffer = ArrayPool<byte>.Shared.Rent(RecvBufsize);
+        var buffer = ArrayPool<byte>.Shared.Rent(Math.Max(RecvBufsize, UdpReceiveBufferSize));
         try
         {
             EndPoint remote = CreateAnyEndPoint(_remoteEndPoint.AddressFamily, 0);

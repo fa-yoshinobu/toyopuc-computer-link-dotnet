@@ -115,6 +115,32 @@ public sealed class ToyopucClientExtensionsTests
         Assert.Equal([Convert.ToHexString(expected)], server.ReceivedFrames.ToArray());
     }
 
+    [Fact]
+    public async Task SendRaw_UdpAcceptsLargeDatagramResponse()
+    {
+        using var server = new UdpClient(new IPEndPoint(IPAddress.Loopback, 0));
+        var port = ((IPEndPoint)server.Client.LocalEndPoint!).Port;
+        var responseData = Enumerable.Range(0, 9000).Select(static index => (byte)(index & 0xFF)).ToArray();
+        var serverTask = Task.Run(async () =>
+        {
+            var request = await server.ReceiveAsync();
+            var response = BuildResponse(0x1C, responseData);
+            await server.SendAsync(response, response.Length, request.RemoteEndPoint);
+        });
+
+        using var client = new ToyopucClient(
+            "127.0.0.1",
+            port,
+            transport: ToyopucTransportMode.Udp,
+            timeout: TimeSpan.FromSeconds(LocalTestTimeoutSeconds));
+
+        var response = client.SendRaw(0x1C);
+        await serverTask;
+
+        Assert.Equal(0x1C, response.Cmd);
+        Assert.Equal(responseData, response.Data);
+    }
+
     private static byte[] BuildResponse(int cmd, byte[] data)
     {
         var length = 1 + data.Length;

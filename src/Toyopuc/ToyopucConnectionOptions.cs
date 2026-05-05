@@ -42,7 +42,7 @@ public sealed record ToyopucConnectionOptions(string Host)
     public TimeSpan RetryDelay { get; init; }
 
     /// <summary>Gets or sets the receive buffer size.</summary>
-    public int RecvBufsize { get; init; } = 8192;
+    public int RecvBufsize { get; init; } = ToyopucClient.UdpReceiveBufferSize;
 
     /// <summary>Gets the effective timeout used for a new client instance.</summary>
     public TimeSpan EffectiveTimeout => Timeout == default ? TimeSpan.FromSeconds(3) : Timeout;

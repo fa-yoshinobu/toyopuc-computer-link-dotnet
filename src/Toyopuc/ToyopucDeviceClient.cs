@@ -50,7 +50,7 @@ public partial class ToyopucDeviceClient : ToyopucClient
         TimeSpan timeout = default,
         int retries = 0,
         TimeSpan retryDelay = default,
-        int recvBufsize = 8192,
+        int recvBufsize = ToyopucClient.UdpReceiveBufferSize,
         ToyopucAddressingOptions? addressingOptions = null,
         string? deviceProfile = null)
         : base(host, port, localPort, transport, timeout, retries, retryDelay, recvBufsize)
