@@ -9,6 +9,12 @@
 
 ![Illustration](https://raw.githubusercontent.com/fa-yoshinobu/plc-comm-computerlink-dotnet/main/docsrc/assets/toyopuc.png)
 
+[![Release](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/actions/workflows/release.yml/badge.svg)](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/actions/workflows/release.yml)
+[![VirusTotal scan on release](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/actions/workflows/VirusTotal%20scan%20on%20release.yml/badge.svg)](https://github.com/fa-yoshinobu/plc-comm-computerlink-dotnet/actions/workflows/VirusTotal%20scan%20on%20release.yml)
+
+[![.NET 9](https://img.shields.io/badge/.NET-9-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![C#](https://img.shields.io/badge/C%23-239120?logo=csharp&logoColor=white)](https://learn.microsoft.com/dotnet/csharp/)
+
 A user-focused .NET library for JTEKT TOYOPUC Computer Link communication.
 The recommended entry point is the high-level queued client created by `ToyopucDeviceClientFactory`.
 
