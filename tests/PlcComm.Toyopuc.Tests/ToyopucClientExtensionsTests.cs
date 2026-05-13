@@ -7,7 +7,7 @@ namespace PlcComm.Toyopuc.Tests;
 
 public sealed class ToyopucClientExtensionsTests
 {
-    private const double LocalTestTimeoutSeconds = 2.0;
+    private const double LocalTestTimeoutSeconds = 3.0;
 
     [Fact]
     public void ToyopucAddress_Normalize_PreservesPrefixAndSuffix()

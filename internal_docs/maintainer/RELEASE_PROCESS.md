@@ -103,7 +103,6 @@ Repository workflows:
 - `.github/workflows/release.yml`
   - build release artifacts on tag pushes and manual dispatch
   - create or update a GitHub Release for `v*` tags
-  - optionally push `.nupkg` and `.snupkg` to NuGet when `NUGET_API_KEY` is configured
 
 Before cutting a tag, confirm the CI workflow is green on the release commit.
 
@@ -143,6 +142,5 @@ Recommended order:
 2. Verify CI on that commit.
 3. Create and push the version tag.
 4. Let the release workflow build the package artifacts and attach them to the GitHub Release.
-5. If `NUGET_API_KEY` is configured, let the workflow publish the `.nupkg` and `.snupkg` to NuGet.
-6. If NuGet publishing is still manual, publish them after the GitHub Release artifacts are verified.
+5. Publish the `.nupkg` and `.snupkg` to NuGet manually after the GitHub Release artifacts are verified.
 
